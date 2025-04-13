@@ -1,47 +1,47 @@
-import 'package:flutter/material.dart';
-import 'scenario.dart';
+  import 'package:flutter/material.dart';
+  import 'scenario.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const HomeScreen(),
-    );
+  void main() {
+    runApp(const MyApp());
   }
-}
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  class MyApp extends StatelessWidget {
+    const MyApp({super.key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  double _opacity = 1.0;
-  bool _isFading = false;
-
-  void _handlePlay() async {
-    if (_isFading) return;
-    setState(() {
-      _opacity = 0.0;
-      _isFading = true;
-    });
-
-    await Future.delayed(const Duration(milliseconds: 1000));
-
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (context) => const ScenarioScreen(),
-      ),
-    );
+    @override
+    Widget build(BuildContext context) {
+      return MaterialApp(
+        home: const HomeScreen(),
+      );
+    }
   }
+
+  class HomeScreen extends StatefulWidget {
+    const HomeScreen({super.key});
+
+    @override
+    State<HomeScreen> createState() => _HomeScreenState();
+  }
+
+  class _HomeScreenState extends State<HomeScreen> {
+    double _opacity = 1.0;
+    bool _isFading = false;
+
+    void _handlePlay() async {
+      if (_isFading) return;
+      setState(() {
+        _opacity = 0.0;
+        _isFading = true;
+      });
+
+      await Future.delayed(const Duration(milliseconds: 1000));
+
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => const ScenarioScreen(),
+        ),
+      );
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +62,18 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
+            const Center(
+              child: Text(
+                'SKIBIDI\nINVASION',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.2,
               left: 0,
@@ -78,6 +90,41 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
+              ),
+            ),
+
+            Positioned(
+              bottom: 110,
+              right: 20,
+              child: Column(
+                children: [
+                  Image.asset('assets/icons/book.png',
+                  ),
+                  Text(
+                    'Story',
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            Positioned(
+              bottom: 10,
+              right: 10,
+              child: Column(
+                children: [
+                  Image.asset('assets/icons/settings.png'),
+                  Text(
+                      'Settings',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white
+                   ),
+                  ),
+                ],
               ),
             ),
           ],
