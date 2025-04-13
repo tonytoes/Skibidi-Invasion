@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'scenario.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -33,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _isFading = true;
     });
 
-    await Future.delayed(const Duration(milliseconds: 700));
+    await Future.delayed(const Duration(milliseconds: 1000));
 
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
@@ -50,25 +51,36 @@ class _HomeScreenState extends State<HomeScreen> {
         opacity: _opacity,
         duration: const Duration(milliseconds: 1200),
         curve: Curves.easeInOut,
-        child: Container(
-          alignment: Alignment.center,
-          padding: const EdgeInsets.all(32),
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/bg/titlescreen_bg.png'),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: TextButton(
-            onPressed: _handlePlay,
-            child: const Text(
-              'Play',
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.white,
+        child: Stack(
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/bg/titlescreen_bg.png'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-          ),
+
+            Positioned(
+              bottom: MediaQuery.of(context).size.height * 0.2,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: TextButton(
+                  onPressed: _handlePlay,
+                  child: const Text(
+                    'Play',
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
