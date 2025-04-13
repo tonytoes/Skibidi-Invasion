@@ -67,9 +67,10 @@
                 'SKIBIDI\nINVASION',
                 textAlign: TextAlign.center,
                 style: TextStyle(
+                  fontFamily: 'JosefinSans',
                   fontSize: 40,
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
@@ -84,6 +85,7 @@
                   child: const Text(
                     'Play',
                     style: TextStyle(
+                      fontFamily: 'JosefinSans',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
