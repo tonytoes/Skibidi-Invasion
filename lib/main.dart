@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'scenario.dart'; // make sure this import is correct!
-
+import 'scenario.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -11,42 +10,63 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const HomeScreen(), // pull the screen into its own widget
+      home: const HomeScreen(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  double _opacity = 1.0;
+  bool _isFading = false;
+
+  void _handlePlay() async {
+    if (_isFading) return;
+    setState(() {
+      _opacity = 0.0;
+      _isFading = true;
+    });
+
+    await Future.delayed(const Duration(milliseconds: 700));
+
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => const ScenarioScreen(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        padding: const EdgeInsets.all(32),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              'assets/images/bg/titlescreen_bg.png',
+      backgroundColor: Colors.black,
+      body: AnimatedOpacity(
+        opacity: _opacity,
+        duration: const Duration(milliseconds: 1200),
+        curve: Curves.easeInOut,
+        child: Container(
+          alignment: Alignment.center,
+          padding: const EdgeInsets.all(32),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/bg/titlescreen_bg.png'),
+              fit: BoxFit.cover,
             ),
-            fit: BoxFit.cover,
           ),
-        ),
-        child: TextButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ScenarioScreen(),
+          child: TextButton(
+            onPressed: _handlePlay,
+            child: const Text(
+              'Play',
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
               ),
-            );
-          },
-          child: Text(
-            'Play',
-            style: TextStyle(
-              fontSize: 24,
-              color: Colors.white,
             ),
           ),
         ),

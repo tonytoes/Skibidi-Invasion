@@ -14,7 +14,7 @@ class ScenarioScreen extends StatelessWidget {
         padding: const EdgeInsets.all(32),
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/bg/ruins_bg.png'),
+            image: AssetImage('assets/images/bg\/ruins_bg.png'),
             fit: BoxFit.cover,
           ),
         ),
