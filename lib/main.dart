@@ -1,5 +1,7 @@
-  import 'package:flutter/material.dart';
-  import 'scenario.dart';
+import 'package:flutter/material.dart';
+import 'scenario.dart';
+import 'settings.dart';
+import 'chapter_settings.dart';
 
   void main() {
     runApp(const MyApp());
@@ -36,12 +38,61 @@
 
       await Future.delayed(const Duration(milliseconds: 1000));
 
-      Navigator.of(context).pushReplacement(
+      await Navigator.of(context).push(
         MaterialPageRoute(
           builder: (context) => const ScenarioScreen(),
         ),
       );
+
+      setState(() {
+        _opacity = 1.0;
+        _isFading = false;
+      });
+
     }
+
+    void _handleChapters() async {
+      if (_isFading) return;
+      setState(() {
+        _opacity = 0.0;
+        _isFading = true;
+      });
+
+      await Future.delayed(const Duration(milliseconds: 1000));
+
+      await Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => const ChapterSettings(),
+        ),
+      );
+
+      setState(() {
+        _opacity = 1.0;
+        _isFading = false;
+      });
+    }
+
+      void _handleSettings() async {
+        if (_isFading) return;
+        setState(() {
+          _opacity = 0.0;
+          _isFading = true;
+        });
+
+        await Future.delayed(const Duration(milliseconds: 1000));
+
+        await Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => const SettingsScreen(),
+          ),
+        );
+
+        setState(() {
+          _opacity = 1.0;
+          _isFading = false;
+        });
+      }
+
 
   @override
   Widget build(BuildContext context) {
@@ -96,11 +147,15 @@
             ),
 
             Positioned(
-              bottom: 110,
-              right: 20,
+              bottom: MediaQuery.of(context).size.height * 0.13,
+              right: MediaQuery.of(context).size.width * 0.02,
               child: Column(
                 children: [
-                  Image.asset('assets/icons/book.png',
+                  TextButton(
+                    onPressed: _handleChapters,
+                    child: Image.asset(
+                      'assets/icons/book.png',
+                    ),
                   ),
                   Text(
                     'Story',
@@ -114,11 +169,16 @@
             ),
 
             Positioned(
-              bottom: 10,
-              right: 10,
+              bottom: MediaQuery.of(context).size.height * 0.02,
+              right: MediaQuery.of(context).size.height * 0.01,
               child: Column(
                 children: [
-                  Image.asset('assets/icons/settings.png'),
+                  TextButton(
+                    onPressed: _handleSettings,
+                    child: Image.asset(
+                        'assets/icons/settings.png'
+                    ),
+                  ),
                   Text(
                       'Settings',
                   style: TextStyle(
@@ -129,6 +189,7 @@
                 ],
               ),
             ),
+
           ],
         ),
       ),
