@@ -10,15 +10,20 @@ class ScenarioScreen extends StatelessWidget {
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+        actions: <Widget>[
+        IconButton(
+          icon: const Icon(
+              Icons.menu,
+              size: 33,
+          ),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        ],
       ),
+
+
       body: Container(
         alignment: Alignment.center,
         padding: const EdgeInsets.all(32),
