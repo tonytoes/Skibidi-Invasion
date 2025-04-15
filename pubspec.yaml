@@ -30,7 +30,7 @@ flutter:
     - assets/audio/music/
 
   fonts:
-    - family: JosefinSnas
+    - family: JosefinSans
       fonts:
         - asset: assets/fonts/JosefinSans-Regular.ttf
           weight: 400

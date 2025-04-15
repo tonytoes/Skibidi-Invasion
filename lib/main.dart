@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'scenario.dart';
 import 'settings.dart';
 import 'chapter_settings.dart';
 
   void main() {
+    WidgetsFlutterBinding.ensureInitialized();
+
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     runApp(const MyApp());
   }
 
