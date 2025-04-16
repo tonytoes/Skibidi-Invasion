@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'scenario.dart';
 import 'settings.dart';
-import 'chapter_settings.dart';
+import 'chapter.dart';
 
   void main() {
     WidgetsFlutterBinding.ensureInitialized();
@@ -71,7 +71,7 @@ import 'chapter_settings.dart';
 
       await Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => const ChapterSettings(),
+          builder: (context) => const ChaptersScreen(),
         ),
       );
 

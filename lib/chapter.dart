@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+class ChaptersScreen extends StatelessWidget {
+  const ChaptersScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
