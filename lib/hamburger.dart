@@ -7,10 +7,7 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-      ),
+      backgroundColor: Colors.black.withOpacity(0.7),
       body: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Center(
@@ -36,16 +33,12 @@ class MenuScreen extends StatelessWidget {
                       thickness: 1.5
                     ),
 
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.transparent,
-                        side: BorderSide.none,
-                      ),
+                    TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                       },
                       child: Text(
-                        'Continue',
+                        'Home',
                             style: const TextStyle (
                           color: Colors.white,
                         fontSize: 24
@@ -53,33 +46,25 @@ class MenuScreen extends StatelessWidget {
                       ),
                     ),
 
-                    ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.transparent,
-                          side: BorderSide.none,
-                        ),
+                    TextButton(
                         onPressed: () {
                           Navigator.pop(context);
                         },
                         child: Text(
-                            'Chapter',
+                            'Sound Settings',
                             style: const TextStyle (
                                 color: Colors.white,
                                 fontSize: 24
-                            ),
+                            )
                         ),
                     ),
 
-                    ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.transparent,
-                          side: BorderSide.none,
-                        ),
+                    TextButton(
                         onPressed: () {
                           Navigator.pop(context);
                         },
                         child: Text(
-                            'Return to title screen',
+                            'Chapters',
                             style: const TextStyle (
                                 color: Colors.white,
                                 fontSize: 24

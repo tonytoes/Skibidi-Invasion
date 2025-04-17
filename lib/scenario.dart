@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'Hamburger.dart';
+import 'hamburger.dart';
 
 void _openMenu(BuildContext context) {
   showCupertinoModalPopup(
@@ -20,34 +20,6 @@ class ScenarioScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: <Widget>[
-
-          Padding(
-            padding: EdgeInsets.only(
-                top:5
-            ),
-            child: ElevatedButton(
-              onPressed: () => _openMenu(context),
-              child: Image.asset(
-                 'assets/icons/double-quaver.png',
-                     color: Colors.white,
-                width: 40,
-                height: 40
-              ),
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all(CircleBorder()),
-                padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-                backgroundColor: MaterialStateProperty.all(Colors.black),
-                overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                      (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.pressed)) {
-                      return Colors.red;
-                    }
-                    return null;
-                  },
-                ),
-              ),
-            ),
-          ),
 
           Padding(
             padding: EdgeInsets.only(

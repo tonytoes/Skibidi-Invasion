@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/cupertino.dart';
 import 'scenario.dart';
 import 'settings.dart';
 import 'chapter.dart';
@@ -45,7 +46,7 @@ import 'chapter.dart';
         _isFading = true;
       });
 
-      await Future.delayed(const Duration(milliseconds: 1000));
+      await Future.delayed(const Duration(milliseconds: 800));
 
       await Navigator.of(context).push(
         MaterialPageRoute(
@@ -60,48 +61,19 @@ import 'chapter.dart';
 
     }
 
-    void _handleChapters() async {
-      if (_isFading) return;
-      setState(() {
-        _opacity = 0.0;
-        _isFading = true;
-      });
-
-      await Future.delayed(const Duration(milliseconds: 1000));
-
-      await Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => const ChaptersScreen(),
-        ),
+    void _Chapters(BuildContext context) {
+      showCupertinoModalPopup(
+        context: context,
+        builder: (context) => const ChapterScreen(),
       );
-
-      setState(() {
-        _opacity = 1.0;
-        _isFading = false;
-      });
     }
 
-      void _handleSettings() async {
-        if (_isFading) return;
-        setState(() {
-          _opacity = 0.0;
-          _isFading = true;
-        });
-
-        await Future.delayed(const Duration(milliseconds: 1000));
-
-        await Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => const SettingsScreen(),
-          ),
-        );
-
-        setState(() {
-          _opacity = 1.0;
-          _isFading = false;
-        });
-      }
-
+    void _Settings(BuildContext context) {
+      showCupertinoModalPopup(
+        context: context,
+        builder: (context) => const SettingsScreen(),
+      );
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +96,7 @@ import 'chapter.dart';
 
             const Center(
               child: Text(
-                'SKIBIDI\nINVASION',
+                'TOILET\nINVASION',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'JosefinSans',
@@ -161,7 +133,7 @@ import 'chapter.dart';
               child: Column(
                 children: [
                   TextButton(
-                    onPressed: _handleChapters,
+                    onPressed: () => _Chapters(context),
                     child: Image.asset(
                       'assets/icons/book.png',
                     ),
@@ -183,7 +155,7 @@ import 'chapter.dart';
               child: Column(
                 children: [
                   TextButton(
-                    onPressed: _handleSettings,
+                    onPressed: () => _Settings(context),
                     child: Image.asset(
                         'assets/icons/settings.png'
                     ),
