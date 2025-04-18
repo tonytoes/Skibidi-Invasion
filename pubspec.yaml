@@ -28,7 +28,7 @@ flutter:
     - assets/icons/
     - assets/audio/sfx/
     - assets/audio/music/
-    - assets/dialogue/
+    - assets/images/dialogue/
 
   fonts:
     - family: JosefinSans

@@ -19,8 +19,8 @@ class ScenarioScreen extends StatefulWidget {
 
 class _ScenarioScreenState extends State<ScenarioScreen> {
   final List<String> _dialogueLines = [
-    "ENZO MC TAYO PLS PLS PLS PLS",
-    "ENZO MC TAYO PLS PLS PLS PLS PLS PLS PLS PLS"
+    "Wha-?!!",
+    "Hey kid you alright?"
   ];
   int _currentLine = 0;
 
@@ -99,7 +99,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
             alignment: Alignment.center,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/bg/livingRoomDay-1600.png'),
+                image: AssetImage('assets/images/bg/Downtown-Night.png'),
                 fit: BoxFit.cover,
               ),
             ),

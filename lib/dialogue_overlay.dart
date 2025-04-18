@@ -16,13 +16,12 @@ class DialogueBoxWidget extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Stack(
           children: [
-            // Background box with image
             Container(
               width: double.infinity,
-              height: 150,
+              height: 220,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/dialogue/dialogue-box.png'),
+                  image: AssetImage('assets/images/dialogue/dialogue-box2.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -34,14 +33,13 @@ class DialogueBoxWidget extends StatelessWidget {
               child: Text(
                 text,
                 style: const TextStyle(
-                  fontSize: 18,
+                  fontSize: 20,
                   fontFamily:'IBMPlexMono',
                   color: Colors.black,
                   height: 1,
                 ),
               ),
             ),
-            // Positioned icon button at the bottom-right of the box
             Positioned(
               right: 16,
               bottom: 16,
