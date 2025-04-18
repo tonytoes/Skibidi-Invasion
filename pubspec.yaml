@@ -28,6 +28,7 @@ flutter:
     - assets/icons/
     - assets/audio/sfx/
     - assets/audio/music/
+    - assets/dialogue/
 
   fonts:
     - family: JosefinSans
@@ -38,3 +39,13 @@ flutter:
           weight: 500
         - asset: assets/fonts/JosefinSans-Bold.ttf
           weight: 700
+
+    - family: TacticRound
+      fonts:
+        - asset: assets/fonts/TacticRound-Bld.ttf
+          weight: 800
+
+    - family: IBMPlexMono
+      fonts:
+        - asset: assets/fonts/IBMPlexMono-regular.ttf
+          weight: 400

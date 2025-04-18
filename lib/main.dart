@@ -61,14 +61,14 @@ import 'chapter.dart';
 
     }
 
-    void _Chapters(BuildContext context) {
+    void _openChapters(BuildContext context) {
       showCupertinoModalPopup(
         context: context,
         builder: (context) => const ChapterScreen(),
       );
     }
 
-    void _Settings(BuildContext context) {
+    void _openSettings(BuildContext context) {
       showCupertinoModalPopup(
         context: context,
         builder: (context) => const SettingsScreen(),
@@ -96,7 +96,7 @@ import 'chapter.dart';
 
             const Center(
               child: Text(
-                'TOILET\nINVASION',
+                'SKIBIDI\nINVASION',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'JosefinSans',
@@ -108,16 +108,66 @@ import 'chapter.dart';
             ),
 
             Positioned(
+              bottom: MediaQuery.of(context).size.height * 0.3,
+              left: 0,
+              right: 0,
+              child: Center(
+                  child: ElevatedButton(
+                    onPressed: _handlePlay,
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Color(0xFF0486f4)),
+                      overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                            (Set<MaterialState> states) {
+                          if (states.contains(MaterialState.pressed)) {
+                            return Colors.indigo;
+                          }
+                          return null;
+                        },
+                      ),
+                      shape: MaterialStateProperty.all(
+                        StadiumBorder(),
+                      ),
+                      minimumSize: MaterialStateProperty.all(const Size(200, 50)),
+                    ),
+                    child: const Text(
+                      'Play',
+                      style: TextStyle(
+                        fontFamily: 'TacticRound',
+                        fontSize: 24,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+            Positioned(
               bottom: MediaQuery.of(context).size.height * 0.2,
               left: 0,
               right: 0,
               child: Center(
-                child: TextButton(
-                  onPressed: _handlePlay,
+                child: ElevatedButton(
+                  onPressed: () => _openSettings(context),
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Color(0xFF0486f4)),
+                      overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                            (Set<MaterialState> states) {
+                          if (states.contains(MaterialState.pressed)) {
+                            return Colors.red;
+                          }
+                          return null;
+                        },
+                      ),
+                      shape: MaterialStateProperty.all(
+                        StadiumBorder(),
+                      ),
+                      minimumSize: MaterialStateProperty.all(const Size(200,50))
+                  ),
                   child: const Text(
-                    'Play',
+                    'Story',
                     style: TextStyle(
-                      fontFamily: 'JosefinSans',
+                      fontFamily: 'TacticRound',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -127,49 +177,43 @@ import 'chapter.dart';
               ),
             ),
 
+
+
             Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.13,
-              right: MediaQuery.of(context).size.width * 0.02,
-              child: Column(
-                children: [
-                  TextButton(
-                    onPressed: () => _Chapters(context),
-                    child: Image.asset(
-                      'assets/icons/book.png',
+              bottom: MediaQuery.of(context).size.height * 0.1,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () => _openSettings(context),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Color(0xFF0486f4)),
+                    overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                          (Set<MaterialState> states) {
+                        if (states.contains(MaterialState.pressed)) {
+                          return Colors.red;
+                        }
+                        return null;
+                      },
                     ),
+                    shape: MaterialStateProperty.all(
+                      StadiumBorder(),
+                    ),
+                      minimumSize: MaterialStateProperty.all(const Size(200,50))
                   ),
-                  Text(
-                    'Story',
+                  child: const Text(
+                    'Settings',
                     style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
+                      fontFamily: 'TacticRound',
+                      fontSize: 24,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ],
+                ),
               ),
             ),
 
-            Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.02,
-              right: MediaQuery.of(context).size.height * 0.01,
-              child: Column(
-                children: [
-                  TextButton(
-                    onPressed: () => _Settings(context),
-                    child: Image.asset(
-                        'assets/icons/settings.png'
-                    ),
-                  ),
-                  Text(
-                      'Settings',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white
-                   ),
-                  ),
-                ],
-              ),
-            ),
 
           ],
         ),
