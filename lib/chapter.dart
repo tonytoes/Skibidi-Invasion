@@ -14,38 +14,32 @@ class ChapterScreen extends StatelessWidget {
           child: Container(
             width: MediaQuery.of(context).size.width - 40,
             height: 750,
-            color: Colors.black.withOpacity(0.7),
+            color: Colors.black.withValues(alpha: 0.7),
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-
                   Padding(
                     padding: EdgeInsets.only(left: 20.0, top: 20.0),
-                    child: Row (
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            'assets/icons/book.png',
-                          ),
-                          SizedBox(width: 10),
-                          Text(
-                            'Story Checkpoints',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 24
-                            ),
-                          ),
-                        ]
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset('assets/icons/book.png'),
+                        SizedBox(width: 10),
+                        Text(
+                          'Story Checkpoints',
+                          style: TextStyle(color: Colors.white, fontSize: 24),
+                        ),
+                      ],
                     ),
                   ),
 
-                  Divider (
-                      color: Colors.white,
-                      height: 36,
-                      indent: 25,
-                      endIndent: 25,
-                      thickness: 1.5
+                  Divider(
+                    color: Colors.white,
+                    height: 36,
+                    indent: 25,
+                    endIndent: 25,
+                    thickness: 1.5,
                   ),
 
                   TextButton(
@@ -54,10 +48,7 @@ class ChapterScreen extends StatelessWidget {
                     },
                     child: Text(
                       'Chapter 1',
-                      style: const TextStyle (
-                          color: Colors.white,
-                          fontSize: 24
-                      ),
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),
 
@@ -66,11 +57,8 @@ class ChapterScreen extends StatelessWidget {
                       Navigator.pop(context);
                     },
                     child: Text(
-                        'Chapter 2',
-                        style: const TextStyle (
-                            color: Colors.white,
-                            fontSize: 24
-                        )
+                      'Chapter 2',
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),
 
@@ -79,11 +67,8 @@ class ChapterScreen extends StatelessWidget {
                       Navigator.pop(context);
                     },
                     child: Text(
-                        'Chapter 3',
-                        style: const TextStyle (
-                            color: Colors.white,
-                            fontSize: 24
-                        )
+                      'Chapter 3',
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),
 
@@ -92,11 +77,8 @@ class ChapterScreen extends StatelessWidget {
                       Navigator.pop(context);
                     },
                     child: Text(
-                        'Chapter 4',
-                        style: const TextStyle (
-                            color: Colors.white,
-                            fontSize: 24
-                        )
+                      'Chapter 4',
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),
 
@@ -105,27 +87,20 @@ class ChapterScreen extends StatelessWidget {
                       Navigator.pop(context);
                     },
                     child: Text(
-                        'Final Chapter',
-                        style: const TextStyle (
-                            color: Colors.white,
-                            fontSize: 24
-                        )
+                      'Final Chapter',
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),
 
                   TextButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: Text(
-                          'Back',
-                          style: const TextStyle (
-                              color: Colors.white,
-                              fontSize: 24
-                          )
-                      )
-                  )
-
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text(
+                      'Back',
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                    ),
+                  ),
                 ],
               ),
             ),

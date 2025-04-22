@@ -4,9 +4,11 @@ class DialogueBoxWidget extends StatelessWidget {
   final String text;
   final VoidCallback _nextDialogue;
 
-  const DialogueBoxWidget({Key? key, required this.text, required VoidCallback nextDialogue})
-      : _nextDialogue = nextDialogue,
-        super(key: key);
+  const DialogueBoxWidget({
+    super.key,
+    required this.text,
+    required VoidCallback nextDialogue,
+  }) : _nextDialogue = nextDialogue;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class DialogueBoxWidget extends StatelessWidget {
                 text,
                 style: const TextStyle(
                   fontSize: 20,
-                  fontFamily:'IBMPlexMono',
+                  fontFamily: 'IBMPlexMono',
                   color: Colors.black,
                   height: 1,
                 ),
@@ -44,7 +46,10 @@ class DialogueBoxWidget extends StatelessWidget {
               right: 16,
               bottom: 16,
               child: IconButton(
-                icon: Image.asset('assets/icons/double-arrow.png', color: Colors.black),
+                icon: Image.asset(
+                  'assets/icons/double-arrow.png',
+                  color: Colors.black,
+                ),
                 onPressed: _nextDialogue,
                 iconSize: 30,
               ),

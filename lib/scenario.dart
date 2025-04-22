@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'hamburger.dart';
+import 'menu.dart';
 import 'dialogue_overlay.dart';
 
 void _openMenu(BuildContext context) {
@@ -18,10 +18,8 @@ class ScenarioScreen extends StatefulWidget {
 }
 
 class _ScenarioScreenState extends State<ScenarioScreen> {
-  final List<String> _dialogueLines = [
-    "Wha-?!!",
-    "Hey kid you alright?"
-  ];
+  bool pressed = false;
+  final List<String> _dialogueLines = ["Wha-?!!", "Hey kid you alright?"];
   int _currentLine = 0;
 
   void _nextDialogue() {
@@ -29,7 +27,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
       if (_currentLine < _dialogueLines.length - 1) {
         _currentLine++;
       } else {
-        _currentLine = 0; // You can loop back to the first dialogue or stop.
+        _currentLine = 0;
       }
     });
   }
@@ -45,56 +43,58 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
           Padding(
             padding: EdgeInsets.only(top: 5),
             child: ElevatedButton(
-              onPressed: () => _openMenu(context),
+              style: ButtonStyle(
+                shape: WidgetStateProperty.all(CircleBorder()),
+                padding: WidgetStateProperty.all(EdgeInsets.all(5)),
+                backgroundColor: WidgetStateProperty.all(Colors.black),
+                overlayColor: WidgetStateProperty.resolveWith<Color?>((
+                  Set<WidgetState> states,
+                ) {
+                  if (states.contains(WidgetState.pressed)) {
+                    return Colors.black; //change
+                  }
+                  return null;
+                }),
+              ),
               child: Image.asset(
-                'assets/icons/speaker.png',
+                pressed == true
+                    ? 'assets/icons/speaker.png'
+                    : 'assets/icons/speaker-off.png',
                 color: Colors.white,
                 width: 40,
                 height: 40,
               ),
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all(CircleBorder()),
-                padding: MaterialStateProperty.all(EdgeInsets.all(5)),
-                backgroundColor: MaterialStateProperty.all(Colors.black),
-                overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                      (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.pressed)) {
-                      return Colors.red;
-                    }
-                    return null;
-                  },
-                ),
-              ),
+              onPressed: () {
+                setState(() {
+                  pressed = !pressed;
+                });
+              },
             ),
           ),
           Padding(
             padding: EdgeInsets.only(top: 5),
             child: ElevatedButton(
               onPressed: () => _openMenu(context),
-              child: Icon(
-                Icons.menu,
-                color: Colors.white,
-                size: 40,
-              ),
               style: ButtonStyle(
-                shape: MaterialStateProperty.all(CircleBorder()),
-                padding: MaterialStateProperty.all(EdgeInsets.all(5)),
-                backgroundColor: MaterialStateProperty.all(Colors.black),
-                overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                      (Set<MaterialState> states) {
-                    if (states.contains(MaterialState.pressed)) {
-                      return Colors.red;
-                    }
-                    return null;
-                  },
-                ),
+                shape: WidgetStateProperty.all(CircleBorder()),
+                padding: WidgetStateProperty.all(EdgeInsets.all(5)),
+                backgroundColor: WidgetStateProperty.all(Colors.black),
+                overlayColor: WidgetStateProperty.resolveWith<Color?>((
+                  Set<WidgetState> states,
+                ) {
+                  if (states.contains(WidgetState.pressed)) {
+                    return Colors.black;
+                  }
+                  return null;
+                }),
               ),
+              child: Icon(Icons.menu, color: Colors.white, size: 40),
             ),
           ),
         ],
       ),
       body: Stack(
-        children:[
+        children: [
           Container(
             alignment: Alignment.center,
             decoration: const BoxDecoration(
@@ -106,7 +106,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
           ),
 
           Align(
-            alignment:Alignment.bottomCenter,
+            alignment: Alignment.bottomCenter,
             child: Padding(
               padding: const EdgeInsets.all(16),
               child: DialogueBoxWidget(
@@ -115,7 +115,6 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
             ),
           ),
-
         ],
       ),
     );
