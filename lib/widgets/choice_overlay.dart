@@ -12,17 +12,22 @@ class ChoiceButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blue, // Customize the button color
-        foregroundColor: Colors.white, // Customize the text color
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8), // Rounded corners
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center, // Center vertically within the Column
+      crossAxisAlignment: CrossAxisAlignment.center, // Center horizontally within the Column
+      children: [
+        ElevatedButton(
+          onPressed: onPressed,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black.withValues(alpha: 0.1),
+
+            foregroundColor: Colors.white, // Customize the text color
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          ),
+          child: Text(choiceText, style: const TextStyle(fontSize: 16)),
         ),
-      ),
-      child: Text(choiceText, style: const TextStyle(fontSize: 16)),
+      ],
     );
   }
 }

@@ -28,10 +28,19 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
       ScenarioData.scenarioData[0]['characterSprite'];
   List<Map<String, dynamic>> _currentChoices = [];
 
+  final List<String> characterSprites = [
+    'assets/images/characters/pose1.png'
+  ];
   @override
   void initState() {
     super.initState();
     _loadInitialChoices();
+
+    Future.delayed(Duration.zero, () {
+      for (String spritePath in characterSprites) {
+        precacheImage(AssetImage(spritePath), context);
+      }
+    });
   }
 
   void _loadInitialChoices() {
@@ -61,16 +70,13 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
         }
       }
 
-      _backgroundImage =
-          ScenarioData.scenarioData[_currentLine]['backgroundImage'] ??
-          _backgroundImage;
-      _currentCharacterName =
-          ScenarioData.scenarioData[_currentLine]['characterName'] ??
-          _currentCharacterName;
-      _currentCharacterSprite =
-          ScenarioData.scenarioData[_currentLine]['characterSprite'];
-      _currentChoices =
-          ScenarioData.scenarioData[_currentLine]['choices'] ?? [];
+      _backgroundImage = ScenarioData.scenarioData[_currentLine]['backgroundImage'] ?? _backgroundImage;
+      _currentCharacterName = ScenarioData.scenarioData[_currentLine]['characterName'] ?? _currentCharacterName;
+      // Fix: Check for the string 'null' and convert it to null.
+      _currentCharacterSprite = ScenarioData.scenarioData[_currentLine]['characterSprite'] == 'null'
+          ? null
+          : ScenarioData.scenarioData[_currentLine]['characterSprite'];
+      _currentChoices = ScenarioData.scenarioData[_currentLine]['choices'] ?? [];
     });
   }
 
@@ -144,10 +150,10 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
             ),
           ),
 
-          if (_currentCharacterSprite != null)
+          if (_currentCharacterSprite != null  && _currentCharacterSprite != 'null')
             Positioned(
-              bottom: 100,
-              left: 50,
+              bottom: MediaQuery.of(context).size.height * 0.27,
+              left: MediaQuery.of(context).size.width * 0.52,
               child: Image.asset(
                 _currentCharacterSprite!,
                 width: 200,
@@ -165,8 +171,8 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   DialogueBoxWidget(
-                    text:
-                        "$_currentCharacterName: ${ScenarioData.scenarioData[_currentLine]['dialogue']!}", //show character name
+                    characterName: _currentCharacterName,
+                    dialogueText: ScenarioData.scenarioData[_currentLine]['dialogue'],
                     nextDialogue: _nextDialogue,
                   ),
                   if (_currentChoices.isNotEmpty) _buildChoiceOptions(context),
