@@ -3,7 +3,10 @@ import 'dart:ui';
 import 'package:skibidi_invasion/main.dart';
 
 void _openHome(BuildContext context) {
-  (context: context, builder: (context) => const HomeScreen());
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => const HomeScreen()),
+  );
 }
 
 class MenuScreen extends StatelessWidget {
@@ -30,6 +33,16 @@ class MenuScreen extends StatelessWidget {
                   ),
 
                   Divider(color: Colors.white, height: 36, thickness: 1.5),
+
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text(
+                      'Continue',
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                    ),
+                  ),
 
                   TextButton(
                     onPressed: () {

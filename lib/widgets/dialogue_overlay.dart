@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class DialogueBoxWidget extends StatelessWidget {
   final String text;
-  final VoidCallback _nextDialogue;
+  final void Function(String?) nextDialogue;
 
   const DialogueBoxWidget({
     super.key,
     required this.text,
-    required VoidCallback nextDialogue,
-  }) : _nextDialogue = nextDialogue;
+    required this.nextDialogue,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class DialogueBoxWidget extends StatelessWidget {
                   'assets/icons/double-arrow.png',
                   color: Colors.black,
                 ),
-                onPressed: _nextDialogue,
+                onPressed: () => nextDialogue(null),
                 iconSize: 30,
               ),
             ),

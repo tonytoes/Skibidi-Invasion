@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-import 'scenario.dart';
-import 'settings.dart';
-import 'chapter.dart';
+import 'scenes/scenario.dart';
+import 'settings/settings_homescreen.dart';
+import 'settings/chapter_settings.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -88,7 +88,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             const Center(
               child: Text(
                 'SKIBIDI\nINVASION',
@@ -101,7 +100,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.3,
               left: 0,
@@ -110,7 +108,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ElevatedButton(
                   onPressed: _handlePlay,
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(Color(0xFF0486f4)),
+                    backgroundColor: WidgetStateProperty.all(
+                      const Color(0xFF0486f4),
+                    ),
                     overlayColor: WidgetStateProperty.resolveWith<Color?>((
                       Set<WidgetState> states,
                     ) {
@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       }
                       return null;
                     }),
-                    shape: WidgetStateProperty.all(StadiumBorder()),
+                    shape: WidgetStateProperty.all(const StadiumBorder()),
                     minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
                   child: const Text(
@@ -134,7 +134,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.2,
               left: 0,
@@ -143,7 +142,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ElevatedButton(
                   onPressed: () => _openChapters(context),
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(Color(0xFF0486f4)),
+                    backgroundColor: WidgetStateProperty.all(
+                      const Color(0xFF0486f4),
+                    ),
                     overlayColor: WidgetStateProperty.resolveWith<Color?>((
                       Set<WidgetState> states,
                     ) {
@@ -152,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       }
                       return null;
                     }),
-                    shape: WidgetStateProperty.all(StadiumBorder()),
+                    shape: WidgetStateProperty.all(const StadiumBorder()),
                     minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
                   child: const Text(
@@ -167,7 +168,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.1,
               left: 0,
@@ -176,7 +176,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ElevatedButton(
                   onPressed: () => _openSettings(context),
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(Color(0xFF0486f4)),
+                    backgroundColor: WidgetStateProperty.all(
+                      const Color(0xFF0486f4),
+                    ),
                     overlayColor: WidgetStateProperty.resolveWith<Color?>((
                       Set<WidgetState> states,
                     ) {
@@ -185,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       }
                       return null;
                     }),
-                    shape: WidgetStateProperty.all(StadiumBorder()),
+                    shape: WidgetStateProperty.all(const StadiumBorder()),
                     minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
                   child: const Text(
