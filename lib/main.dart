@@ -4,24 +4,25 @@ import 'package:flutter/cupertino.dart';
 import 'scenes/scenario.dart';
 import 'settings/settings_homescreen.dart';
 import 'settings/chapter_settings.dart';
+// this the main dart this part imports leading to diff darts
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized(); // this ensures that plugins would work
 
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky); // this removes the status bar and the bottom navigator
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]); // locks the screen to portrait
 
-  runApp(const MyApp());
+  runApp(const MyApp()); // very important without this it wouldn't render the whole shit or it wouldn't run
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget { // this is stateless because this main dart doesn't have any state or basically its the root of all darts
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false, // this removes the debug
+      home: const HomeScreen(), // this the homescreen or what you would see at the start
     );
   }
 }
@@ -40,11 +41,11 @@ class _HomeScreenState extends State<HomeScreen> {
   void _handlePlay() async {
     if (_isFading) return;
     setState(() {
-      _opacity = 0.0;
+      _opacity = 0.0; // this sets the fade out and fade in trnasition
       _isFading = true;
     });
 
-    await Future.delayed(const Duration(milliseconds: 800));
+    await Future.delayed(const Duration(milliseconds: 1000));
 
     await Navigator.of(
       context,
@@ -81,16 +82,16 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Stack(
           children: [
             Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/bg/titlescreen_bg.png'),
-                  fit: BoxFit.cover,
+                    decoration: const BoxDecoration(
+                    image: DecorationImage(
+                    image: AssetImage('assets/images/bg/titlescreen_bg.png'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
             ),
             const Center(
               child: Text(
-                'SKIBIDI\nINVASION',
+                'SKIBIDI\nINVASION', // this is just a draft can be an image asset for the logo
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'JosefinSans',
@@ -100,10 +101,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.3,
-              left: 0,
-              right: 0,
+              left: MediaQuery.of(context).size.width * 0.1,
+              right: MediaQuery.of(context).size.width * 0.1,
               child: Center(
                 child: ElevatedButton(
                   onPressed: _handlePlay,
@@ -134,6 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.2,
               left: 0,
@@ -168,6 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.1,
               left: 0,

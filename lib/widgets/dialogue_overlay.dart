@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-
-class DialogueBoxWidget extends StatelessWidget {
+class DialogueBoxWidget extends StatefulWidget {
   final String characterName;
   final String dialogueText;
   final void Function(String?) nextDialogue;
@@ -14,6 +13,53 @@ class DialogueBoxWidget extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  _DialogueBoxWidgetState createState() => _DialogueBoxWidgetState();
+}
+
+class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
+  String _visibleText = '';
+  bool _isTyping = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _startTypewriter();
+  }
+
+  @override
+  void didUpdateWidget(covariant DialogueBoxWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.dialogueText != widget.dialogueText) {
+      // Only restart typing if the text has changed
+      _startTypewriter();
+    }
+  }
+
+  Future<void> _startTypewriter() async {
+    setState(() {
+      _visibleText = '';  // Clear the previous text
+    });
+    _isTyping = true;
+
+    for (int i = 0; i < widget.dialogueText.length; i++) {  // Change here: i < length instead of i <= length
+      if (!_isTyping) return; // Stops if animation is cancelled
+      await Future.delayed(const Duration(milliseconds: 40));  // Adjust speed as needed
+      setState(() {
+        _visibleText = widget.dialogueText.substring(0, i + 1);  // Show the text character by character
+      });
+    }
+
+    _isTyping = false; // Finished typing
+  }
+
+
+  @override
+  void dispose() {
+    _isTyping = false;
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
@@ -22,7 +68,7 @@ class DialogueBoxWidget extends StatelessWidget {
         child: Stack(
           children: [
             Image.asset(
-              'assets/images/dialogue/dialogue-box2.png',
+              'assets/images/dialogue/dialogue-box3.png', // I changed the dialogue box image here with no opacity
               fit: BoxFit.fill,
               width: double.infinity,
               height: 220,
@@ -34,9 +80,9 @@ class DialogueBoxWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (characterName.trim().isNotEmpty) ...[
+                  if (widget.characterName.trim().isNotEmpty) ...[
                     Text(
-                      characterName,
+                      widget.characterName,
                       style: const TextStyle(
                         fontSize: 20,
                         fontFamily: 'IBMPlexMono',
@@ -52,7 +98,7 @@ class DialogueBoxWidget extends StatelessWidget {
                     const SizedBox(height: 5),
                   ],
                   Text(
-                    dialogueText,
+                    _visibleText,
                     style: const TextStyle(
                       fontSize: 20,
                       fontFamily: 'IBMPlexMono',
@@ -64,15 +110,27 @@ class DialogueBoxWidget extends StatelessWidget {
               ),
             ),
             Positioned(
-              right: 16,
-              bottom: 16,
-              child: IconButton(
-                icon: Image.asset(
-                  'assets/icons/double-arrow.png',
-                  color: Colors.black,
-                ),
-                onPressed: () => nextDialogue(null),
-                iconSize: 30,
+              right: 3,
+              bottom: 5,
+              child: Row(
+                children: [
+                  //Text(
+                    //'Next',
+                        //style: const TextStyle(
+                        //fontSize: 18,
+                        //fontFamily: 'IBMPlexMono',
+                        //color: Colors.black,
+                    //),
+                  //),
+                  IconButton(
+                    icon: Image.asset(
+                      'assets/icons/double-arrow.png',
+                      color: Colors.black,
+                    ),
+                    onPressed: () => widget.nextDialogue(null),
+                    iconSize: 30,
+                  ),
+                ]
               ),
             ),
           ],

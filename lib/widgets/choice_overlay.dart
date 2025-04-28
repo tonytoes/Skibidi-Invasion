@@ -1,31 +1,62 @@
 import 'package:flutter/material.dart';
 
-class ChoiceButton extends StatelessWidget {
+class ChoiceButton extends StatefulWidget {
   final String choiceText;
   final VoidCallback onPressed;
+  final bool isCorrect;
 
   const ChoiceButton({
     super.key,
     required this.choiceText,
     required this.onPressed,
+    required this.isCorrect,
   });
 
   @override
+  State<ChoiceButton> createState() => _ChoiceButtonState();
+}
+
+class _ChoiceButtonState extends State<ChoiceButton> {
+  bool wasTapped = false;
+
+  @override
   Widget build(BuildContext context) {
+    Color backgroundColor;
+
+    if (!wasTapped) {
+      backgroundColor = Colors.black.withOpacity(0.3);
+    } else if (widget.isCorrect) {
+      backgroundColor = Colors.green;
+    } else {
+      backgroundColor = Colors.red;
+    }
+
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center, // Center vertically within the Column
-      crossAxisAlignment: CrossAxisAlignment.center, // Center horizontally within the Column
       children: [
         ElevatedButton(
-          onPressed: onPressed,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.black.withValues(alpha: 0.1),
+          onPressed: () async {
+            setState(() {
+              wasTapped = true; // Change color immediately
+            });
 
-            foregroundColor: Colors.white, // Customize the text color
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            await Future.delayed(const Duration(milliseconds: 800));
+            widget.onPressed();
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: backgroundColor,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 10),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
           ),
-          child: Text(choiceText, style: const TextStyle(fontSize: 16)),
+          child: Text(
+              widget.choiceText,
+              style: const TextStyle(
+                  fontSize: 16
+              ),
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
       ],
     );
