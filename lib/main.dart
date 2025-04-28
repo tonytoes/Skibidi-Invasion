@@ -4,11 +4,11 @@ import 'package:flutter/cupertino.dart';
 import 'scenes/scenario.dart';
 import 'settings/home_settings.dart';
 import 'settings/chapter_settings.dart';
+import 'package:audioplayers/audioplayers.dart';
 // this the main dart this part imports leading to diff darts
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized(); // this ensures that plugins would work
-
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky); // this removes the status bar and the bottom navigator
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]); // locks the screen to portrait
 
