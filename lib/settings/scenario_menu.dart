@@ -3,6 +3,7 @@ import 'dart:ui';
 import '../settings/home_settings.dart';
 import '../settings/chapter_settings.dart';
 import '../widgets/continue_overlay.dart';
+import '../widgets/chapter_overlay.dart';
 
 void _openContinue(BuildContext context) {
   Navigator.pushReplacement(
@@ -21,7 +22,7 @@ void _openSettings(BuildContext context) {
 void _openChapters(BuildContext context) {
     Navigator.pushReplacement(
     context,
-    MaterialPageRoute(builder: (context) => const ChapterScreen()),
+    MaterialPageRoute(builder: (context) => const ChapterOverlay()),
   );
 }
 

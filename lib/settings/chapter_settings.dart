@@ -42,65 +42,141 @@ class ChapterScreen extends StatelessWidget {
                     thickness: 1.5,
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Chapter 1',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 10.0),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'assets/icons/circle-book.png',
+                            width: 27,
+                            height: 27,
+                          ),
+                          const SizedBox(width: 8),
+                          const Text(
+                            'Chapter 1',
+                            style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Chapter 2',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 10.0),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'assets/icons/circle-book.png',
+                            width: 27,
+                            height: 27,
+                          ),
+                          const SizedBox(width: 8),
+                          const Text(
+                            'Chapter 2',
+                            style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Chapter 3',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 10.0),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'assets/icons/circle-book.png',
+                            width: 27,
+                            height: 27,
+                          ),
+                          const SizedBox(width: 8),
+                          const Text(
+                            'Chapter 3',
+                            style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Chapter 4',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 10.0),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'assets/icons/circle-book.png',
+                            width: 27,
+                            height: 27,
+                          ),
+                          const SizedBox(width: 8),
+                          const Text(
+                            'Chapter 4',
+                            style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Final Chapter',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 10.0),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'assets/icons/circle-book.png',
+                            width: 27,
+                            height: 27,
+                          ),
+                          const SizedBox(width: 8),
+                          const Text(
+                            'Final Chapter',
+                            style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Back',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: const EdgeInsets.only(top:30),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text(
+                        'Back',
+                        style: const TextStyle(color: Colors.white, fontSize: 24),
+                      ),
                     ),
                   ),
+
+
                 ],
               ),
             ),

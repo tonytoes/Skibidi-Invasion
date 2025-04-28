@@ -1,67 +1,67 @@
-import 'dart:ui';
-import 'package:flutter/material.dart';
-import '../main.dart';
+  import 'dart:ui';
+  import 'package:flutter/material.dart';
+  import '../main.dart';
 
-void _openHome(BuildContext context) {
-  Navigator.pushReplacement(
-    context,
-    MaterialPageRoute(builder: (context) => const HomeScreen()),
-  );
-}
+  void _openHome(BuildContext context) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
+    );
+  }
 
-class ContinueOverlay extends StatelessWidget {
-  const ContinueOverlay({super.key});
+  class ContinueOverlay extends StatelessWidget {
+    const ContinueOverlay({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-        child: Center(
-          child: Container(
-            width: MediaQuery.of(context).size.width - 40,
-            height: 750,
-            decoration: BoxDecoration(
-              color: Colors.black.withValues(alpha: 0.7),
-            ),
-            padding: const EdgeInsets.all(25),
-            child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'Returning to Home Screen will reset you to the latest checkpoint of the story',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'JoseFinSans',fontWeight: FontWeight.w400,),
-                  ),
-                  const SizedBox(height: 30),
-                  TextButton(
-                    onPressed: () {
-                      _openHome(context);
-                    },
-                    child: const Text(
-                      'Continue',
-                      style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'JoseFinSans',fontWeight: FontWeight.w400, ),
+    @override
+    Widget build(BuildContext context) {
+      return Scaffold(
+        backgroundColor: Colors.transparent,
+        body: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+          child: Center(
+            child: Container(
+              width: MediaQuery.of(context).size.width - 40,
+              height: 750,
+              decoration: BoxDecoration(
+                color: Colors.black.withValues(alpha: 0.7),
+              ),
+              padding: const EdgeInsets.all(25),
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Returning to Home Screen will reset you to the latest checkpoint of the story',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'JosefinSans',fontWeight: FontWeight.w400,),
                     ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Text(
-                      'Back',
-                      style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'JoseFinSans',fontWeight: FontWeight.w400,),
+                    const SizedBox(height: 30),
+                    TextButton(
+                      onPressed: () {
+                        _openHome(context);
+                      },
+                      child: const Text(
+                        'Continue',
+                        style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'JosefinSans',fontWeight: FontWeight.w400, ),
+                      ),
                     ),
-                  ),
-                ],
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text(
+                        'Back',
+                        style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'JosefinSans',fontWeight: FontWeight.w400,),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ),
-      ),
-    );
+      );
+    }
   }
-}
