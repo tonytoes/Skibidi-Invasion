@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:ui';
-import '../settings/menu_scenario.dart';
+import '../settings/scenario_menu.dart';
 import '../widgets/dialogue_overlay.dart';
 import '../data/scenario_data.dart';
 import '../widgets/choice_overlay.dart';
@@ -29,13 +29,12 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
   String _backgroundImage = ScenarioData.scenarioData[0]['backgroundImage'];
   String _currentCharacterName = ScenarioData.scenarioData[0]['characterName'];
   String? _currentCharacterSprite =
-  ScenarioData.scenarioData[0]['characterSprite'];
+      ScenarioData.scenarioData[0]['characterSprite'];
+
   List<Map<String, dynamic>> _currentChoices = [];
   bool _isGameOver = false;
 
-  final List<String> characterSprites = [
-    'assets/images/characters/pose1.png'
-  ];
+  final List<String> characterSprites = ['assets/images/characters/pose1.png'];
 
   @override
   void initState() {
@@ -85,9 +84,12 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
         for (final choice in _currentChoices) {
           if (choice['text'] == selectedChoice) {
             nextLine = choice['nextDialogueIndex'] as int;
-            _backgroundImage = choice['nextBackgroundImage'] ?? _backgroundImage;
-            _currentCharacterName = choice['nextCharacterName'] ?? _currentCharacterName;
-            _currentCharacterSprite = choice['nextCharacterSprite'] ?? _currentCharacterSprite;
+            _backgroundImage =
+                choice['nextBackgroundImage'] ?? _backgroundImage;
+            _currentCharacterName =
+                choice['nextCharacterName'] ?? _currentCharacterName;
+            _currentCharacterSprite =
+                choice['nextCharacterSprite'] ?? _currentCharacterSprite;
             if (choice.containsKey('isCorrect')) {
               isCorrectChoice = choice['isCorrect'] == true;
             } else {
@@ -105,7 +107,6 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
           if (choice['text'] == selectedChoice &&
               choice.containsKey('loseLifeOnIncorrect') &&
               choice['loseLifeOnIncorrect'] == true) {
-
             // Step 1: Pause for effect
             Future.delayed(Duration(milliseconds: 500), () {
               setState(() {
@@ -123,28 +124,36 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
         }
       }
 
-
-
       // If the player still has lives, move to next
       if (!_isGameOver) {
-        if (ScenarioData.scenarioData[_currentLine].containsKey('incorrectChoiceGoTo') &&
+        if (ScenarioData.scenarioData[_currentLine].containsKey(
+              'incorrectChoiceGoTo',
+            ) &&
             !isCorrectChoice) {
-          nextLine = ScenarioData.scenarioData[_currentLine]['incorrectChoiceGoTo'] as int;
+          nextLine =
+              ScenarioData.scenarioData[_currentLine]['incorrectChoiceGoTo']
+                  as int;
         }
 
         _currentLine = nextLine;
-        _backgroundImage = ScenarioData.scenarioData[_currentLine]['backgroundImage'] ?? _backgroundImage;
-        _currentCharacterName = ScenarioData.scenarioData[_currentLine]['characterName'] ?? _currentCharacterName;
-        _currentCharacterSprite = ScenarioData.scenarioData[_currentLine]['characterSprite'] == 'null'
-            ? null
-            : ScenarioData.scenarioData[_currentLine]['characterSprite'];
-        _currentChoices = ScenarioData.scenarioData[_currentLine]['choices'] ?? [];
-        _showLives = ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
+        _backgroundImage =
+            ScenarioData.scenarioData[_currentLine]['backgroundImage'] ??
+            _backgroundImage;
+        _currentCharacterName =
+            ScenarioData.scenarioData[_currentLine]['characterName'] ??
+            _currentCharacterName;
+        _currentCharacterSprite =
+            ScenarioData.scenarioData[_currentLine]['characterSprite'] == 'null'
+                ? null
+                : ScenarioData.scenarioData[_currentLine]['characterSprite'];
+        _currentChoices =
+            ScenarioData.scenarioData[_currentLine]['choices'] ?? [];
+        _showLives =
+            ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
         _loadInitialChoices();
       }
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -227,19 +236,18 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 children: List.generate(_lives, (index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                    child: Icon(
-                      Icons.favorite,
-                      color: Colors.red,
-                      size: 40,
+                    child: Image.asset(
+                      'assets/icons/hearts.png',
+                      width: 40,
+                      height: 40,
                     ),
                   );
                 }),
               ),
             ),
 
-
-
-          if (_currentCharacterSprite != null  && _currentCharacterSprite != 'null')
+          if (_currentCharacterSprite != null &&
+              _currentCharacterSprite != 'null')
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.12,
               left: MediaQuery.of(context).size.width * 0.03,
@@ -253,7 +261,8 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
           else
             const SizedBox.shrink(),
 
-          if (_currentChoices.isNotEmpty && !_isGameOver) // Show choices only if not game over
+          if (_currentChoices.isNotEmpty &&
+              !_isGameOver) // Show choices only if not game over
             Align(
               alignment: Alignment(0, -0.4),
               child: Padding(
@@ -272,7 +281,8 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                   children: [
                     DialogueBoxWidget(
                       characterName: _currentCharacterName,
-                      dialogueText: ScenarioData.scenarioData[_currentLine]['dialogue'],
+                      dialogueText:
+                          ScenarioData.scenarioData[_currentLine]['dialogue'],
                       nextDialogue: _nextDialogue,
                     ),
                   ],
@@ -291,18 +301,19 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: _currentChoices.map((choiceData) {
-        bool isCorrect = choiceData['isCorrect'] ?? false;
+      children:
+          _currentChoices.map((choiceData) {
+            bool isCorrect = choiceData['isCorrect'] ?? false;
 
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ChoiceButton(
-            choiceText: choiceData['text']!,
-            onPressed: () => _nextDialogue(choiceData['text']),
-            isCorrect: isCorrect,
-          ),
-        );
-      }).toList(),
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: ChoiceButton(
+                choiceText: choiceData['text']!,
+                onPressed: () => _nextDialogue(choiceData['text']),
+                isCorrect: isCorrect,
+              ),
+            );
+          }).toList(),
     );
   }
 }

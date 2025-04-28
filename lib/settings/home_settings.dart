@@ -12,9 +12,9 @@ class SettingsScreen extends StatelessWidget {
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Center(
           child: Container(
-            width: MediaQuery.of(context).size.width - 40,
-            height: 750,
-            color: Colors.black.withValues(alpha: 0.7),
+              width: MediaQuery.of(context).size.width - 40,
+              height: 750,
+              color: Colors.black.withValues(alpha: 0.7),
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,

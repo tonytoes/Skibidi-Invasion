@@ -41,11 +41,11 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
     });
     _isTyping = true;
 
-    for (int i = 0; i < widget.dialogueText.length; i++) {  // Change here: i < length instead of i <= length
-      if (!_isTyping) return; // Stops if animation is cancelled
-      await Future.delayed(const Duration(milliseconds: 40));  // Adjust speed as needed
+    for (int i = 0; i < widget.dialogueText.length; i++) {
+      if (!_isTyping) return;
+      await Future.delayed(const Duration(milliseconds: 40));
       setState(() {
-        _visibleText = widget.dialogueText.substring(0, i + 1);  // Show the text character by character
+        _visibleText = widget.dialogueText.substring(0, i + 1);
       });
     }
 
@@ -68,7 +68,7 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
         child: Stack(
           children: [
             Image.asset(
-              'assets/images/dialogue/dialogue-box3.png', // I changed the dialogue box image here with no opacity
+              'assets/images/dialogue/dialogue-box.png', // I changed the dialogue box image here with no opacity
               fit: BoxFit.fill,
               width: double.infinity,
               height: 220,

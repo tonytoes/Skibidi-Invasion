@@ -1,11 +1,27 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'package:skibidi_invasion/main.dart';
+import '../settings/home_settings.dart';
+import '../settings/chapter_settings.dart';
+import '../widgets/continue_overlay.dart';
 
-void _openHome(BuildContext context) {
+void _openContinue(BuildContext context) {
   Navigator.pushReplacement(
     context,
-    MaterialPageRoute(builder: (context) => const HomeScreen()),
+    MaterialPageRoute(builder: (context) => const ContinueOverlay()),
+  );
+}
+
+void _openSettings(BuildContext context) {
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => const SettingsScreen()),
+  );
+}
+
+void _openChapters(BuildContext context) {
+    Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => const ChapterScreen()),
   );
 }
 
@@ -46,7 +62,7 @@ class MenuScreen extends StatelessWidget {
 
                   TextButton(
                     onPressed: () {
-                      _openHome(context);
+                      _openContinue(context);
                     },
                     child: Text(
                       'Return to Home Screen',
@@ -56,7 +72,7 @@ class MenuScreen extends StatelessWidget {
 
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      _openChapters(context);
                     },
                     child: Text(
                       'Chapters',
@@ -66,7 +82,7 @@ class MenuScreen extends StatelessWidget {
 
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context);
+                      _openSettings(context);
                     },
                     child: Text(
                       'More Settings',

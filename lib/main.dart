@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'scenes/scenario.dart';
-import 'settings/settings_homescreen.dart';
+import 'settings/home_settings.dart';
 import 'settings/chapter_settings.dart';
 // this the main dart this part imports leading to diff darts
 
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
                     decoration: const BoxDecoration(
                     image: DecorationImage(
-                    image: AssetImage('assets/images/bg/titlescreen_bg.png'),
+                    image: AssetImage('assets/images/bg/battleground_bg.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
