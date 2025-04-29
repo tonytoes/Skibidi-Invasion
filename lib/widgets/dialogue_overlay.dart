@@ -4,12 +4,14 @@ class DialogueBoxWidget extends StatefulWidget {
   final String characterName;
   final String dialogueText;
   final void Function(String?) nextDialogue;
+  final bool hasChoices;
 
   const DialogueBoxWidget({
     Key? key,
     required this.characterName,
     required this.dialogueText,
     required this.nextDialogue,
+    this.hasChoices = false,
   }) : super(key: key);
 
   @override
@@ -36,17 +38,27 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
   }
 
   Future<void> _startTypewriter() async {
+
+    _isTyping = false;
+    await Future.delayed(const Duration(milliseconds: 50));
+
+    if(!mounted) return;
+
     setState(() {
-      _visibleText = '';  // Clear the previous text
+      _visibleText = '';  // Clearsssss the previous text
     });
     _isTyping = true;
 
     for (int i = 0; i < widget.dialogueText.length; i++) {
-      if (!_isTyping) return;
+      if (!_isTyping || !mounted) {
+        break;
+      }
       await Future.delayed(const Duration(milliseconds: 40));
-      setState(() {
-        _visibleText = widget.dialogueText.substring(0, i + 1);
-      });
+      if (mounted) {
+        setState(() {
+          _visibleText = widget.dialogueText.substring(0, i + 1);
+        });
+      }
     }
 
     _isTyping = false; // Finished typing
@@ -114,21 +126,16 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
               bottom: 5,
               child: Row(
                 children: [
-                  //Text(
-                    //'Next',
-                        //style: const TextStyle(
-                        //fontSize: 18,
-                        //fontFamily: 'IBMPlexMono',
-                        //color: Colors.black,
-                    //),
-                  //),
-                  IconButton(
-                    icon: Image.asset(
-                      'assets/icons/double-arrow.png',
-                      color: Colors.black,
+                  Visibility(
+                    visible: !widget.hasChoices && !_isTyping,
+                    child: IconButton(
+                      icon: Image.asset(
+                        'assets/icons/double-arrow.png',
+                        color: Colors.black,
+                      ),
+                      onPressed: () => widget.nextDialogue(null),
+                      iconSize: 30,
                     ),
-                    onPressed: () => widget.nextDialogue(null),
-                    iconSize: 30,
                   ),
                 ]
               ),

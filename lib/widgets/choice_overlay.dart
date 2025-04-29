@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 class ChoiceButton extends StatefulWidget {
   final String choiceText;
   final VoidCallback onPressed;
-  final bool isCorrect;
+  final bool? isCorrect;
+  final bool resetColor;
 
   const ChoiceButton({
     super.key,
     required this.choiceText,
     required this.onPressed,
-    required this.isCorrect,
+    this.isCorrect,
+    this.resetColor = false,
   });
 
   @override
@@ -20,45 +22,55 @@ class _ChoiceButtonState extends State<ChoiceButton> {
   bool wasTapped = false;
 
   @override
+  void didUpdateWidget(covariant ChoiceButton oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.resetColor) {
+      wasTapped = false;
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     Color backgroundColor;
 
     if (!wasTapped) {
       backgroundColor = Colors.black.withOpacity(0.3);
-    } else if (widget.isCorrect) {
-      backgroundColor = Colors.green;
     } else {
-      backgroundColor = Colors.red;
+      if (widget.isCorrect == null) {
+        backgroundColor = Colors.black;
+      } else if (widget.isCorrect == true) {
+        backgroundColor = Colors.green;
+      } else {
+        backgroundColor = Colors.red;
+      }
     }
 
-    return Column(
-      children: [
-        ElevatedButton(
-          onPressed: () async {
-            setState(() {
-              wasTapped = true; // Change color immediately
-            });
+    return SizedBox(
+      width: 370,
+      height: 50,
+      child: ElevatedButton(
+        onPressed: () async {
+          setState(() {
+            wasTapped = true;
+          });
 
-            await Future.delayed(const Duration(milliseconds: 800));
-            widget.onPressed();
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: backgroundColor,
-            foregroundColor: Colors.white,
-            padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 10),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-          ),
-          child: Text(
-              widget.choiceText,
-              style: const TextStyle(
-                  fontSize: 16
-              ),
-            overflow: TextOverflow.ellipsis,
+          await Future.delayed(const Duration(milliseconds: 800));
+          widget.onPressed();
+        },
+        style: ElevatedButton.styleFrom(
+          backgroundColor: backgroundColor,
+          foregroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.zero,
           ),
         ),
-      ],
+        child: Text(
+          widget.choiceText,
+          style: const TextStyle(fontSize: 16),
+          maxLines: 1,
+          textAlign: TextAlign.center,
+        ),
+      ),
     );
   }
 }
