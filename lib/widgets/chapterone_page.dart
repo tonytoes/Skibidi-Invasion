@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Chapter1Screen extends StatelessWidget {
+  const Chapter1Screen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -7,12 +7,12 @@ class DialogueBoxWidget extends StatefulWidget {
   final bool hasChoices;
 
   const DialogueBoxWidget({
-    Key? key,
+    super.key,
     required this.characterName,
     required this.dialogueText,
     required this.nextDialogue,
     this.hasChoices = false,
-  }) : super(key: key);
+  });
 
   @override
   _DialogueBoxWidgetState createState() => _DialogueBoxWidgetState();

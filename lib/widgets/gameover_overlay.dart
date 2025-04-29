@@ -4,7 +4,7 @@ import '../scenes/scenario.dart'; // Import ScenarioScreen if needed
 class GameOverOverlay extends StatelessWidget {
   final VoidCallback onRestart;
 
-  const GameOverOverlay({Key? key, required this.onRestart}) : super(key: key);
+  const GameOverOverlay({super.key, required this.onRestart});
 
   @override
   Widget build(BuildContext context) {

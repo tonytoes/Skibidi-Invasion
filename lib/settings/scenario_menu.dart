@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import '../settings/home_settings.dart';
-import '../settings/chapter_settings.dart';
 import '../widgets/continue_overlay.dart';
 import '../widgets/chapter_overlay.dart';
 
