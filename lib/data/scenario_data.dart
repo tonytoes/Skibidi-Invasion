@@ -284,5 +284,11 @@ class ScenarioData {
       'characterName': 'Mem',
       'characterSprite': 'assets/images/characters/pose1/111.png',
     },
+    {
+      'dialogue': "It's spreading like crazy, and people are forgetting grammar.", // index 36
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
+    }
   ];
 }
