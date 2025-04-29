@@ -13,7 +13,6 @@ class GameOverOverlay extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: Colors.black.withOpacity(0.8),
-          borderRadius: BorderRadius.circular(10),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,

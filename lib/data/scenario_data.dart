@@ -2,7 +2,7 @@ class ScenarioData {
   static const List<Map<String, dynamic>> scenarioData = [
     {
       'dialogue':
-      "You’re walking peacefully, the wind gently blowing, footsteps echoing on the pavement.", // index 0 kasi  tangina mo jepoy dizon
+      "You’re walking peacefully, the wind gently blowing, footsteps echoing on the pavement.", // index 0
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'characterSprite': null,
@@ -93,14 +93,14 @@ class ScenarioData {
       'choices': [
         {
           'text': "Yes",
-          'isCorrect': true,
           'nextDialogueIndex': 14,
+          'isCorrect': null,
           'nextBackgroundImage': 'assets/images/bg/Dimlit-room.png.png',
         },
         {
-          'text': "No",
-          'isCorrect': true,
+          'text': "Let's do this!",
           'nextDialogueIndex': 14,
+          'isCorrect': null,
           'nextBackgroundImage': 'assets/images/bg/Dimlit-room.png.png',
         },
       ]
@@ -199,48 +199,90 @@ class ScenarioData {
     {
       'dialogue': "He ____ like pizza. What should I put here to complete the sentence?", // index 29
       'backgroundImage': 'assets/images/bg/hq-training-room.png',
-      'characterName': '',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'isQuestion': true,
       'choices': [
         {
-          'text': "don't.",
-          'nextDialogueIndex': 30,
+          'text': "goth mommy",
+          'nextDialogueIndex': 30,  // Incorrect choice leads to index 31
+          'nextBackgroundImage': 'assets/images/bg/hq-training-room.png',
+          'characterName': 'Mem',
+          'characterSprite': 'assets/images/characters/pose1/111.png',
           'isCorrect': false,
           'loseLifeOnIncorrect': true,
-          'nextBackgroundImage': 'assets/images/bg/hq-training-room.png',
         },
         {
           'text': "doesn't",
-          'nextDialogueIndex': 32,
-          'isCorrect': true,
+          'nextDialogueIndex': 32,  // Correct choice leads to index 30
           'nextBackgroundImage': 'assets/images/bg/hq-training-room.png',
+          'characterName': 'Mem',
+          'characterSprite': 'assets/images/characters/pose1/111.png',
+          'isCorrect': true,
         },
         {
           'text': "didn’t",
-          'nextDialogueIndex': 31,
+          'nextDialogueIndex': 31,  // Incorrect choice leads to index 32
+          'nextBackgroundImage': 'assets/images/bg/hq-training-room.png',
+          'characterName': 'Mem',
+          'characterSprite': 'assets/images/characters/pose1/111.png',
           'isCorrect': false,
           'loseLifeOnIncorrect': true,
-          'nextBackgroundImage': 'assets/images/bg/hq-training-room.png',
         },
-      ]
+      ],
     },
     {
-      'dialogue': "Wrong! The Skibidi’s getting closer. You’ve lost one of your lives. Stay sharp!", // index 30
-      'backgroundImage': 'assets/images/bg/Downtown-Night.png',
+      'dialogue': "Walang goth dito haha uto-uto", // index 30 After incorrect feedback, go back to question at index 29
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
       'incorrectChoiceGoTo': 29,
-      'characterName': 'Mem',
-
     },
     {
-      'dialogue': "bobo pota", // index 31
-      'backgroundImage': 'assets/images/bg/Downtown-Night.png',
+      'dialogue': "You’ve got three lives! Lose all three, and we start over!", // index 31
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
       'incorrectChoiceGoTo': 29,
-      'characterName': 'Mem',
     },
     {
-      'dialogue': "Correct! That’s how we do it!", // index 32
-      'backgroundImage': 'assets/images/bg/Downtown-Night.png',
+      'dialogue': "Correct! That's how we do it!!", // index 32
+      'nextDialogueIndex': 33,
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
-    }
+      'characterSprite': 'assets/images/characters/pose1/111.png',
+    },
+    {
+      'dialogue': "Great job kid! You've proven to me that your mind is sharp.", // index 33
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
+    },
+    {
+      'dialogue': "Congrats on completing the tutorial!!", // index 34
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'navigateRoute': 'Chapter1Screen',
+      'cutSceneDuration': 3,
+    },
+    {
+      'dialogue': "Alright, kid. You've got the basics done...", // index 35
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
+    },
+    {
+      'dialogue': "Alright, we're diving into the wildest part of the Grammar Epidemic!", // index 36
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
+    },
+    {
+      'dialogue': "It's spreading like crazy, and people are forgetting grammar.", // index 36
+      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'characterName': 'Mem',
+      'characterSprite': 'assets/images/characters/pose1/111.png',
+    },
   ];
 }
-
