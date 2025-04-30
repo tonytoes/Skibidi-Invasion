@@ -12,7 +12,7 @@ void main() {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky); // this removes the status bar and the bottom navigator
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]); // locks the screen to portrait
 
-  runApp(const MyApp()); // very important without this it wouldn't render the whole shit or it wouldn't run
+  runApp(const MyApp()); // very important without this it wouldn't render the whole or it wouldn't run
 }
 
 class MyApp extends StatelessWidget { // this is stateless because this main dart doesn't have any state or basically its the root of all darts

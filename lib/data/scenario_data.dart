@@ -124,7 +124,7 @@ class ScenarioData {
       'characterSprite': 'assets/images/characters/pose1/131.png',
     },
     {
-      'dialogue': "They kill people and infects them with a brainrot disease...", // index 17
+      'dialogue': "They  people and infects them with a brainrot disease...", // index 17
       'backgroundImage':  'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
       'characterSprite': 'assets/images/characters/pose1/154.png',
@@ -204,7 +204,7 @@ class ScenarioData {
       'isQuestion': true,
       'choices': [
         {
-          'text': "goth mommy",
+          'text': "don't",
           'nextDialogueIndex': 30,  // Incorrect choice leads to index 31
           'nextBackgroundImage': 'assets/images/bg/hq-training-room.png',
           'characterName': 'Mem',
@@ -232,7 +232,7 @@ class ScenarioData {
       ],
     },
     {
-      'dialogue': "Walang goth dito haha uto-uto", // index 30 After incorrect feedback, go back to question at index 29
+      'dialogue': "You’ve lost one of your lives! Stay sharp", // index 30 After incorrect feedback, go back to question at index 29
       'backgroundImage': 'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
       'characterSprite': 'assets/images/characters/pose1/111.png',
@@ -263,8 +263,6 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
       'characterSprite': 'assets/images/characters/pose1/111.png',
-      'navigateRoute': 'Chapter1Screen',
-      'cutSceneDuration': 3,
     },
     {
       'dialogue': "Alright, kid. You've got the basics done...", // index 35

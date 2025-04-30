@@ -24,7 +24,7 @@ class ChapterScreen extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Image.asset('assets/icons/book.png'),
+                        Image.asset('assets/icons/scroll.png'),
                         SizedBox(width: 10),
                         Text(
                           'Story Checkpoints',

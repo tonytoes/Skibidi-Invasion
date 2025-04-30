@@ -1,9 +1,18 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 
-class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+class SettingsScreen extends StatefulWidget {
+      const SettingsScreen({super.key});
 
+      @override
+      State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+  bool firstSwitchValue = false;
+  double val = 0.0;
+  double val1 = 0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,6 +28,7 @@ class SettingsScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
+
                   Padding(
                     padding: EdgeInsets.only(left: 20.0, top: 20.0),
                     child: Row(
@@ -42,65 +52,104 @@ class SettingsScreen extends StatelessWidget {
                     thickness: 1.5,
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Chapter 1',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 10.0),
+                    child: Row (
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        AnimatedToggleSwitch<bool>.dual(
+                          current: firstSwitchValue,
+                          first: false,
+                          second: true,
+                          spacing: 1,
+                          style: const ToggleStyle(
+                            borderColor: Colors.transparent,
+                          ),
+                            borderWidth: 5.0,
+                            height: 43,
+                            onChanged: (b) => setState(() => firstSwitchValue = b),
+                          styleBuilder: (b) => ToggleStyle(
+                              indicatorColor: b ? Colors.green : Colors.red
+                          ),
+                      iconBuilder:  (value) => value
+                            ? const Icon(Icons.volume_up)
+                            : const Icon(Icons.volume_off),
+                            textBuilder: (value) => value
+                            ? const Center(child: Text('On'))
+                            :const Center(child: Text('Off')),
+                        ),
+                        const SizedBox(width: 10),
+                        const Text(
+                          'Enable Text to Speech',
+                          style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                          textAlign: TextAlign.center,
+                        ),
+                      ]
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Chapter 2',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: const EdgeInsets.only(top:20),
+                    child: Column(
+                        children: [
+                          const Text(
+                            'Music',
+                            style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                            textAlign: TextAlign.center,
+                          ),
+                          Slider(
+                            activeColor: Colors.white,
+                            inactiveColor: Colors.white,
+                            max: 1.0,
+                            min: 0.0,
+                            value: val,
+                            onChanged: (value){
+                               setState(() {
+                                 val = value;
+                               });
+                            }
+                          ),
+                        ]
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Chapter 3',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: const EdgeInsets.only(top:20),
+                    child: Column(
+                        children: [
+                          const Text(
+                            'Sound',
+                            style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                          ),
+                          Slider(
+                              activeColor: Colors.white,
+                              inactiveColor: Colors.white,
+                              max: 1.0,
+                              min: 0.0,
+                              value: val1,
+                              onChanged: (value){
+                                setState(() {
+                                  val1 = value;
+                                });
+                              }
+                          ),
+                        ]
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Chapter 4',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                  Padding(
+                    padding: const EdgeInsets.only(top:200),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text(
+                        'Back',
+                        style: const TextStyle(color: Colors.white, fontSize: 24),
+                      ),
                     ),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Final Chapter',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
-                    ),
-                  ),
-
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Back',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
-                    ),
-                  ),
                 ],
               ),
             ),

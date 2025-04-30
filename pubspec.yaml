@@ -15,6 +15,7 @@ dependencies:
   audioplayers: ^6.4.0
   auto_size_text: ^3.0.0
   flutter_tts: ^4.2.2
+  animated_toggle_switch: ^0.8.5
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +28,7 @@ flutter:
 
   assets:
     - assets/images/bg/
+    - assets/icons/brokenheart.png
     - assets/images/characters/
     - assets/images/characters/pose1/
     - assets/images/characters/pose2/

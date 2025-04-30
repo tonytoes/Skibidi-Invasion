@@ -6,7 +6,7 @@ import '../widgets/dialogue_overlay.dart';
 import '../data/scenario_data.dart';
 import '../widgets/choice_overlay.dart';
 import '../widgets/gameover_overlay.dart';
-import '../widgets/chapterone_page.dart';
+
 
 void _openMenu(BuildContext context) {
   showCupertinoModalPopup(
@@ -28,11 +28,12 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
   int _lastQuestionIndex = 0;
   bool pressed = true;
   bool _showLives = true;
-  bool _resetChoiceColors = false;
-  String _backgroundImage = ScenarioData.scenarioData[0]['backgroundImage'];
-  String _currentCharacterName = ScenarioData.scenarioData[0]['characterName'];
-  String? _currentCharacterSprite =
-  ScenarioData.scenarioData[0]['characterSprite'];
+  bool _resetColors = false;
+  // Declared with 'late' keyword
+  late String _backgroundImage;
+  late String _characterName;
+  late String? _characterImage;
+
 
   List<String> _heartImages = [
     'assets/icons/hearts.png',
@@ -43,24 +44,81 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
   List<Map<String, dynamic>> _currentChoices = [];
   bool _isGameOver = false;
 
-  final List<String> characterSprites = ['assets/images/characters/pose1.png'];
+
+  // Add all character sprite image paths to this list
+  final List<String> characterSpritesToPrecache = [
+    'assets/images/characters/pose2/211.png',
+    'assets/images/characters/pose2/212.png',
+    'assets/images/characters/pose2/213.png',
+    'assets/images/characters/pose2/214.png',
+    'assets/images/characters/pose2/221.png',
+    'assets/images/characters/pose2/222.png',
+    'assets/images/characters/pose2/223.png',
+    'assets/images/characters/pose2/224.png',
+    'assets/images/characters/pose2/231.png',
+    'assets/images/characters/pose2/232.png',
+    'assets/images/characters/pose2/233.png',
+    'assets/images/characters/pose2/234.png',
+    'assets/images/characters/pose2/241.png',
+    'assets/images/characters/pose2/242.png',
+    'assets/images/characters/pose2/243.png',
+    'assets/images/characters/pose2/244.png',
+    'assets/images/characters/pose2/251.png',
+    'assets/images/characters/pose2/252.png',
+    'assets/images/characters/pose2/253.png',
+    'assets/images/characters/pose2/254.png',
+    'assets/images/characters/pose2/261.png',
+    'assets/images/characters/pose2/262.png',
+    'assets/images/characters/pose2/263.png',
+    'assets/images/characters/pose2/264.png',
+
+    'assets/images/characters/pose1/111.png',
+    'assets/images/characters/pose1/112.png',
+    'assets/images/characters/pose1/113.png',
+    'assets/images/characters/pose1/114.png',
+    'assets/images/characters/pose1/121.png',
+    'assets/images/characters/pose1/122.png',
+    'assets/images/characters/pose1/123.png',
+    'assets/images/characters/pose1/124.png',
+    'assets/images/characters/pose1/131.png',
+    'assets/images/characters/pose1/132.png',
+    'assets/images/characters/pose1/133.png',
+    'assets/images/characters/pose1/134.png',
+    'assets/images/characters/pose1/141.png',
+    'assets/images/characters/pose1/142.png',
+    'assets/images/characters/pose1/143.png',
+    'assets/images/characters/pose1/144.png',
+    'assets/images/characters/pose1/151.png',
+    'assets/images/characters/pose1/152.png',
+    'assets/images/characters/pose1/153.png',
+    'assets/images/characters/pose1/154.png',
+    'assets/images/characters/pose1/161.png',
+    'assets/images/characters/pose1/162.png',
+    'assets/images/characters/pose1/163.png',
+    'assets/images/characters/pose1/164.png',
+  ];
 
   @override
   void initState() {
     super.initState();
-    _loadInitialChoices();
+    _loadInitialData();
 
+    // Precache images
     Future.delayed(Duration.zero, () {
-      for (String spritePath in characterSprites) {
+      for (String spritePath in characterSpritesToPrecache) {
         precacheImage(AssetImage(spritePath), context);
       }
     });
   }
 
-  void _loadInitialChoices() {
+  void _loadInitialData() {
+    _backgroundImage = ScenarioData.scenarioData[_currentLine]['backgroundImage'];
+    _characterName = ScenarioData.scenarioData[_currentLine]['characterName'];
+    _characterImage = ScenarioData.scenarioData[_currentLine]['characterSprite'] == 'null' ? null : ScenarioData.scenarioData[_currentLine]['characterSprite'];
     _currentChoices = ScenarioData.scenarioData[_currentLine]['choices'] ?? [];
     _showLives = ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
   }
+
 
   void _resetGame() {
     setState(() {
@@ -68,9 +126,10 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
       _lives = 3;
       _isGameOver = false;
       _backgroundImage = ScenarioData.scenarioData[_currentLine]['backgroundImage'];
-      _currentCharacterName = ScenarioData.scenarioData[_currentLine]['characterName'];
-      _currentCharacterSprite = ScenarioData.scenarioData[_currentLine]['characterSprite'];
-      _loadInitialChoices();
+      _characterName = ScenarioData.scenarioData[_currentLine]['characterName'];
+      _characterImage = ScenarioData.scenarioData[_currentLine]['characterSprite'] == 'null' ? null : ScenarioData.scenarioData[_currentLine]['characterSprite'];
+      _currentChoices = ScenarioData.scenarioData[_currentLine]['choices'] ?? [];
+      _showLives = ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
       _heartImages = [
         'assets/icons/hearts.png',
         'assets/icons/hearts.png',
@@ -85,7 +144,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
         return;
       }
 
-      bool isCorrectChoice = false;
+      bool isChoiceCorrect= false;
       int nextLine = _currentLine;
       bool incorrectChoiceMade = false;
 
@@ -100,21 +159,24 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
           if (choice['text'] == selectedChoice) {
             nextLine = choice['nextDialogueIndex'] as int;
             if (choice.containsKey('isCorrect')) {
-              isCorrectChoice = choice['isCorrect'] == true;
+              isChoiceCorrect = choice['isCorrect'] == true;
             } else {
-              isCorrectChoice = true; // Assume correct if 'isCorrect' is not specified
+              isChoiceCorrect= true; // Assume correct if 'isCorrect' is not specified
             }
-            // This fucking handle life loss for incorrect choices
-            if (!isCorrectChoice && choice.containsKey('loseLifeOnIncorrect') && choice['loseLifeOnIncorrect'] == true) {
-              if (!isCorrectChoice && choice.containsKey('loseLifeOnIncorrect') && choice['loseLifeOnIncorrect'] == true) {
-                if (_lives > 0) { // Only lose a life if not already game over
-                  _heartImages[_lives - 1] = 'assets/icons/shattered-heart.png';
-                  _lives--;
-                }
-                if (_lives <= 0) {
-                  _isGameOver = true;
-                  return; // Exit if game over
-                }
+            // Handle life loss for incorrect choices
+            if (!isChoiceCorrect && choice.containsKey('loseLifeOnIncorrect') && choice['loseLifeOnIncorrect'] == true) {
+              print('Incorrect choice made with loseLifeOnIncorrect: true.');
+              print('Incorrect choice made. Lives before: $_lives');
+              if (_lives > 0) {
+                _heartImages[_lives - 1] = 'assets/icons/brokenheart.png';
+                _lives--;
+                print('Lives after: $_lives'); // Print after life loss
+                print('Heart images list after update: $_heartImages'); // Print heart images list
+              }
+              if (_lives <= 0) {
+                _isGameOver = true;
+                print('Game Over triggered.');
+                return;
               }
               incorrectChoiceMade = true;
             }
@@ -123,13 +185,12 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               nextLine = choice['nextDialogueIndex'] as int;
             }
 
-            // This fucking handle life loss for incorrect choices
             break;
           }
         }
       }
 
-      if (!isCorrectChoice && ScenarioData.scenarioData[_currentLine].containsKey('incorrectChoiceGoTo')) {
+      if (!isChoiceCorrect && ScenarioData.scenarioData[_currentLine].containsKey('incorrectChoiceGoTo')) {
         nextLine = ScenarioData.scenarioData[_currentLine]['incorrectChoiceGoTo'] as int;
       }
 
@@ -142,10 +203,10 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
       _backgroundImage =
           ScenarioData.scenarioData[_currentLine]['backgroundImage'] ??
               _backgroundImage;
-      _currentCharacterName =
+      _characterName =
           ScenarioData.scenarioData[_currentLine]['characterName'] ??
-              _currentCharacterName;
-      _currentCharacterSprite =
+              _characterName;
+      _characterImage =
       ScenarioData.scenarioData[_currentLine]['characterSprite'] == 'null'
           ? null
           : ScenarioData.scenarioData[_currentLine]['characterSprite'];
@@ -154,36 +215,11 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
       _showLives =
           ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
 
-      if(ScenarioData.scenarioData[_currentLine].containsKey('navigateRoute')) {
-        final routeName = ScenarioData.scenarioData[_currentLine]['navigateRoute'];
-          if (routeName != null) {
-            _navigateToRoute(routeName);
-            return;
-          }
-      }
 
-      // Reset choice colors after moving to the next dialogue
-      _resetChoiceColors = true;
+      _resetColors = true;
     });
   }
 
-  // fuck you intro scene fuck u fuck u
-  void _navigateToRoute(String routeName) {
-    switch (routeName) {
-      case 'Chapter1Screen':
-        Navigator.of(context).push(
-          PageRouteBuilder(
-            pageBuilder: (context, aniamtion, secondaryAnimation) => Chapter1Screen(),
-            transitionDuration: Duration.zero,
-            reverseTransitionDuration: Duration.zero,
-          ),
-
-
-        );
-        break;
-    // Add more cases for other routes as needed
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -257,18 +293,20 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
             ),
           ),
 
-          if (_showLives && _currentChoices.isNotEmpty)
+          if (_showLives && _currentChoices.isNotEmpty) // Check these conditions
             Positioned(
-              key: ValueKey(_lives),
+              key: ValueKey(_lives), // Keep the ValueKey
               top: MediaQuery.of(context).size.height * 0.01,
               left: MediaQuery.of(context).size.width * 0.03,
               child: Row(
+                key: ValueKey(_lives),
                 mainAxisSize: MainAxisSize.min,
                 children: List.generate(_lives, (index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 2.0),
                     child: Image.asset(
                       _heartImages[index],
+                      key: ValueKey(index), // This uses the image path from the list
                       width: 40,
                       height: 40,
                     ),
@@ -277,13 +315,13 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
             ),
 
-          if (_currentCharacterSprite != null &&
-              _currentCharacterSprite != 'null')
+          if (_characterImage != null &&
+              _characterImage != 'null')
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.12,
               left: MediaQuery.of(context).size.width * 0.03,
               child: Image.asset(
-                _currentCharacterSprite!,
+                _characterImage!,
                 width: 500,
                 height: 400,
                 fit: BoxFit.contain,
@@ -311,7 +349,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     DialogueBoxWidget(
-                      characterName: _currentCharacterName,
+                      characterName: _characterName,
                       dialogueText:
                       ScenarioData.scenarioData[_currentLine]['dialogue'],
                       nextDialogue: _nextDialogue,
@@ -331,9 +369,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
   @override
   void didUpdateWidget(ScenarioScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (_resetChoiceColors) {
+    if (_resetColors) {
       setState(() {
-        _resetChoiceColors = false;
+        _resetColors = false;
       });
     }
   }
@@ -352,7 +390,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
             choiceText: choiceData['text']!,
             onPressed: () => _nextDialogue(choiceData['text']),
             isCorrect: isCorrect,
-            resetColor: _resetChoiceColors,
+            resetColor: _resetColors,
           ),
         );
       }).toList(),
