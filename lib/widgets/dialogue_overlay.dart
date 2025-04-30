@@ -128,16 +128,17 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
                 children: [
                   Visibility(
                     visible: !widget.hasChoices && !_isTyping,
-                    child: IconButton(
-                      icon: Image.asset(
-                        'assets/icons/double-arrow.png',
-                        color: Colors.black,
+                    child: MouseRegion(
+                      child: IconButton(
+                        icon: Image.asset(
+                          'assets/icons/nextBT.png',
+                        ),
+                        onPressed: () => widget.nextDialogue(null),
+                        iconSize: 30,
                       ),
-                      onPressed: () => widget.nextDialogue(null),
-                      iconSize: 30,
                     ),
                   ),
-                ]
+                ],
               ),
             ),
           ],
