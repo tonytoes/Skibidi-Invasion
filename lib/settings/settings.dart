@@ -118,7 +118,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: Column(
                         children: [
                           const Text(
-                            'Sound',
+                            'Sex',
                             style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
                           ),
                           Slider(

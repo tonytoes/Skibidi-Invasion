@@ -1,6 +1,14 @@
   import 'dart:ui';
   import 'package:flutter/material.dart';
   import '../main.dart';
+  import '../settings/settings_scenario.dart';
+
+  void _openMenu(BuildContext context) {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const MenuScreen()),
+    );
+  }
 
   void _openHome(BuildContext context) {
     Navigator.pushReplacement(
@@ -49,7 +57,7 @@
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        _openMenu(context);
                       },
                       child: const Text(
                         'Back',

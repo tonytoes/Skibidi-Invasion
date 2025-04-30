@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'dart:ui';
-import '../settings/scenario_menu.dart';
+import '../settings/settings_scenario.dart';
 import '../widgets/dialogue_overlay.dart';
 import '../data/scenario_data.dart';
 import '../widgets/choice_overlay.dart';
@@ -29,7 +29,6 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
   bool pressed = true;
   bool _showLives = true;
   bool _resetColors = false;
-  // Declared with 'late' keyword
   late String _backgroundImage;
   late String _characterName;
   late String? _characterImage;
@@ -168,7 +167,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               print('Incorrect choice made with loseLifeOnIncorrect: true.');
               print('Incorrect choice made. Lives before: $_lives');
               if (_lives > 0) {
-                _heartImages[_lives - 1] = 'assets/icons/brokenheart.png';
+                _heartImages[_lives - 1] = 'assets/icons/speaker.png';
                 _lives--;
                 print('Lives after: $_lives'); // Print after life loss
                 print('Heart images list after update: $_heartImages'); // Print heart images list

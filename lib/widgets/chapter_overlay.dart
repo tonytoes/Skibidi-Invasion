@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import '../settings/settings_scenario.dart';
+
+void _openMenu(BuildContext context) {
+  Navigator.pushReplacement(
+    context,
+    MaterialPageRoute(builder: (context) => const MenuScreen()),
+  );
+}
 
 class ChapterOverlay extends StatelessWidget {
   const ChapterOverlay({super.key});
@@ -12,31 +20,6 @@ class ChapterOverlay extends StatelessWidget {
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Stack( // Use Stack directly for positioning
           children: [
-            Positioned(
-              top: MediaQuery.of(context).size.height * 0.001,
-              left: MediaQuery.of(context).size.width * 0.01,
-              child: TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Image.asset(
-                      'assets/icons/back-double-arrow.png',
-                      width: 24, // Set width
-                      height: 24, // Set height
-                    ),
-                    const SizedBox(width: 8),
-                    const Text(
-                      'Back',
-                      style: TextStyle(color: Colors.white, fontSize: 23),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 40,
@@ -55,6 +38,16 @@ class ChapterOverlay extends StatelessWidget {
                     _chapterButton(context, 'Chapter 3'),
                     _chapterButton(context, 'Chapter 4'),
                     _chapterButton(context, 'Final Chapter'),
+                    SizedBox(height: 50),
+                    TextButton(
+                      onPressed: () {
+                        _openMenu(context);
+                      },
+                      child: const Text(
+                        'Back',
+                        style: TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'JosefinSans',fontWeight: FontWeight.w400,),
+                      ),
+                    ),
                   ],
                 ),
               ),

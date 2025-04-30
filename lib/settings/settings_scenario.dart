@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import '../settings/home_settings.dart';
-import '../settings/chapter_settings.dart';
+import '../settings/settings.dart';
+import '../settings/settings_chapters.dart';
 import '../widgets/continue_overlay.dart';
 import '../widgets/chapter_overlay.dart';
+import '../settings/settings_more.dart';
 
 void _openContinue(BuildContext context) {
   Navigator.pushReplacement(
@@ -15,7 +16,7 @@ void _openContinue(BuildContext context) {
 void _openSettings(BuildContext context) {
   Navigator.pushReplacement(
     context,
-    MaterialPageRoute(builder: (context) => const SettingsScreen()),
+    MaterialPageRoute(builder: (context) => const SettingsMoreScreen()),
   );
 }
 

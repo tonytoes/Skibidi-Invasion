@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'scenes/scenario.dart';
-import 'settings/home_settings.dart';
-import 'settings/chapter_settings.dart';
+import 'settings/settings.dart';
+import 'settings/settings_chapters.dart';
 import 'package:audioplayers/audioplayers.dart';
 // this the main dart this part imports leading to diff darts
 
