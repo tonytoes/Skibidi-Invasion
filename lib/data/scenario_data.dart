@@ -425,6 +425,7 @@ class ScenarioData {
     {
       'dialogue': "We have no choice but to fight it!", // index 45
       'backgroundImage':  'assets/images/bg/cutscene2.png',
+      'characters': [ {'sprite': 'assets/images/characters/pose1/143.png', 'position': 'right'} ],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/upset.mp3',
     },
@@ -714,7 +715,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "Reading is better when there is light", // index 67
+      'dialogue': "Reading is better when there is light", // index 66
       'backgroundImage':  'assets/images/bg/library2.jpg',
       'characters': [ 
         {'sprite': 'assets/images/characters/pose1/151.png', 'position': 'right'}
@@ -724,7 +725,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "The more you read, the faster you can defeat the skibidi toilets.", // index 68
+      'dialogue': "The more you read, the faster you can defeat the skibidi toilets.", // index 67
       'backgroundImage':  'assets/images/bg/library2.jpg',
       'characters': [ 
         {'sprite': 'assets/images/characters/pose1/142.png', 'position': 'right'}
@@ -734,7 +735,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "I highly recommend you to visit the library in your free time.", // index 69
+      'dialogue': "I highly recommend you to visit the library in your free time.", // index 68
       'backgroundImage':  'assets/images/bg/library2.jpg',
       'characters': [ 
         {'sprite': 'assets/images/characters/pose1/112.png', 'position': 'right'}
@@ -744,28 +745,117 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "(Mem hands you out a book)", // index 70
+      'dialogue': "(Mem hands you out a book)", // index 69
       'backgroundImage':  'assets/images/bg/cutscene3.png', 
       'characterName': '',
       'sfx': 'audio/sfx/action/gear2.mp3',
     },
 
     {
-      'dialogue': "Here, try reading this book.", // index 71
+      'dialogue': "Here, try reading this book.", // index 70
       'backgroundImage':  'assets/images/bg/cutscene3.png', 
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/respond.mp3',
     },
 
     {
-      'dialogue': "You can practice here. Answer them before we proceed to the next location!", // index 72
+      'dialogue': "You can practice here. Answer them before we proceed to the next location!", // index 71
       'backgroundImage':  'assets/images/bg/cutscene3.png', 
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/chat.mp3',
     },
 
 
+    {
+      'dialogue': "pay attention to your hearts and only choose the correct answer.", // index 72
+      'backgroundImage':  'assets/images/bg/cutscene3.png', 
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/141.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
+    },
 
+
+
+
+
+
+
+
+
+
+
+    {
+      'dialogue': " She ____ to school every day", // index 73
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/154.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/twinkle.mp3',
+      'isQuestion': true,
+      'choices': [
+        {
+          'text': "game",
+          'nextDialogueIndex': 74, 
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+        {
+          'text': "goes",
+          'nextDialogueIndex': 76,  
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': true,
+        },
+        {
+          'text': "get",
+          'nextDialogueIndex': 75,  
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+      ],
+    },
+
+    {
+      'dialogue': "oops, that is wrong.", // index 74
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 74,
+    },
+
+    {
+      'dialogue': "oops, that is wrong.", // index 75
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 74,
+    },
+
+
+    {
+      'dialogue': "Yes! When we talk about he or she, we add -s to the action. So we say: ‘She goes’ or ‘He goes.", // index 76
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/152.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/check2.mp3',
+    },
+
+   
    
   ];
 }
