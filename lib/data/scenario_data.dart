@@ -36,7 +36,7 @@ class ScenarioData {
     },
     {
       'dialogue':
-      "The world trembles, and everything goes black as your body collapses onto the ground.", // index 5
+      "You spotted someone behind you, but before you can react. You suddenly got knocked down to  the ground unconcious.", // index 5
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'characterSprite': null,
@@ -49,19 +49,19 @@ class ScenarioData {
       'characterSprite': null,
     },
     {
-      'dialogue': "Hey! Kid..? You alright?", // index 7
+      'dialogue': "Hey! Kid..? You alright? I'm sorry for knocking you down, I thought you are infected with brainrot", // index 7
       'backgroundImage': 'assets/images/bg/Dimlit-room.png',
       'characterName': 'Girl',
-      'characterSprite': 'assets/images/characters/pose2/211.png',
+      'characterSprite': 'assets/images/characters/pose1/113.png',
     },
     {
-      'dialogue': "Uh-oh! A crazy sickness called Brainrot is spreading!!", // index 8
+      'dialogue': "A crazy sickness called Brainrot is spreading in the city!!", // index 8
       'backgroundImage': 'assets/images/bg/Dimlit-room.png',
       'characterName': 'Girl',
-      'characterSprite': 'assets/images/characters/pose1/121.png',
+      'characterSprite': 'assets/images/characters/pose1/114.png',
     },
     {
-      'dialogue': "It's turning people into skibidi toilets!", // index 9
+      'dialogue': "It's turning people into skibidi toilets! They attack anyone that has a functioning brain and eat them.", // index 9
       'backgroundImage': 'assets/images/bg/Dimlit-room.png',
       'characterName': 'Girl',
       'characterSprite': 'assets/images/characters/pose2/213.png',
@@ -73,7 +73,7 @@ class ScenarioData {
       'characterSprite': 'assets/images/characters/pose1/144.png',
     },
     {
-      'dialogue': "But you… you didn’t change. You’re still you. Somehow, you made it through.", // index 11
+      'dialogue': "But you… you didn’t change. You’re still you. Somehow, you made it through without getting infected.", // index 11
       'backgroundImage': 'assets/images/bg/Dimlit-room.png',
       'characterName': 'Girl',
       'characterSprite': 'assets/images/characters/pose1/143.png',
@@ -85,10 +85,10 @@ class ScenarioData {
       'characterSprite': 'assets/images/characters/pose1/111.png',
     },
     {
-      'dialogue': "Will you join us and help stop this silly mess?", // index 13
+      'dialogue': "Will you join me and help stop this skibidi infection?", // index 13
       'backgroundImage': 'assets/images/bg/Dimlit-room.png',
       'characterName': 'Girl',
-      'characterSprite': 'assets/images/characters/pose1/163.png',
+      'characterSprite': 'assets/images/characters/pose2/212.png',
       'showLives': false,
       'choices': [
         {
@@ -106,32 +106,32 @@ class ScenarioData {
       ]
     },
     {
-      'dialogue': "Welcome to the Resistance....", // index 14
+      'dialogue': "Yey! Thank you for accepting..", // index 14
       'backgroundImage': 'assets/images/bg/Dimlit-room.png',
       'characterName': 'Girl',
       'characterSprite': 'assets/images/characters/pose1/112.png',
     },
     {
-      'dialogue': "My name is mem. I lost my family to skibidi toilets. ", // index 15
-      'backgroundImage': 'assets/images/bg/hq-training-room.png',
+      'dialogue': "My name is mem. I lost my family to skibidi toilets a month ago. ", // index 15
+      'backgroundImage': 'assets/images/bg/Dimlit-room.png',
       'characterName': 'Mem',
       'characterSprite': 'assets/images/characters/pose1/163.png',
     },
     {
-      'dialogue': "They were called as Skibdi Toilets, because they're human-headed toiltets..", // index 16
-      'backgroundImage':  'assets/images/bg/hq-training-room.png',
+      'dialogue': "The infected are called as Skibdi Toilets, because they're humans transformed into human-headed toiltets..", // index 16
+      'backgroundImage':  'assets/images/bg/Dimlit-room.png',
       'characterName': 'Mem',
-      'characterSprite': 'assets/images/characters/pose1/131.png',
+      'characterSprite': 'assets/images/characters/pose1/114.png',
     },
     {
-      'dialogue': "They  people and infects them with a brainrot disease...", // index 17
-      'backgroundImage':  'assets/images/bg/hq-training-room.png',
+      'dialogue': "They infect people with brainrot disease using their loud skibidi music...", // index 17
+      'backgroundImage':  'assets/images/bg/Dimlit-room.png',
       'characterName': 'Mem',
-      'characterSprite': 'assets/images/characters/pose1/154.png',
+      'characterSprite': 'assets/images/characters/pose1/153.png',
     },
     {
-      'dialogue': "This brainrot disease turns people into Skibidi Toilets...", // index 18
-      'backgroundImage':  'assets/images/bg/hq-training-room.png',
+      'dialogue': "Avoid prolonged exposure to skibidi music to prevent being infected. You can cover your ears or strengthen your mind to resist the virus", // index 18
+      'backgroundImage':  'assets/images/bg/Dimlit-room.png',
       'characterName': 'Mem',
       'characterSprite': 'assets/images/characters/pose1/111.png',
     },
@@ -145,31 +145,31 @@ class ScenarioData {
       'dialogue': "Mem turns to you. She was so excited...", // index 20
       'backgroundImage':  'assets/images/bg/hq-training-room.png',
       'characterName': '',
-      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'characterSprite': 'assets/images/characters/pose1/121.png',
     },
     {
-      'dialogue': "Alright! To stop them, we must see how sharp your brain is!", // index 21
+      'dialogue': "Alright! to stop them, we must see how sharp your brain is!", // index 21
       'backgroundImage':  'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
-      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'characterSprite': 'assets/images/characters/pose2/242.png',
     },
     {
       'dialogue': "Skibidi Toilets forgot how to think and talk right.", // index 22
       'backgroundImage':  'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
-      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'characterSprite': 'assets/images/characters/pose1/141.png',
     },
     {
       'dialogue': "But if your grammar’s strong, you can beat them!", // index 23
       'backgroundImage': 'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
-      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'characterSprite': 'assets/images/characters/pose1/142.png',
     },
     {
       'dialogue': "Get the answers right, and you’ll stop them!", // index 24
       'backgroundImage': 'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
-      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'characterSprite': 'assets/images/characters/pose2/252.png',
     },
     {
       'dialogue': "You have 3 hearts!", // index 25
@@ -181,14 +181,13 @@ class ScenarioData {
       'dialogue': "Mess up three times, and we start over. So, get ready to think!", // index 26
       'backgroundImage': 'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
-      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'characterSprite': 'assets/images/characters/pose1/131.png',
     },
     {
       'dialogue': "Here comes your first question! Pick the sentence that’s written right.", // index 27
       'backgroundImage': 'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
       'characterSprite': 'assets/images/characters/pose1/111.png',
-      'isQuestion': true,
     },
     {
       'dialogue': "Alright let's go!", // index 28
@@ -250,7 +249,7 @@ class ScenarioData {
       'nextDialogueIndex': 33,
       'backgroundImage': 'assets/images/bg/hq-training-room.png',
       'characterName': 'Mem',
-      'characterSprite': 'assets/images/characters/pose1/111.png',
+      'characterSprite': 'assets/images/characters/pose2/251.png',
     },
     {
       'dialogue': "Great job kid! You've proven to me that your mind is sharp.", // index 33
