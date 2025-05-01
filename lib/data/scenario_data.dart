@@ -15,6 +15,9 @@ class ScenarioData {
 
     
                                     //?           CHAPTER 1         //
+    
+
+    
     {
       'dialogue':
       "You’re walking peacefully, the wind gently blowing, footsteps echoing on the pavement.", // index 0
@@ -339,6 +342,30 @@ class ScenarioData {
       'sfx': 'audio/sfx/emotion/twinkle.mp3',
     },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
                                 //?           CHAPTER  2         // 
@@ -355,7 +382,7 @@ class ScenarioData {
       'backgroundImage':  'assets/images/bg/outside1.jpg',
       'characters': [ {'sprite': 'assets/images/characters/pose1/113.png', 'position': 'right'} ],
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+      'sfx': 'audio/sfx/sound/skibidi1.mp3',
     },
 
     {
@@ -382,9 +409,8 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "We are finally here at the library entrance.", // index 43
-      'backgroundImage':  'assets/images/bg/door2.jpg',
-      'characters': [ {'sprite': 'assets/images/characters/pose1/112.png', 'position': 'right'} ],
+      'dialogue': "We are finally here at the library entrance.", // index 43 //TONY ADD TRANSITION HERE
+      'backgroundImage':  'assets/images/bg/black screen.png',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/twinkle.mp3',
     },
@@ -393,14 +419,14 @@ class ScenarioData {
       'dialogue': "Oh no, a skibidi toilet is blocking the door.", // index 44
       'backgroundImage':  'assets/images/bg/cutscene2.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/skibidisong.mp3',
+      'sfx': 'audio/sfx/sound/skibidi2.mp3',
     },
 
     {
-      'dialogue': "We have no choice but to fight!", // index 45
+      'dialogue': "We have no choice but to fight it!", // index 45
       'backgroundImage':  'assets/images/bg/cutscene2.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/action/upset.mp3',
+      'sfx': 'audio/sfx/emotion/upset.mp3',
     },
 
     {
@@ -408,7 +434,334 @@ class ScenarioData {
       'backgroundImage':  'assets/images/bg/door2.jpg',
       'characters': [ {'sprite': 'assets/images/characters/skibidi/happy.png', 'position': 'center'} ],
       'characterName': 'Skibidi Toilet',
-      'sfx': 'audio/sfx/sound/skibidisong.mp3',
+      'sfx': 'audio/sfx/sound/skibidi3.mp3',
+    },
+
+    {
+      'dialogue': "As you can see, they’ve lost their brains and are saying random words.", // index 47
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/smile.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/113.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/upset.mp3',
+    },
+
+
+    {
+      'dialogue': "Oh no! it saw us!", // index 48
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/angry.png', 'position': 'center'},
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/alert.mp3',
+    },
+
+
+  {
+      'dialogue': "They're afraid of correct grammar, attack him with this sentence! Quick!!", // index 49
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/angry.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/143.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/skibidi3.mp3',
+    },
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    {
+      'dialogue': "____ hate going to school", // index 50
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/angry.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/143.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/skibidi3.mp3',
+      'isQuestion': true,
+      'choices': [
+        {
+          'text': "Im",
+          'nextDialogueIndex': 51, 
+          'nextBackgroundImage':  'assets/images/bg/door2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+        {
+          'text': "him",
+          'nextDialogueIndex': 52,  
+          'nextBackgroundImage':  'assets/images/bg/door2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+        {
+          'text': "I",
+          'nextDialogueIndex': 53,  
+          'nextBackgroundImage':  'assets/images/bg/door2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': true,
+        },
+      ],
+    },
+
+    {
+      'dialogue': "WRONG", // index 51
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/happy.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/144.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 50,
+    },
+
+    {
+      'dialogue': "WRONG", // index 52
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/happy.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/144.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 50,
+    },
+
+    {
+      'dialogue': "It’s working! Keep going!", // index 53
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/sad.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/142.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/check2.mp3',
+    },
+
+
+
+
+
+
+
+
+    {
+      'dialogue': "The man slip and _______", // index 54
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/sad.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/142.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/skibidi3.mp3',
+      'isQuestion': true,
+      'choices': [
+        {
+          'text': "fell",
+          'nextDialogueIndex': 57, 
+          'nextBackgroundImage':  'assets/images/bg/door2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': true,
+        },
+        {
+          'text': "feel",
+          'nextDialogueIndex': 56,  
+          'nextBackgroundImage':  'assets/images/bg/door2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+        {
+          'text': "fall",
+          'nextDialogueIndex': 55,  
+          'nextBackgroundImage':  'assets/images/bg/door2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+      ],
+    },
+
+    {
+      'dialogue': "WRONG", // index 55
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/happy.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/144.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 54,
+    },
+
+    {
+      'dialogue': "WRONG", // index 56
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/happy.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/144.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 54,
+    },
+
+    {
+      'dialogue': "Hell yeah!", // index 57
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/sad.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/142.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/check2.mp3',
+    },
+
+    {
+      'dialogue': "RRRAAAAAAAAAAHHHHHHHH", // index 58
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/shocked.png', 'position': 'center'},
+         ],
+      'characterName': 'Skibidi Toilet',
+      'sfx': 'audio/sfx/sound/rah.mp3',
+    },
+
+    {
+      'dialogue': "....", // index 59
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/dead.png', 'position': 'center'},
+         ],
+      'characterName': 'Skibidi Toilet',
+      'sfx': 'audio/sfx/sound/flush.mp3',
+    },
+
+     {
+      'dialogue': "Amazing! The skibidi flushed itself because it couldn’t handle grammar.", // index 60
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/dead.png', 'position': 'left'},
+        {'sprite': 'assets/images/characters/pose1/152.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+     {
+      'dialogue': "You successfully defeated a skibidi toilet for the first time. Congratulations!", // index 61
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/112.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/chat.mp3',
+    },
+
+    {
+      'dialogue': "Let’s hurry and head inside the library.", // index 62
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/132.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/respond.mp3',
+    },
+
+
+    {
+      'dialogue': "(You and Mem head into the library)", // index 63
+      'backgroundImage':  'assets/images/bg/black screen.png', 
+      'characterName': '',
+      'sfx': 'audio/sfx/action/dooropen1.mp3',
+    },
+
+    {
+      'dialogue': "This is a library. Going to the library and reading books helps your mind become stronger.", // index 64
+      'backgroundImage':  'assets/images/bg/library1.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose2/212.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+    {
+      'dialogue': "(mem turns on the lights)", // index 65
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/131.png', 'position': 'right'}
+         ],
+      'characterName': '',
+      'sfx': 'audio/sfx/action/switch.mp3',
+    },
+
+    {
+      'dialogue': "Reading is better when there is light", // index 67
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/151.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+    {
+      'dialogue': "The more you read, the faster you can defeat the skibidi toilets.", // index 68
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/142.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/chat.mp3',
+    },
+
+    {
+      'dialogue': "I highly recommend you to visit the library in your free time.", // index 69
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/112.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
+    },
+
+    {
+      'dialogue': "(Mem hands you out a book)", // index 70
+      'backgroundImage':  'assets/images/bg/cutscene3.png', 
+      'characterName': '',
+      'sfx': 'audio/sfx/action/gear2.mp3',
+    },
+
+    {
+      'dialogue': "Here, try reading this book.", // index 71
+      'backgroundImage':  'assets/images/bg/cutscene3.png', 
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/respond.mp3',
+    },
+
+    {
+      'dialogue': "You can practice here. Answer them before we proceed to the next location!", // index 72
+      'backgroundImage':  'assets/images/bg/cutscene3.png', 
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/chat.mp3',
     },
 
 
