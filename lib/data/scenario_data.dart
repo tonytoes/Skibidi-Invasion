@@ -341,7 +341,7 @@ class ScenarioData {
 
   
 
-                                //?           CHAPTER 2         //
+                                //?           CHAPTER  2         // 
 
     {
       'dialogue': "The streets are eerily quiet, with only the flickering streetlights casting long shadows as the two of you walk in silence.", // index 38
