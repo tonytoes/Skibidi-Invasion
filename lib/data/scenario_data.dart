@@ -30,14 +30,14 @@ class ScenarioData {
     },
     {
       'dialogue': "Wha—?!", // index 4
-      'backgroundImage': 'assets/images/bg/Downtown-Night.png',
+      'backgroundImage': 'assets/images/bg/cutscene1.png',
       'characterName': 'You',
       'characterSprite': null,
     },
     {
       'dialogue':
       "You spotted someone behind you, but before you can react. You suddenly got knocked down to  the ground unconcious.", // index 5
-      'backgroundImage': 'assets/images/bg/Downtown-Night.png',
+      'backgroundImage': 'assets/images/bg/black screen.png',
       'characterName': '',
       'characterSprite': null,
     },
