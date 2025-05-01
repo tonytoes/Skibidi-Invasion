@@ -777,6 +777,17 @@ class ScenarioData {
     },
 
 
+    {
+      'dialogue': " Alright let's do this!", // index 73
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/152.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+
 
 
 
@@ -787,18 +798,18 @@ class ScenarioData {
 
 
     {
-      'dialogue': " She ____ to school every day", // index 73
+      'dialogue': "She ____ to school every day", // index 74
       'backgroundImage':  'assets/images/bg/library2.jpg',
       'characters': [ 
         {'sprite': 'assets/images/characters/pose1/154.png', 'position': 'right'}
          ],
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/twinkle.mp3',
+      'sfx': 'audio/sfx/emotion/question.mp3',
       'isQuestion': true,
       'choices': [
         {
           'text': "game",
-          'nextDialogueIndex': 74, 
+          'nextDialogueIndex': 75, 
           'nextBackgroundImage':  'assets/images/bg/library2.jpg',
           'characterName': 'Mem',
           'isCorrect': false,
@@ -806,31 +817,20 @@ class ScenarioData {
         },
         {
           'text': "goes",
-          'nextDialogueIndex': 76,  
+          'nextDialogueIndex': 77,  
           'nextBackgroundImage':  'assets/images/bg/library2.jpg',
           'characterName': 'Mem',
           'isCorrect': true,
         },
         {
           'text': "get",
-          'nextDialogueIndex': 75,  
+          'nextDialogueIndex': 76,  
           'nextBackgroundImage':  'assets/images/bg/library2.jpg',
           'characterName': 'Mem',
           'isCorrect': false,
           'loseLifeOnIncorrect': true,
         },
       ],
-    },
-
-    {
-      'dialogue': "oops, that is wrong.", // index 74
-      'backgroundImage':  'assets/images/bg/library2.jpg',
-      'characters': [ 
-        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
-         ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 74,
     },
 
     {
@@ -844,15 +844,232 @@ class ScenarioData {
       'incorrectChoiceGoTo': 74,
     },
 
+    {
+      'dialogue': "oops, that is wrong.", // index 76
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 74,
+    },
+
 
     {
-      'dialogue': "Yes! When we talk about he or she, we add -s to the action. So we say: ‘She goes’ or ‘He goes.", // index 76
+      'dialogue': "Yes! When we talk about he or she, we add -s to the action. So we say: ‘She goes’ or ‘He goes’.", // index 77
       'backgroundImage':  'assets/images/bg/library2.jpg',
       'characters': [ 
         {'sprite': 'assets/images/characters/pose1/152.png', 'position': 'right'}
          ],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/sound/check2.mp3',
+    },
+
+
+    {
+      'dialogue': "Next Question!", // index 78
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/151.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/respond.mp3',
+    },
+
+
+
+
+
+
+
+
+
+    {
+      'dialogue': "This is my brother. ___ is a doctor.", // index 79
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/154.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/question.mp3',
+      'isQuestion': true,
+      'choices': [
+        {
+          'text': "He",
+          'nextDialogueIndex': 82, 
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': true,
+        },
+        {
+          'text': "She",
+          'nextDialogueIndex': 80,  
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+        {
+          'text': "It",
+          'nextDialogueIndex': 81,  
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+      ],
+    },
+
+    {
+      'dialogue': "nuh uh, brother is a boy, so that is not the correct answer.", // index 80
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 79,
+    },
+
+    {
+      'dialogue': "try harder.", // index 81
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 79,
+    },
+
+
+    {
+      'dialogue': "Good job! We say ‘he’ when talking about a boy, like your brother!", // index 82
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/152.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/check2.mp3',
+    },
+
+
+    {
+      'dialogue': "Next Question!", // index 83
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/151.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/respond.mp3',
+    },
+
+
+
+
+
+
+
+
+    {
+      'dialogue': "I ___ my homework yesterday.", // index 84
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/154.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/question.mp3',
+      'isQuestion': true,
+      'choices': [
+        {
+          'text': "do",
+          'nextDialogueIndex': 85, 
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+        {
+          'text': "did",
+          'nextDialogueIndex': 87,  
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': true,
+        },
+        {
+          'text': "done",
+          'nextDialogueIndex': 86,  
+          'nextBackgroundImage':  'assets/images/bg/library2.jpg',
+          'characterName': 'Mem',
+          'isCorrect': false,
+          'loseLifeOnIncorrect': true,
+        },
+      ],
+    },
+
+    {
+      'dialogue': "Not quite! Think about how we talk about something from yesterday.", // index 85
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 84,
+    },
+
+    {
+      'dialogue': "try again.", // index 86
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
+      'incorrectChoiceGoTo': 84,
+    },
+
+
+    {
+      'dialogue': "Yay! ‘Did’ is the right word when we talk about the past—like something you did yesterday!", // index 87
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/152.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/check2.mp3',
+    },
+
+
+    {
+      'dialogue': "Great job!", // index 88
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/112.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+    {
+      'dialogue': "Now that you're all warmed up, let’s head outside and make our way to the laboratory.", // index 89
+      'backgroundImage':  'assets/images/bg/library2.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/141.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/ding.mp3',
+    },
+
+
+
+
+    {
+      'dialogue': "(You and Mem go outside the library)", // index 90
+      'backgroundImage':  'assets/images/bg/black screen.png',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/doorclose3.mp3',
     },
 
    
