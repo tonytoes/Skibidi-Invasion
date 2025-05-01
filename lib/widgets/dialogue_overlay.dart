@@ -5,6 +5,7 @@ class DialogueBoxWidget extends StatefulWidget {
   final String dialogueText;
   final void Function(String?) nextDialogue;
   final bool hasChoices;
+  final bool showArrow;
 
   const DialogueBoxWidget({
     Key? key,
@@ -12,6 +13,7 @@ class DialogueBoxWidget extends StatefulWidget {
     required this.dialogueText,
     required this.nextDialogue,
     this.hasChoices = false,
+    this.showArrow = false,
   }) : super(key: key);
 
   @override

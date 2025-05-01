@@ -10,9 +10,9 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  bool firstSwitchValue = false;
-  double val = 0.0;
-  double val1 = 0.0;
+  bool firstSwitchValue = true;
+  double val = 1.0;
+  double val1 = 1.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +30,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 children: [
 
                   Padding(
-                    padding: EdgeInsets.only(left: 20.0, top: 20.0),
+                    padding: EdgeInsets.only(top: 30.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset('assets/icons/settings.png'),
                         SizedBox(width: 10),
                         Text(
                           'Settings',
@@ -89,49 +88,68 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(top:20),
+                    padding: const EdgeInsets.only(top:25),
                     child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
                             'Music',
                             style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
-                            textAlign: TextAlign.center,
                           ),
-                          Slider(
-                            activeColor: Colors.white,
-                            inactiveColor: Colors.white,
-                            max: 1.0,
-                            min: 0.0,
-                            value: val,
-                            onChanged: (value){
-                               setState(() {
-                                 val = value;
-                               });
-                            }
+                          Container(
+                            width: 300,
+                            child: SliderTheme(
+                              data: SliderTheme.of(context).copyWith(
+                                trackHeight: 1,
+                                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5),
+                              ),
+                              child: Slider(
+                                  activeColor: Colors.white,
+                                  inactiveColor: Colors.white,
+                                  max: 1.0,
+                                  min: 0.0,
+                                  value: val,
+                                  onChanged: (value){
+                                    setState(() {
+                                      val = value;
+                                    });
+                                  }
+                              ),
+                            ),
                           ),
                         ]
                     ),
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(top:20),
+                    padding: const EdgeInsets.only(top:25),
                     child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'Sex',
+                            'Sounds',
                             style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
                           ),
-                          Slider(
-                              activeColor: Colors.white,
-                              inactiveColor: Colors.white,
-                              max: 1.0,
-                              min: 0.0,
-                              value: val1,
-                              onChanged: (value){
-                                setState(() {
-                                  val1 = value;
-                                });
-                              }
+                          Container(
+                            width: 300,
+                            child: SliderTheme(
+                              data: SliderTheme.of(context).copyWith(
+                                trackHeight: 1,
+                                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5),
+                              ),
+                              child: Slider(
+                                  activeColor: Colors.white,
+                                  inactiveColor: Colors.white,
+                                  max: 1.0,
+                                  min: 0.0,
+                                  value: val,
+                                  onChanged: (value){
+                                    setState(() {
+                                      val = value;
+                                    });
+                                  }
+                              ),
+                            ),
                           ),
                         ]
                     ),

@@ -18,9 +18,12 @@ class SettingsMoreScreen extends StatefulWidget {
 }
 
 class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
-  bool firstSwitchValue = false;
-  double val = 0.0;
-  double val1 = 0.0;
+
+  bool firstSwitchValue = true;
+  double music = 1.0;
+  double sound = 1.0;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,20 +33,15 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
         child: Center(
           child: Container(
             width: MediaQuery.of(context).size.width - 40,
-            height: 750,
             color: Colors.black.withValues(alpha: 0.7),
             child: Center(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-
                   Padding(
-                    padding: EdgeInsets.only(left: 20.0, top: 20.0),
+                    padding: EdgeInsets.only(top: 40.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset('assets/icons/settings.png'),
-                        SizedBox(width: 10),
                         Text(
                           'Settings',
                           style: TextStyle(color: Colors.white, fontSize: 24),
@@ -97,49 +95,69 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(top:20),
+                    padding: const EdgeInsets.only(top:30),
                     child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
                             'Music',
                             style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
                             textAlign: TextAlign.center,
                           ),
-                          Slider(
-                              activeColor: Colors.white,
-                              inactiveColor: Colors.white,
-                              max: 1.0,
-                              min: 0.0,
-                              value: val,
-                              onChanged: (value){
-                                setState(() {
-                                  val = value;
-                                });
-                              }
+                          Container(
+                            width: 300,
+                            child: SliderTheme(
+                              data: SliderTheme.of(context).copyWith(
+                                trackHeight: 1,
+                                thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5),
+                              ),
+                              child: Slider(
+                                  activeColor: Colors.white,
+                                  inactiveColor: Colors.white.withOpacity(0.5),
+                                  max: 1.0,
+                                  min: 0.0,
+                                  value: music,
+                                  onChanged: (value){
+                                    setState(() {
+                                      music = value;
+                                    });
+                                  }
+                              ),
+                            ),
                           ),
                         ]
                     ),
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.only(top:20),
+                    padding: const EdgeInsets.only(top:30),
                     child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
                             'Sound',
                             style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
                           ),
-                          Slider(
+                    Container(
+                        width: 300,
+                        child: SliderTheme(
+                          data: SliderTheme.of(context).copyWith(
+                            trackHeight: 1,
+                            thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5),
+                          ),
+                          child: Slider(
                               activeColor: Colors.white,
-                              inactiveColor: Colors.white,
+                              inactiveColor: Colors.white.withOpacity(0.5),
                               max: 1.0,
                               min: 0.0,
-                              value: val1,
+                              value: sound,
                               onChanged: (value){
                                 setState(() {
-                                  val1 = value;
+                                  sound = value;
                                 });
-                              }
+                                }
+                              ),
+                            ),
                           ),
                         ]
                     ),
