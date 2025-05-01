@@ -341,6 +341,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
             ),
           ),
 
+          //  <------ LIVES ----------->
           if (_showLives && _currentChoices.isNotEmpty) // Cheks the conditions of lives and decrements
             Positioned(
               key: ValueKey(_lives), // Keep the ValueKey
@@ -361,7 +362,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 }),
               ),
             ),
+          //  <------ LIVES ----------->
 
+          //  <------ CHARACTERS ----------->
           ..._characters.map((character) {
             String spritePath = character['sprite'];
             String position = character['position'];
@@ -383,7 +386,6 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               left = null;
               right = null;
             }
-
             return Positioned(
               bottom: MediaQuery.of(context).size.height * 0.12, // adjust
               left: left,
@@ -396,7 +398,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
             );
           }).toList(),
+           // <------ CHARACTERS ----------->
 
+          //<------ CHOICES ----------->
           if (_currentChoices.isNotEmpty &&
               !_isGameOver) // Show choices only if it's not game over hak
             Align(
@@ -406,7 +410,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 child: _buildChoiceOptions(context),
               ),
             ),
-
+        //<------ GAMEOVER ----------->
           if (!_isGameOver)
             Align(
               alignment: Alignment.bottomCenter,
@@ -429,20 +433,27 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
 
           if (_isGameOver)
             GameOverOverlay(onRestart: _resetGame), // Show game over overlay
+          //<------ GAMEOVER ----------->
         ],
+        //<------ CHOICES ----------->
+
       ),
     );
   }
+
+//<------ RESETCHOICESCOLOR ----------->
   @override
   void didUpdateWidget(ScenarioScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (_resetColors) {
       setState(() {
         _resetColors = false;
-      });
-    }
+    });
   }
+}
+//<------ RESETCHOICESCOLOR ----------->
 
+//<------ CHOICES ----------->
   Widget _buildChoiceOptions(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -464,3 +475,4 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
     );
   }
 }
+//<------ CHOICES ----------->
