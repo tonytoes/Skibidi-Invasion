@@ -14,6 +14,7 @@ class ScenarioData {
     // },
 
     
+                                    //?           CHAPTER 1         //
     {
       'dialogue':
       "You’re walking peacefully, the wind gently blowing, footsteps echoing on the pavement.", // index 0
@@ -186,7 +187,7 @@ class ScenarioData {
       'characterName': '',
     },
     {
-      'dialogue': "Alright! To see if you can survive agaisnt the infection, we must see how sharp your brain is!", // index 21
+      'dialogue': "Alright! To see if you can survive against the infection, we must see how sharp your brain is!", // index 21
       'backgroundImage':  'assets/images/bg/messyroom.jpg',
       'characters': [ {'sprite': 'assets/images/characters/pose2/252.png', 'position': 'right'} ],
       'characterName': 'Mem',
@@ -331,12 +332,87 @@ class ScenarioData {
 
     },
     {
-      'dialogue': "Let’s go! No time to waste! We’ve got the city to save!", // index 36
+      'dialogue': "Let’s go! No time to waste! We’ve got the city to save!", // index 37
       'backgroundImage':  'assets/images/bg/messyroom.jpg',
       'characters': [ {'sprite': 'assets/images/characters/pose1/152.png', 'position': 'right'} ],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/twinkle.mp3',
     },
+
+  
+
+                                //?           CHAPTER  2         // 
+
+    {
+      'dialogue': "The streets are eerily quiet, with only the flickering streetlights casting long shadows as the two of you walk in silence.", // index 38
+      'backgroundImage':  'assets/images/bg/outside1.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/footstep2.mp3',
+    },
+
+    {
+      'dialogue': "I can hear some skibidi toilets up ahead.", // index 39
+      'backgroundImage':  'assets/images/bg/outside1.jpg',
+      'characters': [ {'sprite': 'assets/images/characters/pose1/113.png', 'position': 'right'} ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+    {
+      'dialogue': "Stay alert.", // index 40
+      'backgroundImage':  'assets/images/bg/outside1.jpg',
+      'characters': [ {'sprite': 'assets/images/characters/pose1/143.png', 'position': 'right'} ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/respond.mp3',
+    },
+
+    {
+      'dialogue': "Let’s head towards the library. We can reach the laboratory faster if we go through there.", // index 41
+      'backgroundImage':  'assets/images/bg/outside1.jpg',
+      'characters': [ {'sprite': 'assets/images/characters/pose1/141.png', 'position': 'right'} ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/chat.mp3',
+    },
+
+    {
+      'dialogue': "The two of you walked towards the direction of the library.", // index 42
+      'backgroundImage':  'assets/images/bg/black screen.png',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/footstep2.mp3',
+    },
+
+    {
+      'dialogue': "We are finally here at the library entrance.", // index 43
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ {'sprite': 'assets/images/characters/pose1/112.png', 'position': 'right'} ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+    {
+      'dialogue': "Oh no, a skibidi toilet is blocking the door.", // index 44
+      'backgroundImage':  'assets/images/bg/cutscene2.png',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/skibidisong.mp3',
+    },
+
+    {
+      'dialogue': "We have no choice but to fight!", // index 45
+      'backgroundImage':  'assets/images/bg/cutscene2.png',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/action/upset.mp3',
+    },
+
+    {
+      'dialogue': "Skibidi dop dop dop yiz yiz skibidi skibidi skibidi—", // index 46
+      'backgroundImage':  'assets/images/bg/door2.jpg',
+      'characters': [ {'sprite': 'assets/images/characters/skibidi/happy.png', 'position': 'center'} ],
+      'characterName': 'Skibidi Toilet',
+      'sfx': 'audio/sfx/sound/skibidisong.mp3',
+    },
+
+
+
    
   ];
 }
