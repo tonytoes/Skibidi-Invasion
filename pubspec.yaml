@@ -36,6 +36,9 @@ flutter:
     - assets/images/characters/skibidi/
     - assets/icons/
     - assets/audio/sfx/
+    - assets/audio/sfx/emotion/
+    - assets/audio/sfx/action/
+    - assets/audio/sfx/sound/
     - assets/audio/bgm/
     - assets/images/dialogue/
 
