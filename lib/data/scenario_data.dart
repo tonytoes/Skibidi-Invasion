@@ -140,9 +140,9 @@ class ScenarioData {
       'sfx': 'audio/sfx/emotion/twinkle.mp3',
     },
     {
-      'dialogue': "My name is mem. I lost my family to skibidi toilets a month ago. ", // index 15
+      'dialogue': "My name is Meguri, but you can call me Mem. My name sounds similar to the word 'memory'.", // index 15
       'backgroundImage': 'assets/images/bg/inside5.jpg',
-      'characters': [ {'sprite': 'assets/images/characters/pose1/113.png', 'position': 'right'} ],
+      'characters': [ {'sprite': 'assets/images/characters/pose1/111.png', 'position': 'right'} ],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/sigh.mp3',
     },
@@ -186,7 +186,7 @@ class ScenarioData {
     {
       'dialogue': "Mem leads you to a room filled with books and scattered notes.", // index 20
       'backgroundImage':  'assets/images/bg/messyroom.jpg',
-      'sfx': 'audio/sfx/action/dooropen2.mp3',
+      'sfx': 'audio/sfx/action/dooropen1.mp3',
       'characterName': '',
     },
     {
@@ -1065,12 +1065,221 @@ class ScenarioData {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      //?           CHAPTER  3         // 
+
     {
-      'dialogue': "(You and Mem go outside the library)", // index 90
+      'dialogue': "(You and Mem goes outside the library)", // index 90
       'backgroundImage':  'assets/images/bg/black screen.png',
       'characterName': '',
       'sfx': 'audio/sfx/action/doorclose3.mp3',
     },
+
+
+    {
+      'dialogue': "(walking)", // index 91
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/footstep6.mp3',
+    },
+
+    {
+      'dialogue': "This place is a mess", // index 92
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/143.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/sweat.mp3',
+    },
+
+    {
+      'dialogue': "It's a sign that a fight broke out here near the laboratory.", // index 93
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/113.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/upset.mp3',
+    },
+
+    {
+      'dialogue': "Look! I see the laboratory door up ahead!", // index 94
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/112.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+
+    {
+      'dialogue': "Ohh no...", // index 95
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/113.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/sweat.mp3',
+    },
+
+
+    {
+      'dialogue': "There are many skibidi toilets scattered everywhere...", // index 96
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/happy.png', 'position': 'right'},
+        {'sprite': 'assets/images/characters/skibidi/smile.png', 'position': 'center'},
+        {'sprite': 'assets/images/characters/skibidi/angry.png', 'position': 'left'},
+         ],
+      'characterName': 'Mem',
+      'showLives': false,
+      'sfx': 'audio/sfx/sound/skibidi6.mp3',
+    },
+
+
+    {
+      'dialogue': "Should we fight them?", // index 97
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/skibidi/happy.png', 'position': 'right'},
+        {'sprite': 'assets/images/characters/skibidi/smile.png', 'position': 'center'},
+        {'sprite': 'assets/images/characters/skibidi/angry.png', 'position': 'left'},
+         ],
+      'characterName': 'Mem',
+      'showLives': false,
+      'sfx': 'audio/sfx/emotion/question.mp3',
+      'choices': [
+        {
+          'text': "I don’t think we can win",
+          'nextDialogueIndex': 98,
+          'isCorrect': null,
+          'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+          //'sfx': 'audio/sfx/emotion/respond.mp3',
+        },
+        {
+          'text': "no",
+          'nextDialogueIndex': 98,
+          'isCorrect': null,
+          'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+          //'sfx': 'audio/sfx/emotion/respond.mp3',
+        },
+        {
+          'text': "Let’s avoid them if possible",
+          'nextDialogueIndex': 98,
+          'isCorrect': null,
+          'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+          //'sfx': 'audio/sfx/emotion/respond.mp3',
+        },
+      ]
+    },
+
+
+    {
+      'dialogue': "You're right, sneaking past them without getting caught is impossible.", // index 98
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/124.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/sigh.mp3',
+    },
+
+    {
+      'dialogue': "what should we do?", // index 99
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/113.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/think.mp3',
+      'showLives': false,
+      'choices': [
+        {
+          'text': "Lets run for it.",
+          'nextDialogueIndex': 100,
+          'isCorrect': null,
+          'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+          //'sfx': 'audio/sfx/emotion/respond.mp3',
+        },
+      ]
+    },
+
+
+    {
+      'dialogue': "You’re crazy....", // index 100
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/143.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/surprise.mp3',
+    },
+
+    {
+      'dialogue': "But… seeing the situation, we don’t really have a choice.", // index 101
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/153.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/respond.mp3',
+    },
+
+
+    {
+      'dialogue': "Let's do this on the count of 3", // index 102
+      'backgroundImage':  'assets/images/bg/outside6.jpg',
+      'characters': [ 
+        {'sprite': 'assets/images/characters/pose1/111.png', 'position': 'right'}
+         ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/chat.mp3',
+    },
+
+    {
+      'dialogue': "1...", // index 103
+      'backgroundImage':  'assets/images/bg/black screen.png',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/bulb.mp3',
+    },
+
+    {
+      'dialogue': "2...", // index 104
+      'backgroundImage':  'assets/images/bg/black screen.png',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/bulb.mp3',
+    },
+
+    {
+      'dialogue': "3...", // index 105
+      'backgroundImage':  'assets/images/bg/black screen.png',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/sound/bulb2.mp3',
+    },
+
+    {
+      'dialogue': "RUN!!!", // index 106
+      'backgroundImage':  'assets/images/bg/cutscene4.png',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/action/run2.mp3',
+    },
+
+
 
    
    
