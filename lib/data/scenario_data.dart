@@ -16,8 +16,6 @@ class ScenarioData {
     
                                     //?           CHAPTER 1         //
     {
-      'dialogue':
-      "You’re walking peacefully, the wind gently blowing, footsteps echoing on the pavement.", // index 0
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'sfx': 'audio/sfx/action/footstep1.mp3'
     },
