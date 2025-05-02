@@ -18,7 +18,7 @@ class ChapterOverlay extends StatelessWidget {
       backgroundColor: Colors.black.withValues(alpha: 0.7),
       body: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-        child: Stack( // Use Stack directly for positioning
+        child: Stack(
           children: [
             Center(
               child: Container(

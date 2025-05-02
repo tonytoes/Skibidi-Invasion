@@ -371,11 +371,11 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
 
             double? left, right;
             if (position == 'left') {
-              left = MediaQuery.of(context).size.width * 0.3;
+              left = MediaQuery.of(context).size.width * 0.3; // adjust spacing from left
               right = null; // Don't set right if positioning from the left
             }
             else if (position == 'right') {
-              right = MediaQuery.of(context).size.width * 0.1;
+              right = MediaQuery.of(context).size.width * 0.1; // adjust spacing from right
               left = null; // Don't set left if positioning from the right
             }
             else if (position == 'center') {

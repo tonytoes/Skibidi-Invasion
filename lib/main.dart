@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-import 'scenes/scenario.dart';
+import '../widgets/instructions_overlay.dart';
 import 'settings/settings.dart';
 import 'settings/settings_chapters.dart';
 import 'package:audioplayers/audioplayers.dart';
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     await Navigator.of(
       context,
-    ).push(MaterialPageRoute(builder: (context) => const ScenarioScreen()));
+    ).push(MaterialPageRoute(builder: (context) => const InstructionScreen()));
 
     setState(() {
       _opacity = 1.0;
@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.black,
       body: AnimatedOpacity(
         opacity: _opacity,
-        duration: const Duration(milliseconds: 1200),
+        duration: const Duration(milliseconds: 800),
         curve: Curves.easeInOut,
         child: Stack(
           children: [

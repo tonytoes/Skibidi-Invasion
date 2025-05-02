@@ -16,9 +16,9 @@ class ScenarioData {
     
                                     //?           CHAPTER 1         //
     
-//fecommit
-    
     {
+      'dialogue':
+    "The world feels calm and normal, but something is off.",
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'sfx': 'audio/sfx/action/footstep1.mp3'
     },
