@@ -261,7 +261,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
       _heartImages = [
         'assets/icons/hearts.png',
         'assets/icons/hearts.png',
-        'assets/icons/hearts.png'
+          'assets/icons/hearts.png'
       ];
       _playSFX(ScenarioData.scenarioData[_currentLine]['sfx']);
       String? bgmPath = ScenarioData.scenarioData[_currentLine]['bgm'];
@@ -278,39 +278,6 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(top: 5, right: 5),
-            child: ElevatedButton(
-              style: ButtonStyle(
-                shape: WidgetStateProperty.all(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
-                backgroundColor: WidgetStateProperty.all(Colors.black.withOpacity(0.5)),
-                overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
-                  if (states.contains(WidgetState.pressed)) {
-                    return Colors.black; //change
-                  }
-                  return null;
-                }),
-              ),
-              child: Image.asset(
-                pressed == true
-                    ? 'assets/icons/speaker.png'
-                    : 'assets/icons/speaker-off.png',
-                color: Colors.white,
-                width: 40,
-                height: 40,
-              ),
-              onPressed: () {
-                setState(() {
-                  pressed = !pressed;
-                });
-              },
-            ),
-          ),
 
           Padding(
             padding: EdgeInsets.only(top: 5, right: 10),
@@ -331,7 +298,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                   return null;
                 }),
               ),
-              child: Icon(Icons.menu, color: Colors.white, size: 40),
+              child: Icon(Icons.menu, color: Colors.white, size: 30),
             ),
           ),
 
@@ -349,7 +316,81 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
             ),
           ),
+          Positioned(
+            top: MediaQuery.of(context).size.height * 0.06,
+            right: MediaQuery.of(context).size.width * 0.010,
+            child:Padding(
+              padding: EdgeInsets.only(top: 5, right: 5),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  shape: WidgetStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
+                  backgroundColor: WidgetStateProperty.all(Colors.black.withOpacity(0.5)),
+                  overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
+                    if (states.contains(WidgetState.pressed)) {
+                      return Colors.black; //change
+                    }
+                    return null;
+                  }),
+                ),
+                child: Image.asset(
+                  pressed == true
+                      ? 'assets/icons/speaker.png'
+                      : 'assets/icons/speaker-off.png',
+                  color: Colors.white,
+                  width: 30,
+                  height: 30,
+                ),
+                onPressed: () {
+                  setState(() {
+                    pressed = !pressed;
+                  });
+                },
+              ),
+            ),
+          ),
 
+          Positioned(
+            top: MediaQuery.of(context).size.height * 0.15,
+            right: MediaQuery.of(context).size.width * 0.010,
+            child:Padding(
+              padding: EdgeInsets.only(top: 5, right: 5),
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  shape: WidgetStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
+                  backgroundColor: WidgetStateProperty.all(Colors.black.withOpacity(0.5)),
+                  overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
+                    if (states.contains(WidgetState.pressed)) {
+                      return Colors.black; //change
+                    }
+                    return null;
+                  }),
+                ),
+                child: Image.asset(
+                  pressed == true
+                      ? 'assets/icons/question.png'
+                      : 'assets/icons/speaker-off.png',
+                  color: Colors.white,
+                  width: 30,
+                  height: 30,
+                ),
+                onPressed: () {
+                  setState(() {
+                    pressed = !pressed;
+                  });
+                },
+              ),
+            ),
+          ),
 
           if (_showLives && _currentChoices.isNotEmpty)
             Positioned(
