@@ -61,7 +61,7 @@ class _ChoiceButtonState extends State<ChoiceButton> {
           backgroundColor: backgroundColor,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero,
+            borderRadius: BorderRadius.circular(20.0),
           ),
         ),
         child: Text(

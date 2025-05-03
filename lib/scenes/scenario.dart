@@ -279,12 +279,16 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
         elevation: 0,
         actions: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 5),
+            padding: EdgeInsets.only(top: 5, right: 5),
             child: ElevatedButton(
               style: ButtonStyle(
-                shape: WidgetStateProperty.all(CircleBorder()),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
                 padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
-                backgroundColor: WidgetStateProperty.all(Colors.black),
+                backgroundColor: WidgetStateProperty.all(Colors.black.withOpacity(0.5)),
                 overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
                   if (states.contains(WidgetState.pressed)) {
                     return Colors.black; //change
@@ -309,13 +313,17 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
           ),
 
           Padding(
-            padding: EdgeInsets.only(top: 5),
+            padding: EdgeInsets.only(top: 5, right: 10),
             child: ElevatedButton(
               onPressed: () => _openMenu(context),
               style: ButtonStyle(
-                shape: WidgetStateProperty.all(CircleBorder()),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)),
+                ),
                 padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
-                backgroundColor: WidgetStateProperty.all(Colors.black),
+                backgroundColor: WidgetStateProperty.all(
+                  Colors.black.withOpacity(0.5),),
                 overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
                   if (states.contains(WidgetState.pressed)) {
                     return Colors.black;
@@ -326,6 +334,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               child: Icon(Icons.menu, color: Colors.white, size: 40),
             ),
           ),
+
         ],
       ),
 
