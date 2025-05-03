@@ -9,8 +9,7 @@ import '../settings/settings_more.dart';
 import '../widgets/bgm_player.dart';
 
 
-void _openContinue(BuildContext context) {
-  BGMPlayer().startBackgroundMusic();
+void _openContinue(BuildContext context)  {
   Navigator.pushReplacement(
     context,
     PageTransition(
@@ -19,7 +18,10 @@ void _openContinue(BuildContext context) {
       child: const ContinueOverlay(),
     ),
   );
+  BGMPlayer().startBackgroundMusic(); //FUCKING NOT WORKING FUCKING ANNOYING SHIT
 }
+
+
 
 void _openSettings(BuildContext context) {
   Navigator.pushReplacement(
@@ -81,7 +83,6 @@ class MenuScreen extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       _openContinue(context);
-                      BGMPlayer().startBackgroundMusic();
                       
                     },
                     child: Text(
