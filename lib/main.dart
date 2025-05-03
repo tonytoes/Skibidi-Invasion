@@ -48,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
   void _handlePlay() async {
+    _sfxPlayer.play(AssetSource('audio/sfx/sound/GTAclick.mp3'));
     if (_isFading) return;
     setState(() {
       _opacity = 0.0;
@@ -143,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
               right: MediaQuery.of(context).size.width * 0.1,
               child: Center(
                 child: ElevatedButton(
-                  onPressed: _handlePlay,
+                  onPressed: _handlePlay, 
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
@@ -179,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/twinkle.mp3'));
+                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
                     _openChapters(context);
                   },
                   style: ButtonStyle(
@@ -216,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/twinkle.mp3'));
+                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
                     _openSettings(context);
                   },
                   style: ButtonStyle(
