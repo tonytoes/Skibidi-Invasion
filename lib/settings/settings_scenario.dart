@@ -6,7 +6,7 @@ import '../widgets/continue_overlay.dart';
 import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';
 import '../settings/settings_more.dart';
-import '../widgets/bgm_player.dart';
+import '../main.dart';
 
 
 void _openContinue(BuildContext context)  {
@@ -18,19 +18,19 @@ void _openContinue(BuildContext context)  {
       child: const ContinueOverlay(),
     ),
   );
-  BGMPlayer().startBackgroundMusic(); //FUCKING NOT WORKING FUCKING ANNOYING SHIT
+  bgmPlayer.startBackgroundMusic(); //FUCKING NOT WORKING FUCKING ANNOYING SHIT
 }
 
 
 
 void _openSettings(BuildContext context) {
   Navigator.pushReplacement(
-    context,
-   PageTransition(
-       type: PageTransitionType.fade,
-       duration: const Duration(milliseconds: 500),
-       child: const SettingsMoreScreen()
-     )
+  context,
+  PageTransition(
+      type: PageTransitionType.fade,
+      duration: const Duration(milliseconds: 500),
+      child: const SettingsMoreScreen()
+    )
   );
 }
 

@@ -98,17 +98,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
 
-
-
- @override
-  void dispose() {
-    bgmPlayer.dispose(); // Dispose of the BGM player when the screen is disposed
-    _sfxPlayer.dispose();
-    super.dispose();
-  }
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
