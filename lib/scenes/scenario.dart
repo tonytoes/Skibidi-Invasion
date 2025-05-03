@@ -8,6 +8,8 @@ import '../data/scenario_data.dart';
 import '../widgets/choice_overlay.dart';
 import '../widgets/gameover_overlay.dart';
 
+
+
 void _openMenu(BuildContext context) {
   showCupertinoModalPopup(
     context: context,
@@ -23,7 +25,7 @@ class ScenarioScreen extends StatefulWidget {
 }
 
 class _ScenarioScreenState extends State<ScenarioScreen> {
-  int _currentLine = 0;
+  int _currentLine = 90;
   int _lives = 3;
   int _lastQuestionIndex = 0;
   bool pressed = true;
@@ -338,8 +340,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
             ),
           ),
-        // Cheks the conditions of lives and decrements
-          if (_showLives && _currentChoices.isNotEmpty)
+
+          //  <------ LIVES ----------->
+          if (_showLives && _currentChoices.isNotEmpty) // Cheks the conditions of lives and decrements
             Positioned(
               key: ValueKey(_lives), // Keep the ValueKey
               top: MediaQuery.of(context).size.height * 0.01,
@@ -359,7 +362,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 }),
               ),
             ),
+          //  <------ LIVES ----------->
 
+          //  <------ CHARACTERS ----------->
           ..._characters.map((character) {
             String spritePath = character['sprite'];
             String position = character['position'];
@@ -393,7 +398,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
             );
           }).toList(),
+           // <------ CHARACTERS ----------->
 
+          //<------ CHOICES ----------->
           if (_currentChoices.isNotEmpty &&
               !_isGameOver) // Show choices only if it's not game over hak
             Align(
@@ -403,7 +410,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 child: _buildChoiceOptions(context),
               ),
             ),
-
+        //<------ GAMEOVER ----------->
           if (!_isGameOver)
             Align(
               alignment: Alignment.bottomCenter,
@@ -423,13 +430,18 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 ),
               ),
             ),
+
           if (_isGameOver)
             GameOverOverlay(onRestart: _resetGame), // Show game over overlay
+          //<------ GAMEOVER ----------->
         ],
+        //<------ CHOICES ----------->
+
       ),
     );
   }
 
+//<------ RESETCHOICESCOLOR ----------->
   @override
   void didUpdateWidget(ScenarioScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -439,7 +451,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
     });
   }
 }
+//<------ RESETCHOICESCOLOR ----------->
 
+//<------ CHOICES ----------->
   Widget _buildChoiceOptions(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -461,4 +475,4 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
     );
   }
 }
-
+//<------ CHOICES ----------->
