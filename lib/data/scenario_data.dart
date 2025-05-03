@@ -1,19 +1,5 @@
 class ScenarioData {
   static const List<Map<String, dynamic>> scenarioData = [
-    // {
-    //   'dialogue':
-    //   "You’re walking peacefully, the wind gently blowing, footsteps echoing on the pavement.", // index 0
-    //   'backgroundImage': 'assets/images/bg/Downtown-Night.png',
-    //   'characterName': 'TEST',
-    //   'characters': [ // dont hot relaod go back from the main screen . ps right left looks opposite
-    //      {'sprite': 'assets/images/characters/pose1/111.png', 'position': 'right'},
-    //      {'sprite': 'assets/images/characters/skibidi/smile.png', 'position': 'left'},
-    //   ],
-    //   'sfx': 'audio/sfx/SE_49mm_01.wav', // sfx goes first before dialogue if want the sfx at the end after dialogue put it at the very end or after dialogue
-    //    'bgm': 'audio/bgm/bgm-fantasy.mp3',
-    // },
-
-    
                                     //?           CHAPTER 1         //
     
     {
