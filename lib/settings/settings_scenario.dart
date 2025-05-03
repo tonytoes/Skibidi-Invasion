@@ -6,7 +6,7 @@ import '../widgets/continue_overlay.dart';
 import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';
 import '../settings/settings_more.dart';
-import '../main.dart';
+
 
 
 void _openContinue(BuildContext context)  {
@@ -18,7 +18,7 @@ void _openContinue(BuildContext context)  {
       child: const ContinueOverlay(),
     ),
   );
-  bgmPlayer.startBackgroundMusic(); //FUCKING NOT WORKING FUCKING ANNOYING SHIT
+ 
 }
 
 
