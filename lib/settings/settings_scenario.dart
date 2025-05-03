@@ -3,27 +3,40 @@ import 'dart:ui';
 import '../settings/settings.dart';
 import '../settings/settings_chapters.dart';
 import '../widgets/continue_overlay.dart';
+import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';
 import '../settings/settings_more.dart';
 
 void _openContinue(BuildContext context) {
   Navigator.pushReplacement(
-    context,
-    MaterialPageRoute(builder: (context) => const ContinueOverlay()),
+      context,
+      PageTransition(
+        type: PageTransitionType.fade,
+        duration: const Duration(milliseconds: 500),
+        child: const ContinueOverlay(),
+      )
   );
 }
 
 void _openSettings(BuildContext context) {
   Navigator.pushReplacement(
     context,
-    MaterialPageRoute(builder: (context) => const SettingsMoreScreen()),
+   PageTransition(
+       type: PageTransitionType.fade,
+       duration: const Duration(milliseconds: 500),
+       child: const SettingsMoreScreen()
+     )
   );
 }
 
 void _openChapters(BuildContext context) {
     Navigator.pushReplacement(
     context,
-    MaterialPageRoute(builder: (context) => const ChapterOverlay()),
+    PageTransition(
+    type: PageTransitionType.fade,
+    duration: const Duration(milliseconds: 500),
+    child: const ChapterOverlay()
+    ),
   );
 }
 

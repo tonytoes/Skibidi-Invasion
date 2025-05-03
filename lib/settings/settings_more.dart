@@ -1,12 +1,17 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import '../settings/settings_scenario.dart';
 
 void _openMenu(BuildContext context) {
   Navigator.pushReplacement(
     context,
-    MaterialPageRoute(builder: (context) => const MenuScreen()),
+    PageTransition(
+      type: PageTransitionType.fade,
+      duration: const Duration(milliseconds: 500),
+      child: const MenuScreen(),
+    ),
   );
 }
 

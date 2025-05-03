@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart'; // Import the package
+import 'package:page_transition/page_transition.dart';
 import '../main.dart';
 import '../settings/settings_scenario.dart';
 
