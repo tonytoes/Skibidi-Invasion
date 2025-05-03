@@ -97,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const Center(
               child: Text(
-                'SKIBIDI\nINVASION',
+                'SKIBIDI\nINFECTION',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'JosefinSans',

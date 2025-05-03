@@ -2,7 +2,7 @@ class ScenarioData {
   static const List<Map<String, dynamic>> scenarioData = [
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
-//?           CHAPTER 1         //
+                                 //?           CHAPTER 1         //
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 
@@ -423,288 +423,288 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
-    { // 35
-      'dialogue': "He ____ like pizza. What should I put here to complete the sentence?",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/141.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/twinkle.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "don't",
-          'nextDialogueIndex': 36,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "doesn't",
-          'nextDialogueIndex': 38,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "didn’t",
-          'nextDialogueIndex': 37,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
-    { // 36
-      'dialogue': "You’ve lost one of your lives! Stay sharp",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/143.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'incorrectChoiceGoTo': 35,
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-    },
-    { // 37
-      'dialogue': "You’ve got three lives! Lose all three, and we start over!",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/143.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'incorrectChoiceGoTo': 35,
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-    },
-    { // 38
-      'dialogue': "Correct! That's how we do it!!",
-      'nextDialogueIndex': 39,
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose2/252.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
-    { // 39
-      'dialogue': "Let's tidy up this sentence! 'They ____ cleaning their room right now.' What’s the right word?",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/141.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/thinking.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "is",
-          'nextDialogueIndex': 40,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "are",
-          'nextDialogueIndex': 42,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "was",
-          'nextDialogueIndex': 41,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
-    { // 40
-      'dialogue': "Oops! ‘Is’ doesn’t match with ‘they’. Try again!",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/143.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'incorrectChoiceGoTo': 39,
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-    },
-    { // 41
-      'dialogue': "Nope! ‘Was’ is past tense, but the sentence says ‘right now’.",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/143.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'incorrectChoiceGoTo': 39,
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-    },
-    { // 42
-      'dialogue': "Correct! 'They are cleaning' matches the subject and tense!",
-      'nextDialogueIndex': 43,
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose2/253.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
-    { // 43
-      'dialogue': "Here's another! 'She ____ already eaten when I arrived.' Which word completes it?",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/141.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/thinking.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "has",
-          'nextDialogueIndex': 44,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "had",
-          'nextDialogueIndex': 45,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "have",
-          'nextDialogueIndex': 44,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
-    { // 44
-      'dialogue': "Not quite! The second part is past tense, so use the past perfect form.",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/143.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'incorrectChoiceGoTo': 43,
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-    },
-    { // 45
-      'dialogue': "Yes! 'She had already eaten' — that’s the past perfect form!",
-      'nextDialogueIndex': 46,
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose2/254.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
-    { // 46
-      'dialogue': "Final one for now: 'Mem grabbed ___ apple from the table.' What fits best?",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/141.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/thinking.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "a",
-          'nextDialogueIndex': 47,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "an",
-          'nextDialogueIndex': 48,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "the",
-          'nextDialogueIndex': 47,
-          'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
-    { // 47
-      'dialogue': "Nope! ‘Apple’ starts with a vowel sound — check again!",
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/143.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'incorrectChoiceGoTo': 46,
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-    },
-    { // 48
-      'dialogue': "Nice! 'An apple' is correct. You nailed it!",
-      'nextDialogueIndex': 49,
-      'backgroundImage': 'assets/images/bg/messyroom.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose2/254.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
+                                                  { // 35
+                                                    'dialogue': "He ____ like pizza. What should I put here to complete the sentence?",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/141.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'sfx': 'audio/sfx/emotion/twinkle.mp3',
+                                                    'isQuestion': true,
+                                                    'choices': [
+                                                      {
+                                                        'text': "don't",
+                                                        'nextDialogueIndex': 36,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': false,
+                                                        'loseLifeOnIncorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "doesn't",
+                                                        'nextDialogueIndex': 38,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "didn’t",
+                                                        'nextDialogueIndex': 37,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': false,
+                                                        'loseLifeOnIncorrect': true,
+                                                      },
+                                                    ],
+                                                  },
+                                                  { // 36
+                                                    'dialogue': "You’ve lost one of your lives! Stay sharp",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/143.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'incorrectChoiceGoTo': 35,
+                                                    'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                  },
+                                                  { // 37
+                                                    'dialogue': "You’ve got three lives! Lose all three, and we start over!",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/143.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'incorrectChoiceGoTo': 35,
+                                                    'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                  },
+                                                  { // 38
+                                                    'dialogue': "Correct! That's how we do it!!",
+                                                    'nextDialogueIndex': 39,
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose2/252.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'sfx': 'audio/sfx/sound/check2.mp3',
+                                                  },
+                                                  { // 39
+                                                    'dialogue': "Let's tidy up this sentence! 'They ____ cleaning their room right now.' What’s the right word?",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/141.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'sfx': 'audio/sfx/emotion/thinking.mp3',
+                                                    'isQuestion': true,
+                                                    'choices': [
+                                                      {
+                                                        'text': "is",
+                                                        'nextDialogueIndex': 40,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': false,
+                                                        'loseLifeOnIncorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "are",
+                                                        'nextDialogueIndex': 42,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "was",
+                                                        'nextDialogueIndex': 41,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': false,
+                                                        'loseLifeOnIncorrect': true,
+                                                      },
+                                                    ],
+                                                  },
+                                                  { // 40
+                                                    'dialogue': "Oops! ‘Is’ doesn’t match with ‘they’. Try again!",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/143.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'incorrectChoiceGoTo': 39,
+                                                    'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                  },
+                                                  { // 41
+                                                    'dialogue': "Nope! ‘Was’ is past tense, but the sentence says ‘right now’.",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/143.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'incorrectChoiceGoTo': 39,
+                                                    'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                  },
+                                                  { // 42
+                                                    'dialogue': "Correct! 'They are cleaning' matches the subject and tense!",
+                                                    'nextDialogueIndex': 43,
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose2/253.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'sfx': 'audio/sfx/sound/check2.mp3',
+                                                  },
+                                                  { // 43
+                                                    'dialogue': "Here's another! 'She ____ already eaten when I arrived.' Which word completes it?",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/141.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'sfx': 'audio/sfx/emotion/thinking.mp3',
+                                                    'isQuestion': true,
+                                                    'choices': [
+                                                      {
+                                                        'text': "has",
+                                                        'nextDialogueIndex': 44,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': false,
+                                                        'loseLifeOnIncorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "had",
+                                                        'nextDialogueIndex': 45,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "have",
+                                                        'nextDialogueIndex': 44,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': false,
+                                                        'loseLifeOnIncorrect': true,
+                                                      },
+                                                    ],
+                                                  },
+                                                  { // 44
+                                                    'dialogue': "Not quite! The second part is past tense, so use the past perfect form.",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/143.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'incorrectChoiceGoTo': 43,
+                                                    'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                  },
+                                                  { // 45
+                                                    'dialogue': "Yes! 'She had already eaten' — that’s the past perfect form!",
+                                                    'nextDialogueIndex': 46,
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose2/254.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'sfx': 'audio/sfx/sound/check2.mp3',
+                                                  },
+                                                  { // 46
+                                                    'dialogue': "Final one for now: 'Mem grabbed ___ apple from the table.' What fits best?",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/141.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'sfx': 'audio/sfx/emotion/thinking.mp3',
+                                                    'isQuestion': true,
+                                                    'choices': [
+                                                      {
+                                                        'text': "a",
+                                                        'nextDialogueIndex': 47,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': false,
+                                                        'loseLifeOnIncorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "an",
+                                                        'nextDialogueIndex': 48,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "the",
+                                                        'nextDialogueIndex': 47,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': false,
+                                                        'loseLifeOnIncorrect': true,
+                                                      },
+                                                    ],
+                                                  },
+                                                  { // 47
+                                                    'dialogue': "Nope! ‘Apple’ starts with a vowel sound — check again!",
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose1/143.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'incorrectChoiceGoTo': 46,
+                                                    'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                  },
+                                                  { // 48
+                                                    'dialogue': "Nice! 'An apple' is correct. You nailed it!",
+                                                    'nextDialogueIndex': 49,
+                                                    'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                    'characters': [
+                                                      {
+                                                        'sprite': 'assets/images/characters/pose2/254.png',
+                                                        'position': 'right'
+                                                      }
+                                                    ],
+                                                    'characterName': 'Mem',
+                                                    'sfx': 'audio/sfx/sound/check2.mp3',
+                                                  },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -775,9 +775,56 @@ class ScenarioData {
     },
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
-//?           CHAPTER 2         //
+                                  //?           CHAPTER 2         //
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
     { // 54
@@ -912,197 +959,197 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
-    { // 66
-      'dialogue': "____ hate going to school",
-      'backgroundImage': 'assets/images/bg/door2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/skibidi/angry.png',
-          'position': 'left'
-        },
-        {
-          'sprite': 'assets/images/characters/pose1/143.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/skibidi3.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "Im",
-          'nextDialogueIndex': 67,
-          'nextBackgroundImage': 'assets/images/bg/door2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "him",
-          'nextDialogueIndex': 68,
-          'nextBackgroundImage': 'assets/images/bg/door2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "I",
-          'nextDialogueIndex': 69,
-          'nextBackgroundImage': 'assets/images/bg/door2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-      ],
-    },
+                                                      { // 66
+                                                        'dialogue': "____ hate going to school",
+                                                        'backgroundImage': 'assets/images/bg/door2.jpg',
+                                                        'characters': [
+                                                          {
+                                                            'sprite': 'assets/images/characters/skibidi/angry.png',
+                                                            'position': 'left'
+                                                          },
+                                                          {
+                                                            'sprite': 'assets/images/characters/pose1/143.png',
+                                                            'position': 'right'
+                                                          }
+                                                        ],
+                                                        'characterName': 'Mem',
+                                                        'sfx': 'audio/sfx/sound/skibidi3.mp3',
+                                                        'isQuestion': true,
+                                                        'choices': [
+                                                          {
+                                                            'text': "Im",
+                                                            'nextDialogueIndex': 67,
+                                                            'nextBackgroundImage': 'assets/images/bg/door2.jpg',
+                                                            'characterName': 'Mem',
+                                                            'isCorrect': false,
+                                                            'loseLifeOnIncorrect': true,
+                                                          },
+                                                          {
+                                                            'text': "him",
+                                                            'nextDialogueIndex': 68,
+                                                            'nextBackgroundImage': 'assets/images/bg/door2.jpg',
+                                                            'characterName': 'Mem',
+                                                            'isCorrect': false,
+                                                            'loseLifeOnIncorrect': true,
+                                                          },
+                                                          {
+                                                            'text': "I",
+                                                            'nextDialogueIndex': 69,
+                                                            'nextBackgroundImage': 'assets/images/bg/door2.jpg',
+                                                            'characterName': 'Mem',
+                                                            'isCorrect': true,
+                                                          },
+                                                        ],
+                                                      },
 
-    { // 67
-      'dialogue': "WRONG",
-      'backgroundImage': 'assets/images/bg/door2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/skibidi/happy.png',
-          'position': 'left'
-        },
-        {
-          'sprite': 'assets/images/characters/pose1/144.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 66,
-    },
+                                                      { // 67
+                                                        'dialogue': "WRONG",
+                                                        'backgroundImage': 'assets/images/bg/door2.jpg',
+                                                        'characters': [
+                                                          {
+                                                            'sprite': 'assets/images/characters/skibidi/happy.png',
+                                                            'position': 'left'
+                                                          },
+                                                          {
+                                                            'sprite': 'assets/images/characters/pose1/144.png',
+                                                            'position': 'right'
+                                                          }
+                                                        ],
+                                                        'characterName': 'Mem',
+                                                        'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                        'incorrectChoiceGoTo': 66,
+                                                      },
 
-    { // 68
-      'dialogue': "WRONG",
-      'backgroundImage': 'assets/images/bg/door2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/skibidi/happy.png',
-          'position': 'left'
-        },
-        {
-          'sprite': 'assets/images/characters/pose1/144.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 66,
-    },
+                                                      { // 68
+                                                        'dialogue': "WRONG",
+                                                        'backgroundImage': 'assets/images/bg/door2.jpg',
+                                                        'characters': [
+                                                          {
+                                                            'sprite': 'assets/images/characters/skibidi/happy.png',
+                                                            'position': 'left'
+                                                          },
+                                                          {
+                                                            'sprite': 'assets/images/characters/pose1/144.png',
+                                                            'position': 'right'
+                                                          }
+                                                        ],
+                                                        'characterName': 'Mem',
+                                                        'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                        'incorrectChoiceGoTo': 66,
+                                                      },
 
-    { // 69
-      'dialogue': "It’s working! Keep going!",
-      'backgroundImage': 'assets/images/bg/door2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/skibidi/sad.png',
-          'position': 'left'
-        },
-        {
-          'sprite': 'assets/images/characters/pose1/142.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
+                                                      { // 69
+                                                        'dialogue': "It’s working! Keep going!",
+                                                        'backgroundImage': 'assets/images/bg/door2.jpg',
+                                                        'characters': [
+                                                          {
+                                                            'sprite': 'assets/images/characters/skibidi/sad.png',
+                                                            'position': 'left'
+                                                          },
+                                                          {
+                                                            'sprite': 'assets/images/characters/pose1/142.png',
+                                                            'position': 'right'
+                                                          }
+                                                        ],
+                                                        'characterName': 'Mem',
+                                                        'sfx': 'audio/sfx/sound/check2.mp3',
+                                                      },
 
-    { // 70
-      'dialogue': "The man slip and _______",
-      'backgroundImage': 'assets/images/bg/door2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/skibidi/sad.png',
-          'position': 'left'
-        },
-        {
-          'sprite': 'assets/images/characters/pose1/142.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/skibidi3.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "fall",
-          'nextDialogueIndex': 71,
-          'nextBackgroundImage': 'assets/images/bg/door2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "feel",
-          'nextDialogueIndex': 72,
-          'nextBackgroundImage': 'assets/images/bg/door2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "fell",
-          'nextDialogueIndex': 73,
-          'nextBackgroundImage': 'assets/images/bg/door2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-      ],
-    },
+                                                      { // 70
+                                                        'dialogue': "The man slip and _______",
+                                                        'backgroundImage': 'assets/images/bg/door2.jpg',
+                                                        'characters': [
+                                                          {
+                                                            'sprite': 'assets/images/characters/skibidi/sad.png',
+                                                            'position': 'left'
+                                                          },
+                                                          {
+                                                            'sprite': 'assets/images/characters/pose1/142.png',
+                                                            'position': 'right'
+                                                          }
+                                                        ],
+                                                        'characterName': 'Mem',
+                                                        'sfx': 'audio/sfx/sound/skibidi3.mp3',
+                                                        'isQuestion': true,
+                                                        'choices': [
+                                                          {
+                                                            'text': "fall",
+                                                            'nextDialogueIndex': 71,
+                                                            'nextBackgroundImage': 'assets/images/bg/door2.jpg',
+                                                            'characterName': 'Mem',
+                                                            'isCorrect': false,
+                                                            'loseLifeOnIncorrect': true,
+                                                          },
+                                                          {
+                                                            'text': "feel",
+                                                            'nextDialogueIndex': 72,
+                                                            'nextBackgroundImage': 'assets/images/bg/door2.jpg',
+                                                            'characterName': 'Mem',
+                                                            'isCorrect': false,
+                                                            'loseLifeOnIncorrect': true,
+                                                          },
+                                                          {
+                                                            'text': "fell",
+                                                            'nextDialogueIndex': 73,
+                                                            'nextBackgroundImage': 'assets/images/bg/door2.jpg',
+                                                            'characterName': 'Mem',
+                                                            'isCorrect': true,
+                                                          },
+                                                        ],
+                                                      },
 
-    { // 71
-      'dialogue': "WRONG",
-      'backgroundImage': 'assets/images/bg/door2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/skibidi/happy.png',
-          'position': 'left'
-        },
-        {
-          'sprite': 'assets/images/characters/pose1/144.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 70,
-    },
+                                                      { // 71
+                                                        'dialogue': "WRONG",
+                                                        'backgroundImage': 'assets/images/bg/door2.jpg',
+                                                        'characters': [
+                                                          {
+                                                            'sprite': 'assets/images/characters/skibidi/happy.png',
+                                                            'position': 'left'
+                                                          },
+                                                          {
+                                                            'sprite': 'assets/images/characters/pose1/144.png',
+                                                            'position': 'right'
+                                                          }
+                                                        ],
+                                                        'characterName': 'Mem',
+                                                        'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                        'incorrectChoiceGoTo': 70,
+                                                      },
 
-    { // 72
-      'dialogue': "WRONG",
-      'backgroundImage': 'assets/images/bg/door2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/skibidi/happy.png',
-          'position': 'left'
-        },
-        {
-          'sprite': 'assets/images/characters/pose1/144.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 70,
-    },
+                                                      { // 72
+                                                        'dialogue': "WRONG",
+                                                        'backgroundImage': 'assets/images/bg/door2.jpg',
+                                                        'characters': [
+                                                          {
+                                                            'sprite': 'assets/images/characters/skibidi/happy.png',
+                                                            'position': 'left'
+                                                          },
+                                                          {
+                                                            'sprite': 'assets/images/characters/pose1/144.png',
+                                                            'position': 'right'
+                                                          }
+                                                        ],
+                                                        'characterName': 'Mem',
+                                                        'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                        'incorrectChoiceGoTo': 70,
+                                                      },
 
-    { // 73
-      'dialogue': "Hell yeah!",
-      'backgroundImage': 'assets/images/bg/door2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/skibidi/sad.png',
-          'position': 'left'
-        },
-        {
-          'sprite': 'assets/images/characters/pose1/142.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
+                                                      { // 73
+                                                        'dialogue': "Hell yeah!",
+                                                        'backgroundImage': 'assets/images/bg/door2.jpg',
+                                                        'characters': [
+                                                          {
+                                                            'sprite': 'assets/images/characters/skibidi/sad.png',
+                                                            'position': 'left'
+                                                          },
+                                                          {
+                                                            'sprite': 'assets/images/characters/pose1/142.png',
+                                                            'position': 'right'
+                                                          }
+                                                        ],
+                                                        'characterName': 'Mem',
+                                                        'sfx': 'audio/sfx/sound/check2.mp3',
+                                                      },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -1306,440 +1353,440 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
-    {
-      'dialogue': "She ____ to school every day", // index 90
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/154.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/question.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "game",
-          'nextDialogueIndex': 91,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "goes",
-          'nextDialogueIndex': 93,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "get",
-          'nextDialogueIndex': 92,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
+                                              {
+                                                'dialogue': "She ____ to school every day", // index 90
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/154.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/emotion/question.mp3',
+                                                'isQuestion': true,
+                                                'choices': [
+                                                  {
+                                                    'text': "game",
+                                                    'nextDialogueIndex': 91,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "goes",
+                                                    'nextDialogueIndex': 93,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "get",
+                                                    'nextDialogueIndex': 92,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                ],
+                                              },
 
-    {
-      'dialogue': "oops, that is wrong.", // index 91
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 90,
-    },
+                                              {
+                                                'dialogue': "oops, that is wrong.", // index 91
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 90,
+                                              },
 
-    {
-      'dialogue': "oops, that is wrong.", // index 92
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 90,
-    },
+                                              {
+                                                'dialogue': "oops, that is wrong.", // index 92
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 90,
+                                              },
 
-    {
-      'dialogue': "Yes! When we talk about he or she, we add -s to the action. So we say: ‘She goes’ or ‘He goes’.",
-      // index 93
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/152.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
+                                              {
+                                                'dialogue': "Yes! When we talk about he or she, we add -s to the action. So we say: ‘She goes’ or ‘He goes’.",
+                                                // index 93
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/152.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/check2.mp3',
+                                              },
 
-    {
-      'dialogue': "Next Question!", // index 94
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/151.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/respond.mp3',
-    },
+                                              {
+                                                'dialogue': "Next Question!", // index 94
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/151.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/emotion/respond.mp3',
+                                              },
 
-    {
-      'dialogue': "This is my brother. ___ is a doctor.", // index 95
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/154.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/question.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "He",
-          'nextDialogueIndex': 98,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "She",
-          'nextDialogueIndex': 96,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "It",
-          'nextDialogueIndex': 97,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
+                                              {
+                                                'dialogue': "This is my brother. ___ is a doctor.", // index 95
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/154.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/emotion/question.mp3',
+                                                'isQuestion': true,
+                                                'choices': [
+                                                  {
+                                                    'text': "He",
+                                                    'nextDialogueIndex': 98,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "She",
+                                                    'nextDialogueIndex': 96,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "It",
+                                                    'nextDialogueIndex': 97,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                ],
+                                              },
 
-    {
-      'dialogue': "nuh uh, brother is a boy, so that is not the correct answer.",
-      // index 96
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 95,
-    },
+                                              {
+                                                'dialogue': "nuh uh, brother is a boy, so that is not the correct answer.",
+                                                // index 96
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 95,
+                                              },
 
-    {
-      'dialogue': "try harder.", // index 97
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 95,
-    },
+                                              {
+                                                'dialogue': "try harder.", // index 97
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 95,
+                                              },
 
-    {
-      'dialogue': "Good job! We say ‘he’ when talking about a boy, like your brother!",
-      // index 98
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/152.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
+                                              {
+                                                'dialogue': "Good job! We say ‘he’ when talking about a boy, like your brother!",
+                                                // index 98
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/152.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/check2.mp3',
+                                              },
 
-    {
-      'dialogue': "Next Question!", // index 99
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/151.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/respond.mp3',
-    },
+                                              {
+                                                'dialogue': "Next Question!", // index 99
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/151.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/emotion/respond.mp3',
+                                              },
 
-    {
-      'dialogue': "I ___ my homework yesterday.", // index 100
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/154.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/question.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "do",
-          'nextDialogueIndex': 101,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "did",
-          'nextDialogueIndex': 103,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "done",
-          'nextDialogueIndex': 102,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
+                                              {
+                                                'dialogue': "I ___ my homework yesterday.", // index 100
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/154.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/emotion/question.mp3',
+                                                'isQuestion': true,
+                                                'choices': [
+                                                  {
+                                                    'text': "do",
+                                                    'nextDialogueIndex': 101,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "did",
+                                                    'nextDialogueIndex': 103,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "done",
+                                                    'nextDialogueIndex': 102,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                ],
+                                              },
 
-    {
-      'dialogue': "Not quite! Think about how we talk about something from yesterday.",
-      // index 101
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 100,
-    },
+                                              {
+                                                'dialogue': "Not quite! Think about how we talk about something from yesterday.",
+                                                // index 101
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 100,
+                                              },
 
-    {
-      'dialogue': "try again.", // index 102
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 100,
-    },
+                                              {
+                                                'dialogue': "try again.", // index 102
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 100,
+                                              },
 
-    {
-      'dialogue': "Yay! ‘Did’ is the right word when we talk about the past—like something you did yesterday!",
-      // index 103
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/152.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
-    {
-      'dialogue': "She ___ to the store yesterday.", // index 104
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/154.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/question.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "go",
-          'nextDialogueIndex': 105,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "went",
-          'nextDialogueIndex': 107,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "gone",
-          'nextDialogueIndex': 106,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
+                                              {
+                                                'dialogue': "Yay! ‘Did’ is the right word when we talk about the past—like something you did yesterday!",
+                                                // index 103
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/152.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/check2.mp3',
+                                              },
+                                              {
+                                                'dialogue': "She ___ to the store yesterday.", // index 104
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/154.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/emotion/question.mp3',
+                                                'isQuestion': true,
+                                                'choices': [
+                                                  {
+                                                    'text': "go",
+                                                    'nextDialogueIndex': 105,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "went",
+                                                    'nextDialogueIndex': 107,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "gone",
+                                                    'nextDialogueIndex': 106,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                ],
+                                              },
 
-    {
-      'dialogue': "Oops! That’s not quite right. Think about the past tense of 'go'.",
-      // index 105
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 104,
-    },
+                                              {
+                                                'dialogue': "Oops! That’s not quite right. Think about the past tense of 'go'.",
+                                                // index 105
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 104,
+                                              },
 
-    {
-      'dialogue': "Hmm, not quite! 'Gone' is used in other situations. Try again.",
-      // index 106
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 104,
-    },
+                                              {
+                                                'dialogue': "Hmm, not quite! 'Gone' is used in other situations. Try again.",
+                                                // index 106
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 104,
+                                              },
 
-    {
-      'dialogue': "Yay! ‘Went’ is the correct word for talking about the past—like something you did yesterday!",
-      // index 107
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/152.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
-    {
-      'dialogue': "They ___ a movie last night.", // index 108
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/154.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/question.mp3',
-      'isQuestion': true,
-      'choices': [
-        {
-          'text': "watch",
-          'nextDialogueIndex': 109,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-        {
-          'text': "watched",
-          'nextDialogueIndex': 111,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': true,
-        },
-        {
-          'text': "watching",
-          'nextDialogueIndex': 110,
-          'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-          'characterName': 'Mem',
-          'isCorrect': false,
-          'loseLifeOnIncorrect': true,
-        },
-      ],
-    },
+                                              {
+                                                'dialogue': "Yay! ‘Went’ is the correct word for talking about the past—like something you did yesterday!",
+                                                // index 107
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/152.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/check2.mp3',
+                                              },
+                                              {
+                                                'dialogue': "They ___ a movie last night.", // index 108
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/154.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/emotion/question.mp3',
+                                                'isQuestion': true,
+                                                'choices': [
+                                                  {
+                                                    'text': "watch",
+                                                    'nextDialogueIndex': 109,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "watched",
+                                                    'nextDialogueIndex': 111,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "watching",
+                                                    'nextDialogueIndex': 110,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': false,
+                                                    'loseLifeOnIncorrect': true,
+                                                  },
+                                                ],
+                                              },
 
-    {
-      'dialogue': "Oops! That’s not correct. What’s the past tense of 'watch'?",
-      // index 109
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 108,
-    },
+                                              {
+                                                'dialogue': "Oops! That’s not correct. What’s the past tense of 'watch'?",
+                                                // index 109
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 108,
+                                              },
 
-    {
-      'dialogue': "Hmm, not quite! 'Watching' is for ongoing actions. Try again.",
-      // index 110
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/153.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/wrong.mp3',
-      'incorrectChoiceGoTo': 108,
-    },
+                                              {
+                                                'dialogue': "Hmm, not quite! 'Watching' is for ongoing actions. Try again.",
+                                                // index 110
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/153.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/wrong.mp3',
+                                                'incorrectChoiceGoTo': 108,
+                                              },
 
-    {
-      'dialogue': "Yay! ‘Watched’ is the correct word when talking about something that happened in the past!",
-      // index 111
-      'backgroundImage': 'assets/images/bg/library2.jpg',
-      'characters': [
-        {
-          'sprite': 'assets/images/characters/pose1/152.png',
-          'position': 'right'
-        }
-      ],
-      'characterName': 'Mem',
-      'sfx': 'audio/sfx/sound/check2.mp3',
-    },
+                                              {
+                                                'dialogue': "Yay! ‘Watched’ is the correct word when talking about something that happened in the past!",
+                                                // index 111
+                                                'backgroundImage': 'assets/images/bg/library2.jpg',
+                                                'characters': [
+                                                  {
+                                                    'sprite': 'assets/images/characters/pose1/152.png',
+                                                    'position': 'right'
+                                                  }
+                                                ],
+                                                'characterName': 'Mem',
+                                                'sfx': 'audio/sfx/sound/check2.mp3',
+                                              },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -1772,9 +1819,52 @@ class ScenarioData {
     },
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
-//?           CHAPTER 3         //
+                              //?           CHAPTER 3         //
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
     {

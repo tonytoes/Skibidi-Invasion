@@ -56,7 +56,7 @@ class _InstructionScreenState extends State<InstructionScreen> {
             ),
             const Center(
               child: Text(
-                'SKIBIDI\nINVASION', // this is just a draft can be an image asset for the logo
+                'SKIBIDI\nINFECTION', // this is just a draft can be an image asset for the logo
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'JosefinSans',
