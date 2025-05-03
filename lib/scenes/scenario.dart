@@ -195,7 +195,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 choice['loseLifeOnIncorrect'] ==
                     true) { // Handles life loss for incorrect choices
               if (_lives > 0) {
-                _heartImages[_lives - 1] = 'assets/icons/speaker.png';
+                _heartImages[_lives - 1] = 'assets/icons/brokenheart.png';
                 _lives--;
               }
               if (_lives <= 0) {
@@ -341,8 +341,8 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
             ),
           ),
 
-          //  <------ LIVES ----------->
-          if (_showLives && _currentChoices.isNotEmpty) // Cheks the conditions of lives and decrements
+
+          if (_showLives && _currentChoices.isNotEmpty)
             Positioned(
               key: ValueKey(_lives), // Keep the ValueKey
               top: MediaQuery.of(context).size.height * 0.01,
@@ -350,7 +350,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               child: Row(
                 key: ValueKey(_lives),
                 mainAxisSize: MainAxisSize.min,
-                children: List.generate(_lives, (index) {
+                children: List.generate(3, (index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 2.0),
                     child: Image.asset(
@@ -362,9 +362,8 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 }),
               ),
             ),
-          //  <------ LIVES ----------->
 
-          //  <------ CHARACTERS ----------->
+
           ..._characters.map((character) {
             String spritePath = character['sprite'];
             String position = character['position'];
@@ -398,9 +397,8 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
             );
           }).toList(),
-           // <------ CHARACTERS ----------->
 
-          //<------ CHOICES ----------->
+
           if (_currentChoices.isNotEmpty &&
               !_isGameOver) // Show choices only if it's not game over hak
             Align(
@@ -410,7 +408,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 child: _buildChoiceOptions(context),
               ),
             ),
-        //<------ GAMEOVER ----------->
+
           if (!_isGameOver)
             Align(
               alignment: Alignment.bottomCenter,
@@ -433,15 +431,11 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
 
           if (_isGameOver)
             GameOverOverlay(onRestart: _resetGame), // Show game over overlay
-          //<------ GAMEOVER ----------->
         ],
-        //<------ CHOICES ----------->
-
       ),
     );
   }
 
-//<------ RESETCHOICESCOLOR ----------->
   @override
   void didUpdateWidget(ScenarioScreen oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -451,9 +445,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
     });
   }
 }
-//<------ RESETCHOICESCOLOR ----------->
 
-//<------ CHOICES ----------->
   Widget _buildChoiceOptions(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -475,4 +467,4 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
     );
   }
 }
-//<------ CHOICES ----------->
+

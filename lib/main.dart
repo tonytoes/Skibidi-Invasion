@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:page_transition/page_transition.dart'; // Import the page_transition package
 import '../widgets/instructions_overlay.dart';
 import 'settings/settings.dart';
 import 'settings/settings_chapters.dart';
@@ -8,21 +9,21 @@ import 'package:audioplayers/audioplayers.dart';
 // this the main dart this part imports leading to diff darts
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized(); // this ensures that plugins would work
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky); // this removes the status bar and the bottom navigator
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]); // locks the screen to portrait
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-  runApp(const MyApp()); // very important without this it wouldn't render the whole or it wouldn't run
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget { // this is stateless because this main dart doesn't have any state or basically its the root of all darts
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // this removes the debug
-      home: const HomeScreen(), // this the homescreen or what you would see at the start
+      debugShowCheckedModeBanner: false,
+      home: const HomeScreen(),
     );
   }
 }
@@ -41,15 +42,22 @@ class _HomeScreenState extends State<HomeScreen> {
   void _handlePlay() async {
     if (_isFading) return;
     setState(() {
-      _opacity = 0.0; // this sets the fade out and fade in trnasition
+      _opacity = 0.0;
       _isFading = true;
     });
 
-    await Future.delayed(const Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 800)); // Use 800ms to match the AnimatedOpacity
 
     await Navigator.of(
       context,
-    ).push(MaterialPageRoute(builder: (context) => const InstructionScreen()));
+    ).pushReplacement( // Use pushReplacement for a smoother transition
+      PageTransition(
+        // Use PageTransition
+        type: PageTransitionType.fade, // Choose your desired transition type
+        duration: const Duration(milliseconds: 800), // Match AnimatedOpacity duration
+        child: const InstructionScreen(), // The screen to navigate to
+      ),
+    );
 
     setState(() {
       _opacity = 1.0;
@@ -77,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.black,
       body: AnimatedOpacity(
         opacity: _opacity,
-        duration: const Duration(milliseconds: 800),
+        duration: const Duration(milliseconds: 800), // 800ms
         curve: Curves.easeInOut,
         child: Stack(
           children: [
@@ -91,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const Center(
               child: Text(
-                'SKIBIDI\nINVASION', // this is just a draft can be an image asset for the logo
+                'SKIBIDI\nINVASION',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontFamily: 'JosefinSans',
@@ -101,7 +109,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.3,
               left: MediaQuery.of(context).size.width * 0.1,
@@ -110,19 +117,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ElevatedButton(
                   onPressed: _handlePlay,
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(
-                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
-                    ),
-                    overlayColor: WidgetStateProperty.resolveWith<Color?>((
-                        Set<WidgetState> states,
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
+                    overlayColor: MaterialStateProperty.resolveWith<Color?>((
+                        Set<MaterialState> states,
                         ) {
-                      if (states.contains(WidgetState.pressed)) {
-                        return Color.fromARGB(255, 125, 192, 108).withOpacity(0.2);;
+                      if (states.contains(MaterialState.pressed)) {
+                        return const Color.fromARGB(255, 125, 192, 108)
+                            .withOpacity(0.2);
+                        ;
                       }
                       return null;
                     }),
-                    shape: WidgetStateProperty.all(const StadiumBorder()),
-                    minimumSize: WidgetStateProperty.all(const Size(200, 50)),
+                    shape: MaterialStateProperty.all(const StadiumBorder()),
+                    minimumSize: MaterialStateProperty.all(const Size(200, 50)),
                   ),
                   child: const Text(
                     'Play',
@@ -136,7 +144,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.2,
               left: 0,
@@ -145,19 +152,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ElevatedButton(
                   onPressed: () => _openChapters(context),
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(
-                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
-                    ),
-                    overlayColor: WidgetStateProperty.resolveWith<Color?>((
-                        Set<WidgetState> states,
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
+                    overlayColor: MaterialStateProperty.resolveWith<Color?>((
+                        Set<MaterialState> states,
                         ) {
-                      if (states.contains(WidgetState.pressed)) {
-                        return const Color.fromARGB(255, 138, 137, 90).withOpacity(0.2);
+                      if (states.contains(MaterialState.pressed)) {
+                        return const Color.fromARGB(255, 138, 137, 90)
+                            .withOpacity(0.2);
                       }
                       return null;
                     }),
-                    shape: WidgetStateProperty.all(const StadiumBorder()),
-                    minimumSize: WidgetStateProperty.all(const Size(200, 50)),
+                    shape: MaterialStateProperty.all(const StadiumBorder()),
+                    minimumSize: MaterialStateProperty.all(const Size(200, 50)),
                   ),
                   child: const Text(
                     'Story',
@@ -171,7 +178,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.1,
               left: 0,
@@ -180,19 +186,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: ElevatedButton(
                   onPressed: () => _openSettings(context),
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(
-                        const  Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
-                    ),
-                    overlayColor: WidgetStateProperty.resolveWith<Color?>((
-                        Set<WidgetState> states,
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
+                    overlayColor: MaterialStateProperty.resolveWith<Color?>((
+                        Set<MaterialState> states,
                         ) {
-                      if (states.contains(WidgetState.pressed)) {
-                        return const Color.fromARGB(255, 90, 136, 138).withOpacity(0.2);
+                      if (states.contains(MaterialState.pressed)) {
+                        return const Color.fromARGB(255, 90, 136, 138)
+                            .withOpacity(0.2);
                       }
                       return null;
                     }),
-                    shape: WidgetStateProperty.all(const StadiumBorder()),
-                    minimumSize: WidgetStateProperty.all(const Size(200, 50)),
+                    shape: MaterialStateProperty.all(const StadiumBorder()),
+                    minimumSize: MaterialStateProperty.all(const Size(200, 50)),
                   ),
                   child: const Text(
                     'Settings',
@@ -212,3 +218,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
