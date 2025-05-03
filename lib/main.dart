@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:page_transition/page_transition.dart'; // Import the page_transition package
+import 'package:page_transition/page_transition.dart';
 import '../widgets/instructions_overlay.dart';
 import 'settings/settings.dart';
 import 'settings/settings_chapters.dart';
 import 'package:audioplayers/audioplayers.dart';
-// this the main dart this part imports leading to diff darts
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,16 +45,15 @@ class _HomeScreenState extends State<HomeScreen> {
       _isFading = true;
     });
 
-    await Future.delayed(const Duration(milliseconds: 800)); // Use 800ms to match the AnimatedOpacity
+    await Future.delayed(const Duration(milliseconds: 800));
 
     await Navigator.of(
       context,
-    ).pushReplacement( // Use pushReplacement for a smoother transition
+    ).pushReplacement(
       PageTransition(
-        // Use PageTransition
-        type: PageTransitionType.fade, // Choose your desired transition type
-        duration: const Duration(milliseconds: 800), // Match AnimatedOpacity duration
-        child: const InstructionScreen(), // The screen to navigate to
+        type: PageTransitionType.fade,
+        duration: const Duration(milliseconds: 800),
+        child: const InstructionScreen(),
       ),
     );
 
@@ -85,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.black,
       body: AnimatedOpacity(
         opacity: _opacity,
-        duration: const Duration(milliseconds: 800), // 800ms
+        duration: const Duration(milliseconds: 800),
         curve: Curves.easeInOut,
         child: Stack(
           children: [

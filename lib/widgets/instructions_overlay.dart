@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:page_transition/page_transition.dart';
 import '../scenes/scenario.dart';
 
 class InstructionScreen extends StatefulWidget  {
@@ -27,7 +28,7 @@ class _InstructionScreenState extends State<InstructionScreen> {
       _isFading = true;
     });
 
-    await Future.delayed(const Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 800));
 
     if (!mounted) return;
     await Navigator.of(context).pushReplacement(
@@ -35,15 +36,13 @@ class _InstructionScreenState extends State<InstructionScreen> {
     );
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       body: AnimatedOpacity(
         opacity: _opacity,
-        duration: const Duration(milliseconds: 1200),
+        duration: const Duration(milliseconds: 800),
         curve: Curves.easeInOut,
         child: Stack(
           children: [
