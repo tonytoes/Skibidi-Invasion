@@ -64,3 +64,9 @@ flutter:
       fonts:
         - asset: assets/fonts/IBMPlexMono-regular.ttf
           weight: 400
+
+    - family: Obafen
+      fonts:
+        - asset: assets/fonts/Obafen-e9jK3.otf
+          weight: 400      
+

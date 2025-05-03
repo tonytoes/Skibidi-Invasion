@@ -90,20 +90,29 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/bg/Downtown-Night.png'),
+                  image: AssetImage('assets/images/bg/cutscene2.png'),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            const Center(
+            Positioned(
+              right: MediaQuery.of(context).size.width * 0.18,
+              top: MediaQuery.of(context).size.width * 0.2,
               child: Text(
-                'SKIBIDI\nINVASION',
+                'SKIBIDI\nINFECTION',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'JosefinSans',
-                  fontSize: 40,
+                  fontFamily: 'Obafen',
+                  fontSize: 60,
                   color: Colors.white,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w400,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(3, 3),
+                      blurRadius: 5,
+                      color: Colors.black54,
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -133,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text(
                     'Play',
                     style: TextStyle(
-                      fontFamily: 'TacticRound',
+                      fontFamily: 'Obafen',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -167,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text(
                     'Story',
                     style: TextStyle(
-                      fontFamily: 'TacticRound',
+                      fontFamily: 'Obafen',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -201,7 +210,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text(
                     'Settings',
                     style: TextStyle(
-                      fontFamily: 'TacticRound',
+                      fontFamily: 'Obafen',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
