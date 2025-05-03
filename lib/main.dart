@@ -82,12 +82,12 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Stack(
           children: [
             Container(
-                    decoration: const BoxDecoration(
-                    image: DecorationImage(
-                    image: AssetImage('assets/images/bg/Downtown-Night.png'),
-                    fit: BoxFit.cover,
-                  ),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/bg/Downtown-Night.png'),
+                  fit: BoxFit.cover,
                 ),
+              ),
             ),
             const Center(
               child: Text(
@@ -111,11 +111,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: _handlePlay,
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                      const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
+                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
                     ),
                     overlayColor: WidgetStateProperty.resolveWith<Color?>((
-                      Set<WidgetState> states,
-                    ) {
+                        Set<WidgetState> states,
+                        ) {
                       if (states.contains(WidgetState.pressed)) {
                         return Color.fromARGB(255, 125, 192, 108).withOpacity(0.2);;
                       }
@@ -146,11 +146,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => _openChapters(context),
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                      const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
+                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
                     ),
                     overlayColor: WidgetStateProperty.resolveWith<Color?>((
-                      Set<WidgetState> states,
-                    ) {
+                        Set<WidgetState> states,
+                        ) {
                       if (states.contains(WidgetState.pressed)) {
                         return const Color.fromARGB(255, 138, 137, 90).withOpacity(0.2);
                       }
@@ -181,11 +181,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => _openSettings(context),
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                      const  Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
+                        const  Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)
                     ),
                     overlayColor: WidgetStateProperty.resolveWith<Color?>((
-                      Set<WidgetState> states,
-                    ) {
+                        Set<WidgetState> states,
+                        ) {
                       if (states.contains(WidgetState.pressed)) {
                         return const Color.fromARGB(255, 90, 136, 138).withOpacity(0.2);
                       }
@@ -212,7 +212,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
-
-//ndkVersion = flutter.ndkVersion

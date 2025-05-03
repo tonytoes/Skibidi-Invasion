@@ -10,8 +10,6 @@ class InstructionScreen extends StatefulWidget  {
   State<InstructionScreen> createState() => _InstructionScreenState();
 }
 
-
-
 class _InstructionScreenState extends State<InstructionScreen> {
   double _opacity = 1.0;
   bool _isFading = false;
