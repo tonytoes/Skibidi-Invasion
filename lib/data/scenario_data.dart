@@ -1859,7 +1859,7 @@ class ScenarioData {
 
 
 
-    
+
 
 
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
@@ -2119,7 +2119,7 @@ class ScenarioData {
       'dialogue': "There! Look the laboratory door!", // index 133
       'backgroundImage': 'assets/images/bg/door1.jpg',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/action/run.mp3',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
     },
 
     {
@@ -2154,5 +2154,164 @@ class ScenarioData {
       'characterName': '',
       'sfx': 'audio/sfx/action/doorclose2.mp3',
     },
+
+    {
+      'dialogue': "Phew.. that was close.", // index 137
+      'backgroundImage': 'assets/images/bg/hallway4.jpg',
+      'characters': [
+        {
+          'sprite': 'assets/images/characters/pose1/151.png',
+          'position': 'right'
+        }
+      ],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/sweat.mp3',
+    },
+
+    {
+      'dialogue': "We’re safe for now, but... it's only a matter of time before they break the door.", // index 138
+      'backgroundImage': 'assets/images/bg/hallway4.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/113.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
+    },
+
+    {
+      'dialogue': "We need to figure out what’s going on in this lab.", // index 139
+      'backgroundImage': 'assets/images/bg/hallway4.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/ding.mp3',
+    },
+
+    {
+      'dialogue': "let's go and explore this place, we might be able to find clues about the skibidi king.", // index 140
+      'backgroundImage': 'assets/images/bg/hallway4.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/ding.mp3',
+    },
+
+    {
+      'dialogue': "(walking)", // index 141
+      'backgroundImage': 'assets/images/bg/b12.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/footstep1.mp3',
+    },
+
+     {
+      'dialogue': "This place is massive... Lets keep going.", // index 142
+      'backgroundImage': 'assets/images/bg/b12.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/121.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
+    },
+
+    {
+      'dialogue': "(walking)", // index 141
+      'backgroundImage': 'assets/images/bg/b11.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/footstep2.mp3',
+    },
+
+    {
+      'dialogue': "Let's check each room and see what we can find.", // index 142
+      'backgroundImage': 'assets/images/bg/b11.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+
+    {
+      'dialogue': "(enters a room)", // index 141
+      'backgroundImage': 'assets/images/bg/b10.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/dooropen3.mp3',
+    },
+
+
+    {
+      'dialogue': "This looks like a place where the skibidi toilets were contained.", // index 142
+      'backgroundImage': 'assets/images/bg/b10.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/113.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
+    },
+
+    {
+      'dialogue': "But this is not what we were locking for. Lets go to another room.", // index 143
+      'backgroundImage': 'assets/images/bg/b10.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/sigh.mp3',
+    },
+
+    {
+      'dialogue': "(enters a room)", // index 144
+      'backgroundImage': 'assets/images/bg/b3.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/dooropen3.mp3',
+    },
+
+    {
+      'dialogue': "This looks like the chemical lab where they experimented on the skibidi toilets.", // index 145
+      'backgroundImage': 'assets/images/bg/b3.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/ding.mp3',
+    },
+
+    {
+      'dialogue': "Look! There’s something here. Maybe we can use science to understand how to cure the Brainrot Infection!", // index 146
+      'backgroundImage': 'assets/images/bg/b3.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
+    },
+
+    {
+      'dialogue': "Science is amazing because it lets us do experiments to discover how things work and create cool things!", // index 147
+      'backgroundImage': 'assets/images/bg/b3.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/152.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/cartoon.mp3',
+    },
+
+    {
+      'dialogue': "Let’s test your knowledge about science!", // index 148
+      'backgroundImage': 'assets/images/bg/b3.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
+    },
+
+    {
+      'dialogue': "Try not to mess up, picking the wrong answer will reduce your heart because science can be dangerous if it’s done wrong.", // index 149
+      'backgroundImage': 'assets/images/bg/b3.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/upset.mp3',
+    },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ];
 }
