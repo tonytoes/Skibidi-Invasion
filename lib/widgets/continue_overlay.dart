@@ -28,8 +28,6 @@
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Center(
             child: Container(
-              width: MediaQuery.of(context).size.width - 40,
-              height: 750,
               decoration: BoxDecoration(
                 color: Colors.black.withValues(alpha: 0.7),
               ),
