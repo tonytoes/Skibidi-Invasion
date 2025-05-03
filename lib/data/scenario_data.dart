@@ -1607,14 +1607,14 @@ class ScenarioData {
 },
 
 {
-  'dialogue': "There's so many skibidi toilets following us!", // index 131
+  'dialogue': "AAAAAHHHH!!!! There's so many skibidi toilets following us!", // index 131
   'backgroundImage':  'assets/images/bg/cutscene4.png',
   'characterName': 'Mem',
   'sfx': 'audio/sfx/sound/many_skibidi.mp3',
 },
 
 {
-  'dialogue': "AAAAAHHHH!! You're too fast! don't leave me!!!", // index 132
+  'dialogue': "WAIT!! You're too fast! don't leave me!!!", // index 132
   'backgroundImage':  'assets/images/bg/cutscene4.png',
   'characterName': 'Mem',
   'sfx': 'audio/sfx/action/run.mp3',

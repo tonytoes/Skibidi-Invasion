@@ -25,7 +25,7 @@ class ScenarioScreen extends StatefulWidget {
 }
 
 class _ScenarioScreenState extends State<ScenarioScreen> {
-  int _currentLine = 129;
+  int _currentLine = 120;
   int _lives = 3;
   int _lastQuestionIndex = 0;
   bool pressed = true;
