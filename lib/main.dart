@@ -90,12 +90,14 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/bg/Downtown-Night.png'),
+                  image: AssetImage('assets/images/bg/cutscene2.png'),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            const Center(
+            Positioned(
+              right: MediaQuery.of(context).size.width * 0.18,
+              top: MediaQuery.of(context).size.width * 0.2,
               child: Text(
                 'SKIBIDI\nINFECTION',
                 textAlign: TextAlign.center,
@@ -104,6 +106,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontSize: 60,
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
+                  shadows: [
+                    Shadow(
+                      offset: Offset(3, 3),
+                      blurRadius: 5,
+                      color: Colors.black54,
+                    ),
+                  ],
                 ),
               ),
             ),
