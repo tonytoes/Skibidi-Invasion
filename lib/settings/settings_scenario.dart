@@ -6,15 +6,18 @@ import '../widgets/continue_overlay.dart';
 import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';
 import '../settings/settings_more.dart';
+import '../widgets/bgm_player.dart';
+
 
 void _openContinue(BuildContext context) {
+  BGMPlayer().startBackgroundMusic();
   Navigator.pushReplacement(
-      context,
-      PageTransition(
-        type: PageTransitionType.fade,
-        duration: const Duration(milliseconds: 500),
-        child: const ContinueOverlay(),
-      )
+    context,
+    PageTransition(
+      type: PageTransitionType.fade,
+      duration: const Duration(milliseconds: 500),
+      child: const ContinueOverlay(),
+    ),
   );
 }
 
@@ -78,9 +81,11 @@ class MenuScreen extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       _openContinue(context);
+                      BGMPlayer().startBackgroundMusic();
+                      
                     },
                     child: Text(
-                      'Return to Home Screen',
+                      'Back to Home',
                       style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),

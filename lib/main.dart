@@ -6,6 +6,7 @@ import '../widgets/instructions_overlay.dart';
 import 'settings/settings.dart';
 import 'settings/settings_chapters.dart';
 import 'package:audioplayers/audioplayers.dart';
+import '../widgets/bgm_player.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,14 +30,22 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+  
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+
+final bgmPlayer = BGMPlayer();
+final AudioPlayer _sfxPlayer = AudioPlayer();
+
+
 class _HomeScreenState extends State<HomeScreen> {
   double _opacity = 1.0;
   bool _isFading = false;
+
+
 
   void _handlePlay() async {
     if (_isFading) return;
@@ -45,11 +54,12 @@ class _HomeScreenState extends State<HomeScreen> {
       _isFading = true;
     });
 
+    // Fade out music
+    await bgmPlayer.stopBackgroundMusic();
+
     await Future.delayed(const Duration(milliseconds: 800));
 
-    await Navigator.of(
-      context,
-    ).pushReplacement(
+    await Navigator.of(context).pushReplacement(
       PageTransition(
         type: PageTransitionType.fade,
         duration: const Duration(milliseconds: 800),
@@ -61,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _opacity = 1.0;
       _isFading = false;
     });
+
   }
 
   void _openChapters(BuildContext context) {
@@ -76,6 +87,27 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context) => const SettingsScreen(),
     );
   }
+
+
+ @override
+  void initState() {
+    super.initState();
+    bgmPlayer.startBackgroundMusic(); // Start the BGM on screen load
+  }
+
+
+
+
+
+
+ @override
+  void dispose() {
+    bgmPlayer.dispose(); // Dispose of the BGM player when the screen is disposed
+    _sfxPlayer.dispose();
+    super.dispose();
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -157,7 +189,10 @@ class _HomeScreenState extends State<HomeScreen> {
               right: 0,
               child: Center(
                 child: ElevatedButton(
-                  onPressed: () => _openChapters(context),
+                  onPressed: () {
+                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/twinkle.mp3'));
+                    _openChapters(context);
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
@@ -191,7 +226,10 @@ class _HomeScreenState extends State<HomeScreen> {
               right: 0,
               child: Center(
                 child: ElevatedButton(
-                  onPressed: () => _openSettings(context),
+                  onPressed: () {
+                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/twinkle.mp3'));
+                    _openSettings(context);
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
@@ -225,4 +263,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
 
