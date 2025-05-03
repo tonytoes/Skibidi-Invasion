@@ -100,7 +100,7 @@ class MenuScreen extends StatelessWidget {
                       _openSettings(context);
                     },
                     child: Text(
-                      'More Settings',
+                      'Settings',
                       style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),

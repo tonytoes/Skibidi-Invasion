@@ -25,7 +25,7 @@ class ScenarioScreen extends StatefulWidget {
 }
 
 class _ScenarioScreenState extends State<ScenarioScreen> {
-  int _currentLine = 90;
+  int _currentLine = 20;
   int _lives = 3;
   int _lastQuestionIndex = 0;
   bool pressed = true;
@@ -284,7 +284,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               style: ButtonStyle(
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
                 padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
@@ -319,7 +319,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               style: ButtonStyle(
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
+                    borderRadius: BorderRadius.circular(20)),
                 ),
                 padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
                 backgroundColor: WidgetStateProperty.all(

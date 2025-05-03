@@ -97,13 +97,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const Center(
               child: Text(
-                'SKIBIDI\nINVASION',
+                'SKIBIDI\nINFECTION',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'JosefinSans',
-                  fontSize: 40,
+                  fontFamily: 'Obafen',
+                  fontSize: 60,
                   color: Colors.white,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ),
@@ -133,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text(
                     'Play',
                     style: TextStyle(
-                      fontFamily: 'TacticRound',
+                      fontFamily: 'Obafen',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -167,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text(
                     'Story',
                     style: TextStyle(
-                      fontFamily: 'TacticRound',
+                      fontFamily: 'Obafen',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -201,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: const Text(
                     'Settings',
                     style: TextStyle(
-                      fontFamily: 'TacticRound',
+                      fontFamily: 'Obafen',
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
