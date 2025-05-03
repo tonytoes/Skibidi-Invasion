@@ -25,7 +25,7 @@ class ScenarioScreen extends StatefulWidget {
 }
 
 class _ScenarioScreenState extends State<ScenarioScreen> {
-  int _currentLine = 20;
+  int _currentLine = 59;
   int _lives = 3;
   int _lastQuestionIndex = 0;
   bool pressed = true;
@@ -298,11 +298,11 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
               child: Image.asset(
                 pressed == true
-                    ? 'assets/icons/speaker.png'
-                    : 'assets/icons/speaker-off.png',
+                    ? 'assets/icons/volume.png'
+                    : 'assets/icons/volume.png',
                 color: Colors.white,
-                width: 40,
-                height: 40,
+                width: 50,
+                height: 50,
               ),
               onPressed: () {
                 setState(() {
