@@ -11,8 +11,8 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool firstSwitchValue = true;
-  double val = 1.0;
-  double val1 = 1.0;
+  double vol = 0.5;
+  double vol2 = 0.5;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,42 +52,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
 
                   Padding(
-                    padding: EdgeInsets.only(left: 20.0, top: 10.0),
-                    child: Row (
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        AnimatedToggleSwitch<bool>.dual(
-                          current: firstSwitchValue,
-                          first: false,
-                          second: true,
-                          spacing: 1,
-                          style: const ToggleStyle(
-                            borderColor: Colors.transparent,
-                          ),
-                            borderWidth: 5.0,
-                            height: 43,
-                            onChanged: (b) => setState(() => firstSwitchValue = b),
-                          styleBuilder: (b) => ToggleStyle(
-                              indicatorColor: b ? Colors.green : Colors.red
-                          ),
-                      iconBuilder:  (value) => value
-                            ? const Icon(Icons.volume_up)
-                            : const Icon(Icons.volume_off),
-                            textBuilder: (value) => value
-                            ? const Center(child: Text('On'))
-                            :const Center(child: Text('Off')),
-                        ),
-                        const SizedBox(width: 10),
-                        const Text(
-                          'Enable Text to Speech',
-                          style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
-                          textAlign: TextAlign.center,
-                        ),
-                      ]
-                    ),
-                  ),
-
-                  Padding(
                     padding: const EdgeInsets.only(top:25),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,23 +64,27 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             width: 300,
                             child: SliderTheme(
                               data: SliderTheme.of(context).copyWith(
-                                trackHeight: 1,
+                                trackHeight: 3,
                                 thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5),
                               ),
                               child: Slider(
-                                  activeColor: Colors.white,
+                                  activeColor: Colors.red,
                                   inactiveColor: Colors.white,
                                   max: 1.0,
                                   min: 0.0,
-                                  value: val,
+                                  value: vol,
                                   onChanged: (value){
                                     setState(() {
-                                      val = value;
+                                      vol = value;
                                     });
                                   }
                               ),
                             ),
                           ),
+                    SizedBox(width: 10),
+                    Text(
+                        '${(vol * 100).round()}%',
+                        style: TextStyle(color: Colors.white, fontSize: 16),)
                         ]
                     ),
                   ),
@@ -134,26 +102,67 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             width: 300,
                             child: SliderTheme(
                               data: SliderTheme.of(context).copyWith(
-                                trackHeight: 1,
+                                trackHeight: 3,
                                 thumbShape: RoundSliderThumbShape(enabledThumbRadius: 5),
                               ),
                               child: Slider(
-                                  activeColor: Colors.white,
+                                  activeColor: Colors.red,
                                   inactiveColor: Colors.white,
                                   max: 1.0,
                                   min: 0.0,
-                                  value: val,
+                                  value: vol2,
                                   onChanged: (value){
                                     setState(() {
-                                      val = value;
+                                      vol2 = value;
                                     });
                                   }
                               ),
                             ),
                           ),
+                          SizedBox(width: 10),
+                          Text(
+                            '${(vol2 * 100).round()}%',
+                            style: TextStyle(color: Colors.white, fontSize: 16),)
                         ]
                     ),
                   ),
+
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 30.0),
+                    child: Row (
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          AnimatedToggleSwitch<bool>.dual(
+                            current: firstSwitchValue,
+                            first: false,
+                            second: true,
+                            spacing: 1,
+                            style: const ToggleStyle(
+                              borderColor: Colors.transparent,
+                            ),
+                            borderWidth: 5.0,
+                            height: 43,
+                            onChanged: (b) => setState(() => firstSwitchValue = b),
+                            styleBuilder: (b) => ToggleStyle(
+                                indicatorColor: b ? Colors.green : Colors.red
+                            ),
+                            iconBuilder:  (value) => value
+                                ? const Icon(Icons.volume_up)
+                                : const Icon(Icons.volume_off),
+                            textBuilder: (value) => value
+                                ? const Center(child: Text('On'))
+                                :const Center(child: Text('Off')),
+                          ),
+                          const SizedBox(width: 10),
+                          const Text(
+                            'Enable Text to Speech',
+                            style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'JosefinSans', fontWeight: FontWeight.w400),
+                            textAlign: TextAlign.center,
+                          ),
+                        ]
+                    ),
+                  ),
+
 
                   Padding(
                     padding: const EdgeInsets.only(top:200),

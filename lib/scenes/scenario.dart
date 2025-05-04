@@ -7,8 +7,14 @@ import '../widgets/dialogue_overlay.dart';
 import '../data/scenario_data.dart';
 import '../widgets/choice_overlay.dart';
 import '../widgets/gameover_overlay.dart';
+import '../widgets/help_overlay.dart';
 
-
+void _openHelp(BuildContext context) {
+  showCupertinoModalPopup(
+    context: context,
+    builder: (context) => const HelpScreen(),
+  );
+}
 
 void _openMenu(BuildContext context) {
   showCupertinoModalPopup(
@@ -316,6 +322,8 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
               ),
             ),
           ),
+
+
           Positioned(
             top: MediaQuery.of(context).size.height * 0.06,
             right: MediaQuery.of(context).size.width * 0.010,
@@ -338,9 +346,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                   }),
                 ),
                 child: Image.asset(
-                  pressed == true
-                      ? 'assets/icons/speaker.png'
-                      : 'assets/icons/speaker-off.png',
+                  'assets/icons/volume.png',
                   color: Colors.white,
                   width: 30,
                   height: 30,
@@ -355,7 +361,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
           ),
 
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.15,
+            top: MediaQuery.of(context).size.height * 0.12,
             right: MediaQuery.of(context).size.width * 0.010,
             child:Padding(
               padding: EdgeInsets.only(top: 5, right: 5),
@@ -376,17 +382,13 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                   }),
                 ),
                 child: Image.asset(
-                  pressed == true
-                      ? 'assets/icons/question.png'
-                      : 'assets/icons/speaker-off.png',
+                  'assets/icons/question.png',
                   color: Colors.white,
                   width: 30,
                   height: 30,
                 ),
                 onPressed: () {
-                  setState(() {
-                    pressed = !pressed;
-                  });
+                  _openHelp(context);
                 },
               ),
             ),
