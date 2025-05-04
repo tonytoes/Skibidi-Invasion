@@ -2208,14 +2208,14 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "(walking)", // index 141
+      'dialogue': "(walking)", // index 143
       'backgroundImage': 'assets/images/bg/b11.jpg',
       'characterName': '',
       'sfx': 'audio/sfx/action/footstep2.mp3',
     },
 
     {
-      'dialogue': "Let's check each room and see what we can find.", // index 142
+      'dialogue': "Let's check each room and see what we can find.", // index 144
       'backgroundImage': 'assets/images/bg/b11.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2223,7 +2223,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "(enters a room)", // index 141
+      'dialogue': "(enters a room)", // index 145
       'backgroundImage': 'assets/images/bg/b10.jpg',
       'characterName': '',
       'sfx': 'audio/sfx/action/dooropen3.mp3',
@@ -2231,7 +2231,7 @@ class ScenarioData {
 
 
     {
-      'dialogue': "This looks like a place where the skibidi toilets were contained.", // index 142
+      'dialogue': "This looks like a place where the skibidi toilets were contained.", // index 146
       'backgroundImage': 'assets/images/bg/b10.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/113.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2239,7 +2239,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "But this is not what we were locking for. Lets go to another room.", // index 143
+      'dialogue': "But this is not what we were locking for. Lets go to another room.", // index 147
       'backgroundImage': 'assets/images/bg/b10.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2247,14 +2247,14 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "(enters a room)", // index 144
+      'dialogue': "(enters a room)", // index 148
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characterName': '',
       'sfx': 'audio/sfx/action/dooropen3.mp3',
     },
 
     {
-      'dialogue': "This looks like the chemical lab where they experimented on the skibidi toilets.", // index 145
+      'dialogue': "This looks like the chemical lab where they experimented on the skibidi toilets.", // index 149
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2262,7 +2262,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "Look! There’s something here. Maybe we can use science to understand how to cure the Brainrot Infection!", // index 146
+      'dialogue': "Look! There’s something here. Maybe we can use science to understand how to cure the Brainrot Infection!", // index 150
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2270,7 +2270,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "Science is amazing because it lets us do experiments to discover how things work and create cool things!", // index 147
+      'dialogue': "Science is amazing because it lets us do experiments to discover how things work and create cool things!", // index 151
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/152.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2278,7 +2278,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "Let’s test your knowledge about science!", // index 148
+      'dialogue': "Let’s test your knowledge about science!", // index 152
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2286,7 +2286,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "Try not to mess up, picking the wrong answer will reduce your heart because science can be dangerous if it’s done wrong.", // index 149
+      'dialogue': "Try not to mess up, picking the wrong answer will reduce your heart because science can be dangerous if it’s done wrong.", // index 153
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2296,20 +2296,218 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
+                                        {
+                                            'dialogue': "Here’s your first science question! What part of a plant absorbs water from the soil?", // index 154
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/154.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "Roots",
+                                                'nextDialogueIndex': 156,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "Leaves",
+                                                'nextDialogueIndex': 155,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "Flowers",
+                                                'nextDialogueIndex': 155,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
 
+                                          {
+                                            'dialogue': "Not quite! Think about where the plant's water comes from. Try again!", // index 155
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 154,
+                                          }, 
+                                          {
+                                            'dialogue': "Correct! The roots absorb water from the soil to keep the plant alive!", // index 156
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          
+                                          {
+                                            'dialogue': "Next, what happens to water when it gets heated up?", // index 157
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/154.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "It freezes",
+                                                'nextDialogueIndex': 158,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "It evaporates",
+                                                'nextDialogueIndex': 159,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "It turns into ice",
+                                                'nextDialogueIndex': 158,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
+                                          
+                                          {
+                                            'dialogue': "Think about what happens when water gets really hot. What happens to it? Try again!", // index 158
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 157,
+                                          },
+                                          {
+                                            'dialogue': "Correct! When water gets heated, it turns into vapor and rises up as evaporation!", // index 159
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/steam.mp3',
+                                          },
+                                          {
+                                            'dialogue': "Next question...", // index 160
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/exclaim.mp3',
+                                          },
+                                          {
+                                            'dialogue': "Which force pulls everything toward the ground?", // index 161
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/154.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "Magnetism",
+                                                'nextDialogueIndex': 162,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "Gravity",
+                                                'nextDialogueIndex': 163,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "Electricity",
+                                                'nextDialogueIndex': 162,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
+                                          
+                                          {
+                                            'dialogue': "Almost! Gravity is the force that keeps us grounded. Try again!", // index 162
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 161,
+                                          },
 
-
-
-
-
-
-
-
-
-
-
-
-
+                                          {
+                                            'dialogue': "Great! Gravity pulls everything down toward the Earth!", // index 163
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/fall.mp3',
+                                          }, 
+                                          {
+                                            'dialogue': "Alright, last question! We’re almost there!", // index 164
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/exclaim.mp3',
+                                          },
+                                          {
+                                            'dialogue': "Which system in our body helps us breathe?", // index 165
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/154.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "Digestive system",
+                                                'nextDialogueIndex': 166,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "Respiratory system",
+                                                'nextDialogueIndex': 167,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "Nervous system",
+                                                'nextDialogueIndex': 166,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
+                                          
+                                          {
+                                            'dialogue': "Think about what helps us breathe in air. What system is involved? Try again!", // index 166
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 165,
+                                          },
+                                          {
+                                            'dialogue': "Correct! The respiratory system helps us breathe by taking in oxygen and releasing carbon dioxide.", // index 167
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/breathing.mp3',
+                                          },
 
 
 
