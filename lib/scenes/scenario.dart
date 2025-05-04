@@ -24,8 +24,8 @@ class ScenarioScreen extends StatefulWidget {
   State<ScenarioScreen> createState() => _ScenarioScreenState();
 }
 
-class _ScenarioScreenState extends State<ScenarioScreen> {
-  int _currentLine = 90;
+class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObserver  {
+  int _currentLine = 0;
   int _lives = 3;
   int _lastQuestionIndex = 0;
   bool pressed = true;
@@ -36,6 +36,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
   late AudioPlayer _audio;
   late AudioPlayer _bgm;
   String? _currentBgm;
+  
 
   List<Map<String, dynamic>> _characters = [];
 
@@ -118,15 +119,33 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
         precacheImage(AssetImage(spritePath), context);
       }
     });
+     WidgetsBinding.instance.addObserver(this);
   }
 
   @override
   void dispose () {
+     WidgetsBinding.instance.removeObserver(this);
     _bgm.stop();
     _bgm.dispose();
     _audio.dispose();
     super.dispose();
   }
+
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+    
+    // When the app comes to the foreground, resume BGM if it's not playing
+    if (state == AppLifecycleState.resumed) {
+      if (_bgm.state == PlayerState.paused || _bgm.state == PlayerState.stopped) {
+        _bgm.resume();
+      }
+    }
+  }
+
+
+
+
+
 
   void _loadInitialData() {
     _backgroundImage =
@@ -266,6 +285,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
       _playSFX(ScenarioData.scenarioData[_currentLine]['sfx']);
       String? bgmPath = ScenarioData.scenarioData[_currentLine]['bgm'];
       _updateBgm(bgmPath);
+
+
+      
     });
   }
 
@@ -290,7 +312,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                 ),
                 padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
                 backgroundColor: WidgetStateProperty.all(
-                  Colors.black.withOpacity(0.5),),
+                  Colors.black.withOpacity(0.4),),
                 overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
                   if (states.contains(WidgetState.pressed)) {
                     return Colors.black;
@@ -329,7 +351,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                     ),
                   ),
                   padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
-                  backgroundColor: WidgetStateProperty.all(Colors.black.withOpacity(0.5)),
+                  backgroundColor: WidgetStateProperty.all(Colors.black.withOpacity(0.4)),
                   overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
                     if (states.contains(WidgetState.pressed)) {
                       return Colors.black; //change
@@ -355,7 +377,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
           ),
 
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.15,
+            top: MediaQuery.of(context).size.height * 0.12,
             right: MediaQuery.of(context).size.width * 0.010,
             child:Padding(
               padding: EdgeInsets.only(top: 5, right: 5),
@@ -367,7 +389,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
                     ),
                   ),
                   padding: WidgetStateProperty.all(const EdgeInsets.all(5)),
-                  backgroundColor: WidgetStateProperty.all(Colors.black.withOpacity(0.5)),
+                  backgroundColor: WidgetStateProperty.all(Colors.black.withOpacity(0.4)),
                   overlayColor: WidgetStateProperty.resolveWith<Color?>((states) {
                     if (states.contains(WidgetState.pressed)) {
                       return Colors.black; //change
@@ -493,6 +515,9 @@ class _ScenarioScreenState extends State<ScenarioScreen> {
       setState(() {
         _resetColors = false;
     });
+  }
+  if (_bgm.state == PlayerState.stopped || _bgm.state == PlayerState.paused) {
+    _bgm.resume();
   }
 }
 

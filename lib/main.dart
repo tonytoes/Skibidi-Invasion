@@ -6,6 +6,7 @@ import '../widgets/instructions_overlay.dart';
 import 'settings/settings.dart';
 import 'settings/settings_chapters.dart';
 import 'package:audioplayers/audioplayers.dart';
+import '../widgets/bgm_player.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,27 +30,37 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+  
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+
+final bgmPlayer = BGMPlayer();
+final AudioPlayer _sfxPlayer = AudioPlayer();
+
+
 class _HomeScreenState extends State<HomeScreen> {
   double _opacity = 1.0;
   bool _isFading = false;
 
+
+
   void _handlePlay() async {
+    _sfxPlayer.play(AssetSource('audio/sfx/sound/GTAclick.mp3'));
     if (_isFading) return;
     setState(() {
       _opacity = 0.0;
       _isFading = true;
     });
 
+    // Fade out music
+    await bgmPlayer.stopBackgroundMusic();
+
     await Future.delayed(const Duration(milliseconds: 800));
 
-    await Navigator.of(
-      context,
-    ).pushReplacement(
+    await Navigator.of(context).pushReplacement(
       PageTransition(
         type: PageTransitionType.fade,
         duration: const Duration(milliseconds: 800),
@@ -61,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _opacity = 1.0;
       _isFading = false;
     });
+
   }
 
   void _openChapters(BuildContext context) {
@@ -76,6 +88,16 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context) => const SettingsScreen(),
     );
   }
+
+
+ @override
+  void initState() {
+    super.initState();
+    bgmPlayer.startBackgroundMusic(); // Start the BGM on screen load
+  }
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
               right: MediaQuery.of(context).size.width * 0.1,
               child: Center(
                 child: ElevatedButton(
-                  onPressed: _handlePlay,
+                  onPressed: _handlePlay, 
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
@@ -157,7 +179,10 @@ class _HomeScreenState extends State<HomeScreen> {
               right: 0,
               child: Center(
                 child: ElevatedButton(
-                  onPressed: () => _openChapters(context),
+                  onPressed: () {
+                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
+                    _openChapters(context);
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
@@ -191,7 +216,10 @@ class _HomeScreenState extends State<HomeScreen> {
               right: 0,
               child: Center(
                 child: ElevatedButton(
-                  onPressed: () => _openSettings(context),
+                  onPressed: () {
+                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
+                    _openSettings(context);
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
@@ -225,4 +253,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
 

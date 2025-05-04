@@ -7,25 +7,30 @@ import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';
 import '../settings/settings_more.dart';
 
-void _openContinue(BuildContext context) {
+
+
+void _openContinue(BuildContext context)  {
   Navigator.pushReplacement(
-      context,
-      PageTransition(
-        type: PageTransitionType.fade,
-        duration: const Duration(milliseconds: 500),
-        child: const ContinueOverlay(),
-      )
+    context,
+    PageTransition(
+      type: PageTransitionType.fade,
+      duration: const Duration(milliseconds: 500),
+      child: const ContinueOverlay(),
+    ),
   );
+ 
 }
+
+
 
 void _openSettings(BuildContext context) {
   Navigator.pushReplacement(
-    context,
-   PageTransition(
-       type: PageTransitionType.fade,
-       duration: const Duration(milliseconds: 500),
-       child: const SettingsMoreScreen()
-     )
+  context,
+  PageTransition(
+      type: PageTransitionType.fade,
+      duration: const Duration(milliseconds: 500),
+      child: const SettingsMoreScreen()
+    )
   );
 }
 
@@ -78,9 +83,10 @@ class MenuScreen extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       _openContinue(context);
+                      
                     },
                     child: Text(
-                      'Return to Home Screen',
+                      'Back to Home',
                       style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),
