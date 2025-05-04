@@ -56,6 +56,7 @@
                     TextButton(
                       onPressed: () {
                         _openHome(context);
+                        bgmPlayer.startBackgroundMusic(); 
                       },
                       child: const Text(
                         'Continue',
