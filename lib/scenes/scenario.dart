@@ -31,7 +31,7 @@ class ScenarioScreen extends StatefulWidget {
 }
 
 class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObserver  {
-  int _currentLine = 0;
+  int _currentLine = 48;
   int _lives = 3;
   int _lastQuestionIndex = 0;
   bool pressed = true;
@@ -42,6 +42,11 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
   late AudioPlayer _audio;
   late AudioPlayer _bgm;
   String? _currentBgm;
+  bool _showArrow = false;
+  double _arrowLeft = 0.0;
+  double _arrowTop = 0.0;
+  double _arrowRotation = 0.0;
+  String _arrowAsset = 'assets/icons/turorial_arrow.png';
   
 
   List<Map<String, dynamic>> _characters = [];
@@ -147,11 +152,6 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
       }
     }
   }
-
-
-
-
-
 
   void _loadInitialData() {
     _backgroundImage =
@@ -262,6 +262,38 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
       _showLives =
           ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
 
+      if (_currentLine == 1) {
+        _showArrow = true;
+        _arrowLeft = 270.0;
+        _arrowTop = 150.0;
+        _arrowAsset =
+        'assets/icons/tutorial_arrow.png';
+        _arrowRotation = 90.0;
+      } else if (_currentLine == 3) {
+        _showArrow = true;
+        _arrowLeft = 260.0;
+        _arrowTop = 100.0;
+        _arrowAsset =
+        'assets/icons/tutorial_arrow.png';
+        _arrowRotation = 90.0;
+      } else if (_currentLine == 6) {
+        _showArrow = true;
+        _arrowLeft = 100.0;
+        _arrowTop = 150.0;
+        _arrowAsset =
+        'assets/icons/tutorial_arrow.png';
+        _arrowRotation = 180.0;
+      } else if (_currentLine == 11) {
+        _showArrow = true;
+        _arrowLeft = 260.0;
+        _arrowTop = 100.0;
+        _arrowAsset =
+        'assets/icons/tutorial_arrow.png';
+        _arrowRotation = 180.0;
+      } else {
+        _showArrow = false; //hide
+      }
+
       _playSFX(ScenarioData.scenarioData[_currentLine]['sfx']);
       String? bgmPath = ScenarioData.scenarioData[_currentLine]['bgm'];
       _updateBgm(bgmPath);
@@ -286,14 +318,11 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
       _heartImages = [
         'assets/icons/hearts.png',
         'assets/icons/hearts.png',
-          'assets/icons/hearts.png'
+        'assets/icons/hearts.png'
       ];
       _playSFX(ScenarioData.scenarioData[_currentLine]['sfx']);
       String? bgmPath = ScenarioData.scenarioData[_currentLine]['bgm'];
       _updateBgm(bgmPath);
-
-
-      
     });
   }
 
@@ -347,7 +376,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
 
 
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.06,
+            top: MediaQuery.of(context).size.height * 0.11,
             right: MediaQuery.of(context).size.width * 0.010,
             child:Padding(
               padding: EdgeInsets.only(top: 5, right: 5),
@@ -368,7 +397,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
                   }),
                 ),
                 child: Image.asset(
-                  'assets/icons/volume.png',
+                  'assets/icons/speaker.png',
                   color: Colors.white,
                   width: 30,
                   height: 30,
@@ -383,7 +412,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
           ),
 
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.12,
+            top: MediaQuery.of(context).size.height * 0.17,
             right: MediaQuery.of(context).size.width * 0.010,
             child:Padding(
               padding: EdgeInsets.only(top: 5, right: 5),
@@ -418,7 +447,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
 
           if (_showLives && _currentChoices.isNotEmpty)
             Positioned(
-              key: ValueKey(_lives), // Keep the ValueKey
+              key: ValueKey(_lives),
               top: MediaQuery.of(context).size.height * 0.01,
               left: MediaQuery.of(context).size.width * 0.03,
               child: Row(
@@ -483,6 +512,20 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
               ),
             ),
 
+          if (_showArrow)
+            Positioned(
+              left: _arrowLeft,
+              top: _arrowTop,
+              child: Transform.rotate(
+                angle: _arrowRotation * (3.1415926535897932 / 180),
+                child: Image.asset(
+                  _arrowAsset,
+                  width: 70,
+                  height: 70,
+                ),
+              ),
+            ),
+
           if (!_isGameOver)
             Align(
               alignment: Alignment.bottomCenter,
@@ -502,7 +545,6 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
                 ),
               ),
             ),
-
           if (_isGameOver)
             GameOverOverlay(onRestart: _resetGame), // Show game over overlay
         ],

@@ -19,6 +19,7 @@ dependencies:
   animate_do: ^4.2.0
   just_audio: ^0.10.2
   page_transition: ^2.2.1
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -44,6 +45,7 @@ flutter:
     - assets/audio/sfx/sound/
     - assets/audio/bgm/
     - assets/images/dialogue/
+    - assets/icons/tutorial_arrow.png
 
   fonts:
     - family: JosefinSans

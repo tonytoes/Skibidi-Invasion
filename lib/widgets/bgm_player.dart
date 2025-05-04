@@ -32,7 +32,7 @@ class BGMPlayer {
     // Fade-in
     for (double vol = 0.0; vol <= 1.0; vol += 0.1) {
       await Future.delayed(const Duration(milliseconds: 200));
-      _bgmPlayer.setVolume(vol);
+      await _bgmPlayer.setVolume(vol);
     }
   }
 
@@ -42,11 +42,15 @@ class BGMPlayer {
     // Fade-out
     for (double vol = 1.0; vol >= 0.0; vol -= 0.1) {
       await Future.delayed(const Duration(milliseconds: 200));
-      _bgmPlayer.setVolume(vol);
+      await _bgmPlayer.setVolume(vol);
     }
 
     await _bgmPlayer.stop();
     _isPlaying = false;
+  }
+
+  Future<void> setVolume(double volume) async {
+    await _bgmPlayer.setVolume(volume);
   }
 
   void dispose() {

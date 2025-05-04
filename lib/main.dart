@@ -30,22 +30,17 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
-  
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-
 final bgmPlayer = BGMPlayer();
 final AudioPlayer _sfxPlayer = AudioPlayer();
-
 
 class _HomeScreenState extends State<HomeScreen> {
   double _opacity = 1.0;
   bool _isFading = false;
-
-
 
   void _handlePlay() async {
     _sfxPlayer.play(AssetSource('audio/sfx/sound/GTAclick.mp3'));
@@ -72,7 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
       _opacity = 1.0;
       _isFading = false;
     });
-
   }
 
   void _openChapters(BuildContext context) {
@@ -85,19 +79,15 @@ class _HomeScreenState extends State<HomeScreen> {
   void _openSettings(BuildContext context) {
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => const SettingsScreen(),
+      builder: (context) => SettingsScreen(sfxPlayer: _sfxPlayer),
     );
   }
 
-
- @override
+  @override
   void initState() {
     super.initState();
     bgmPlayer.startBackgroundMusic(); // Start the BGM on screen load
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -144,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
               right: MediaQuery.of(context).size.width * 0.1,
               child: Center(
                 child: ElevatedButton(
-                  onPressed: _handlePlay, 
+                  onPressed: _handlePlay,
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
@@ -253,5 +243,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
