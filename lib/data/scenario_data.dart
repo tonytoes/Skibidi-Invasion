@@ -455,7 +455,7 @@ class ScenarioData {
       'sfx': 'audio/sfx/emotion/chat.mp3',
     },
     {
-      'dialogue': "It hurts their rotten brains. They flush themselves when u attack them with it.",
+      'dialogue': "It hurts their rotten brains. They flush themselves when you attack them with it.",
       // index 42
       'backgroundImage': 'assets/images/bg/messyroom.jpg',
       'characters': [
@@ -618,12 +618,7 @@ class ScenarioData {
                                                   { // 52
                                                     'dialogue': "Let's tidy up this sentence! 'They ____ cleaning their room right now.' What’s the right word?",
                                                     'backgroundImage': 'assets/images/bg/messyroom.jpg',
-                                                    'characters': [
-                                                      {
-                                                        'sprite': 'assets/images/characters/pose1/141.png',
-                                                        'position': 'right'
-                                                      }
-                                                    ],
+                                                    'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right', }],
                                                     'characterName': 'Mem',
                                                     'sfx': 'audio/sfx/emotion/thinking.mp3',
                                                     'isQuestion': true,
@@ -637,19 +632,19 @@ class ScenarioData {
                                                         'loseLifeOnIncorrect': true,
                                                       },
                                                       {
-                                                        'text': "are",
-                                                        'nextDialogueIndex': 55,
-                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-                                                        'characterName': 'Mem',
-                                                        'isCorrect': true,
-                                                      },
-                                                      {
                                                         'text': "was",
                                                         'nextDialogueIndex': 54,
                                                         'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
                                                         'characterName': 'Mem',
                                                         'isCorrect': false,
                                                         'loseLifeOnIncorrect': true,
+                                                      },
+                                                      {
+                                                        'text': "are",
+                                                        'nextDialogueIndex': 55,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': true,
                                                       },
                                                     ],
                                                   },
@@ -659,7 +654,8 @@ class ScenarioData {
                                                     'characters': [
                                                       {
                                                         'sprite': 'assets/images/characters/pose1/143.png',
-                                                        'position': 'right'
+                                                        'position': 'right',
+                                                        'sfx': 'audio/sfx/emotion/question.mp3',
                                                       }
                                                     ],
                                                     'characterName': 'Mem',
@@ -685,7 +681,7 @@ class ScenarioData {
                                                     'backgroundImage': 'assets/images/bg/messyroom.jpg',
                                                     'characters': [
                                                       {
-                                                        'sprite': 'assets/images/characters/pose2/253.png',
+                                                        'sprite': 'assets/images/characters/pose2/252.png',
                                                         'position': 'right'
                                                       }
                                                     ],
@@ -699,11 +695,11 @@ class ScenarioData {
                                                     'characters': [
                                                       {
                                                         'sprite': 'assets/images/characters/pose1/141.png',
-                                                        'position': 'right'
+                                                        'position': 'right',
                                                       }
                                                     ],
                                                     'characterName': 'Mem',
-                                                    'sfx': 'audio/sfx/emotion/thinking.mp3',
+                                                    'sfx': 'audio/sfx/emotion/question.mp3',
                                                     'isQuestion': true,
                                                     'choices': [
                                                       {
@@ -772,19 +768,19 @@ class ScenarioData {
                                                     'isQuestion': true,
                                                     'choices': [
                                                       {
+                                                        'text': "an",
+                                                        'nextDialogueIndex': 61,
+                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
+                                                        'characterName': 'Mem',
+                                                        'isCorrect': true,
+                                                      },
+                                                      {
                                                         'text': "a",
                                                         'nextDialogueIndex': 60,
                                                         'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
                                                         'characterName': 'Mem',
                                                         'isCorrect': false,
                                                         'loseLifeOnIncorrect': true,
-                                                      },
-                                                      {
-                                                        'text': "an",
-                                                        'nextDialogueIndex': 61,
-                                                        'nextBackgroundImage': 'assets/images/bg/messyroom.jpg',
-                                                        'characterName': 'Mem',
-                                                        'isCorrect': true,
                                                       },
                                                       {
                                                         'text': "the",
@@ -945,7 +941,7 @@ class ScenarioData {
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
     { // 67
-      'dialogue': "The streets are eerily quiet, with only the flickering streetlights casting long shadows as the two of you walk in silence.",
+      'dialogue': "(The streets are eerily quiet, with only the flickering streetlights casting long shadows as the two of you walk in silence)",
       'backgroundImage': 'assets/images/bg/outside1.jpg',
       'characterName': '',
       'sfx': 'audio/sfx/action/footstep2.mp3',
@@ -1029,7 +1025,7 @@ class ScenarioData {
       'sfx': 'audio/sfx/sound/skibidi3.mp3',
     },
     { // 76
-      'dialogue': "As you can see, they’ve lost their brains and are saying random words.",
+      'dialogue': "As you can see, they are suffering from brainrotting infection and can only say nonsense words.",
       'backgroundImage': 'assets/images/bg/door2.jpg',
       'characters': [
         {
@@ -1057,7 +1053,7 @@ class ScenarioData {
       'sfx': 'audio/sfx/sound/alert.mp3',
     },
     { // 78
-      'dialogue': "They're afraid of correct grammar, attack him with this sentence! Quick!!",
+      'dialogue': "They're afraid of correct grammar and facts, attack him with this sentence! Quick!!",
       'backgroundImage': 'assets/images/bg/door2.jpg',
       'characters': [
         {
@@ -1489,14 +1485,7 @@ class ScenarioData {
                                                     'characterName': 'Mem',
                                                     'isCorrect': false,
                                                     'loseLifeOnIncorrect': true,
-                                                  },
-                                                  {
-                                                    'text': "goes",
-                                                    'nextDialogueIndex': 106,
-                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-                                                    'characterName': 'Mem',
-                                                    'isCorrect': true,
-                                                  },
+                                                  },  
                                                   {
                                                     'text': "get",
                                                     'nextDialogueIndex': 105,
@@ -1504,6 +1493,13 @@ class ScenarioData {
                                                     'characterName': 'Mem',
                                                     'isCorrect': false,
                                                     'loseLifeOnIncorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "goes",
+                                                    'nextDialogueIndex': 106,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': true,
                                                   },
                                                 ],
                                               },
@@ -1845,19 +1841,19 @@ class ScenarioData {
                                                     'loseLifeOnIncorrect': true,
                                                   },
                                                   {
-                                                    'text': "watched",
-                                                    'nextDialogueIndex': 124,
-                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
-                                                    'characterName': 'Mem',
-                                                    'isCorrect': true,
-                                                  },
-                                                  {
                                                     'text': "watching",
                                                     'nextDialogueIndex': 123,
                                                     'nextBackgroundImage': 'assets/images/bg/library2.jpg',
                                                     'characterName': 'Mem',
                                                     'isCorrect': false,
                                                     'loseLifeOnIncorrect': true,
+                                                  },
+                                                  {
+                                                    'text': "watched",
+                                                    'nextDialogueIndex': 124,
+                                                    'nextBackgroundImage': 'assets/images/bg/library2.jpg',
+                                                    'characterName': 'Mem',
+                                                    'isCorrect': true,
                                                   },
                                                 ],
                                               },
@@ -2027,7 +2023,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "Look! I see the laboratory door up ahead!", // index 131
+      'dialogue': "Wait...Look! I see the laboratory door up ahead!", // index 131
       'backgroundImage': 'assets/images/bg/outside6.jpg',
       'characters': [
         {
@@ -2318,7 +2314,7 @@ class ScenarioData {
     },
 
      {
-      'dialogue': "This place is massive... Lets keep going.", // index 155
+      'dialogue': "This place is massive...I want to rest but we should keep going.", // index 155
       'backgroundImage': 'assets/images/bg/b12.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/121.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2333,7 +2329,7 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "Let's check each room and see what we can find.", // index 157
+      'dialogue': "We might be able to find something here. Let's check each room and see what we can find.", // index 157
       'backgroundImage': 'assets/images/bg/b11.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
       'characterName': 'Mem',
@@ -2365,20 +2361,20 @@ class ScenarioData {
     },
 
     {
-      'dialogue': "(enters a room)", // index 161
+      'dialogue': "(enters a science laboratory room)", // index 161
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characterName': '',
       'sfx': 'audio/sfx/action/dooropen3.mp3',
     },
 
     {
-      'dialogue': "This looks like the chemical lab where they experimented on the skibidi toilets.", // index 162
+      'dialogue': "This looks like the science lab where they experimented on the skibidi toilets.", // index 162
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right'}],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/ding.mp3',
     },
-
+//TODO CUTSCENE---------------------------------------------------------------------------------
     {
       'dialogue': "Look! There’s something here. Maybe we can use science to understand how to cure the Brainrot Infection!", // index 163
       'backgroundImage': 'assets/images/bg/b3.jpg',
@@ -2460,7 +2456,7 @@ class ScenarioData {
                                           {
                                             'dialogue': "Correct! The roots absorb water from the soil to keep the plant alive!", // index 169
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
-                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/152.png','position': 'right'}],
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/sound/check2.mp3',
                                           },
@@ -2510,9 +2506,9 @@ class ScenarioData {
                                           {
                                             'dialogue': "Correct! When water gets heated, it turns into vapor and rises up as evaporation!", // index 172
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
-                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/152.png','position': 'right'}],
                                             'characterName': 'Mem',
-                                            'sfx': 'audio/sfx/sound/steam.mp3',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
                                           },
                                           {
                                             'dialogue': "Next question...", // index 173
@@ -2539,19 +2535,19 @@ class ScenarioData {
                                                 'loseLifeOnIncorrect': true,
                                               },
                                               {
-                                                'text': "Gravity",
-                                                'nextDialogueIndex': 176,
-                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
-                                                'characterName': 'Mem',
-                                                'isCorrect': true,
-                                              },
-                                              {
                                                 'text': "Electricity",
                                                 'nextDialogueIndex': 175,
                                                 'nextBackgroundImage': 'assets/images/bg/b3.jpg',
                                                 'characterName': 'Mem',
                                                 'isCorrect': false,
                                                 'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "Gravity",
+                                                'nextDialogueIndex': 176,
+                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
                                               },
                                             ],
                                           },
@@ -2570,7 +2566,7 @@ class ScenarioData {
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
                                             'characterName': 'Mem',
-                                            'sfx': 'audio/sfx/sound/fall.mp3',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
                                           }, 
                                           {
                                             'dialogue': "Alright, last question! We’re almost there!", // index 177
@@ -2625,9 +2621,9 @@ class ScenarioData {
                                           {
                                             'dialogue': "Correct! The respiratory system helps us breathe by taking in oxygen and releasing carbon dioxide.", // index 180
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
-                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/152.png','position': 'right'}],
                                             'characterName': 'Mem',
-                                            'sfx': 'audio/sfx/sound/breathing.mp3',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
                                           },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -2636,21 +2632,21 @@ class ScenarioData {
     {
       'dialogue': "Nice work! With your knowledge, defeating the skibidi king will be much more easier!", // index 181
       'backgroundImage': 'assets/images/bg/b3.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right'}],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/upset.mp3',
   	},
     {
-      'dialogue': "Let's go and explore the next room!", // index 182
+      'dialogue': "But you should still practice more.", // index 182
       'backgroundImage': 'assets/images/bg/b3.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/upset.mp3',
   	},
     {
-      'dialogue': "Let's go and explore the next room!", // index 183
+      'dialogue': "Anyways, Let's go and explore the next room!", // index 183
       'backgroundImage': 'assets/images/bg/b3.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
+      'characters': [{'sprite': 'assets/images/characters/pose1/144.png','position': 'right'}],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/upset.mp3',
   	},
@@ -2662,14 +2658,14 @@ class ScenarioData {
     },
     {
       'dialogue': "Lets go to that room next!", // index 183
-      'backgroundImage': 'assets/images/bg/b3.jpg',
+      'backgroundImage': 'assets/images/bg/b11.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/upset.mp3',
   	},
     {
       'dialogue':"(you followed Mem)", // index 184
-      'backgroundImage': 'assets/images/bg/black screen.png',
+      'backgroundImage': 'assets/images/bg/b11.jpg',
       'characterName': '',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
@@ -2677,7 +2673,7 @@ class ScenarioData {
       'dialogue':"(Door opens)", // index 184
       'backgroundImage': 'assets/images/bg/black screen.png',
       'characterName': '',
-      'sfx': 'audio/sfx/sound/dooropen2.mp3',
+      'sfx': 'audio/sfx/action/dooropen3.mp3',
     },
 
 
@@ -2709,30 +2705,31 @@ class ScenarioData {
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?   
     {
       'dialogue': "Woah! We found the computer room!", // index 185
-      'backgroundImage': 'assets/images/bg/b3.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
+      'backgroundImage': 'assets/images/bg/computer3.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right'}],
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/upset.mp3',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
   	},
     {
       'dialogue': "With this we can finally find the data we need to stop the brainrot infection!", // index 186
-      'backgroundImage': 'assets/images/bg/b3.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
+      'backgroundImage': 'assets/images/bg/computer3.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/152.png','position': 'right'}],
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/upset.mp3',
+      'sfx': 'audio/sfx/emotion/cartoon.mp3',
   	},
     {
       'dialogue':"(Mem turned on the electricity)", // index 187
-      'backgroundImage': 'assets/images/bg/black screen.png',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/134.png','position': 'right'}],
       'characterName': '',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/action/switch.mp3',
     },
     {
       'dialogue': "Nice! the computers still works fine.", // index 188
-      'backgroundImage': 'assets/images/bg/b3.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right'}],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right'}],
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/upset.mp3',
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
   	},
     //TODO CUTSCENE---------------------------------------------
     {
