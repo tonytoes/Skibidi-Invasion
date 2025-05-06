@@ -6,42 +6,49 @@ class ScenarioData {
       "Hello there! Before we start we would like you to be familiar with the game!", // index 0
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/ding.mp3',
     },
     {
       'dialogue':
       "Tap the speaker icon to activate text-to-speech!", // index 1
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/think.mp3',
     },
     {
       'dialogue':
       "Great Job! Just keep tapping the icon to activate text-to-speech!", // index 2
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
     },
     {
       'dialogue':
       "If you need to adjust the music and sound effects. Press the Menu Icon!", // index 3
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/think.mp3',
     },
     {
       'dialogue':
       "You can also go back to homescreen, if you wanted to!", // index 4
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':
       "Now for the next Part!", // index 5
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/cartoon.mp3',
     },
     {
       'dialogue': "This is where you pick choices! Pick the right choices given to you.", // index 6
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
       'isQuestion': true,
+      'sfx': 'audio/sfx/emotion/twinkle.mp3',
       'choices': [
         {
           'text': "Right",
@@ -65,31 +72,37 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
       'incorrectChoiceGoTo': 6,
+      'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue': "That's how you do it! In the game you would be given questions to answer!", // index 8
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/sound/check.mp3',
     },
     {
       'dialogue': "So pick the right answer!", // index 9
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
     },
     {
       'dialogue': "Now that's all for me.", // index 10
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue': "If you need more help. Just press the question icon!", // index 11
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/think.mp3',
     },
     {
       'dialogue': "Well then! Goodluck!", // index 12
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
+      'sfx': 'audio/sfx/emotion/cartoon.mp3',
       
     },
 

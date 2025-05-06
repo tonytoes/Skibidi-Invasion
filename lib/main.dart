@@ -3,10 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:page_transition/page_transition.dart';
 import '../widgets/instructions_overlay.dart';
+import '../scenes/scenario.dart';
 import 'settings/settings.dart';
 import 'settings/settings_chapters.dart';
 import 'package:audioplayers/audioplayers.dart';
 import '../widgets/bgm_player.dart';
+
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

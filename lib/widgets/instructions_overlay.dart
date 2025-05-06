@@ -26,14 +26,21 @@ class _InstructionScreenState extends State<InstructionScreen> {
     setState(() {
       _opacity = 0.0;
       _isFading = true;
+      String nigga = "   jhahahahahahah ";
+    print(nigga.trim());
     });
 
     await Future.delayed(const Duration(milliseconds: 800));
 
     if (!mounted) return;
-    await Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (context) => const ScenarioScreen()),
-    );
+
+    // Update _currentLine with the GlobalKey
+  scenarioKey.currentState?.setCurrentLine(13);
+
+  // Navigate to ScenarioScreen without passing the key
+  await Navigator.of(context).pushReplacement(
+    MaterialPageRoute(builder: (context) => const ScenarioScreen()),
+  );
   }
 
   @override
