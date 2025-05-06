@@ -31,7 +31,7 @@ class ScenarioScreen extends StatefulWidget {
 }
 
 class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObserver  {
-  int _currentLine = 48;
+  int _currentLine = 0;
   int _lives = 3;
   int _lastQuestionIndex = 0;
   bool pressed = true;
@@ -376,7 +376,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
 
 
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.11,
+            top: MediaQuery.of(context).size.height * 0.06,
             right: MediaQuery.of(context).size.width * 0.010,
             child:Padding(
               padding: EdgeInsets.only(top: 5, right: 5),
@@ -412,7 +412,7 @@ class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObse
           ),
 
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.17,
+            top: MediaQuery.of(context).size.height * 0.12,
             right: MediaQuery.of(context).size.width * 0.010,
             child:Padding(
               padding: EdgeInsets.only(top: 5, right: 5),

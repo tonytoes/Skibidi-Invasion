@@ -20,6 +20,7 @@ dependencies:
   just_audio: ^0.10.2
   page_transition: ^2.2.1
   shared_preferences: ^2.5.3
+  flutter_native_splash: ^2.4.6
 
 dev_dependencies:
   flutter_test:
@@ -33,6 +34,7 @@ flutter:
   assets:
     - assets/
     - assets/images/bg/
+    - assets/images/logo/mem-logo.png
     - assets/icons/brokenheart.png
     - assets/images/characters/
     - assets/images/characters/pose1/

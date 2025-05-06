@@ -129,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.3,
+              bottom: MediaQuery.of(context).size.height * 0.4,
               left: MediaQuery.of(context).size.width * 0.1,
               right: MediaQuery.of(context).size.width * 0.1,
               child: Center(
@@ -163,8 +163,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
             Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.2,
+              bottom: MediaQuery.of(context).size.height * 0.3,
               left: 0,
               right: 0,
               child: Center(
@@ -200,6 +201,46 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
+            Positioned(
+              bottom: MediaQuery.of(context).size.height * 0.2,
+              left: 0,
+              right: 0,
+              child: Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
+                    _openChapters(context);
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
+                    overlayColor: MaterialStateProperty.resolveWith<Color?>((
+                        Set<MaterialState> states,
+                        ) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return const Color.fromARGB(255, 138, 137, 90)
+                            .withOpacity(0.2);
+                      }
+                      return null;
+                    }),
+                    shape: MaterialStateProperty.all(const StadiumBorder()),
+                    minimumSize: MaterialStateProperty.all(const Size(200, 50)),
+                  ),
+                  child: const Text(
+                    'Challenges',
+                    style: TextStyle(
+                      fontFamily: 'Obafen',
+                      fontSize: 24,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.1,
               left: 0,

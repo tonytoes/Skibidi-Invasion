@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 
 class DialogueBoxWidget extends StatefulWidget {
   final String characterName;
@@ -23,10 +24,14 @@ class DialogueBoxWidget extends StatefulWidget {
 class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
   String _visibleText = '';
   bool _isTyping = false;
+  int _tapCount = 0;
+  late TapGestureRecognizer _tapGestureRecognizer;
 
   @override
   void initState() {
     super.initState();
+    _tapGestureRecognizer = TapGestureRecognizer()
+    ..onTap = _tap;
     _startTypewriter();
   }
 
@@ -34,8 +39,8 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
   void didUpdateWidget(covariant DialogueBoxWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.dialogueText != widget.dialogueText) {
-      // Only restart typing if the text has changed
       _startTypewriter();
+      _tapCount = 0;
     }
   }
 
@@ -66,10 +71,22 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
     _isTyping = false; // Finished typing
   }
 
+  void _tap() {
+    if (_isTyping) {
+      setState(() {
+        _visibleText = widget.dialogueText;
+        _isTyping = false;
+      });
+    } else {
+      widget.nextDialogue(null);
+    }
+  }
+
 
   @override
   void dispose() {
     _isTyping = false;
+    _tapGestureRecognizer.dispose();
     super.dispose();
   }
 
@@ -79,6 +96,9 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
       alignment: Alignment.bottomCenter,
       child: Padding(
         padding: const EdgeInsets.all(16),
+        child: GestureDetector(
+          behavior: HitTestBehavior.translucent,
+          onTap: _tap,
         child: Stack(
           children: [
             Image.asset(
@@ -128,21 +148,22 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
               bottom: 5,
               child: Row(
                 children: [
-                  //Visibility(
-                    //visible: !widget.hasChoices && !_isTyping,
-                    //child:
+                  Visibility(
+                    visible: !widget.hasChoices && !_isTyping,
+                    child:
                     IconButton(
                       icon: Image.asset(
                         'assets/icons/nextBT.png'
                       ),
                       onPressed: () => widget.nextDialogue(null),
-                      iconSize: 30,
+                        iconSize: 30,
+                      ),
                     ),
-                  //),
-                ]
+                  ]
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

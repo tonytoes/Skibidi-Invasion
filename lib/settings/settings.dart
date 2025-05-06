@@ -40,8 +40,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Future<void> _loadSettings() async {
     final prefs = await _prefs;
     setState(() {
-      musicVolume = prefs.getDouble('musicVolume') ?? 0.5;
-      sfxVolume = prefs.getDouble('sfxVolume') ?? 0.5;
+      musicVolume = prefs.getDouble('musicVolume') ?? 0.0;
+      sfxVolume = prefs.getDouble('sfxVolume') ?? 0.0;
     });
     _bgmPlayer.setVolume(musicVolume);
     widget.sfxPlayer.setVolume(sfxVolume);
@@ -223,7 +223,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 'Enable Text to Speech',
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 20,
+                                    fontSize: 15,
                                     fontFamily: 'JosefinSans',
                                     fontWeight: FontWeight.w400),
                                 textAlign: TextAlign.center,
