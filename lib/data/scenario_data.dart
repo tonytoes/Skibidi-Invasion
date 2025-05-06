@@ -536,6 +536,7 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
+//*QUESTION 1
                                                   { // 48
                                                     'dialogue': "He ____ like pizza. What should I put here to complete the sentence?",
                                                     'backgroundImage': 'assets/images/bg/messyroom.jpg',
@@ -613,6 +614,7 @@ class ScenarioData {
                                                     'characterName': 'Mem',
                                                     'sfx': 'audio/sfx/sound/check2.mp3',
                                                   },
+//*QUESTION 2
                                                   { // 52
                                                     'dialogue': "Let's tidy up this sentence! 'They ____ cleaning their room right now.' What’s the right word?",
                                                     'backgroundImage': 'assets/images/bg/messyroom.jpg',
@@ -690,6 +692,7 @@ class ScenarioData {
                                                     'characterName': 'Mem',
                                                     'sfx': 'audio/sfx/sound/check2.mp3',
                                                   },
+//*QUESTION 3
                                                   { // 56
                                                     'dialogue': "Here's another! 'She ____ already eaten when I arrived.' Which word completes it?",
                                                     'backgroundImage': 'assets/images/bg/messyroom.jpg',
@@ -754,6 +757,7 @@ class ScenarioData {
                                                     'characterName': 'Mem',
                                                     'sfx': 'audio/sfx/sound/check2.mp3',
                                                   },
+//*QUESTION 4
                                                   { // 59
                                                     'dialogue': "Final one for now: 'Mem grabbed ___ apple from the table.' What fits best?",
                                                     'backgroundImage': 'assets/images/bg/messyroom.jpg',
@@ -1072,6 +1076,7 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
+//*QUESTION 1
                                                       { // 79
                                                         'dialogue': "____ hate going to school",
                                                         'backgroundImage': 'assets/images/bg/door2.jpg',
@@ -1114,7 +1119,6 @@ class ScenarioData {
                                                           },
                                                         ],
                                                       },
-
                                                       { // 80
                                                         'dialogue': "WRONG",
                                                         'backgroundImage': 'assets/images/bg/door2.jpg',
@@ -1132,7 +1136,6 @@ class ScenarioData {
                                                         'sfx': 'audio/sfx/sound/wrong.mp3',
                                                         'incorrectChoiceGoTo': 79,
                                                       },
-
                                                       { // 81
                                                         'dialogue': "WRONG",
                                                         'backgroundImage': 'assets/images/bg/door2.jpg',
@@ -1150,7 +1153,6 @@ class ScenarioData {
                                                         'sfx': 'audio/sfx/sound/wrong.mp3',
                                                         'incorrectChoiceGoTo': 79,
                                                       },
-
                                                       { // 82
                                                         'dialogue': "It’s working! Keep going!",
                                                         'backgroundImage': 'assets/images/bg/door2.jpg',
@@ -1167,7 +1169,7 @@ class ScenarioData {
                                                         'characterName': 'Mem',
                                                         'sfx': 'audio/sfx/sound/check2.mp3',
                                                       },
-
+//*QUESTION 2
                                                       { // 83
                                                         'dialogue': "The man slip and _______",
                                                         'backgroundImage': 'assets/images/bg/door2.jpg',
@@ -1466,6 +1468,7 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
+//*QUESTION 1
                                               {
                                                 'dialogue': "She ____ to school every day", // index 103
                                                 'backgroundImage': 'assets/images/bg/library2.jpg',
@@ -1559,7 +1562,7 @@ class ScenarioData {
                                                 'characterName': 'Mem',
                                                 'sfx': 'audio/sfx/emotion/respond.mp3',
                                               },
-
+//*QUESTION 2
                                               {
                                                 'dialogue': "This is my brother. ___ is a doctor.", // index 108
                                                 'backgroundImage': 'assets/images/bg/library2.jpg',
@@ -1654,7 +1657,7 @@ class ScenarioData {
                                                 'characterName': 'Mem',
                                                 'sfx': 'audio/sfx/emotion/respond.mp3',
                                               },
-
+//*QUESTION 3
                                               {
                                                 'dialogue': "I ___ my homework yesterday.", // index 113
                                                 'backgroundImage': 'assets/images/bg/library2.jpg',
@@ -1736,6 +1739,7 @@ class ScenarioData {
                                                 'characterName': 'Mem',
                                                 'sfx': 'audio/sfx/sound/check2.mp3',
                                               },
+//*QUESTION 4
                                               {
                                                 'dialogue': "She ___ to the store yesterday.", // index 117
                                                 'backgroundImage': 'assets/images/bg/library2.jpg',
@@ -1818,6 +1822,7 @@ class ScenarioData {
                                                 'characterName': 'Mem',
                                                 'sfx': 'audio/sfx/sound/check2.mp3',
                                               },
+//*QUESTION 5
                                               {
                                                 'dialogue': "They ___ a movie last night.", // index 121
                                                 'backgroundImage': 'assets/images/bg/library2.jpg',
@@ -2409,6 +2414,7 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
+//*QUESTION 1
                                         {
                                             'dialogue': "Here’s your first science question! What part of a plant absorbs water from the soil?", // index 167
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
@@ -2458,7 +2464,7 @@ class ScenarioData {
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/sound/check2.mp3',
                                           },
-                                          
+//*QUESTION 2
                                           {
                                             'dialogue': "Next, what happens to water when it gets heated up?", // index 170
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
@@ -2515,6 +2521,7 @@ class ScenarioData {
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/emotion/exclaim.mp3',
                                           },
+//*QUESTION 3
                                           {
                                             'dialogue': "Which force pulls everything toward the ground?", // index 174
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
@@ -2572,6 +2579,7 @@ class ScenarioData {
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/emotion/exclaim.mp3',
                                           },
+//*QUESTION 4
                                           {
                                             'dialogue': "Which system in our body helps us breathe?", // index 178
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
@@ -2895,7 +2903,8 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
-{
+//*QUESTION 1
+                                            {
                                             'dialogue': "What is 2 + 3?", // index 208
                                             'backgroundImage': 'assets/images/bg/b3.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose1/154.png','position': 'right'}],
@@ -2951,6 +2960,8 @@ class ScenarioData {
                                           'characterName': 'Mem',
                                           'sfx': 'audio/sfx/sound/check2.mp3',
                                           },
+
+                                          
 
 
 
