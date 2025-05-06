@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
       PageTransition(
         type: PageTransitionType.fade,
         duration: const Duration(milliseconds: 800),
-        child: const InstructionScreen(),
+        child: const ScenarioScreen(),
       ),
     );
 
