@@ -2733,43 +2733,45 @@ class ScenarioData {
     {
       'dialogue':"(Mem sat at the computer chair)", // index 192
       'backgroundImage': 'assets/images/bg/cutscene7.png',
-      'characterName': '',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"alright, lets see what's inside.", // index 193
       'backgroundImage': 'assets/images/bg/cutscene7.png',
-      'characterName': '',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     //TODO CUTSCENE---------------------------------------------
     {
       'dialogue':"Ohh no", // index 194
       'backgroundImage': 'assets/images/bg/cutscene7.png',
-      'characterName': '',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
      {
       'dialogue':"the computers are locked.", // index 195
       'backgroundImage': 'assets/images/bg/cutscene7.png',
-      'characterName': '',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"We need to use mathematics in order to open the computer and access their data...", // index 196
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Get 3 wrong answers and the computer will lock… permanently...", // index 197
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue': "What do we do now?", // index 198
-      'backgroundImage': 'assets/images/bg/black screen.png',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
       'showLives': false,
@@ -2779,62 +2781,62 @@ class ScenarioData {
           'text': "Let me help",
           'nextDialogueIndex': 199,
           'isCorrect': null,
-          'nextBackgroundImage': 'assets/images/bg/inside5.jpg',
+          'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
         },
         {
           'text': "don't worry bebe girl, I'll help you",
           'nextDialogueIndex': 199,
           'isCorrect': null,
-          'nextBackgroundImage': 'assets/images/bg/inside5.jpg',
+          'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
         },
       ]
     },
     {
       'dialogue':"Really?!", // index 199
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"I knew I could count on you!", // index 200
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Alright, I'll explain on how you can unlock the computer security system.", // index 201
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"The lock consist of 4 levels.", // index 202
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"It consist of Addition, Substraction, Multiplication and Division!", // index 203
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"You need to pass all of them to unlock the computer.", // index 204
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue': "Are you ready?", // index 205
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
       'showLives': false,
       'sfx': 'audio/sfx/emotion/question.mp3',
@@ -2843,47 +2845,47 @@ class ScenarioData {
           'text': "Heck Yeah!",
           'nextDialogueIndex': 206,
           'isCorrect': null,
-          'nextBackgroundImage': 'assets/images/bg/inside5.jpg',
+          'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
         },
         {
           'text': "I'm ready",
           'nextDialogueIndex': 206,
           'isCorrect': null,
-          'nextBackgroundImage': 'assets/images/bg/inside5.jpg',
+          'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
         },
         {
           'text': "Let's do this",
           'nextDialogueIndex': 206,
           'isCorrect': null,
-          'nextBackgroundImage': 'assets/images/bg/inside5.jpg',
+          'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
         },
       ]
     },
     {
       'dialogue':"Alright, The 1st Level is Addition.", // index 206
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Addition is when we put numbers together to make a bigger number!", // index 207
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Like if you have 1 apple and I give you 1 more, now you have 2 apples!", // index 208
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Alright, Let's do this!... Starting Level 1...", // index 209
       'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
-      'backgroundImage': 'assets/images/bg/black screen.png',
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': '',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
@@ -2894,7 +2896,7 @@ class ScenarioData {
 //*QUESTION 1
                                             {
                                             'dialogue': "What is 2 + 3?", // index 210
-                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose1/154.png','position': 'right'}],
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/emotion/question.mp3',
@@ -2903,14 +2905,14 @@ class ScenarioData {
                                               {
                                                 'text': "5",
                                                 'nextDialogueIndex': 212,
-                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
                                                 'characterName': 'Mem',
                                                 'isCorrect': true,
                                               },
                                               {
                                                 'text': "6",
                                                 'nextDialogueIndex': 211,
-                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
                                                 'characterName': 'Mem',
                                                 'isCorrect': false,
                                                 'loseLifeOnIncorrect': true,
@@ -2918,7 +2920,7 @@ class ScenarioData {
                                               {
                                                 'text': "4",
                                                 'nextDialogueIndex': 211,
-                                                'nextBackgroundImage': 'assets/images/bg/b3.jpg',
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
                                                 'characterName': 'Mem',
                                                 'isCorrect': false,
                                                 'loseLifeOnIncorrect': true,
@@ -2928,7 +2930,7 @@ class ScenarioData {
 
                                           {
                                             'dialogue': "Oops… that’s not right. Be careful, we only have limited chances!", // index 211
-                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/sound/wrong.mp3',
@@ -2936,14 +2938,14 @@ class ScenarioData {
                                           }, 
                                           {
                                             'dialogue': "Yay! That’s right! 2 and 3 together make a 5!", // index 212
-                                            'backgroundImage': 'assets/images/bg/b3.jpg',
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/sound/check2.mp3',
                                           },
                                           { 
                                           'dialogue': "Next Question!",  // index 213
-                                          'backgroundImage': 'assets/images/bg/messyroom.jpg',
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
                                           'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
                                           'characterName': 'Mem',
                                           'sfx': 'audio/sfx/sound/check2.mp3',
