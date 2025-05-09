@@ -74,3 +74,13 @@ flutter:
         - asset: assets/fonts/Obafen-e9jK3.otf
           weight: 400      
 
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+
+  color: "#000000"
+  fullscreen: true
+  image: assets/images/logo/mem-logo.png
+  android_gravity: center
+  ios_content_mode: center

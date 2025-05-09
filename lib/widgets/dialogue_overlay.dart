@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class DialogueBoxWidget extends StatefulWidget {
   final String characterName;
@@ -139,7 +140,7 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
                       Container(height: 1, color: Colors.black),
                       const SizedBox(height: 5),
                     ],
-                    Text(
+                    AutoSizeText(
                       _visibleText,
                       style: const TextStyle(
                         fontSize: 20,
@@ -147,6 +148,8 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
                         color: Colors.black,
                         height: 1,
                       ),
+                      maxLines: 6,
+                      minFontSize: 15,
                     ),
                   ],
                 ),

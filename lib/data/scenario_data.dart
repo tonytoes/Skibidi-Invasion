@@ -100,6 +100,7 @@ class ScenarioData {
     },
     {
       'dialogue': "Well then! Goodluck!", // index 12
+      'isCheckpoint': true,
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
       'sfx': 'audio/sfx/emotion/cartoon.mp3',

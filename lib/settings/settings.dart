@@ -73,7 +73,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                 return Container(
                   width: MediaQuery.of(context).size.width - 40,
-                  height: 750,
+                  height: 650,
                   color: Colors.black.withValues(alpha: 0.7),
                   child: Center(
                     child: Column(
@@ -232,7 +232,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 200),
+                          padding: const EdgeInsets.only(top: 150),
                           child: TextButton(
                             onPressed: () {
                               Navigator.pop(context);

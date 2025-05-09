@@ -8,13 +8,17 @@ import 'settings/settings.dart';
 import 'settings/settings_chapters.dart';
 import 'package:audioplayers/audioplayers.dart';
 import '../widgets/bgm_player.dart';
+import '../widgets/player_progress.dart';
 
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, // ✅ Make status bar transparent
+    statusBarIconBrightness: Brightness.light, // or Brightness.dark based on bg color
+  ));
   runApp(const MyApp());
 }
 
@@ -61,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
       PageTransition(
         type: PageTransitionType.fade,
         duration: const Duration(milliseconds: 800),
-        child: const ScenarioScreen(),
+        child: ScenarioScreen(index: 0),
       ),
     );
 
@@ -71,10 +75,25 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  void _openChapters(BuildContext context) {
+  void _handleChapterSelect(int chapterIndex) {
+    Navigator.pushReplacement(
+      context,
+      PageTransition(
+        type: PageTransitionType.fade,
+        duration: const Duration(milliseconds: 500),
+        child: ScenarioScreen(index: chapterIndex), // Pass the chapterIndex here
+      ),
+    );
+  }
+
+
+  _openChapters(BuildContext context) {
+    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => const ChapterScreen(),
+      builder: (context) => ChapterScreen(
+        onChapterSelect: _handleChapterSelect,  // Pass the function here
+      ),
     );
   }
 

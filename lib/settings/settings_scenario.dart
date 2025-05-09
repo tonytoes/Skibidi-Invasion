@@ -18,7 +18,7 @@ void _openContinue(BuildContext context)  {
       child: const ContinueOverlay(),
     ),
   );
- 
+
 }
 
 
@@ -35,15 +35,16 @@ void _openSettings(BuildContext context) {
 }
 
 void _openChapters(BuildContext context) {
-    Navigator.pushReplacement(
+  Navigator.pushReplacement(
     context,
     PageTransition(
-    type: PageTransitionType.fade,
-    duration: const Duration(milliseconds: 500),
-    child: const ChapterOverlay()
+        type: PageTransitionType.fade,
+        duration: const Duration(milliseconds: 500),
+        child: const ChapterOverlay()
     ),
   );
 }
+
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -83,7 +84,7 @@ class MenuScreen extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       _openContinue(context);
-                      
+
                     },
                     child: Text(
                       'Back to Home',
