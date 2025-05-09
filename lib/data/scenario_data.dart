@@ -2411,7 +2411,7 @@ class ScenarioData {
 //*QUESTION 1
                                         {
                                             'dialogue': "Here’s your first science question! What part of a plant absorbs water from the soil?", // index 167
-                                            'backgroundImage': 'assets/images/bg/cutscene6.png',
+                                            'backgroundImage': 'assets/images/bg/b3.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose1/154.png','position': 'right'}],
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/emotion/question.mp3',
