@@ -30,6 +30,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
     setState(() {
       _maxUnlockedIndex = index;
     });
+    print('ChapterScreen: Loaded maxUnlockedIndex is: $_maxUnlockedIndex'); // Add this line
   }
 
   @override
@@ -47,9 +48,12 @@ class _ChapterScreenState extends State<ChapterScreen> {
       body: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Center(
+          child: GestureDetector( // <-- Add GestureDetector here
+          onTap: () {
+          print('ChapterScreen: GestureDetector on main Container tapped'); // Add this print
+          },
           child: Container(
-            width: MediaQuery.of(context).size.width - 40,
-            height: 650,
+            //height: 650,
             color: Colors.black.withOpacity(0.7),
             child: Column(
               children: [
@@ -84,11 +88,11 @@ class _ChapterScreenState extends State<ChapterScreen> {
                   bool isUnlocked = chapter['index'] <= _maxUnlockedIndex;
                   return Padding(
                     padding: const EdgeInsets.only(left: 20.0, top: 10.0),
-                    child: TextButton(
-                      onPressed: isUnlocked
+                    child: GestureDetector(
+                      onTap: isUnlocked
                           ? () {
+                        print('ChapterScreen: Tapped on chapter with index: ${chapter['index']}'); // This print is not appearing
                         widget.onChapterSelect(chapter['index']);
-                        Navigator.pop(context);
                       }
                           : null,
                       child: Row(
@@ -124,6 +128,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
             ),
           ),
         ),
+      ),
       ),
     );
   }

@@ -7,6 +7,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developer',
       'sfx': 'audio/sfx/emotion/ding.mp3',
+      'index': 0,
     },
     {
       'dialogue':
@@ -125,7 +126,8 @@ class ScenarioData {
       // index 13
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
-      'sfx': 'audio/sfx/action/footstep1.mp3'
+      'sfx': 'audio/sfx/action/footstep1.mp3',
+      'index': 13,
     },
     {
       'dialogue':

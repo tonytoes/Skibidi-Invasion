@@ -1,6 +1,5 @@
   import 'package:flutter/material.dart';
   import 'package:flutter/cupertino.dart';
-  import 'package:audioplayers/audioplayers.dart';
   import 'dart:ui';
   import '../settings/settings_scenario.dart';
   import '../widgets/dialogue_overlay.dart';
@@ -11,6 +10,8 @@
   import '../widgets/player_progress.dart';
   import '../settings/settings_chapters.dart';
   import 'package:shared_preferences/shared_preferences.dart';
+  import 'package:just_audio/just_audio.dart';
+  import 'dart:async';
 
   void _openHelp(BuildContext context) {
     showCupertinoModalPopup(
@@ -27,9 +28,16 @@
   }
 
   class ScenarioScreen extends StatefulWidget {
-    final int index;  // Add the index parameter here
+    final int index;
+    final AudioPlayer sfxPlayer;
+    final AudioPlayer bgmPlayer;
 
-    const ScenarioScreen({Key? key, required this.index}) : super(key: key);
+    const ScenarioScreen({
+      Key? key,
+      required this.index,
+      required this.sfxPlayer,
+      required this.bgmPlayer,
+    }) : super(key: key);
 
     @override
     _ScenarioScreenState createState() => _ScenarioScreenState();
@@ -38,7 +46,6 @@
   class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObserver  {
     int _currentLine = 12;
     int _lives = 3;
-    int index = 0;
     int _lastQuestionIndex = 0;
     int _maxUnlockedIndex = 0;
     bool pressed = true;
@@ -46,14 +53,14 @@
     bool _resetColors = false;
     late String _backgroundImage;
     late String _characterName;
-    late AudioPlayer _audio;
-    late AudioPlayer _bgm;
+    AudioPlayer get _audio => widget.sfxPlayer;
+    AudioPlayer get _bgm => widget.bgmPlayer;
     String? _currentBgm;
     bool _showArrow = false;
     double _arrowLeft = 0.0;
     double _arrowTop = 0.0;
     double _arrowRotation = 0.0;
-    String _arrowAsset = 'assets/icons/turorial_arrow.png';
+    String _arrowAsset = 'assets/icons/tutorial_arrow.png';
 
 
     List<Map<String, dynamic>> _characters = [];
@@ -71,67 +78,45 @@
 
     // Add all character sprite image paths to this list
     final List<String> characterSpritesToPrecache = [
-      'assets/images/characters/pose1/111.png',
-      'assets/images/characters/pose1/112.png',
-      'assets/images/characters/pose1/113.png',
-      'assets/images/characters/pose1/114.png',
-      'assets/images/characters/pose1/121.png',
-      'assets/images/characters/pose1/122.png',
-      'assets/images/characters/pose1/123.png',
-      'assets/images/characters/pose1/124.png',
-      'assets/images/characters/pose1/131.png',
-      'assets/images/characters/pose1/132.png',
-      'assets/images/characters/pose1/133.png',
-      'assets/images/characters/pose1/134.png',
-      'assets/images/characters/pose1/141.png',
-      'assets/images/characters/pose1/142.png',
-      'assets/images/characters/pose1/143.png',
-      'assets/images/characters/pose1/144.png',
-      'assets/images/characters/pose1/151.png',
-      'assets/images/characters/pose1/152.png',
-      'assets/images/characters/pose1/153.png',
-      'assets/images/characters/pose1/154.png',
-      'assets/images/characters/pose1/161.png',
-      'assets/images/characters/pose1/162.png',
-      'assets/images/characters/pose1/163.png',
-      'assets/images/characters/pose1/164.png',
+      'assets/images/characters/pose1/111.png', 'assets/images/characters/pose1/112.png',
+      'assets/images/characters/pose1/113.png', 'assets/images/characters/pose1/114.png',
+      'assets/images/characters/pose1/121.png', 'assets/images/characters/pose1/122.png',
+      'assets/images/characters/pose1/123.png', 'assets/images/characters/pose1/124.png',
+      'assets/images/characters/pose1/131.png', 'assets/images/characters/pose1/132.png',
+      'assets/images/characters/pose1/133.png', 'assets/images/characters/pose1/134.png',
+      'assets/images/characters/pose1/141.png', 'assets/images/characters/pose1/142.png',
+      'assets/images/characters/pose1/143.png', 'assets/images/characters/pose1/144.png',
+      'assets/images/characters/pose1/151.png', 'assets/images/characters/pose1/152.png',
+      'assets/images/characters/pose1/153.png', 'assets/images/characters/pose1/154.png',
+      'assets/images/characters/pose1/161.png', 'assets/images/characters/pose1/162.png',
+      'assets/images/characters/pose1/163.png', 'assets/images/characters/pose1/164.png',
 
-      'assets/images/characters/pose2/211.png',
-      'assets/images/characters/pose2/212.png',
-      'assets/images/characters/pose2/213.png',
-      'assets/images/characters/pose2/214.png',
-      'assets/images/characters/pose2/221.png',
-      'assets/images/characters/pose2/222.png',
-      'assets/images/characters/pose2/223.png',
-      'assets/images/characters/pose2/224.png',
-      'assets/images/characters/pose2/231.png',
-      'assets/images/characters/pose2/232.png',
-      'assets/images/characters/pose2/233.png',
-      'assets/images/characters/pose2/234.png',
-      'assets/images/characters/pose2/241.png',
-      'assets/images/characters/pose2/242.png',
-      'assets/images/characters/pose2/243.png',
-      'assets/images/characters/pose2/244.png',
-      'assets/images/characters/pose2/251.png',
-      'assets/images/characters/pose2/252.png',
-      'assets/images/characters/pose2/253.png',
-      'assets/images/characters/pose2/254.png',
-      'assets/images/characters/pose2/261.png',
-      'assets/images/characters/pose2/262.png',
-      'assets/images/characters/pose2/263.png',
-      'assets/images/characters/pose2/264.png',
+      'assets/images/characters/pose2/211.png', 'assets/images/characters/pose2/212.png',
+      'assets/images/characters/pose2/213.png', 'assets/images/characters/pose2/214.png',
+      'assets/images/characters/pose2/221.png', 'assets/images/characters/pose2/222.png',
+      'assets/images/characters/pose2/223.png', 'assets/images/characters/pose2/224.png',
+      'assets/images/characters/pose2/231.png', 'assets/images/characters/pose2/232.png',
+      'assets/images/characters/pose2/233.png', 'assets/images/characters/pose2/234.png',
+      'assets/images/characters/pose2/241.png', 'assets/images/characters/pose2/242.png',
+      'assets/images/characters/pose2/243.png', 'assets/images/characters/pose2/244.png',
+      'assets/images/characters/pose2/251.png', 'assets/images/characters/pose2/252.png',
+      'assets/images/characters/pose2/253.png', 'assets/images/characters/pose2/254.png',
+      'assets/images/characters/pose2/261.png', 'assets/images/characters/pose2/262.png',
+      'assets/images/characters/pose2/263.png', 'assets/images/characters/pose2/264.png',
+
     ];
-
 
     @override
     void initState() {
       super.initState();
-      loadPrefs();
-      _audio = AudioPlayer();
-      _bgm = AudioPlayer();
-      _loadInitialData();
+      print('ScenarioScreen initState: Received widget.index = ${widget.index}');
       _currentLine = widget.index;
-      // Precache images
+      print('ScenarioScreen initState: Set _currentLine to = $_currentLine');
+      loadPrefs();
+
+      print('ScenarioScreen initState: Using AudioPlayers passed from parent.');
+
+      _loadInitialData();
       Future.delayed(Duration.zero, () {
         for (String spritePath in characterSpritesToPrecache) {
           precacheImage(AssetImage(spritePath), context);
@@ -141,30 +126,18 @@
     }
 
     void loadPrefs() async {
-      final prefs = await SharedPreferences.getInstance();
-      int index = prefs.getInt('progress') ?? 0;
+      int index = await loadProgress();
       setState(() {
         _maxUnlockedIndex = index;
       });
     }
-
 
     void _openChapterScreen() {
       showCupertinoModalPopup(
         context: context,
         builder: (context) => ChapterScreen(
           onChapterSelect: (index) {
-            setState(() {
-              _currentLine = index;
-              _loadInitialData();
-            });
-            // Navigate to ScenarioScreen and pass the selected chapter index
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ScenarioScreen(index: index), // Pass selected index
-              ),
-            );
+            print('ScenarioScreen _openChapterScreen: Chapter selected with index $index. Calling parent callback.');
           },
         ),
       );
@@ -172,42 +145,68 @@
 
 
     @override
-    void dispose () {
+    void dispose() {
       WidgetsBinding.instance.removeObserver(this);
-      _bgm.stop();
-      _bgm.dispose();
-      _audio.dispose();
+      print('ScenarioScreen dispose: Skipping ALL dispose logic except super.dispose() for debugging.'); // Keep this print
       super.dispose();
     }
 
+
+    @override
     void didChangeAppLifecycleState(AppLifecycleState state) {
       super.didChangeAppLifecycleState(state);
-
-      // When the app comes to the foreground, resume BGM if it's not playing
       if (state == AppLifecycleState.resumed) {
-        if (_bgm.state == PlayerState.paused || _bgm.state == PlayerState.stopped) {
-          _bgm.resume();
+        if (_bgm.processingState == ProcessingState.ready && !_bgm.playing) {
+          _bgm.play();
         }
+      } else if (state == AppLifecycleState.paused) {
+        if (_bgm.playing) {
+          _bgm.pause();
+        }
+      } else if (state == AppLifecycleState.inactive || state == AppLifecycleState.detached) {
+        _bgm.stop();
       }
     }
 
+
     void _loadInitialData() {
-      _backgroundImage =
-      ScenarioData.scenarioData[_currentLine]['backgroundImage'];
-      _characters =
-          (ScenarioData.scenarioData[_currentLine]['characters'] as List<
-              Map<String, dynamic>>?) ?? [];
-      _characterName = ScenarioData.scenarioData[_currentLine]['characterName'] ?? '';
-      _currentChoices = ScenarioData.scenarioData[_currentLine]['choices'] ?? [];
-      _showLives = ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
-      _playSFX(ScenarioData.scenarioData[_currentLine]['sfx']);
-      String? bgmPath = ScenarioData.scenarioData[_currentLine]['bgm'];
-      _updateBgm(bgmPath);
+      print('ScenarioScreen _loadInitialData: Called for _currentLine = $_currentLine');
+      if (_currentLine >= 0 && _currentLine < ScenarioData.scenarioData.length) {
+        final currentScenario = ScenarioData.scenarioData[_currentLine];
+        print('ScenarioScreen _loadInitialData: Loaded data: $currentScenario');
+        _backgroundImage = currentScenario['backgroundImage'];
+        _characters = (currentScenario['characters'] as List<Map<String, dynamic>>?) ?? [];
+        _characterName = currentScenario['characterName'] ?? '';
+        _currentChoices = currentScenario['choices'] ?? [];
+        _showLives = currentScenario['showLives'] ?? true;
+
+        // *** TEMPORARY DEBUGGING CODE - Temporarily skip audio playback ***
+        // We commented these out previously to debug the crash.
+        // UNCOMMENT these lines once the crash is resolved and you're ready to test audio again.
+        // _playSFX(currentScenario['sfx']); // UNCOMMENT THIS LINE LATER
+        // String? bgmPath = currentScenario['bgm']; // UNCOMMENT THIS LINE LATER
+        // _updateBgm(bgmPath); // UNCOMMENT THIS LINE LATER
+        print('ScenarioScreen _loadInitialData: Temporarily skipping all audio loading for debugging.');
+        // *** END TEMPORARY DEBUGGING CODE ***
+      } else {
+        print('ScenarioScreen _loadInitialData: Error: Invalid index: $_currentLine');
+        // Handle this error case, maybe navigate back or show an error message
+      }
     }
 
     void _playSFX(String? sfxPath) {
       if (sfxPath != null && sfxPath.isNotEmpty) {
-        _audio.play(AssetSource(sfxPath));
+        if (sfxPath == 'audio/sfx/emotion/GTAclick.mp3') {
+          print('ScenarioScreen _playSFX: Skipping problematic asset: $sfxPath');
+          return;
+        }
+        try {
+          _audio.stop();
+          _audio.setAudioSource(AudioSource.asset(sfxPath));
+          _audio.play();
+        } catch (e) {
+          print('ScenarioScreen _playSFX: Error playing SFX $sfxPath: $e');
+        }
       }
     }
 
@@ -217,18 +216,23 @@
           await _bgm.stop();
         }
         if(bgmPath != null && bgmPath.isNotEmpty) {
-          await _bgm.setSource(AssetSource(bgmPath));
-          _bgm.setReleaseMode(ReleaseMode.loop);
-          await _bgm.resume();
-
-          _currentBgm = bgmPath;
+          try {
+            await _bgm.setAudioSource(AudioSource.asset(bgmPath));
+            _bgm.setLoopMode(LoopMode.one);
+            await _bgm.play();
+            _currentBgm = bgmPath;
+          } catch (e) {
+            print('ScenarioScreen _updateBgm: Error updating BGM to $bgmPath: $e');
+            await _bgm.stop();
+            _currentBgm = null;
+          }
         }
         else {
+          await _bgm.stop();
           _currentBgm = null;
         }
       }
     }
-
 
     void _nextDialogue(String? selectedChoice) {
       setState(() {
@@ -286,11 +290,14 @@
             ScenarioData.scenarioData[nextLine]['isQuestion'] == true) {
           _lastQuestionIndex = nextLine;
         }
+
         _currentLine = nextLine;
+
         if (_currentLine > _maxUnlockedIndex) {
           _maxUnlockedIndex = _currentLine;
           saveProgress(_currentLine);
         }
+
         _backgroundImage =
             ScenarioData.scenarioData[_currentLine]['backgroundImage'] ??
                 _backgroundImage;
@@ -306,47 +313,32 @@
             ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
 
         if (_currentLine == 1) {
-          _showArrow = true;
-          _arrowLeft = 270.0;
-          _arrowTop = 150.0;
-          _arrowAsset =
-          'assets/icons/tutorial_arrow.png';
-          _arrowRotation = 90.0;
+          _showArrow = true; _arrowLeft = 270.0; _arrowTop = 150.0;
+          _arrowAsset = 'assets/icons/tutorial_arrow.png'; _arrowRotation = 90.0;
         } else if (_currentLine == 3) {
-          _showArrow = true;
-          _arrowLeft = 260.0;
-          _arrowTop = 100.0;
-          _arrowAsset =
-          'assets/icons/tutorial_arrow.png';
-          _arrowRotation = 90.0;
+          _showArrow = true; _arrowLeft = 260.0; _arrowTop = 100.0;
+          _arrowAsset = 'assets/icons/tutorial_arrow.png'; _arrowRotation = 90.0;
         } else if (_currentLine == 6) {
-          _showArrow = true;
-          _arrowLeft = 100.0;
-          _arrowTop = 150.0;
-          _arrowAsset =
-          'assets/icons/tutorial_arrow.png';
-          _arrowRotation = 180.0;
+          _showArrow = true; _arrowLeft = 100.0; _arrowTop = 150.0;
+          _arrowAsset = 'assets/icons/tutorial_arrow.png'; _arrowRotation = 180.0;
         } else if (_currentLine == 11) {
-          _showArrow = true;
-          _arrowLeft = 260.0;
-          _arrowTop = 100.0;
-          _arrowAsset =
-          'assets/icons/tutorial_arrow.png';
-          _arrowRotation = 180.0;
+          _showArrow = true; _arrowLeft = 260.0; _arrowTop = 100.0;
+          _arrowAsset = 'assets/icons/tutorial_arrow.png'; _arrowRotation = 180.0;
         } else {
-          _showArrow = false; //hide
+          _showArrow = false;
         }
 
         _playSFX(ScenarioData.scenarioData[_currentLine]['sfx']);
         String? bgmPath = ScenarioData.scenarioData[_currentLine]['bgm'];
         _updateBgm(bgmPath);
+
         _resetColors = true;
       });
     }
 
     void _resetGame() {
       setState(() {
-        _currentLine = _lastQuestionIndex > 0 ? _lastQuestionIndex : 0;
+        _currentLine = _lastQuestionIndex > 0 ? _lastQuestionIndex - 1 : 0;
         _lives = 3;
         _isGameOver = false;
         _backgroundImage =
@@ -558,13 +550,24 @@
     @override
     void didUpdateWidget(ScenarioScreen oldWidget) {
       super.didUpdateWidget(oldWidget);
+
+      if (widget.index != oldWidget.index) {
+        print("_ScenarioScreenState didUpdateWidget: widget.index changed. Updating _currentLine and reloading data.");
+        if (mounted) {
+          _currentLine = widget.index;
+          _loadInitialData();
+        }
+      }
+
       if (_resetColors) {
         setState(() {
           _resetColors = false;
         });
       }
-      if (_bgm.state == PlayerState.stopped || _bgm.state == PlayerState.paused) {
-        _bgm.resume();
+      Future<void> someFunction() async {
+        if (_bgm.processingState == ProcessingState.ready && !_bgm.playing) {
+          await _bgm.play();
+        }
       }
     }
 

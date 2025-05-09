@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:page_transition/page_transition.dart';
-import '../widgets/instructions_overlay.dart';
 import '../scenes/scenario.dart';
 import 'settings/settings.dart';
 import 'settings/settings_chapters.dart';
-import 'package:audioplayers/audioplayers.dart';
+import 'package:just_audio/just_audio.dart';
 import '../widgets/bgm_player.dart';
 import '../widgets/player_progress.dart';
+import '../widgets/chapterone_overlay.dart'; // Import the ChapterIntroOverlay
 
 
 void main() {
@@ -16,8 +16,8 @@ void main() {
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, // ✅ Make status bar transparent
-    statusBarIconBrightness: Brightness.light, // or Brightness.dark based on bg color
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.light,
   ));
   runApp(const MyApp());
 }
@@ -41,61 +41,156 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+// Initialize your global BGM player instance
 final bgmPlayer = BGMPlayer();
+
+// Initialize your global SFX player instance using just_audio
 final AudioPlayer _sfxPlayer = AudioPlayer();
 
-class _HomeScreenState extends State<HomeScreen> {
-  double _opacity = 1.0;
-  bool _isFading = false;
 
-  void _handlePlay() async {
-    _sfxPlayer.play(AssetSource('audio/sfx/sound/GTAclick.mp3'));
+class _HomeScreenState extends State<HomeScreen> {
+  double _opacity = 1.0; // State for HomeScreen fade effect
+  bool _isFading = false; // Flag to prevent multiple taps during fade
+  int _lastPlayedIndex = 0; // Last played chapter index
+
+
+  @override
+  void initState() {
+    super.initState();
+    loadLastPlayedIndex();
+    bgmPlayer.startBackgroundMusic();
+  }
+
+  // Load the last played chapter index from SharedPreferences
+  void loadLastPlayedIndex() async {
+    // Use loadProgress from player_progress.dart
+    int? index = await loadProgress();
+    setState(() {
+      _lastPlayedIndex = index ?? 0; // Default to 0 if no index saved
+    });
+  }
+
+
+  // Handles the transition when tapping Play/Continue
+  void _handlePlayOrContinue() async {
+    // try {
+    //    await _sfxPlayer.setAudioSource(AudioSource.asset('audio/sfx/sound/GTAclick.mp3'));
+    //    _sfxPlayer.play();
+    // } catch (e) {
+    //    print('Error playing click SFX: $e');
+    // }
+
     if (_isFading) return;
+
     setState(() {
       _opacity = 0.0;
       _isFading = true;
     });
 
-    // Fade out music
     await bgmPlayer.stopBackgroundMusic();
 
+    // Wait for fade-out animation to complete
     await Future.delayed(const Duration(milliseconds: 800));
 
-    await Navigator.of(context).pushReplacement(
-      PageTransition(
-        type: PageTransitionType.fade,
-        duration: const Duration(milliseconds: 800),
-        child: ScenarioScreen(index: 0),
-      ),
-    );
+
+    final int targetScenarioIndex = _lastPlayedIndex > 0 ? _lastPlayedIndex : 0;
+
+    const int chapter1ActualStartIndex = 13;
+
+    if (targetScenarioIndex == chapter1ActualStartIndex) {
+      await Navigator.of(context).pushReplacement(
+        PageRouteBuilder(
+          transitionDuration: const Duration(milliseconds: 500),
+          pageBuilder: (context, animation, secondaryAnimation) => ChapterIntroOverlay(
+            chapterIndex: chapter1ActualStartIndex, // Pass the index for ScenarioScreen
+            chapterTitle: 'Chapter 1', // Title for the overlay
+            sfxPlayer: _sfxPlayer,
+            bgmPlayer: bgmPlayer.player,
+          ),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return FadeTransition(opacity: animation, child: child);
+          },
+        ),
+      );
+    } else {
+      await Navigator.of(context).pushReplacement(
+        PageTransition(
+          type: PageTransitionType.fade,
+          duration: const Duration(milliseconds: 800),
+          child: ScenarioScreen(
+            index: targetScenarioIndex,
+            sfxPlayer: _sfxPlayer,
+            bgmPlayer: bgmPlayer.player,
+          ),
+        ),
+      );
+    }
 
     setState(() {
       _opacity = 1.0;
       _isFading = false;
     });
+    // bgmPlayer.startBackgroundMusic(); // Re-evaluate when to restart BGM
   }
 
-  void _handleChapterSelect(int chapterIndex) {
-    Navigator.pushReplacement(
-      context,
-      PageTransition(
-        type: PageTransitionType.fade,
-        duration: const Duration(milliseconds: 500),
-        child: ScenarioScreen(index: chapterIndex), // Pass the chapterIndex here
-      ),
-    );
-  }
-
-
-  _openChapters(BuildContext context) {
-    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
+  void _openChapters(BuildContext context) {
+    // try {
+    //    await _sfxPlayer.setAudioSource(AudioSource.asset('audio/sfx/sound/GTAclick.mp3'));
+    //    _sfxPlayer.play();
+    // } catch (e) {
+    //    print('Error playing click SFX: $e');
+    // }
+    print('main.dart: Tapped Story button, opening ChapterScreen modal');
     showCupertinoModalPopup(
       context: context,
       builder: (context) => ChapterScreen(
-        onChapterSelect: _handleChapterSelect,  // Pass the function here
+        onChapterSelect: _handleChapterSelect,
+        // sfxPlayer: _sfxPlayer,
       ),
     );
   }
+
+
+  void _handleChapterSelect(int chapterIndex) {
+    print('main.dart: _handleChapterSelect called with index: $chapterIndex'); // Add this print
+
+    Navigator.pop(context);
+
+    const int chapter1ActualStartIndex = 13;
+
+
+    if (chapterIndex == chapter1ActualStartIndex) {
+      Navigator.pushReplacement(
+        context,
+        PageRouteBuilder(
+          transitionDuration: const Duration(milliseconds: 500),
+          pageBuilder: (context, animation, secondaryAnimation) => ChapterIntroOverlay(
+            chapterIndex: chapter1ActualStartIndex,
+            chapterTitle: 'Chapter 1',
+            sfxPlayer: _sfxPlayer,
+            bgmPlayer: bgmPlayer.player,
+          ),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return FadeTransition(opacity: animation, child: child);
+          },
+        ),
+      );
+    } else {
+      Navigator.pushReplacement(
+        context,
+        PageTransition(
+          type: PageTransitionType.fade,
+          duration: const Duration(milliseconds: 500),
+          child: ScenarioScreen(
+            index: chapterIndex,
+            sfxPlayer: _sfxPlayer,
+            bgmPlayer: bgmPlayer.player,
+          ),
+        ),
+      );
+    }
+  }
+
 
   void _openSettings(BuildContext context) {
     showCupertinoModalPopup(
@@ -104,42 +199,55 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // Dispose of global resources when HomeScreen is disposed
   @override
-  void initState() {
-    super.initState();
-    bgmPlayer.startBackgroundMusic(); // Start the BGM on screen load
+  void dispose() {
+    print('HomeScreen dispose: Disposing global audio players.');
+    _sfxPlayer.dispose();
+    bgmPlayer.dispose();
+
+    print('HomeScreen dispose: Disposed global audio players.');
+
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
+    super.dispose();
   }
+
 
   @override
   Widget build(BuildContext context) {
+    // Determine button text based on whether progress exists
+    final buttonText = _lastPlayedIndex > 0 ? 'Continue' : 'Play';
+
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.black, // Keep black background for the home screen fade
       body: AnimatedOpacity(
         opacity: _opacity,
-        duration: const Duration(milliseconds: 800),
-        curve: Curves.easeInOut,
-        child: Stack(
+        duration: Duration(milliseconds: _isFading ? 800 : 0), // Duration depends on if fading
+        curve: Curves.easeInOut, // Smooth the fade animation
+        child: Stack( // Use Stack to layer widgets
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/bg/cutscene2.png'),
-                  fit: BoxFit.cover,
-                ),
+            // Background Image
+            Positioned.fill( // Make the image cover the whole screen
+              child: Image.asset(
+                'assets/images/bg/cutscene2.png', // Ensure this path is correct
+                fit: BoxFit.cover,
               ),
             ),
+
+            // Game Title
             Positioned(
-              right: MediaQuery.of(context).size.width * 0.18,
-              top: MediaQuery.of(context).size.width * 0.2,
+              right: MediaQuery.of(context).size.width * 0.18, // Adjust position
+              top: MediaQuery.of(context).size.width * 0.2, // Adjust position
               child: Text(
-                'SKIBIDI\nINFECTION',
+                'SKIBIDI\nINFECTION', // Game title text
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontFamily: 'Obafen',
-                  fontSize: 60,
+                  fontFamily: 'Obafen', // Your custom font
+                  fontSize: 60, // Adjust size
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
-                  shadows: [
+                  shadows: [ // Optional: Add text shadow for better visibility
                     Shadow(
                       offset: Offset(3, 3),
                       blurRadius: 5,
@@ -149,33 +257,33 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
+            // Play/Continue Button
             Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.4,
-              left: MediaQuery.of(context).size.width * 0.1,
-              right: MediaQuery.of(context).size.width * 0.1,
-              child: Center(
+              bottom: MediaQuery.of(context).size.height * 0.3, // Adjust position
+              left: MediaQuery.of(context).size.width * 0.1, // Adjust position
+              right: MediaQuery.of(context).size.width * 0.1, // Adjust position
+              child: Center( // Center the button horizontally
                 child: ElevatedButton(
-                  onPressed: _handlePlay,
+                  onPressed: _handlePlayOrContinue,
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
-                    overlayColor: MaterialStateProperty.resolveWith<Color?>((
-                        Set<MaterialState> states,
-                        ) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return const Color.fromARGB(255, 125, 192, 108)
-                            .withOpacity(0.2);
-                        ;
-                      }
-                      return null;
-                    }),
-                    shape: MaterialStateProperty.all(const StadiumBorder()),
-                    minimumSize: MaterialStateProperty.all(const Size(200, 50)),
+                    backgroundColor: WidgetStateProperty.all(
+                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.2)), // Semi-transparent black background
+                    overlayColor: WidgetStateProperty.resolveWith<Color?>(
+                            (Set<WidgetState> states) { // Visual feedback on tap
+                          if (states.contains(WidgetState.pressed)) {
+                            return const Color.fromARGB(255, 90, 136, 138) // Color on press
+                                .withOpacity(0.2);
+                          }
+                          return null; // No overlay color in other states
+                        }),
+                    shape: WidgetStateProperty.all(const StadiumBorder()), // Stadium (rounded) shape
+                    minimumSize: WidgetStateProperty.all(const Size(200, 50)), // Set minimum size
                   ),
-                  child: const Text(
-                    'Play',
-                    style: TextStyle(
-                      fontFamily: 'Obafen',
+                  child: Text( // Use the dynamic button text ("Play" or "Continue")
+                    buttonText,
+                    style: const TextStyle(
+                      fontFamily: 'Obafen', // Your custom font
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -185,73 +293,34 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
+            // Story Button (Opens Chapters)
             Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.3,
+              bottom: MediaQuery.of(context).size.height * 0.2, // Adjust position
               left: 0,
               right: 0,
-              child: Center(
+              child: Center( // Center the button horizontally
                 child: ElevatedButton(
                   onPressed: () {
-                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
-                    _openChapters(context);
+                    _openChapters(context); // Call method to open chapter modal
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
+                    backgroundColor: WidgetStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
-                    overlayColor: MaterialStateProperty.resolveWith<Color?>((
-                        Set<MaterialState> states,
-                        ) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return const Color.fromARGB(255, 138, 137, 90)
-                            .withOpacity(0.2);
-                      }
-                      return null;
-                    }),
-                    shape: MaterialStateProperty.all(const StadiumBorder()),
-                    minimumSize: MaterialStateProperty.all(const Size(200, 50)),
+                    overlayColor: WidgetStateProperty.resolveWith<Color?>(
+                            (Set<WidgetState> states) {
+                          if (states.contains(WidgetState.pressed)) {
+                            return const Color.fromARGB(255, 90, 136, 138)
+                                .withOpacity(0.2);
+                          }
+                          return null;
+                        }),
+                    shape: WidgetStateProperty.all(const StadiumBorder()),
+                    minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
                   child: const Text(
                     'Story',
                     style: TextStyle(
-                      fontFamily: 'Obafen',
-                      fontSize: 24,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-
-            Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.2,
-              left: 0,
-              right: 0,
-              child: Center(
-                child: ElevatedButton(
-                  onPressed: () {
-                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
-                    _openChapters(context);
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
-                    overlayColor: MaterialStateProperty.resolveWith<Color?>((
-                        Set<MaterialState> states,
-                        ) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return const Color.fromARGB(255, 138, 137, 90)
-                            .withOpacity(0.2);
-                      }
-                      return null;
-                    }),
-                    shape: MaterialStateProperty.all(const StadiumBorder()),
-                    minimumSize: MaterialStateProperty.all(const Size(200, 50)),
-                  ),
-                  child: const Text(
-                    'Challenges',
-                    style: TextStyle(
-                      fontFamily: 'Obafen',
+                      fontFamily: 'Obafen', // Your custom font
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -262,35 +331,34 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
 
+            // Settings Button
             Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.1,
+              bottom: MediaQuery.of(context).size.height * 0.1, // Adjust position
               left: 0,
               right: 0,
-              child: Center(
+              child: Center( // Center the button horizontally
                 child: ElevatedButton(
                   onPressed: () {
-                    _sfxPlayer.play(AssetSource('audio/sfx/emotion/GTAclick.mp3'));
-                    _openSettings(context);
+                    _openSettings(context); // Call method to open settings modal
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
+                    backgroundColor: WidgetStateProperty.all(
                         const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
-                    overlayColor: MaterialStateProperty.resolveWith<Color?>((
-                        Set<MaterialState> states,
-                        ) {
-                      if (states.contains(MaterialState.pressed)) {
-                        return const Color.fromARGB(255, 90, 136, 138)
-                            .withOpacity(0.2);
-                      }
-                      return null;
-                    }),
-                    shape: MaterialStateProperty.all(const StadiumBorder()),
-                    minimumSize: MaterialStateProperty.all(const Size(200, 50)),
+                    overlayColor: WidgetStateProperty.resolveWith<Color?>(
+                            (Set<WidgetState> states) {
+                          if (states.contains(WidgetState.pressed)) {
+                            return const Color.fromARGB(255, 90, 136, 138)
+                                .withOpacity(0.2);
+                          }
+                          return null;
+                        }),
+                    shape: WidgetStateProperty.all(const StadiumBorder()),
+                    minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
                   child: const Text(
                     'Settings',
                     style: TextStyle(
-                      fontFamily: 'Obafen',
+                      fontFamily: 'Obafen', // Your custom font
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
