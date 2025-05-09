@@ -2747,13 +2747,13 @@ class ScenarioData {
     },
     //TODO CUTSCENE---------------------------------------------
     {
-      'dialogue':"Ohh no", // index 194
+      'dialogue':"Ohh no...", // index 194
       'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
      {
-      'dialogue':"the computers are locked.", // index 195
+      'dialogue':"the folders are locked.", // index 195
       'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
