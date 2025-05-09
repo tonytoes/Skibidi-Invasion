@@ -2732,26 +2732,26 @@ class ScenarioData {
     //TODO CUTSCENE---------------------------------------------
     {
       'dialogue':"(Mem sat at the computer chair)", // index 192
-      'backgroundImage': 'assets/images/bg/black screen.png',
+      'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': '',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"alright, lets see what's inside.", // index 193
-      'backgroundImage': 'assets/images/bg/black screen.png',
+      'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': '',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     //TODO CUTSCENE---------------------------------------------
     {
       'dialogue':"Ohh no", // index 194
-      'backgroundImage': 'assets/images/bg/black screen.png',
+      'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': '',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
      {
       'dialogue':"the computers are locked.", // index 195
-      'backgroundImage': 'assets/images/bg/black screen.png',
+      'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': '',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
