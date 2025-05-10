@@ -197,7 +197,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'audio/sfx/emotion/exclaim.mp3',
-    },
+    },    
     {
       'dialogue': "It's turning people into skibidi toilets! They infect people and rot their brains using loud music.",
       // index 22
@@ -2733,44 +2733,44 @@ class ScenarioData {
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/twinkle.mp3',
   	},
-    //TODO CUTSCENE---------------------------------------------
     {
-      'dialogue':"(Mem sat at the computer chair)", // index 192
+    //TODO CUTSCENE---------------------------------------------
+    'dialogue':"(Mem sat at the computer chair)", // index 192
       'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/action/gear2.mp3',
     },
     {
       'dialogue':"alright, lets see what's inside.", // index 193
       'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/action/typing1.mp3',
     },
     //TODO CUTSCENE---------------------------------------------
     {
       'dialogue':"Ohh no...", // index 194
-      'backgroundImage': 'assets/images/bg/cutscene7.png',
+      'backgroundImage': 'assets/images/bg/cutscene8.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
     },
      {
       'dialogue':"the folders are locked.", // index 195
-      'backgroundImage': 'assets/images/bg/cutscene7.png',
+      'backgroundImage': 'assets/images/bg/cutscene8.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/emotion/sigh.mp3',
     },
     {
       'dialogue':"We need to use mathematics in order to open the computer and access their data...", // index 196
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }],
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Get 3 wrong answers and the computer will lock… permanently...", // index 197
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right' }],
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
@@ -2797,42 +2797,42 @@ class ScenarioData {
     },
     {
       'dialogue':"Really?!", // index 199
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"I knew I could count on you!", // index 200
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose2/252.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Alright, I'll explain on how you can unlock the computer security system.", // index 201
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"The lock consist of 4 levels.", // index 202
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"It consist of Addition, Substraction, Multiplication and Division!", // index 203
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"You need to pass all of them to unlock the computer.", // index 204
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
@@ -2841,7 +2841,7 @@ class ScenarioData {
       'dialogue': "Are you ready?", // index 205
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
       'showLives': false,
       'sfx': 'audio/sfx/emotion/question.mp3',
       'choices': [
@@ -2867,28 +2867,28 @@ class ScenarioData {
     },
     {
       'dialogue':"Alright, The 1st Level is Addition.", // index 206
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Addition is when we put numbers together to make a bigger number!", // index 207
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Like if you have 1 apple and I give you 1 more, now you have 2 apples!", // index 208
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/dot.mp3',
     },
     {
       'dialogue':"Alright, Let's do this!... Starting Level 1...", // index 209
-      'characters': [{'sprite': 'assets/images/characters/pose1/164.png','position': 'right' }],
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': '',
       'sfx': 'audio/sfx/emotion/dot.mp3',
@@ -2901,7 +2901,7 @@ class ScenarioData {
                                             {
                                             'dialogue': "What is 2 + 3?", // index 210
                                             'backgroundImage': 'assets/images/bg/computer10.jpg',
-                                            'characters': [{'sprite': 'assets/images/characters/pose1/154.png','position': 'right'}],
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
@@ -2935,7 +2935,7 @@ class ScenarioData {
                                           {
                                             'dialogue': "Oops… that’s not right. Be careful, we only have limited chances!", // index 211
                                             'backgroundImage': 'assets/images/bg/computer10.jpg',
-                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 210,
@@ -2943,27 +2943,851 @@ class ScenarioData {
                                           {
                                             'dialogue': "Yay! That’s right! 2 and 3 together make a 5!", // index 212
                                             'backgroundImage': 'assets/images/bg/computer10.jpg',
-                                            'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
                                             'characterName': 'Mem',
                                             'sfx': 'audio/sfx/sound/check2.mp3',
                                           },
                                           { 
                                           'dialogue': "Next Question!",  // index 213
                                           'backgroundImage': 'assets/images/bg/computer10.jpg',
-                                          'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right'}],
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                           'characterName': 'Mem',
-                                          'sfx': 'audio/sfx/sound/check2.mp3',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//*QUESTION 2
+                                          {
+                                            'dialogue': "What is 8 + 2?", // index 214
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                            
+                                              {
+                                                'text': "9",
+                                                'nextDialogueIndex': 215,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "10",
+                                                'nextDialogueIndex': 216,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "5",
+                                                'nextDialogueIndex': 215,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
                                           },
 
-                                          
+                                          {
+                                            'dialogue': "Try again. We’re running out of chances…", // index 215
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 214,
+                                          }, 
+                                          {
+                                            'dialogue': "Yay! That’s right! 8 and 2 together make a 10!", // index 216
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Next Question!",  // index 217
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//*QUESTION 3                                          
+                                            {
+                                            'dialogue': "What is 12 + 4?", // index 218
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                            
+                                              {
+                                                'text': "14",
+                                                'nextDialogueIndex': 219,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "16",
+                                                'nextDialogueIndex': 220,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "20",
+                                                'nextDialogueIndex': 219,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Try again. We’re running out of chances…", // index 219
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 218,
+                                          }, 
+                                          {
+                                            'dialogue': "Yay! That’s right! 12 and 4 together make a 16!", // index 220
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Good job! We cleared The Level 1!",  // index 221
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+{
+      'dialogue':"Next is Subtraction Level 2!", // index 222
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"Subtraction means taking something away.", // index 223
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"Like if I have 5 cookies, and I eat 2, now I have 3 cookies left!", // index 224
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"Alright, Let's start!", // index 225
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//*QUESTION 1
+                                            {
+                                            'dialogue': "What is 5 - 2?", // index 226
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "3",
+                                                'nextDialogueIndex': 228,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "8",
+                                                'nextDialogueIndex': 227,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "6",
+                                                'nextDialogueIndex': 227,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Not quite… subtracting means going down", // index 227
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 226,
+                                          }, 
+                                          {
+                                            'dialogue': "Yes! You took 2 away from 5, and now you have 3!", // index 228
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Next Question!",  // index 229
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//*QUESTION 2
+                                            {
+                                            'dialogue': "What is 6 - 1?", // index 230
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              
+                                              {
+                                                'text': "7",
+                                                'nextDialogueIndex': 231,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "4",
+                                                'nextDialogueIndex': 231,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "5",
+                                                'nextDialogueIndex': 232,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Oops! Think of what’s left after you take 1 away.", // index 231
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 230,
+                                          }, 
+                                          {
+                                            'dialogue': "Yes! You took 1 away from 6, and now you have 5!", // index 232
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Next Question!",  // index 233
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//*QUESTION 3
+                                            {
+                                            'dialogue': "What is 14 - 8?", // index 234
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "6",
+                                                'nextDialogueIndex': 236,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "9",
+                                                'nextDialogueIndex': 235,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "22",
+                                                'nextDialogueIndex': 235,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Oops! Think of what’s left after you take 6 away.", // index 235
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 234,
+                                          }, 
+                                          {
+                                            'dialogue': "Yes! You took 8 away from 14, and now you have 6!", // index 236
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Nice! We successfully cleared level 2!",  // index 237
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+{
+      'dialogue':"Next is Multiplication Level 3!", // index 238
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"Multiplication is like repeated addition.", // index 239
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"If you have 2 bags with 3 candies each, that’s 3 + 3 = 6! Or you can say 2 times 3 = 6.", // index 240
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"Alright, Let's start!", // index 241
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//*QUESTION 1
+                                            {
+                                            'dialogue': "What is 3 x 3?", // index 241
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "9",
+                                                'nextDialogueIndex': 243,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "6",
+                                                'nextDialogueIndex': 242,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "12",
+                                                'nextDialogueIndex': 242,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Hmm… remember, multiplication is adding the same number again.", // index 242
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 241,
+                                          }, 
+                                          {
+                                            'dialogue': "Yes! That’s it! 3 times 3 is 9!", // index 243
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Next Question!",  // index 244
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//*QUESTION 2
+                                            {
+                                            'dialogue': "What is 9 x 1?", // index 245
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              
+                                              {
+                                                'text': "10",
+                                                'nextDialogueIndex': 246,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "9",
+                                                'nextDialogueIndex': 247,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "8",
+                                                'nextDialogueIndex': 246,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Try again! Multiplying by 1 doesn’t change the number.", // index 246
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 245,
+                                          }, 
+                                          {
+                                            'dialogue': "Exactly! Any number times 1 is just that number.", // index 247
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Next Question!",  // index 248
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//*QUESTION 3
+                                            {
+                                            'dialogue': "What is 8 x 7?", // index 249
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              
+                                              {
+                                                'text': "37",
+                                                'nextDialogueIndex': 250,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "56",
+                                                'nextDialogueIndex': 251,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "15",
+                                                'nextDialogueIndex': 250,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Wrong, try adding 8 repeatedly 7 times.", // index 250
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 249,
+                                          }, 
+                                          {
+                                            'dialogue': "You are right! 8 times 7 is 56!", // index 251
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Awesome, We cleared level 4!",  // index 252
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//                                        
+{
+      'dialogue':"Last is Division Level 4!", // index 253
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"Division means splitting something into equal parts.", // index 254
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"If we share 6 candies between 2 kids, they each get 3 candies!", // index 255
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+    {
+      'dialogue':"Alright, Let's start!", // index 256
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+    },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//  
+//*QUESTION 1
+                                            {
+                                            'dialogue': "What is  6 ÷ 2?", // index 257
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "4",
+                                                'nextDialogueIndex': 258,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "2",
+                                                'nextDialogueIndex': 258,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "3",
+                                                'nextDialogueIndex': 259,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Try to picture splitting it evenly.", // index 258
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 257,
+                                          }, 
+                                          {
+                                            'dialogue': "Perfect! You divided 6 into 2 equal parts!", // index 259
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Next Question!",  // index 260
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },
+//*QUESTION 2
+                                            {
+                                            'dialogue': "What is  9 ÷ 3?", // index 261
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "2",
+                                                'nextDialogueIndex': 262,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "6",
+                                                'nextDialogueIndex': 262,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "3",
+                                                'nextDialogueIndex': 263,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Close, but not quite. Think of how many 3s fit into 9.", // index 262
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 261,
+                                          }, 
+                                          {
+                                            'dialogue': "You got it! 3 groups of 3 make 9!", // index 263
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "Next Question!",  // index 264
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },   
+//*QUESTION 3
+                                            {
+                                            'dialogue': "What is  8 ÷ 8?", // index 265
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "2",
+                                                'nextDialogueIndex': 266,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "1",
+                                                'nextDialogueIndex': 267,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                              {
+                                                'text': "4",
+                                                'nextDialogueIndex': 266,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Nope, Think about how you can split a number with the same number", // index 266
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/123.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 265,
+                                          }, 
+                                          {
+                                            'dialogue': "That's right! any number divided by itself is always 1!", // index 267
+                                            'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/212.png','position': 'right'}],
+                                            'characterName': 'Mem',
+                                            'sfx': 'audio/sfx/sound/check2.mp3',
+                                          },
+                                          { 
+                                          'dialogue': "We did it!",  // index 268
+                                          'backgroundImage': 'assets/images/bg/computer10.jpg',
+                                          'characters': [{'sprite': 'assets/images/characters/pose2/252.png','position': 'right'}],
+                                          'characterName': 'Mem',
+                                          'sfx': 'audio/sfx/sound/twinkle.mp3',
+                                          },                                           
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//                                        
+{
+      'dialogue':"All Levels are cleared! We can now access the information in this computer!", // index 269
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/cartoon.mp3',
+}, 
+{
+      'dialogue':"(Mem typing)", // index 270
+      'characters': [{'sprite': 'assets/images/characters/pose1/134.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/typing2.mp3',
+}, 
+{
+      'dialogue':"According to this data… the infection started in this laboratory.", // index 271
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/dot.mp3',
+}, 
+{
+      'dialogue':"They we're experimenting on the Skibidi King, The source of this brainrot infection.", // index 272
+      'characters': [{'sprite': 'assets/images/characters/pose1/113.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/exclaim.mp3',
+}, 
+{
+      'dialogue':"The Skibidi King escaped from the laboratory and started infecting everyone.", // index 273
+      'characters': [{'sprite': 'assets/images/characters/pose1/153.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/sigh.mp3',
+}, 
+{
+      'dialogue':"It says that if the Skibidi King is defeated, the brainrot infection will disappear.", // index 274
+      'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/bulb.mp3',
+}, 
+{
+      'dialogue':"The Skibidi King is said to be making a nest in the school.", // index 275
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/surprise.mp3',
+}, 
+{
+      'dialogue':"Alright, Now that we know how to stop the infection and the location of the Skibidi King...", // index 276
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/surprise.mp3',
+}, 
+{
+      'dialogue':"Let's go to the school and defeat him!", // index 276
+      'characters': [{'sprite': 'assets/images/characters/pose2/252.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/computer10.jpg',
+      'characterName': 'Mem',
+      'sfx': 'audio/sfx/emotion/surprise.mp3',
+}, 
+{
+      'dialogue':"(You and Mem walked out of the laboratory)", // index 276
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      'sfx': 'audio/sfx/action/footstep1.mp3',
+}, 
 
 
 
 
 
 
-    
 
+
+
+
+
+
+
+
+//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
+//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
+                              //?           CHAPTER 5        //
+//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
+//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//? 
 
   ];
 }
