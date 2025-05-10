@@ -20,12 +20,6 @@
     );
   }
 
-  void _openMenu(BuildContext context) {
-    showCupertinoModalPopup(
-      context: context,
-      builder: (context) => const MenuScreen(),
-    );
-  }
 
   class ScenarioScreen extends StatefulWidget {
     final int index;
@@ -64,7 +58,6 @@
 
 
     List<Map<String, dynamic>> _characters = [];
-
 
     List<String> _heartImages = [
       'assets/icons/hearts.png',
@@ -106,15 +99,18 @@
 
     ];
 
+    void _openMenu(BuildContext context) {
+      showCupertinoModalPopup(
+        context: context,
+        builder: (context) => MenuScreen(sfxPlayer: widget.sfxPlayer),
+      );
+    }
+
     @override
     void initState() {
       super.initState();
-      print('ScenarioScreen initState: Received widget.index = ${widget.index}');
       _currentLine = widget.index;
-      print('ScenarioScreen initState: Set _currentLine to = $_currentLine');
       loadPrefs();
-
-      print('ScenarioScreen initState: Using AudioPlayers passed from parent.');
 
       _loadInitialData();
       Future.delayed(Duration.zero, () {
@@ -136,8 +132,7 @@
       showCupertinoModalPopup(
         context: context,
         builder: (context) => ChapterScreen(
-          onChapterSelect: (index) {
-            print('ScenarioScreen _openChapterScreen: Chapter selected with index $index. Calling parent callback.');
+          onChapterSelect: (index, title) {
           },
         ),
       );
@@ -147,7 +142,6 @@
     @override
     void dispose() {
       WidgetsBinding.instance.removeObserver(this);
-      print('ScenarioScreen dispose: Skipping ALL dispose logic except super.dispose() for debugging.'); // Keep this print
       super.dispose();
     }
 
@@ -170,67 +164,64 @@
 
 
     void _loadInitialData() {
-      print('ScenarioScreen _loadInitialData: Called for _currentLine = $_currentLine');
       if (_currentLine >= 0 && _currentLine < ScenarioData.scenarioData.length) {
         final currentScenario = ScenarioData.scenarioData[_currentLine];
-        print('ScenarioScreen _loadInitialData: Loaded data: $currentScenario');
         _backgroundImage = currentScenario['backgroundImage'];
         _characters = (currentScenario['characters'] as List<Map<String, dynamic>>?) ?? [];
         _characterName = currentScenario['characterName'] ?? '';
         _currentChoices = currentScenario['choices'] ?? [];
         _showLives = currentScenario['showLives'] ?? true;
 
-        // *** TEMPORARY DEBUGGING CODE - Temporarily skip audio playback ***
-        // We commented these out previously to debug the crash.
-        // UNCOMMENT these lines once the crash is resolved and you're ready to test audio again.
-        // _playSFX(currentScenario['sfx']); // UNCOMMENT THIS LINE LATER
-        // String? bgmPath = currentScenario['bgm']; // UNCOMMENT THIS LINE LATER
-        // _updateBgm(bgmPath); // UNCOMMENT THIS LINE LATER
-        print('ScenarioScreen _loadInitialData: Temporarily skipping all audio loading for debugging.');
-        // *** END TEMPORARY DEBUGGING CODE ***
+         _playSFX(currentScenario['sfx']);
+        String? bgmPath = currentScenario['bgm'];
+        _updateBgm(bgmPath);
       } else {
-        print('ScenarioScreen _loadInitialData: Error: Invalid index: $_currentLine');
-        // Handle this error case, maybe navigate back or show an error message
       }
     }
 
-    void _playSFX(String? sfxPath) {
+    void _playSFX(String? sfxPath) async {
+      print('Attempting to play SFX: $sfxPath');
       if (sfxPath != null && sfxPath.isNotEmpty) {
         if (sfxPath == 'audio/sfx/emotion/GTAclick.mp3') {
-          print('ScenarioScreen _playSFX: Skipping problematic asset: $sfxPath');
+          print('Skipping problematic SFX: $sfxPath');
           return;
         }
         try {
-          _audio.stop();
-          _audio.setAudioSource(AudioSource.asset(sfxPath));
-          _audio.play();
+          await _audio.stop();
+          print("SFX: stopped");
+          await _audio.setAudioSource(AudioSource.asset(sfxPath));
+          print("SFX: source set");
+          await _audio.setVolume(1.0);
+          await _audio.play();
+          print("SFX: playing");
         } catch (e) {
-          print('ScenarioScreen _playSFX: Error playing SFX $sfxPath: $e');
+          print('Error playing SFX $sfxPath: $e');
         }
       }
     }
 
-    void _updateBgm(String? bgmPath) async {
-      if (bgmPath != _currentBgm) {
-        if (_currentBgm != null) {
+
+    void _updateBgm(String? newBgmPath) async {
+      if (newBgmPath != null && newBgmPath.isNotEmpty) {
+        if (newBgmPath != _currentBgm || !_bgm.playing) {
           await _bgm.stop();
-        }
-        if(bgmPath != null && bgmPath.isNotEmpty) {
           try {
-            await _bgm.setAudioSource(AudioSource.asset(bgmPath));
+            await _bgm.setAudioSource(AudioSource.asset(newBgmPath));
             _bgm.setLoopMode(LoopMode.one);
             await _bgm.play();
-            _currentBgm = bgmPath;
+            _currentBgm = newBgmPath;
           } catch (e) {
-            print('ScenarioScreen _updateBgm: Error updating BGM to $bgmPath: $e');
             await _bgm.stop();
             _currentBgm = null;
           }
         }
-        else {
+      } else {
+        // Stop the player if it's currently playing anything (e.g., main screen BGM)
+        // or if the scenario previously had a BGM playing.
+        if (_bgm.playing || _currentBgm != null) {
           await _bgm.stop();
-          _currentBgm = null;
         }
+        _currentBgm = null; // Mark that scenario has no active BGM
       }
     }
 
@@ -550,9 +541,7 @@
     @override
     void didUpdateWidget(ScenarioScreen oldWidget) {
       super.didUpdateWidget(oldWidget);
-
       if (widget.index != oldWidget.index) {
-        print("_ScenarioScreenState didUpdateWidget: widget.index changed. Updating _currentLine and reloading data.");
         if (mounted) {
           _currentLine = widget.index;
           _loadInitialData();
@@ -564,10 +553,8 @@
           _resetColors = false;
         });
       }
-      Future<void> someFunction() async {
-        if (_bgm.processingState == ProcessingState.ready && !_bgm.playing) {
-          await _bgm.play();
-        }
+      if (_bgm.processingState == ProcessingState.ready && !_bgm.playing) {
+        _bgm.play();
       }
     }
 

@@ -131,7 +131,7 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
                         widget.characterName,
                         style: const TextStyle(
                           fontSize: 20,
-                          fontFamily: 'IBMPlexMono',
+                          fontFamily: 'PixelMplus',
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
@@ -144,7 +144,7 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
                       _visibleText,
                       style: const TextStyle(
                         fontSize: 20,
-                        fontFamily: 'IBMPlexMono',
+                        fontFamily: 'PixelMplus',
                         color: Colors.black,
                         height: 1,
                       ),

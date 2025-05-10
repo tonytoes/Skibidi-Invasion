@@ -5,7 +5,7 @@ import '../widgets/player_progress.dart';
 
 
 class ChapterScreen extends StatefulWidget {
-  final Function(int) onChapterSelect;
+  final Function(int, String) onChapterSelect;
 
   const ChapterScreen({
     super.key,
@@ -30,16 +30,17 @@ class _ChapterScreenState extends State<ChapterScreen> {
     setState(() {
       _maxUnlockedIndex = index;
     });
-    print('ChapterScreen: Loaded maxUnlockedIndex is: $_maxUnlockedIndex'); // Add this line
+    print('ChapterScreen: Loaded maxUnlockedIndex is: $_maxUnlockedIndex');
   }
 
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> chapters = [
-      {'title': 'Chapter 1', 'index': 13},
-      {'title': 'Chapter 2', 'index': 67},
-      {'title': 'Chapter 3', 'index': 130},
-      {'title': 'Chapter 4', 'index': 200},
+      {'title': 'Prologue', 'index': 0},
+      {'title': 'Chapter I', 'index': 13},
+      {'title': 'Chapter II', 'index': 67},
+      {'title': 'Chapter III', 'index': 130},
+      {'title': 'Chapter IV', 'index': 200},
       {'title': 'Final Chapter', 'index': 250},
     ];
 
@@ -48,28 +49,27 @@ class _ChapterScreenState extends State<ChapterScreen> {
       body: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Center(
-          child: GestureDetector( // <-- Add GestureDetector here
+          child: GestureDetector(
           onTap: () {
-          print('ChapterScreen: GestureDetector on main Container tapped'); // Add this print
+          print('ChapterScreen: GestureDetector on main Container tapped');
           },
           child: Container(
-            //height: 650,
+
             color: Colors.black.withOpacity(0.7),
             child: Column(
               children: [
-                // Header and Divider...
+
                 Padding(
-                  padding: const EdgeInsets.only(left: 20.0, top: 20.0),
+                  padding: const EdgeInsets.only(top: 20.0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('assets/icons/scroll.png'),
                       const SizedBox(width: 10),
                       const Text(
-                        'Story Checkpoints',
+                        'Chapters',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 24,
+                          fontSize: 26,
                         ),
                       ),
                     ],
@@ -83,7 +83,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
                   thickness: 1.5,
                 ),
 
-                // Chapters
+
                 ...chapters.map((chapter) {
                   bool isUnlocked = chapter['index'] <= _maxUnlockedIndex;
                   return Padding(
@@ -91,14 +91,16 @@ class _ChapterScreenState extends State<ChapterScreen> {
                     child: GestureDetector(
                       onTap: isUnlocked
                           ? () {
-                        print('ChapterScreen: Tapped on chapter with index: ${chapter['index']}'); // This print is not appearing
-                        widget.onChapterSelect(chapter['index']);
+                        print('ChapterScreen: Tapped on chapter with index: ${chapter['index']}');
+                        widget.onChapterSelect(chapter['index'], chapter['title']);
                       }
                           : null,
                       child: Row(
                         children: [
                           Image.asset(
-                            'assets/icons/circle-book.png',
+                            isUnlocked
+                            ? 'assets/icons/circle-book.png'
+                            : 'assets/icons/lock.png',
                             width: 27,
                             height: 27,
                             color: isUnlocked ? Colors.white : Colors.grey,
@@ -116,7 +118,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
                     ),
                   );
                 }).toList(),
-                const Spacer(),
+                SizedBox(height: 150),
                 TextButton(
                   onPressed: () => Navigator.pop(context),
                   child: const Text(

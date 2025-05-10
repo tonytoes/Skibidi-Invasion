@@ -2,20 +2,23 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:page_transition/page_transition.dart';
 import '../settings/settings_scenario.dart';
+import 'package:just_audio/just_audio.dart';
 
-void _openMenu(BuildContext context) {
+void _openMenu(BuildContext context, AudioPlayer sfxPlayer) {
   Navigator.pushReplacement(
     context,
     PageTransition(
       type: PageTransitionType.fade,
       duration: const Duration(milliseconds: 500),
-      child: const MenuScreen(),
+      child: MenuScreen(sfxPlayer: sfxPlayer),
     ),
   );
 }
 
 class ChapterOverlay extends StatelessWidget {
-  const ChapterOverlay({super.key});
+  final AudioPlayer sfxPlayer;
+
+  const ChapterOverlay({super.key, required this.sfxPlayer});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +49,7 @@ class ChapterOverlay extends StatelessWidget {
                     SizedBox(height: 50),
                     TextButton(
                       onPressed: () {
-                        _openMenu(context);
+                        _openMenu(context, sfxPlayer);
                       },
                       child: const Text(
                         'Back',

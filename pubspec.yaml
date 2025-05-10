@@ -31,7 +31,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
+    - assets/audio/
     - assets/images/bg/
     - assets/images/logo/mem-logo.png
     - assets/icons/brokenheart.png
@@ -40,7 +40,6 @@ flutter:
     - assets/images/characters/pose2/
     - assets/images/characters/skibidi/
     - assets/icons/
-    - assets/audio/
     - assets/audio/sfx/
     - assets/audio/sfx/emotion/
     - assets/audio/sfx/action/
@@ -74,7 +73,20 @@ flutter:
     - family: Obafen
       fonts:
         - asset: assets/fonts/Obafen-e9jK3.otf
-          weight: 400      
+          weight: 400
+
+    - family: PixelMplus
+      fonts:
+        - asset: assets/fonts/PixelMplus10-Regular.ttf
+          weight: 400
+
+    - family: onryou
+      fonts:
+        - asset: assets/fonts/onryou.TTF
+
+    - family: JKGothic
+      fonts:
+        - asset: assets/fonts/JKG-M_3.ttf
 
 flutter_native_splash:
   android: true

@@ -40,8 +40,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Future<void> _loadSettings() async {
     final prefs = await _prefs;
     setState(() {
-      musicVolume = prefs.getDouble('musicVolume') ?? 0.0;
-      sfxVolume = prefs.getDouble('sfxVolume') ?? 0.0;
+      musicVolume = prefs.getDouble('musicVolume') ?? 0.5;
+      sfxVolume = prefs.getDouble('sfxVolume') ?? 0.5;
     });
     _bgmPlayer.setVolume(musicVolume);
     widget.sfxPlayer.setVolume(sfxVolume);
@@ -72,8 +72,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 widget.sfxPlayer.setVolume(sfxVolume);
 
                 return Container(
-                  width: MediaQuery.of(context).size.width - 40,
-                  height: 650,
                   color: Colors.black.withValues(alpha: 0.7),
                   child: Center(
                     child: Column(
@@ -192,6 +190,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           ),
                         ),
 
+                        /*
                         Padding(
                           padding: EdgeInsets.only(left: 20.0, top: 30.0),
                           child: Row(
@@ -230,7 +229,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               ),
                             ],
                           ),
-                        ),
+                        ), */
+
                         Padding(
                           padding: const EdgeInsets.only(top: 150),
                           child: TextButton(

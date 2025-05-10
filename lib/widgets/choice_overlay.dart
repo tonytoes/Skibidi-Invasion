@@ -46,7 +46,7 @@ class _ChoiceButtonState extends State<ChoiceButton> {
     }
 
     return SizedBox(
-      width: 370,
+      width: 340,
       height: 50,
       child: ElevatedButton(
         onPressed: () async {

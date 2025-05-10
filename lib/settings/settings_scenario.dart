@@ -6,48 +6,48 @@ import '../widgets/continue_overlay.dart';
 import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';
 import '../settings/settings_more.dart';
+import 'package:just_audio/just_audio.dart';
 
 
 
-void _openContinue(BuildContext context)  {
+void _openContinue(BuildContext context, AudioPlayer sfxPlayer)  {
   Navigator.pushReplacement(
     context,
     PageTransition(
       type: PageTransitionType.fade,
       duration: const Duration(milliseconds: 500),
-      child: const ContinueOverlay(),
+      child: ContinueOverlay(sfxPlayer: sfxPlayer),
     ),
   );
 
 }
 
-
-
-void _openSettings(BuildContext context) {
+void _openSettings(BuildContext context, AudioPlayer sfxPlayer) {
   Navigator.pushReplacement(
   context,
   PageTransition(
       type: PageTransitionType.fade,
       duration: const Duration(milliseconds: 500),
-      child: const SettingsMoreScreen()
+      child: SettingsMoreScreen(sfxPlayer: sfxPlayer),
     )
   );
 }
 
-void _openChapters(BuildContext context) {
+void _openChapters(BuildContext context, AudioPlayer sfxPlayer) {
   Navigator.pushReplacement(
     context,
     PageTransition(
-        type: PageTransitionType.fade,
-        duration: const Duration(milliseconds: 500),
-        child: const ChapterOverlay()
+      type: PageTransitionType.fade,
+      duration: const Duration(milliseconds: 500),
+      child: ChapterOverlay(sfxPlayer: sfxPlayer),
     ),
   );
 }
 
-
 class MenuScreen extends StatelessWidget {
-  const MenuScreen({super.key});
+  final AudioPlayer sfxPlayer;
+
+  MenuScreen({super.key, required this.sfxPlayer});
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +83,7 @@ class MenuScreen extends StatelessWidget {
 
                   TextButton(
                     onPressed: () {
-                      _openContinue(context);
+                      _openContinue(context, sfxPlayer);
 
                     },
                     child: Text(
@@ -94,7 +94,7 @@ class MenuScreen extends StatelessWidget {
 
                   TextButton(
                     onPressed: () {
-                      _openChapters(context);
+                      _openChapters(context, sfxPlayer);
                     },
                     child: Text(
                       'Chapters',
@@ -104,7 +104,7 @@ class MenuScreen extends StatelessWidget {
 
                   TextButton(
                     onPressed: () {
-                      _openSettings(context);
+                      _openSettings(context, sfxPlayer);
                     },
                     child: Text(
                       'Settings',

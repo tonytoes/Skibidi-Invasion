@@ -17,18 +17,20 @@ class GameOverOverlay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: SizedBox(
-        width: 300,
       child: Container(
-        padding: const EdgeInsets.all(24),
+        width: 750,
         decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.8),
+         image: const DecorationImage(
+            image: AssetImage('assets/images/bg/gameover.png'),
+            fit: BoxFit.cover,
+         ),
         ),
+        child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             const Text(
-              "Game Over!",
+              "GAME OVER",
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
@@ -36,26 +38,9 @@ class GameOverOverlay extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    _openHome(context);
-                  },
-                  style: ElevatedButton.styleFrom( // design here
-                    backgroundColor: Colors.blue,
-                    foregroundColor: Colors.white,
-                  ),
-                  child: const Text(
-                      "HOME",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
                 ElevatedButton(
                   onPressed: onRestart,
                   style: ElevatedButton.styleFrom( // design here
@@ -71,12 +56,29 @@ class GameOverOverlay extends StatelessWidget {
                       ),
                     ),
                   ),
+                ElevatedButton(
+                  onPressed: () {
+                    _openHome(context);
+                  },
+                  style: ElevatedButton.styleFrom( // design here
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                  ),
+                  child: const Text(
+                    "HOME",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
                 ],
               ),
             ],
           ),
+          ),
         ),
-      ),
     );
   }
 }
