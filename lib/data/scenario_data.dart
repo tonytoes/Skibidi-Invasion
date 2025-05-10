@@ -196,7 +196,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'audio/sfx/emotion/exclaim.mp3',
-    },
+    },    
     {
       'dialogue': "It's turning people into skibidi toilets! They infect people and rot their brains using loud music.",
       // index 22
