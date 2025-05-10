@@ -2732,31 +2732,31 @@ class ScenarioData {
       'characterName': 'Mem',
       'sfx': 'audio/sfx/emotion/twinkle.mp3',
   	},
-    //TODO CUTSCENE---------------------------------------------
     {
-      'dialogue':"(Mem sat at the computer chair)", // index 192
+    //TODO CUTSCENE---------------------------------------------
+    'dialogue':"(Mem sat at the computer chair)", // index 192
       'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/action/gear2.mp3',
     },
     {
       'dialogue':"alright, lets see what's inside.", // index 193
       'backgroundImage': 'assets/images/bg/cutscene7.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/action/typing1.mp3',
     },
     //TODO CUTSCENE---------------------------------------------
     {
       'dialogue':"Ohh no...", // index 194
-      'backgroundImage': 'assets/images/bg/cutscene7.png',
+      'backgroundImage': 'assets/images/bg/cutscene8.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/sound/wrong.mp3',
     },
      {
       'dialogue':"the folders are locked.", // index 195
-      'backgroundImage': 'assets/images/bg/cutscene7.png',
+      'backgroundImage': 'assets/images/bg/cutscene8.png',
       'characterName': 'Mem',
-      'sfx': 'audio/sfx/emotion/dot.mp3',
+      'sfx': 'audio/sfx/emotion/sigh.mp3',
     },
     {
       'dialogue':"We need to use mathematics in order to open the computer and access their data...", // index 196
