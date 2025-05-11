@@ -9,7 +9,7 @@ import 'settings/settings_chapters.dart';
 import 'package:just_audio/just_audio.dart';
 import '../widgets/bgm_player.dart';
 import '../widgets/player_progress.dart';
-import '../widgets/chaptertitle.dart';
+import '../widgets/chapter_title.dart';
 
 
 void main() {
