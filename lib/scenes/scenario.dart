@@ -12,6 +12,7 @@
   import 'package:shared_preferences/shared_preferences.dart';
   import 'package:just_audio/just_audio.dart';
   import 'dart:async';
+  import 'package:just_audio/just_audio.dart';
 
   void _openHelp(BuildContext context) {
     showCupertinoModalPopup(
@@ -38,7 +39,7 @@
   }
 
   class _ScenarioScreenState extends State<ScenarioScreen> with WidgetsBindingObserver  {
-    int _currentLine = 12;
+    int _currentLine = 0;
     int _lives = 3;
     int _lastQuestionIndex = 0;
     int _maxUnlockedIndex = 0;
@@ -67,6 +68,16 @@
 
     List<Map<String, dynamic>> _currentChoices = [];
     bool _isGameOver = false;
+
+   final AudioPlayer _player = AudioPlayer();
+    Future<void> _playSoundEffect() async {
+      try {
+        await _player.setAsset('assets/audio/sfx/sound/rah.mp3');
+        await _player.play();
+      } catch (e) {
+        print('Error playing sound: $e');
+      }
+    }
 
 
     // Add all character sprite image paths to this list
@@ -258,7 +269,9 @@
                   _lives--;
                 }
                 if (_lives <= 0) {
+                  _playSoundEffect(); 
                   _isGameOver = true;
+                  
                   return;
                 }
                 incorrectChoiceMade = true;
@@ -532,7 +545,7 @@
                 ),
               ),
             if (_isGameOver)
-              GameOverOverlay(onRestart: _resetGame), // Show game over overlay
+              GameOverOverlay(onRestart: _resetGame),  // Show game over overlay
           ],
         ),
       );

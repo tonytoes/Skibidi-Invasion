@@ -140,14 +140,14 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           children: [
             Positioned.fill(
               child: Image.asset(
-                'assets/images/bg/cutscene2.png',
+                'assets/images/bg/cutscene4.png',
                 fit: BoxFit.cover,
               ),
             ),
 
             Positioned(
-              right: MediaQuery.of(context).size.width * 0.18,
-              top: MediaQuery.of(context).size.width * 0.2,
+              right: MediaQuery.of(context).size.width * 0.15,
+              top: MediaQuery.of(context).size.width * 0.5,
               child: Text(
                 'SKIBIDI\nINFECTION',
                 textAlign: TextAlign.center,
@@ -156,6 +156,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   fontSize: 60,
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
+                  height: 0.9, 
                   shadows: [
                     Shadow(
                       offset: Offset(3, 3),
@@ -191,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
                   child: Text(
-                    'Play',
+                    'Story Mode',
                     style: const TextStyle(
                       fontFamily: 'Obafen', // Your custom font
                       fontSize: 24,
