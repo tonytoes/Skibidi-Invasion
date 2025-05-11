@@ -3489,7 +3489,7 @@ class ScenarioData {
                                             'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
                                           { 
-                                          'dialogue': "Awesome, We cleared level 4!",  // index 253
+                                          'dialogue': "Awesome, We cleared level 3!",  // index 253
                                           'backgroundImage': 'assets/images/bg/computer10.jpg',
                                           'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                           'characterName': 'Mem',
@@ -3722,7 +3722,7 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/action/typing2.mp3',
 }, 
 {
-      'dialogue':"According to this data… the infection started in this laboratory.", // index 272
+      'dialogue':"According to this data... the infection started in this laboratory.", // index 272
       'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
