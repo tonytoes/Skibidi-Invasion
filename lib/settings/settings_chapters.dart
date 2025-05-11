@@ -51,7 +51,6 @@ class _ChapterScreenState extends State<ChapterScreen> {
         child: Center(
           child: GestureDetector(
           onTap: () {
-          print('ChapterScreen: GestureDetector on main Container tapped');
           },
           child: Container(
 
@@ -106,12 +105,16 @@ class _ChapterScreenState extends State<ChapterScreen> {
                             color: isUnlocked ? Colors.white : Colors.grey,
                           ),
                           const SizedBox(width: 8),
-                          Text(
-                            chapter['title'],
-                            style: TextStyle(
-                              color: isUnlocked ? Colors.white : Colors.grey,
-                              fontSize: 30,
-                            ),
+                          LayoutBuilder(
+                            builder: (context, constraints) {
+                              return Text(
+                                chapter['title'],
+                                style: TextStyle(
+                                  color: isUnlocked ? Colors.white : Colors.grey,
+                                  fontSize: chapter['title'].length > 20 ? 24 : 25,
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),

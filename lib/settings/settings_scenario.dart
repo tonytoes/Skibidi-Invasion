@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import '../settings/settings.dart';
+import '../settings/settings_audio.dart';
 import '../settings/settings_chapters.dart';
 import '../widgets/continue_overlay.dart';
 import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';
-import '../settings/settings_more.dart';
+import '../settings/settings_audio_scenario.dart';
 import 'package:just_audio/just_audio.dart';
 
 
@@ -58,57 +58,94 @@ class MenuScreen extends StatelessWidget {
         child: Center(
           child: Container(
             width: MediaQuery.of(context).size.width - 40,
-            height: 800,
             color: Colors.transparent,
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
-                    'Menu',
-                    style: TextStyle(color: Colors.white, fontSize: 24),
-                  ),
-
-                  Divider(color: Colors.white, height: 36, thickness: 1.5),
-
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      'Continue',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
-                    ),
-                  ),
-
-                  TextButton(
+                  SizedBox(height: 70),
+                  ElevatedButton(
                     onPressed: () {
                       _openContinue(context, sfxPlayer);
-
                     },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      minimumSize: Size(300,50),
+                      side: BorderSide(
+                          color: Colors.white,
+                          width: 2.0
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
                     child: Text(
-                      'Back to Home',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                      'Return Home',
+                      style: const TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'Mplus', fontWeight: FontWeight.w400),
                     ),
                   ),
-
-                  TextButton(
+                  SizedBox(height: 20),
+                  ElevatedButton(
                     onPressed: () {
                       _openChapters(context, sfxPlayer);
                     },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      minimumSize: Size(300,50),
+                      side: BorderSide(
+                          color: Colors.white,
+                          width: 2.0
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
                     child: Text(
                       'Chapters',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                      style: const TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'Mplus', fontWeight: FontWeight.w400),
                     ),
                   ),
-
-                  TextButton(
+                  SizedBox(height: 20),
+                  ElevatedButton(
                     onPressed: () {
                       _openSettings(context, sfxPlayer);
                     },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      minimumSize: Size(300,50),
+                      side: BorderSide(
+                          color: Colors.white,
+                          width: 2.0
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
                     child: Text(
-                      'Settings',
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                      'Sounds',
+                      style: const TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'Mplus', fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                  SizedBox(height: 200),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+
+                      minimumSize: Size(300,50),
+                      side: BorderSide(
+                          color: Colors.white,
+                          width: 2.0
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    child: Text(
+                      'Close',
+                      style: const TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'MPlus', fontWeight: FontWeight.w400),
                     ),
                   ),
                 ],

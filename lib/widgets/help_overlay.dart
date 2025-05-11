@@ -24,7 +24,7 @@ class HelpScreen extends StatelessWidget {
                       children: [
                         SizedBox(width: 10),
                         Text(
-                          'TUTORIAL',
+                          'In-Game Guide  ',
                           style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
                       ],

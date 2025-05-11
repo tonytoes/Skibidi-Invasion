@@ -25,7 +25,9 @@ class DialogueBoxWidget extends StatefulWidget {
 class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
   String _visibleText = '';
   bool _isTyping = false;
-  int _tapCount = 0;
+  bool _skipDialogue = false;
+  bool _tapBlocked = false;
+  int _typingSession = 0;
   late TapGestureRecognizer _tapGestureRecognizer;
 
   @override
@@ -33,6 +35,7 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
     super.initState();
     _tapGestureRecognizer = TapGestureRecognizer()..onTap = _tap;
     _startTypewriter();
+    _skipDialogue = false;
   }
 
   @override
@@ -40,59 +43,57 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.dialogueText != widget.dialogueText) {
       _startTypewriter();
-      _tapCount = 0;
+      _skipDialogue = false;
     }
   }
 
   Future<void> _startTypewriter() async {
-    _isTyping = false;
-    await Future.delayed(const Duration(milliseconds: 50));
-
-    if (!mounted) return;
+    _isTyping = true;
+    final currentSession = ++_typingSession;
 
     setState(() {
-      _visibleText = ''; // Clearsssss the previous text
+      _visibleText = '';
     });
-    _isTyping = true;
 
     for (int i = 0; i < widget.dialogueText.length; i++) {
-      if (!_isTyping || !mounted) {
-        break;
-      }
+      if (!_isTyping || !mounted || currentSession != _typingSession) break;
       await Future.delayed(const Duration(milliseconds: 40));
-      if (mounted) {
+      if (mounted && currentSession == _typingSession) {
         setState(() {
           _visibleText = widget.dialogueText.substring(0, i + 1);
         });
       }
     }
 
-    _isTyping = false; // Finished typing
+    if (mounted && currentSession == _typingSession) {
+      _isTyping = false;
+    }
   }
 
-  Future<void> noTypewriter() async {
+  void _showFullTextInstantly() {
     _isTyping = false;
-    await Future.delayed(const Duration(milliseconds: 50));
-
+    _typingSession++;
     if (!mounted) return;
-
     setState(() {
       _visibleText = widget.dialogueText;
     });
   }
 
   void _tap() {
+    if (_tapBlocked) return;
+    _tapBlocked = true;
+    Future.delayed(const Duration(milliseconds: 200), () => _tapBlocked = false);
+
     if (widget.hasChoices == false) {
       if (_isTyping) {
-        setState(() {
-          _visibleText = widget.dialogueText;
-          _isTyping = false;
-          noTypewriter();
-        });
+        _showFullTextInstantly();
       } else {
-        widget.nextDialogue(null);
+        if (!_skipDialogue) {
+          _skipDialogue = true;
+          widget.nextDialogue(null);
+        }
       }
-    } 
+    }
   }
 
   @override
@@ -114,7 +115,7 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
           child: Stack(
             children: [
               Image.asset(
-                'assets/images/dialogue/dialogue-box.png', // I changed the dialogue box image here with no opacity
+                'assets/images/dialogue/dialogue-box.png',
                 fit: BoxFit.fill,
                 width: double.infinity,
                 height: 220,
@@ -131,7 +132,7 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
                         widget.characterName,
                         style: const TextStyle(
                           fontSize: 20,
-                          fontFamily: 'PixelMplus',
+                          fontFamily: 'IBMPlexMono',
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
@@ -144,7 +145,7 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
                       _visibleText,
                       style: const TextStyle(
                         fontSize: 20,
-                        fontFamily: 'PixelMplus',
+                        fontFamily: 'IBMPlexMono',
                         color: Colors.black,
                         height: 1,
                       ),
@@ -157,17 +158,18 @@ class _DialogueBoxWidgetState extends State<DialogueBoxWidget> {
               Positioned(
                 right: 3,
                 bottom: 5,
-                child: Row(
-                  children: [
-                    Visibility(
-                      visible: !widget.hasChoices && !_isTyping,
-                      child: IconButton(
-                        icon: Image.asset('assets/icons/nextBT.png'),
-                        onPressed: () => widget.nextDialogue(null),
-                        iconSize: 30,
-                      ),
-                    ),
-                  ],
+                child: Visibility(
+                  visible: !widget.hasChoices && !_isTyping,
+                  child: IconButton(
+                    icon: Image.asset('assets/icons/nextBT.png'),
+                    onPressed: () {
+                      if (!_skipDialogue) {
+                        _skipDialogue = true;
+                        widget.nextDialogue(null);
+                      }
+                    },
+                    iconSize: 30,
+                  ),
                 ),
               ),
             ],

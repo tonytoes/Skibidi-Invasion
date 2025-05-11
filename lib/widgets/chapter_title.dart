@@ -79,13 +79,18 @@ class _ChapterIntroOverlayState extends State<ChapterIntroOverlay> {
           opacity: _opacity,
           duration: const Duration(seconds: 2),
           curve: Curves.easeIn,
+          child: SizedBox(
+          width: MediaQuery.of(context).size.width * 0.8,
           child: Text(
             widget.chapterTitle,
+            textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 48,
               color: Colors.white,
               fontFamily: 'Obafen',
               fontWeight: FontWeight.bold,
+              ),
+            maxLines: 3,
             ),
           ),
         ),

@@ -84,7 +84,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             children: [
                               SizedBox(width: 10),
                               Text(
-                                'Settings',
+                                'Sounds',
                                 style: TextStyle(color: Colors.white, fontSize: 24),
                               ),
                             ],
@@ -104,7 +104,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                'Music',
+                                'Background Music',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
@@ -150,7 +150,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                'Sounds',
+                                'Sound Effects',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,

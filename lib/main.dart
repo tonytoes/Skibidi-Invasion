@@ -4,12 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:page_transition/page_transition.dart';
 import '../scenes/scenario.dart';
-import 'settings/settings.dart';
+import 'settings/settings_audio.dart';
 import 'settings/settings_chapters.dart';
 import 'package:just_audio/just_audio.dart';
 import '../widgets/bgm_player.dart';
 import '../widgets/player_progress.dart';
 import '../widgets/chapter_title.dart';
+import '../settings/options_overlay.dart';
 
 
 void main() {
@@ -113,10 +114,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  void _openSettings(BuildContext context) {
+  void _openAudio(BuildContext context) {
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => SettingsScreen(sfxPlayer: _sfxPlayer),
+      builder: (context) => Options(sfxPlayer: _sfxPlayer),
     );
   }
 
@@ -125,6 +126,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
+    bgmPlayer.player.pause();
   }
 
 
@@ -249,7 +251,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               child: Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    _openSettings(context);
+                    _openAudio(context);
                   },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(

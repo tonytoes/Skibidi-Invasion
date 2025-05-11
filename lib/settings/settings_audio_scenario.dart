@@ -95,9 +95,8 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              SizedBox(width: 10),
                               Text(
-                                'Settings',
+                                'Sounds',
                                 style: TextStyle(color: Colors.white, fontSize: 24),
                               ),
                             ],
@@ -117,7 +116,7 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                'Music',
+                                'Background Music',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
@@ -163,7 +162,7 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               const Text(
-                                'Sounds',
+                                'Sound Effects',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
@@ -203,52 +202,11 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                           ),
                         ),
 
-                        /*
-                        Padding(
-                          padding: EdgeInsets.only(left: 20.0, top: 30.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              AnimatedToggleSwitch<bool>.dual(
-                                current: firstSwitchValue,
-                                first: false,
-                                second: true,
-                                spacing: 1,
-                                style: const ToggleStyle(
-                                  borderColor: Colors.transparent,
-                                ),
-                                borderWidth: 5.0,
-                                height: 43,
-                                onChanged: (b) =>
-                                    setState(() => firstSwitchValue = b),
-                                styleBuilder: (b) =>
-                                    ToggleStyle(indicatorColor: b ? Colors.green : Colors.red),
-                                iconBuilder: (value) => value
-                                    ? const Icon(Icons.volume_up)
-                                    : const Icon(Icons.volume_off),
-                                textBuilder: (value) => value
-                                    ? const Center(child: Text('On'))
-                                    : const Center(child: Text('Off')),
-                              ),
-                              const SizedBox(width: 10),
-                              const Text(
-                                'Enable Text to Speech',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 15,
-                                    fontFamily: 'JosefinSans',
-                                    fontWeight: FontWeight.w400),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        ), */
-
                         Padding(
                           padding: const EdgeInsets.only(top: 150),
                           child: TextButton(
                             onPressed: () {
-                              Navigator.pop(context);
+                              _openMenu(context, widget.sfxPlayer);
                             },
                             child: Text(
                               'Back',

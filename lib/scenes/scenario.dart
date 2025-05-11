@@ -13,6 +13,7 @@
   import 'package:just_audio/just_audio.dart';
   import 'dart:async';
   import 'package:just_audio/just_audio.dart';
+  import '../widgets/audio_debug.dart';
 
   void _openHelp(BuildContext context) {
     showCupertinoModalPopup(
@@ -68,16 +69,6 @@
 
     List<Map<String, dynamic>> _currentChoices = [];
     bool _isGameOver = false;
-
-   final AudioPlayer _player = AudioPlayer();
-    Future<void> _playSoundEffect() async {
-      try {
-        await _player.setAsset('assets/audio/sfx/sound/rah.mp3');
-        await _player.play();
-      } catch (e) {
-        print('Error playing sound: $e');
-      }
-    }
 
 
     // Add all character sprite image paths to this list
@@ -190,24 +181,24 @@
       }
     }
 
-    void _playSFX(String? sfxPath) async {
-      print('Attempting to play SFX: $sfxPath');
-      if (sfxPath != null && sfxPath.isNotEmpty) {
-        if (sfxPath == 'audio/sfx/emotion/GTAclick.mp3') {
-          print('Skipping problematic SFX: $sfxPath');
-          return;
+    Future<void> _playSFX(String? sfxPath) async {
+      final AudioPlayer player = widget.sfxPlayer;
+
+      if (sfxPath == null || sfxPath.isEmpty) {
+        return;
+      }
+
+      try {
+        if (!mounted) return;
+        if (player.playerState.processingState == ProcessingState.idle ||
+            player.playerState.processingState == ProcessingState.completed ||
+            player.playing) {
+          await player.stop();
         }
-        try {
-          await _audio.stop();
-          print("SFX: stopped");
-          await _audio.setAudioSource(AudioSource.asset(sfxPath));
-          print("SFX: source set");
-          await _audio.setVolume(1.0);
-          await _audio.play();
-          print("SFX: playing");
-        } catch (e) {
-          print('Error playing SFX $sfxPath: $e');
-        }
+
+        await player.setAudioSource(AudioSource.asset(sfxPath));
+        await player.play();
+      } catch (e) {
       }
     }
 
@@ -227,12 +218,10 @@
           }
         }
       } else {
-        // Stop the player if it's currently playing anything (e.g., main screen BGM)
-        // or if the scenario previously had a BGM playing.
         if (_bgm.playing || _currentBgm != null) {
           await _bgm.stop();
         }
-        _currentBgm = null; // Mark that scenario has no active BGM
+        _currentBgm = null;
       }
     }
 
@@ -245,6 +234,8 @@
         bool isChoiceCorrect = false;
         int nextLine = _currentLine;
         bool incorrectChoiceMade = false;
+        final screenWidth = MediaQuery.of(context).size.width;
+        final screenHeight = MediaQuery.of(context).size.height;
 
         if (selectedChoice == null) {
           if (_currentLine < ScenarioData.scenarioData.length - 1) {
@@ -269,7 +260,7 @@
                   _lives--;
                 }
                 if (_lives <= 0) {
-                  _playSoundEffect(); 
+                  playTransientSFX('assets/audio/sfx/sound/rah.mp3');
                   _isGameOver = true;
                   
                   return;
@@ -317,17 +308,17 @@
             ScenarioData.scenarioData[_currentLine]['showLives'] ?? true;
 
         if (_currentLine == 1) {
-          _showArrow = true; _arrowLeft = 270.0; _arrowTop = 150.0;
-          _arrowAsset = 'assets/icons/tutorial_arrow.png'; _arrowRotation = 90.0;
+          _showArrow = true; _arrowLeft = screenWidth * 0.6; _arrowTop = screenHeight * 0.08;
+          _arrowAsset = 'assets/icons/arrow-right.png'; _arrowRotation = 0.0;
         } else if (_currentLine == 3) {
-          _showArrow = true; _arrowLeft = 260.0; _arrowTop = 100.0;
-          _arrowAsset = 'assets/icons/tutorial_arrow.png'; _arrowRotation = 90.0;
+          _showArrow = true; _arrowLeft = screenWidth * 0.6; _arrowTop = screenHeight * 0.01;
+          _arrowAsset = 'assets/icons/arrow-right.png'; _arrowRotation = 0.0;
         } else if (_currentLine == 6) {
-          _showArrow = true; _arrowLeft = 100.0; _arrowTop = 150.0;
+          _showArrow = true; _arrowLeft = screenWidth * 0.1; _arrowTop = screenHeight * 0.2;
           _arrowAsset = 'assets/icons/tutorial_arrow.png'; _arrowRotation = 180.0;
         } else if (_currentLine == 11) {
-          _showArrow = true; _arrowLeft = 260.0; _arrowTop = 100.0;
-          _arrowAsset = 'assets/icons/tutorial_arrow.png'; _arrowRotation = 180.0;
+          _showArrow = true; _arrowLeft = screenWidth * 0.6; _arrowTop = screenHeight * 0.15;
+          _arrowAsset = 'assets/icons/arrow-right.png'; _arrowRotation = 0.0;
         } else {
           _showArrow = false;
         }

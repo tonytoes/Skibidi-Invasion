@@ -88,6 +88,11 @@ flutter:
       fonts:
         - asset: assets/fonts/JKG-M_3.ttf
 
+    - family: MPlus
+      fonts:
+        - asset: assets/fonts/MPLUSRounded1c-Regular.ttf
+          weight: 400
+
 flutter_native_splash:
   android: true
   ios: true
