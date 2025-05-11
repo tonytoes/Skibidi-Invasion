@@ -46,7 +46,7 @@ class Developers extends StatelessWidget {
                         height: 250
                       ),
                       Text(
-                        'We are Driven Designer Party.',
+                        'We are Diddy Party.',
                             style: TextStyle(fontSize: 20, color: Colors.white)
                       ),
                     ],

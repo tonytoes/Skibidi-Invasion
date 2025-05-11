@@ -41,7 +41,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
       {'title': 'Chapter 2: First Battle', 'index': 67},
       {'title': 'Chapter 3: Science', 'index': 127},
       {'title': 'Chapter 4: Math Security', 'index': 188},
-      {'title': 'Chapter 5: Boss Battle', 'index': 276},
+      {'title': 'Chapter 5: Boss Battle', 'index': 279},
     ];
 
     return Scaffold(
