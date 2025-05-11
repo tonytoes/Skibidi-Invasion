@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../scenes/scenario.dart';
 import '../main.dart';
+import 'package:just_audio/just_audio.dart';
 
 void _openHome(BuildContext context) {
   Navigator.pushReplacement(
@@ -9,76 +10,85 @@ void _openHome(BuildContext context) {
   );
 }
 
-class GameOverOverlay extends StatelessWidget {
+class GameOverOverlay extends StatefulWidget {
   final VoidCallback onRestart;
 
   const GameOverOverlay({Key? key, required this.onRestart}) : super(key: key);
+
+  @override
+  _GameOverOverlayState createState() => _GameOverOverlayState();
+}
+
+class _GameOverOverlayState extends State<GameOverOverlay> {
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
         width: 750,
-        decoration: BoxDecoration(
-         image: const DecorationImage(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
             image: AssetImage('assets/images/bg/gameover.png'),
             fit: BoxFit.cover,
-         ),
+          ),
         ),
         child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text(
-              "GAME OVER",
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                "GAME OVER",
+                style: TextStyle(
+                  fontFamily: 'Obafen',
+                  fontSize: 50,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton(
-                  onPressed: onRestart,
-                  style: ElevatedButton.styleFrom( // design here
-                    backgroundColor: Colors.red,
-                    foregroundColor: Colors.white,
-                  ),
-                  child: const Text(
+              const SizedBox(height: 20),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: widget.onRestart,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 30, 121, 206).withOpacity(0.6),
+                      foregroundColor: Colors.white,
+                    ),
+                    child: const Text(
                       "RETRY",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      style: TextStyle(
+                        fontFamily: 'Obafen',
+                        fontSize: 24,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                ElevatedButton(
-                  onPressed: () {
-                    _openHome(context);
-                  },
-                  style: ElevatedButton.styleFrom( // design here
-                    backgroundColor: Colors.blue,
-                    foregroundColor: Colors.white,
-                  ),
-                  child: const Text(
-                    "HOME",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                  ElevatedButton(
+                    onPressed: () {
+                      _openHome(context);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 81, 81, 82).withOpacity(0.6),
+                      foregroundColor: Colors.white,
+                    ),
+                    child: const Text(
+                      "HOME",
+                      style: TextStyle(
+                        fontFamily: 'Obafen',
+                        fontSize: 24,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
                 ],
               ),
             ],
           ),
-          ),
         ),
+      ),
     );
   }
 }

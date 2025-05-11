@@ -25,6 +25,7 @@ class ChapterIntroOverlay extends StatefulWidget {
 class _ChapterIntroOverlayState extends State<ChapterIntroOverlay> {
   double _opacity = 0.0;
 
+
   @override
   void initState() {
     super.initState();
@@ -83,7 +84,7 @@ class _ChapterIntroOverlayState extends State<ChapterIntroOverlay> {
             style: const TextStyle(
               fontSize: 48,
               color: Colors.white,
-              fontFamily: 'onryou',
+              fontFamily: 'Obafen',
               fontWeight: FontWeight.bold,
             ),
           ),

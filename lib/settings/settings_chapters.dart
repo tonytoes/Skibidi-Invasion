@@ -37,11 +37,11 @@ class _ChapterScreenState extends State<ChapterScreen> {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> chapters = [
       {'title': 'Prologue', 'index': 0},
-      {'title': 'Chapter I', 'index': 13},
-      {'title': 'Chapter II', 'index': 67},
-      {'title': 'Chapter III', 'index': 130},
-      {'title': 'Chapter IV', 'index': 200},
-      {'title': 'Final Chapter', 'index': 250},
+      {'title': 'Chapter 1: Introduction', 'index': 13},
+      {'title': 'Chapter 2: First Battle', 'index': 67},
+      {'title': 'Chapter 3: Science', 'index': 127},
+      {'title': 'Chapter 4: Math Security', 'index': 188},
+      {'title': 'Chapter 5: Boss Battle', 'index': 276},
     ];
 
     return Scaffold(
@@ -66,7 +66,7 @@ class _ChapterScreenState extends State<ChapterScreen> {
                     children: [
                       const SizedBox(width: 10),
                       const Text(
-                        'Chapters',
+                        'Select Chapter',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 26,
