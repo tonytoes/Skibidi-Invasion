@@ -126,7 +126,7 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
       'index': 13,
       'isChapterStart': true,
-      'chapterTitle': 'Chapter 2: Introduction',
+      'chapterTitle': 'Chapter 1: Intro',
     },
     {
       'dialogue':
@@ -3953,8 +3953,6 @@ class ScenarioData {
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/sound/clatter.mp3',
 },
-
-//TODO skibidi king cutscene
 {
       'dialogue':"....", // index 301
       'backgroundImage': 'assets/images/bg/cutscene9.png',
@@ -3986,15 +3984,419 @@ class ScenarioData {
       
 },
 {
-      'dialogue':"Let's use english to freeze him!", // index 304
+      'dialogue':"Let's use english to freeze him!", // index 305
       'backgroundImage': 'assets/images/bg/room15.jpg',
       'characters': 
       [{'sprite': 'assets/images/characters/pose2/223.png','position': 'right' }, 
       {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
       'characterName': 'Mem',
       //'sfx': 'assets/audio/sfx/emotion/angry.mp3',
-      
 },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//   
+//*QUESTION 1
+                                            {
+                                            'dialogue': "The skibidi king _____ and stopped?", // index 306
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "freeze",
+                                                'nextDialogueIndex': 307,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "frezed",
+                                                'nextDialogueIndex': 308,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "froze",
+                                                'nextDialogueIndex': 309,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Wrong, this is the base form (present tense), but the sentence is in past tense.", // index 307
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 306,
+                                          }, 
+                                          {
+                                            'dialogue': "incorrect; not a real word in English.", // index 308
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 305,
+                                          }, 
+                                          {
+                                            'dialogue': "Yes! past tense of freeze, matches the past-tense narrative.", // index 309
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//   
+  { 
+  'dialogue': "It worked!",  // index 310
+  'backgroundImage': 'assets/images/bg/room15.jpg',
+  'characters': 
+    [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }, 
+    {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  },
+  { 
+  'dialogue': "Now the skibidi king is stuck in place!",  // index 311
+  'backgroundImage': 'assets/images/bg/room15.jpg',
+  'characters': 
+    [{'sprite': 'assets/images/characters/pose1/121.png','position': 'right' }, 
+    {'sprite': 'assets/images/characters/skibidi/king12.png','position': 'left'}],
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  },
+  { 
+  'dialogue': "Let's keep attacking while we still have a chance!",  // index 312
+  'backgroundImage': 'assets/images/bg/room15.jpg',
+  'characters': 
+    [{'sprite': 'assets/images/characters/pose1/144.png','position': 'right' }, 
+    {'sprite': 'assets/images/characters/skibidi/king12.png','position': 'left'}],
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  },
+   { 
+  'dialogue': "Now, let’s use Math to confuse him!",  // index 313
+  'backgroundImage': 'assets/images/bg/room15.jpg',
+  'characters': 
+    [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }, 
+    {'sprite': 'assets/images/characters/skibidi/king12.png','position': 'left'}],
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//  
+//*QUESTION 1
+                                            {
+                                            'dialogue': "What 30 + 27 = ?", // index 314
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "68",
+                                                'nextDialogueIndex': 315,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "77",
+                                                'nextDialogueIndex': 315,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "57",
+                                                'nextDialogueIndex': 316,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Think about combining 30 and 27 together.", // index 315
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 314,
+                                          }, 
+                                          {
+                                            'dialogue': "Nice work! It was effective!", // index 316
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },
+                                          {
+                                            'dialogue': "Let's keep going!", // index 317
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/121.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king12.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },
+//*QUESTION 2
+                                          {
+                                            'dialogue': "What is the chemical symbol for water?",  //318
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [
+                                              {'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'},
+                                            ],
+                                            'characterName': 'Mem',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "H2O",
+                                                'nextDialogueIndex': 320,
+                                                'nextBackgroundImage': 'assets/images/bg/computer11.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true
+                                              },
+                                              {
+                                                'text': "O2",
+                                                'nextDialogueIndex': 319,
+                                                'nextBackgroundImage': 'assets/images/bg/computer11.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true
+                                              },
+                                              {
+                                                'text': "CO2",
+                                                'nextDialogueIndex': 319,
+                                                'nextBackgroundImage': 'assets/images/bg/computer11.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            'dialogue': "Oops! That's not correct. Think about the most common liquid on Earth.", //319
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [
+                                              {'sprite': 'assets/images/characters/pose1/133.png', 'position': 'right'}, 
+                                              {'sprite': 'assets/images/characters/skibidi/king14.png', 'position': 'left'}
+                                            ],
+                                            'characterName': 'Mem',
+                                            'incorrectChoiceGoTo': 318
+                                          }, 
+                                          {
+                                            'dialogue': "Correct! H2O is the chemical symbol for water.",  //320
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
+                                            'characterName': 'Mem'
+                                          },
+//*QUESTION 3
+                                          {
+                                            'dialogue': "Which word is the correct past tense of 'run'?", //321
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                              [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "ran",
+                                                'nextDialogueIndex': 323,
+                                                'nextBackgroundImage': 'assets/images/bg/computer14.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true
+                                              },
+                                              {
+                                                'text': "runed",
+                                                'nextDialogueIndex': 322,
+                                                'nextBackgroundImage': 'assets/images/bg/computer14.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true
+                                              },
+                                              {
+                                                'text': "runned",
+                                                'nextDialogueIndex': 322,
+                                                'nextBackgroundImage': 'assets/images/bg/computer14.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            'dialogue': "Oops! Think about the irregular past tense of 'run'.", //322
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            'incorrectChoiceGoTo': 321
+                                          }, 
+                                          {
+                                            'dialogue': "Great! 'Ran' is the correct past tense of 'run'.",  //323
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
+                                            'characterName': 'Mem'
+                                          },
+//*QUESTION 4
+                                          {
+                                            'dialogue': "What is the main source of energy for plants?", //324
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                              [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                              {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "Sunlight",
+                                                'nextDialogueIndex': 327,
+                                                'nextBackgroundImage': 'assets/images/bg/computer15.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true
+                                              },
+                                              {
+                                                'text': "Water",
+                                                'nextDialogueIndex': 325,
+                                                'nextBackgroundImage': 'assets/images/bg/computer15.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true
+                                              },
+                                              {
+                                                'text': "Soil",
+                                                'nextDialogueIndex': 326,
+                                                'nextBackgroundImage': 'assets/images/bg/computer15.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true
+                                              }
+                                            ]
+                                          },
+                                          { //index 335
+                                            'dialogue': "Water is important for plants, but it doesn't provide the energy they need to grow. Think about the energy source plants use directly.", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            'incorrectChoiceGoTo': 324
+                                          }, 
+                                          { //index 336
+                                            'dialogue': "Soil is where plants grow, but it doesn't provide energy. Consider what fuels the process of photosynthesis in plants.", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            'incorrectChoiceGoTo': 324
+                                          }, 
+                                          {//index 327
+                                            'dialogue': "Correct! Sunlight is the energy source plants use to create their food through photosynthesis.", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
+                                            'characterName': 'Mem'
+                                          },
+//*QUESTION 5
+                                          {
+                                            'dialogue': "Which gas do humans need to breathe in to survive?", //328
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                              [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                              {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            'isQuestion': true,
+                                            'choices': [
+                                              {
+                                                'text': "Oxygen",
+                                                'nextDialogueIndex': 331,
+                                                'nextBackgroundImage': 'assets/images/bg/computer15.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true
+                                              },
+                                              {
+                                                'text': "Carbon Dioxide",
+                                                'nextDialogueIndex': 330,
+                                                'nextBackgroundImage': 'assets/images/bg/computer15.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true
+                                              },
+                                              {
+                                                'text': "Nitrogen",
+                                                'nextDialogueIndex': 329,
+                                                'nextBackgroundImage': 'assets/images/bg/computer15.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true
+                                              }
+                                            ]
+                                          },
+                                          { //index 329
+                                            'dialogue': "Nitrogen makes up most of the air, but it's not the gas our bodies use for survival. Think harder!", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            'incorrectChoiceGoTo': 328
+                                          }, 
+                                          { //index 330
+                                            'dialogue': "Carbon dioxide is what we breathe out, not in. Try again and think about what we inhale.", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            'incorrectChoiceGoTo': 328
+                                          }, 
+                                          {//index 321
+                                            'dialogue': "Correct! Humans need oxygen to breathe and survive.", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
+                                            'characterName': 'Mem'
+                                          },
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================// 
+
+
+
 
 
 
