@@ -40,7 +40,7 @@ class BGMPlayer {
       final double musicVolume = prefs.getDouble('musicVolume') ?? 0.5;
 
       await _bgmPlayer.stop();
-      await _bgmPlayer.setAudioSource(AudioSource.asset('assets/audio/bgm/a.mp3'));
+      await _bgmPlayer.setAudioSource(AudioSource.asset('assets/audio/bgm/haha.mp3'));
       _bgmPlayer.setLoopMode(LoopMode.one);
       await _bgmPlayer.setVolume(musicVolume);
       await _bgmPlayer.play();
