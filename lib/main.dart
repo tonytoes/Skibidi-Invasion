@@ -234,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
                   child: Text(
-                    'Story Mode',
+                    'Story',
                     style: const TextStyle(
                       fontFamily: 'Obafen', // Your custom font
                       fontSize: 24,

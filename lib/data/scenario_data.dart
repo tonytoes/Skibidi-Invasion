@@ -126,7 +126,7 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
       'index': 13,
       'isChapterStart': true,
-      'chapterTitle': 'Chapter 2: First Battle',
+      'chapterTitle': 'Chapter 2: Introduction',
     },
     {
       'dialogue':
@@ -951,7 +951,7 @@ class ScenarioData {
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/footstep2.mp3',
   'isChapterStart': true,
-  'chapterTitle': 'Chapter 2: First Battle',
+  'chapterTitle': 'Chapter 2: Library',
 
 },
 { // 68
@@ -2000,7 +2000,7 @@ class ScenarioData {
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/doorclose3.mp3',
   'isChapterStart': true,
-  'chapterTitle': 'Chapter 3: Science',
+  'chapterTitle': 'Chapter 3: Laboratory',
 },
 
 {
@@ -2724,7 +2724,7 @@ class ScenarioData {
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
   'isChapterStart': true,
-  'chapterTitle': 'Chapter 4: Math Security',
+  'chapterTitle': 'Chapter 4: Computer',
 },
 {
   'dialogue': "With this we can finally find the data we need to stop the brainrot infection!", // index 189
@@ -3777,12 +3777,7 @@ class ScenarioData {
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
 }, 
-{
-      'dialogue':"(You and Mem walked out of the laboratory)", // index 279
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
-      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
-}, 
+
 
 
 
@@ -3802,6 +3797,166 @@ class ScenarioData {
                               //?           CHAPTER 5        //
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//? 
+ {
+      'dialogue':"(You and Mem walked go on a journey to school)", // index 279
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',   
+      'chapterTitle': 'Chapter 5: End',
+}, 
+
+{
+      'dialogue':"...", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/b9.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+{
+      'dialogue':"walking here in the open area is dangerous.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/b9.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+{
+      'dialogue':"Let's walk between buildings instead.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/b9.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+
+{
+      'dialogue':"(walking)", // index 279
+      'backgroundImage': 'assets/images/bg/b8.jpg',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+}, 
+
+{
+      'dialogue':"I feel alot safer here.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/b8.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+{
+      'dialogue':"Lets keep going.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/b8.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+
+
+{
+      'dialogue':"(walking)", // index 279
+      'backgroundImage': 'assets/images/bg/outside3.jpg',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+}, 
+
+{
+      'dialogue':"I think we are getting closer.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/outside3.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+
+{
+      'dialogue':"(walking)", // index 279
+      'backgroundImage': 'assets/images/bg/school.jpg',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+}, 
+
+{
+      'dialogue':"Look!", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/school.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+{
+      'dialogue':"I can see the school!", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/school.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+{
+      'dialogue':"Let's go inside and find the skibidi king.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/school.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+}, 
+{
+      'dialogue':"(you and mem entered the school)", // index 279
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+}, 
+{
+      'dialogue':"we are finally inside the school.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/hallway1.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+},
+{
+      'dialogue':"(you and mem heard a strange upstairs)", // index 279
+      'backgroundImage': 'assets/images/bg/hallway1.jpg',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+}, 
+{
+      'dialogue':"What’s that noise? It’s coming from the upper floors.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/hallway1.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+},
+{
+      'dialogue':"Let's check it out!", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/hallway1.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+},
+{
+      'dialogue':"(You and mem climbed the stairs)", // index 279
+      'backgroundImage': 'assets/images/bg/stairs.jpg',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+}, 
+{
+      'dialogue':"(The 2 of you arrived at the 5th floor)", // index 279
+      'backgroundImage': 'assets/images/bg/room16.jpg',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+}, 
+{
+      'dialogue':"This floor is completely wrecked.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/room16.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+},
+{
+      'dialogue':"Let's take a peek at that room. I hear noise in there.", // index 278
+      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'backgroundImage': 'assets/images/bg/room16.jpg',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+},
+
+//TODO skibidi king cutscene
+
+
+
 
   ];
 }
