@@ -26,7 +26,7 @@ class ScenarioData {
     },
     {
       'dialogue':
-      "Press menu icon to toggle sounds, and etc!", // index 3
+      "Press the menu icon to toggle sounds. By dragging the drag button left to right, it will toggle the sound lower to high", // index 3
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developers',
       'sfx': 'assets/audio/sfx/emotion/think.mp3',
@@ -101,7 +101,7 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/emotion/think.mp3',
     },
     {
-      'dialogue': "well then.. Enjoy!!", // index 12
+      'dialogue': "Well then.. Enjoy!!", // index 12
       'isCheckpoint': true,
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developers',

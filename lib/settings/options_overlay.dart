@@ -10,7 +10,6 @@ import '../settings/settings_audio_scenario.dart';
 import 'package:just_audio/just_audio.dart';
 import '../widgets/devs_overlay.dart';
 
-
 void _openSettings(BuildContext context, AudioPlayer sfxPlayer) {
   showCupertinoModalPopup(
     context: context,
@@ -28,7 +27,7 @@ void _openDevs(BuildContext context, AudioPlayer sfxPlayer) {
 class Options extends StatelessWidget {
   final AudioPlayer sfxPlayer;
 
-  Options ({super.key, required this.sfxPlayer});
+  const Options({super.key, required this.sfxPlayer});
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +51,8 @@ class Options extends StatelessWidget {
 
                   Divider(color: Colors.white, height: 36, thickness: 1.5),
 
-                   Row(
-                     mainAxisAlignment: MainAxisAlignment.center,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       GestureDetector(
                         onTap: () {
@@ -63,8 +62,8 @@ class Options extends StatelessWidget {
                           height: 120,
                           width: 120,
                           decoration: BoxDecoration(
-                              color: Colors.transparent,
-                              border: Border.all(color: Colors.white, width: 2)
+                            color: Colors.transparent,
+                            border: Border.all(color: Colors.white, width: 2),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -78,7 +77,10 @@ class Options extends StatelessWidget {
                               Spacer(),
                               Text(
                                 'Sounds',
-                                style: TextStyle(color: Colors.white, fontSize: 16),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
                               ),
                             ],
                           ),
@@ -94,8 +96,8 @@ class Options extends StatelessWidget {
                           height: 120,
                           width: 120,
                           decoration: BoxDecoration(
-                              color: Colors.transparent,
-                              border: Border.all(color: Colors.white, width: 2)
+                            color: Colors.transparent,
+                            border: Border.all(color: Colors.white, width: 2),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -107,7 +109,10 @@ class Options extends StatelessWidget {
                               ),
                               Text(
                                 'Developers',
-                                style: TextStyle(color: Colors.white, fontSize: 16),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
                               ),
                             ],
                           ),
@@ -115,7 +120,6 @@ class Options extends StatelessWidget {
                       ),
                     ],
                   ),
-
 
                   Padding(
                     padding: const EdgeInsets.only(top: 150),
@@ -125,12 +129,13 @@ class Options extends StatelessWidget {
                       },
                       child: Text(
                         'Back',
-                        style: const TextStyle(color: Colors.white, fontSize: 24),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
                       ),
                     ),
                   ),
-
-
                 ],
               ),
             ),

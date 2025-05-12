@@ -58,9 +58,9 @@
                     ),
                     const SizedBox(height: 30),
                     TextButton(
-                      onPressed: () {
+                      onPressed: () async {
                         _openHome(context);
-                        bgmPlayer.startBackgroundMusic(); 
+                        await bgmPlayer.restartBackgroundMusic();
                       },
                       child: const Text(
                         'Continue',

@@ -1,16 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import '../scenes/challenge.dart';
 import '../widgets/player_progress.dart';
-
 
 class ChalSelectScreen extends StatefulWidget {
   final Function(int, String) onChallengeSelect;
 
-  const ChalSelectScreen({
-    super.key,
-    required this.onChallengeSelect,
-  });
+  const ChalSelectScreen({super.key, required this.onChallengeSelect});
 
   @override
   State<ChalSelectScreen> createState() => _ChalSelectScreenState();
@@ -47,14 +42,11 @@ class _ChalSelectScreenState extends State<ChalSelectScreen> {
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Center(
           child: GestureDetector(
-            onTap: () {
-            },
+            onTap: () {},
             child: Container(
-
-              color: Colors.black.withOpacity(0.7),
+              color: Colors.black.withValues(alpha: 0.7),
               child: Column(
                 children: [
-
                   Padding(
                     padding: const EdgeInsets.only(top: 20.0),
                     child: Row(
@@ -63,10 +55,7 @@ class _ChalSelectScreenState extends State<ChalSelectScreen> {
                         const SizedBox(width: 10),
                         const Text(
                           'Challenges',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 26,
-                          ),
+                          style: TextStyle(color: Colors.white, fontSize: 26),
                         ),
                       ],
                     ),
@@ -79,17 +68,20 @@ class _ChalSelectScreenState extends State<ChalSelectScreen> {
                     thickness: 1.5,
                   ),
 
-
                   ...challenge.map((challenge) {
                     bool isUnlocked = challenge['index'] <= _maxUnlockedIndex;
                     return Padding(
                       padding: const EdgeInsets.only(left: 20.0, top: 10.0),
                       child: GestureDetector(
-                        onTap: isUnlocked
-                            ? () {
-                          widget.onChallengeSelect(challenge['index'], challenge['title']);
-                        }
-                            : null,
+                        onTap:
+                            isUnlocked
+                                ? () {
+                                  widget.onChallengeSelect(
+                                    challenge['index'],
+                                    challenge['title'],
+                                  );
+                                }
+                                : null,
                         child: Row(
                           children: [
                             Image.asset(
@@ -106,8 +98,12 @@ class _ChalSelectScreenState extends State<ChalSelectScreen> {
                                 return Text(
                                   challenge['title'],
                                   style: TextStyle(
-                                    color: isUnlocked ? Colors.white : Colors.grey,
-                                    fontSize: challenge['title'].length > 20 ? 24 : 25,
+                                    color:
+                                        isUnlocked ? Colors.white : Colors.grey,
+                                    fontSize:
+                                        challenge['title'].length > 20
+                                            ? 24
+                                            : 25,
                                   ),
                                 );
                               },

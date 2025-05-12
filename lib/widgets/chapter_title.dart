@@ -9,6 +9,8 @@ class ChapterIntroOverlay extends StatefulWidget {
   final String chapterTitle;
   final AudioPlayer sfxPlayer;
   final AudioPlayer bgmPlayer;
+  final String? autoSfx;
+  final String? autoBgm;
 
   const ChapterIntroOverlay({
     Key? key,
@@ -16,6 +18,8 @@ class ChapterIntroOverlay extends StatefulWidget {
     required this.chapterTitle,
     required this.sfxPlayer,
     required this.bgmPlayer,
+    this.autoSfx,
+    this.autoBgm,
   }) : super(key: key);
 
   @override
@@ -50,6 +54,8 @@ class _ChapterIntroOverlayState extends State<ChapterIntroOverlay> {
               index: widget.chapterIndex,
               sfxPlayer: widget.sfxPlayer,
               bgmPlayer: widget.bgmPlayer,
+              autoSfx: widget.autoSfx,
+              autoBgm: widget.autoBgm,
             ),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               // Optional: Add a fade-out transition for the intro screen itself

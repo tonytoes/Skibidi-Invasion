@@ -1,20 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'package:flutter/cupertino.dart';
-import '../settings/settings_audio.dart';
-import '../settings/select_chapters.dart';
-import '../widgets/continue_overlay.dart';
-import 'package:page_transition/page_transition.dart';
-import '../widgets/chapter_overlay.dart';
-import '../settings/settings_audio_scenario.dart';
 import 'package:just_audio/just_audio.dart';
-
-
 
 class Developers extends StatelessWidget {
   final AudioPlayer sfxPlayer;
 
-  Developers ({super.key, required this.sfxPlayer});
+  const Developers({super.key, required this.sfxPlayer});
 
   @override
   Widget build(BuildContext context) {
@@ -43,11 +34,11 @@ class Developers extends StatelessWidget {
                       Image.asset(
                         'assets/icons/mem-dev.png',
                         width: 250,
-                        height: 250
+                        height: 250,
                       ),
                       Text(
                         'We are Driven Designer Party.',
-                            style: TextStyle(fontSize: 20, color: Colors.white)
+                        style: TextStyle(fontSize: 20, color: Colors.white),
                       ),
                     ],
                   ),
@@ -60,12 +51,13 @@ class Developers extends StatelessWidget {
                       },
                       child: Text(
                         'Back',
-                        style: const TextStyle(color: Colors.white, fontSize: 24),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
                       ),
                     ),
                   ),
-
-
                 ],
               ),
             ),

@@ -34,6 +34,21 @@ class BGMPlayer {
     }
   }
 
+  Future<void> restartBackgroundMusic() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final double musicVolume = prefs.getDouble('musicVolume') ?? 0.5;
+
+      await _bgmPlayer.stop();
+      await _bgmPlayer.setAudioSource(AudioSource.asset('assets/audio/bgm/a.mp3'));
+      _bgmPlayer.setLoopMode(LoopMode.one);
+      await _bgmPlayer.setVolume(musicVolume);
+      await _bgmPlayer.play();
+    } catch (e) {
+    }
+  }
+
+
   Future<void> fadeInBackgroundMusic() async {
     if (_bgmPlayer.playing || _bgmPlayer.processingState == ProcessingState.ready) {
       return;

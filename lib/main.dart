@@ -1,29 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:page_transition/page_transition.dart';
-import '../scenes/scenario.dart';
-import 'settings/settings_audio.dart';
 import 'settings/select_chapters.dart';
 import 'package:just_audio/just_audio.dart';
 import '../widgets/bgm_player.dart';
 import '../widgets/player_progress.dart';
 import '../widgets/chapter_title.dart';
 import '../settings/options_overlay.dart';
-import '../scenes/challenge.dart';
 import '../widgets/challenge_title.dart';
 import '../settings/select_challenge.dart';
-
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-    statusBarIconBrightness: Brightness.light,
-  ));
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+    ),
+  );
   runApp(const MyApp());
 }
 
@@ -46,67 +43,47 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-
 final bgmPlayer = BGMPlayer();
 final AudioPlayer _sfxPlayer = AudioPlayer();
-
 
 class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   double _opacity = 1.0;
   bool _isFading = false;
-  int _lastPlayedIndex = 0;
-
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
     _sfxPlayer.setVolume(0.5);
-    loadLastPlayedIndex();
     bgmPlayer.startBackgroundMusic();
   }
 
-
-  void loadLastPlayedIndex() async {
-    int? index = await loadProgress();
-    setState(() {
-      _lastPlayedIndex = index ?? 0;
-    });
-  }
-
-
   void _openChapters(BuildContext context) {
-    // try {
-    //    await _sfxPlayer.setAudioSource(AudioSource.asset('audio/sfx/sound/GTAclick.mp3'));
-    //    _sfxPlayer.play();
-    // } catch (e) {
-    //    print('Error playing click SFX: $e');
-    // }
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => ChapterScreen(
-        onChapterSelect: (index, title ) => _handleChapterSelect(index,title),
-        // sfxPlayer: _sfxPlayer,
-      ),
+      builder:
+          (context) => ChapterScreen(
+            onChapterSelect:
+                (index, title) => _handleChapterSelect(index, title),
+          ),
     );
   }
-
 
   void _handleChapterSelect(int chapterIndex, String chapterTitle) {
     Navigator.pop(context);
     bgmPlayer.player.pause();
 
-
     Navigator.pushReplacement(
       context,
       PageRouteBuilder(
         transitionDuration: const Duration(milliseconds: 800),
-        pageBuilder: (context, animation, secondaryAnimation) => ChapterIntroOverlay(
-          chapterIndex: chapterIndex,
-          chapterTitle: chapterTitle,
-          sfxPlayer: _sfxPlayer,
-          bgmPlayer: bgmPlayer.player,
-        ),
+        pageBuilder:
+            (context, animation, secondaryAnimation) => ChapterIntroOverlay(
+              chapterIndex: chapterIndex,
+              chapterTitle: chapterTitle,
+              sfxPlayer: _sfxPlayer,
+              bgmPlayer: bgmPlayer.player,
+            ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           return FadeTransition(opacity: animation, child: child);
         },
@@ -122,18 +99,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 
   void _openChallenge(BuildContext context) {
-    // try {
-    //    await _sfxPlayer.setAudioSource(AudioSource.asset('audio/sfx/sound/GTAclick.mp3'));
-    //    _sfxPlayer.play();
-    // } catch (e) {
-    //    print('Error playing click SFX: $e');
-    // }
     showCupertinoModalPopup(
       context: context,
-      builder: (context) => ChalSelectScreen(
-        onChallengeSelect: (index, title ) => _handleChallengeSelect(index,title),
-        // sfxPlayer: _sfxPlayer,
-      ),
+      builder:
+          (context) => ChalSelectScreen(
+            onChallengeSelect:
+                (index, title) => _handleChallengeSelect(index, title),
+          ),
     );
   }
 
@@ -141,25 +113,23 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     Navigator.pop(context);
     bgmPlayer.player.pause();
 
-
     Navigator.pushReplacement(
       context,
       PageRouteBuilder(
         transitionDuration: const Duration(milliseconds: 800),
-        pageBuilder: (context, animation, secondaryAnimation) => ChallengeIntroOverlay(
-          challengeIndex: challengeIndex,
-          challengeTitle: challengeTitle,
-          sfxPlayer: _sfxPlayer,
-          bgmPlayer: bgmPlayer.player,
-        ),
+        pageBuilder:
+            (context, animation, secondaryAnimation) => ChallengeIntroOverlay(
+              challengeIndex: challengeIndex,
+              challengeTitle: challengeTitle,
+              sfxPlayer: _sfxPlayer,
+              bgmPlayer: bgmPlayer.player,
+            ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           return FadeTransition(opacity: animation, child: child);
         },
       ),
     );
   }
-
-
 
   @override
   void dispose() {
@@ -168,7 +138,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     super.dispose();
     bgmPlayer.player.pause();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -198,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   fontSize: 60,
                   color: Colors.white,
                   fontWeight: FontWeight.w400,
-                  height: 0.9, 
+                  height: 0.9,
                   shadows: [
                     Shadow(
                       offset: Offset(3, 3),
@@ -221,15 +190,21 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.2)),
-                    overlayColor: WidgetStateProperty.resolveWith<Color?>(
-                            (Set<WidgetState> states) {
-                          if (states.contains(WidgetState.pressed)) {
-                            return const Color.fromARGB(255, 90, 136, 138)
-                                .withOpacity(0.2);
-                          }
-                          return null;
-                        }),
+                      const Color.fromARGB(255, 0, 0, 0).withValues(alpha: 0.2),
+                    ),
+                    overlayColor: WidgetStateProperty.resolveWith<Color?>((
+                      Set<WidgetState> states,
+                    ) {
+                      if (states.contains(WidgetState.pressed)) {
+                        return const Color.fromARGB(
+                          255,
+                          90,
+                          136,
+                          138,
+                        ).withValues(alpha: 0.2);
+                      }
+                      return null;
+                    }),
                     shape: WidgetStateProperty.all(const StadiumBorder()),
                     minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
@@ -246,7 +221,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               ),
             ),
 
-
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.2,
               left: 0,
@@ -258,15 +232,21 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
-                    overlayColor: WidgetStateProperty.resolveWith<Color?>(
-                            (Set<WidgetState> states) {
-                          if (states.contains(WidgetState.pressed)) {
-                            return const Color.fromARGB(255, 90, 136, 138)
-                                .withOpacity(0.2);
-                          }
-                          return null;
-                        }),
+                      const Color.fromARGB(255, 0, 0, 0).withValues(alpha: 0.3),
+                    ),
+                    overlayColor: WidgetStateProperty.resolveWith<Color?>((
+                      Set<WidgetState> states,
+                    ) {
+                      if (states.contains(WidgetState.pressed)) {
+                        return const Color.fromARGB(
+                          255,
+                          90,
+                          136,
+                          138,
+                        ).withValues(alpha: 0.2);
+                      }
+                      return null;
+                    }),
                     shape: WidgetStateProperty.all(const StadiumBorder()),
                     minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
@@ -283,7 +263,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               ),
             ),
 
-
             Positioned(
               bottom: MediaQuery.of(context).size.height * 0.1,
               left: 0,
@@ -295,15 +274,21 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
-                        const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3)),
-                    overlayColor: WidgetStateProperty.resolveWith<Color?>(
-                            (Set<WidgetState> states) {
-                          if (states.contains(WidgetState.pressed)) {
-                            return const Color.fromARGB(255, 90, 136, 138)
-                                .withOpacity(0.2);
-                          }
-                          return null;
-                        }),
+                      const Color.fromARGB(255, 0, 0, 0).withValues(alpha: 0.3),
+                    ),
+                    overlayColor: WidgetStateProperty.resolveWith<Color?>((
+                      Set<WidgetState> states,
+                    ) {
+                      if (states.contains(WidgetState.pressed)) {
+                        return const Color.fromARGB(
+                          255,
+                          90,
+                          136,
+                          138,
+                        ).withValues(alpha: 0.2);
+                      }
+                      return null;
+                    }),
                     shape: WidgetStateProperty.all(const StadiumBorder()),
                     minimumSize: WidgetStateProperty.all(const Size(200, 50)),
                   ),
