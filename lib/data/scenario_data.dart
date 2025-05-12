@@ -3806,155 +3806,195 @@ class ScenarioData {
 }, 
 
 {
-      'dialogue':"...", // index 278
+      'dialogue':"...", // index 280
       'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/b9.jpg',
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
 }, 
 {
-      'dialogue':"walking here in the open area is dangerous.", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"walking here in the open area is dangerous.", // index 281
+      'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/b9.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/think.mp3',
 }, 
 {
-      'dialogue':"Let's walk between buildings instead.", // index 278
+      'dialogue':"Let's walk between buildings instead.", // index 282
       'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/b9.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
 }, 
 
 {
-      'dialogue':"(walking)", // index 279
+      'dialogue':"(walking)", // index 283
       'backgroundImage': 'assets/images/bg/b8.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
 }, 
 
 {
-      'dialogue':"I feel alot safer here.", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"I feel alot safer here.", // index 284
+      'characters': [{'sprite': 'assets/images/characters/pose1/152.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/b8.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 }, 
 {
-      'dialogue':"Lets keep going.", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"Lets keep going.", // index 285
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/b8.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
 }, 
 
 
 {
-      'dialogue':"(walking)", // index 279
+      'dialogue':"(walking)", // index 286
       'backgroundImage': 'assets/images/bg/outside3.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
 }, 
 
 {
-      'dialogue':"I think we are getting closer.", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"I think we are getting closer.", // index 287
+      'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/outside3.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/think.mp3',
 }, 
 
 {
-      'dialogue':"(walking)", // index 279
+      'dialogue':"(walking)", // index 288
       'backgroundImage': 'assets/images/bg/school.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
 }, 
 
 {
-      'dialogue':"Look!", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"Look!", // index 289
+      'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/school.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/ding.mp3',
 }, 
 {
-      'dialogue':"I can see the school!", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"I can see the school!", // index 290
+      'characters': [{'sprite': 'assets/images/characters/pose1/142.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/school.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/chat.mp3',
 }, 
 {
-      'dialogue':"Let's go inside and find the skibidi king.", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"Let's go inside and find the skibidi king.", // index 291
+      'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/school.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/heart.mp3',
 }, 
 {
-      'dialogue':"(you and mem entered the school)", // index 279
+      'dialogue':"(you and mem entered the school)", // index 292
       'backgroundImage': 'assets/images/bg/black screen.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
 }, 
 {
-      'dialogue':"we are finally inside the school.", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"we are finally inside the school.", // index 293
+      'characters': [{'sprite': 'assets/images/characters/pose2/222.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/hallway1.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
 {
-      'dialogue':"(you and mem heard a strange upstairs)", // index 279
+      'dialogue':"(you and mem heard a strange noise upstairs)", // index 294
       'backgroundImage': 'assets/images/bg/hallway1.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/114.png','position': 'right' }],
       'characterName': '',
-      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+      'sfx': 'assets/audio/sfx/action/footstep7.mp3',
 }, 
 {
-      'dialogue':"What’s that noise? It’s coming from the upper floors.", // index 278
+      'dialogue':"What’s that noise? It’s coming from the upper floors.", // index 295
       'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/hallway1.jpg',
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
 },
 {
-      'dialogue':"Let's check it out!", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"Let's check it out.", // index 296
+      'characters': [{'sprite': 'assets/images/characters/pose1/144.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/hallway1.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/emotion/think.mp3',
 },
 {
-      'dialogue':"(You and mem climbed the stairs)", // index 279
+      'dialogue':"(You and mem climbed the stairs)", // index 297
       'backgroundImage': 'assets/images/bg/stairs.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
 }, 
 {
-      'dialogue':"(The 2 of you arrived at the 5th floor)", // index 279
+      'dialogue':"(The two of you arrived at the 5th floor)", // index 298
       'backgroundImage': 'assets/images/bg/room16.jpg',
       'characterName': '',
-      'sfx': 'assets/audio/sfx/action/footstep1.mp3',
+      'sfx': 'assets/audio/sfx/action/footstep6.mp3',
 }, 
 {
-      'dialogue':"This floor is completely wrecked.", // index 278
+      'dialogue':"This floor is completely wrecked.", // index 299
       'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/room16.jpg',
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
 },
 {
-      'dialogue':"Let's take a peek at that room. I hear noise in there.", // index 278
-      'characters': [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }],
+      'dialogue':"Let's take a peek at that room. I heared a noise in there.", // index 300
+      'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/room16.jpg',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'sfx': 'assets/audio/sfx/sound/clatter.mp3',
 },
 
 //TODO skibidi king cutscene
-
+{
+      'dialogue':"....", // index 301
+      'backgroundImage': 'assets/images/bg/cutscene9.png',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/sound/skibidi3.mp3',
+},
+{
+      'dialogue':"ummm...", // index 302
+      'backgroundImage': 'assets/images/bg/cutscene9.png',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      
+},
+{
+      'dialogue':"I think we are cooked...", // index 303
+      'backgroundImage': 'assets/images/bg/cutscene9.png',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/sweat.mp3',
+      
+},
+{
+      'dialogue':"He is coming after us!", // index 304
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': 
+      [ 
+      {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'center'}],
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/bgm/a.mp3',
+      
+},
+{
+      'dialogue':"Let's use english to freeze him!", // index 304
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': 
+      [{'sprite': 'assets/images/characters/pose2/223.png','position': 'right' }, 
+      {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/sfx/emotion/angry.mp3',
+      
+},
 
 
 
