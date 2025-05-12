@@ -54,7 +54,7 @@ class _ChoiceButtonState extends State<ChoiceButton> {
             wasTapped = true;
           });
 
-          await Future.delayed(const Duration(milliseconds: 800));
+          await Future.delayed(const Duration(milliseconds: 500));
           widget.onPressed();
         },
         style: ElevatedButton.styleFrom(

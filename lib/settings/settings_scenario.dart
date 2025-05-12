@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import '../settings/settings_audio.dart';
-import '../settings/settings_chapters.dart';
+import '../settings/select_chapters.dart';
 import '../widgets/continue_overlay.dart';
 import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';

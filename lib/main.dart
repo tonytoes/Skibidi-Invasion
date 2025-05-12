@@ -5,12 +5,15 @@ import 'package:flutter/scheduler.dart';
 import 'package:page_transition/page_transition.dart';
 import '../scenes/scenario.dart';
 import 'settings/settings_audio.dart';
-import 'settings/settings_chapters.dart';
+import 'settings/select_chapters.dart';
 import 'package:just_audio/just_audio.dart';
 import '../widgets/bgm_player.dart';
 import '../widgets/player_progress.dart';
 import '../widgets/chapter_title.dart';
 import '../settings/options_overlay.dart';
+import '../scenes/challenge.dart';
+import '../widgets/challenge_title.dart';
+import '../settings/select_challenge.dart';
 
 
 void main() {
@@ -79,7 +82,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     // } catch (e) {
     //    print('Error playing click SFX: $e');
     // }
-    print('main.dart: Tapped Story button, opening ChapterScreen modal');
     showCupertinoModalPopup(
       context: context,
       builder: (context) => ChapterScreen(
@@ -91,8 +93,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
 
   void _handleChapterSelect(int chapterIndex, String chapterTitle) {
-    print('main.dart: _handleChapterSelect called with index: $chapterIndex and title: $chapterTitle');
-
     Navigator.pop(context);
     bgmPlayer.player.pause();
 
@@ -120,6 +120,46 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       builder: (context) => Options(sfxPlayer: _sfxPlayer),
     );
   }
+
+  void _openChallenge(BuildContext context) {
+    // try {
+    //    await _sfxPlayer.setAudioSource(AudioSource.asset('audio/sfx/sound/GTAclick.mp3'));
+    //    _sfxPlayer.play();
+    // } catch (e) {
+    //    print('Error playing click SFX: $e');
+    // }
+    showCupertinoModalPopup(
+      context: context,
+      builder: (context) => ChalSelectScreen(
+        onChallengeSelect: (index, title ) => _handleChallengeSelect(index,title),
+        // sfxPlayer: _sfxPlayer,
+      ),
+    );
+  }
+
+  void _handleChallengeSelect(int challengeIndex, String challengeTitle) {
+    Navigator.pop(context);
+    bgmPlayer.player.pause();
+
+
+    Navigator.pushReplacement(
+      context,
+      PageRouteBuilder(
+        transitionDuration: const Duration(milliseconds: 800),
+        pageBuilder: (context, animation, secondaryAnimation) => ChallengeIntroOverlay(
+          challengeIndex: challengeIndex,
+          challengeTitle: challengeTitle,
+          sfxPlayer: _sfxPlayer,
+          bgmPlayer: bgmPlayer.player,
+        ),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+      ),
+    );
+  }
+
+
 
   @override
   void dispose() {
@@ -214,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               child: Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pop(context);
+                    _openChallenge(context);
                   },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(

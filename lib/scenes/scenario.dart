@@ -8,7 +8,7 @@
   import '../widgets/gameover_overlay.dart';
   import '../widgets/help_overlay.dart';
   import '../widgets/player_progress.dart';
-  import '../settings/settings_chapters.dart';
+  import '../settings/select_chapters.dart';
   import 'package:shared_preferences/shared_preferences.dart';
   import 'package:just_audio/just_audio.dart';
   import 'dart:async';
