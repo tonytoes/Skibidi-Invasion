@@ -4794,12 +4794,14 @@ class ScenarioData {
 },
 
 {
-      'dialogue':"end credits...", // index 361
+      'dialogue':"", // index 361
       'backgroundImage': 'assets/images/bg/room15.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
       ],
-      'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'isChapterStart': true,
+      'chapterTitle': 'The End',
+      'characterName': '',
+      'sfx': 'assets/audio/bgm/what Ive done.mp3',    
 },
 
 
