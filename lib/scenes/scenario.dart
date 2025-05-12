@@ -14,6 +14,8 @@
   import 'dart:async';
   import 'package:just_audio/just_audio.dart';
   import '../widgets/audio_debug.dart';
+  import '../widgets/chapter_title.dart';
+
 
   void _openHelp(BuildContext context) {
     showCupertinoModalPopup(
@@ -135,10 +137,28 @@
         context: context,
         builder: (context) => ChapterScreen(
           onChapterSelect: (index, title) {
+            Navigator.of(context).pop();
+
+            Navigator.of(context).pushReplacement(
+              PageRouteBuilder(
+                transitionDuration: const Duration(milliseconds: 300),
+                pageBuilder: (_, __, ___) => ChapterIntroOverlay(
+                  chapterIndex: index,
+                  chapterTitle: title,
+                  sfxPlayer: widget.sfxPlayer,
+                  bgmPlayer: widget.bgmPlayer,
+                ),
+                transitionsBuilder: (_, animation, __, child) => FadeTransition(
+                  opacity: animation,
+                  child: child,
+                ),
+              ),
+            );
           },
         ),
       );
     }
+
 
 
     @override
@@ -293,6 +313,34 @@
           saveProgress(_currentLine);
         }
 
+        final scenario = ScenarioData.scenarioData[_currentLine];
+        if (scenario['isChapterStart'] == true) {
+          Future.microtask(() async {
+            final nextSfx = scenario['sfx'];
+            final nextBgm = scenario['bgm'];
+            await widget.sfxPlayer.stop();
+            await widget.bgmPlayer.stop();
+            await Navigator.of(context).push(
+              PageRouteBuilder(
+                opaque: false,
+                pageBuilder: (_, __, ___) => ChapterIntroOverlay(
+                  chapterIndex: _currentLine,
+                  chapterTitle: scenario['chapterTitle'] ?? 'Chapter',
+                  sfxPlayer: widget.sfxPlayer,
+                  bgmPlayer: widget.bgmPlayer,
+                ),
+                transitionsBuilder: (_, animation, __, child) =>
+                    FadeTransition(opacity: animation, child: child),
+              ),
+            );
+            if (mounted) {
+              _playSFX(nextSfx);
+              _updateBgm(nextBgm);
+            }
+          });
+          return;
+        }
+
         _backgroundImage =
             ScenarioData.scenarioData[_currentLine]['backgroundImage'] ??
                 _backgroundImage;
@@ -333,7 +381,7 @@
 
     void _resetGame() {
       setState(() {
-        _currentLine = _lastQuestionIndex > 0 ? _lastQuestionIndex - 1 : 0;
+        _currentLine = _lastQuestionIndex > 0 ? _lastQuestionIndex: 0;
         _lives = 3;
         _isGameOver = false;
         _backgroundImage =

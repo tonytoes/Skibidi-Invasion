@@ -90,7 +90,6 @@ class _ChapterScreenState extends State<ChapterScreen> {
                     child: GestureDetector(
                       onTap: isUnlocked
                           ? () {
-                        print('ChapterScreen: Tapped on chapter with index: ${chapter['index']}');
                         widget.onChapterSelect(chapter['index'], chapter['title']);
                       }
                           : null,

@@ -4,7 +4,7 @@ class ScenarioData {
     // add assets/ prefix in the sfx tenkyu bro read notes on monday.com
     {
       'dialogue':
-      "Before we start, Let's be familair with the game!", // index 0
+      "Before we start, Let's be familiar with the game!", // index 0
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developers',
       'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
@@ -125,6 +125,8 @@ class ScenarioData {
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
       'index': 13,
+      'isChapterStart': true,
+      'chapterTitle': 'Chapter 2: First Battle',
     },
     {
       'dialogue':
@@ -948,6 +950,9 @@ class ScenarioData {
   'backgroundImage': 'assets/images/bg/outside1.jpg',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/footstep2.mp3',
+  'isChapterStart': true,
+  'chapterTitle': 'Chapter 2: First Battle',
+
 },
 { // 68
   'dialogue': "I can hear some skibidi toilets up ahead.",
@@ -1994,6 +1999,8 @@ class ScenarioData {
   'backgroundImage': 'assets/images/bg/black screen.png',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/doorclose3.mp3',
+  'isChapterStart': true,
+  'chapterTitle': 'Chapter 3: Science',
 },
 
 {
@@ -2716,6 +2723,8 @@ class ScenarioData {
   'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right'}],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'isChapterStart': true,
+  'chapterTitle': 'Chapter 4: Math Security',
 },
 {
   'dialogue': "With this we can finally find the data we need to stop the brainrot infection!", // index 189
@@ -3751,6 +3760,8 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/computer10.jpg',
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
+    'isChapterStart': true,
+    'chapterTitle': 'Chapter 5: Boss Battle',
 }, 
 {
       'dialogue':"Alright, Now that we know how to stop the infection and the location of the Skibidi King...", // index 277
