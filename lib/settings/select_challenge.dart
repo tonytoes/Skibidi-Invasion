@@ -35,10 +35,10 @@ class _ChalSelectScreenState extends State<ChalSelectScreen> {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> challenge = [
-      {'title': 'Trials', 'index': 0},
-      {'title': 'Trials 1', 'index': 2},
-      {'title': 'Trials 2', 'index': 3},
-      {'title': 'Trials 3', 'index': 4},
+      {'title': 'Level 1', 'index': 0},
+      {'title': 'Level 2', 'index': 2},
+      {'title': 'Level 3', 'index': 3},
+      {'title': 'Level 4', 'index': 4},
     ];
 
     return Scaffold(

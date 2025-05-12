@@ -26,7 +26,7 @@ class BGMPlayer {
     try {
       final prefs = await SharedPreferences.getInstance();
       final double musicVolume = prefs.getDouble('musicVolume') ?? 0.5;
-      await _bgmPlayer.setAudioSource(AudioSource.asset('assets/audio/bgm/a.mp3')); // Change the bgm here
+      await _bgmPlayer.setAudioSource(AudioSource.asset('assets/audio/bgm/haha.mp3')); // Change the bgm here
       _bgmPlayer.setLoopMode(LoopMode.one);
       await _bgmPlayer.setVolume(musicVolume);
       await _bgmPlayer.play();
@@ -43,7 +43,7 @@ class BGMPlayer {
     final double targetVolume = prefs.getDouble('musicVolume') ?? 0.5;
 
     try {
-      await _bgmPlayer.setAudioSource(AudioSource.asset('assets/audio/bgm/a.mp3')); // Change the bgm here
+      await _bgmPlayer.setAudioSource(AudioSource.asset('assets/audio/bgm/haha.mp3')); // Change the bgm here
       _bgmPlayer.setLoopMode(LoopMode.one);
       await _bgmPlayer.setVolume(0.0);
       await _bgmPlayer.play();
