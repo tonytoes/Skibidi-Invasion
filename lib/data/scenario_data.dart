@@ -4399,7 +4399,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/room15.jpg',
       'characters': [{'sprite': 'assets/images/characters/skibidi/king25.png','position': 'center'}],
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/sfx/sound/omikuji.mp3',    
 },
 {
       'dialogue':"Just a little more and we can defeat him!", // index 333
@@ -4407,7 +4407,7 @@ class ScenarioData {
       'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
       {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/emotion/twinkle.mp3',    
 },
 {
       'dialogue':"Let's do this!", // index 334
@@ -4415,7 +4415,7 @@ class ScenarioData {
       'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
       {'sprite': 'assets/images/characters/skibidi/king22.png','position': 'left'}],
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/bgm/greg.mp3',    
 },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -4719,14 +4719,14 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/room15.jpg',
       'characters': [{'sprite': 'assets/images/characters/skibidi/king25.png','position': 'center'}],
       'characterName': 'Skibidi King',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/sfx/sound/rah.mp3',    
 },
 {
       'dialogue':"...", // index 352
       'backgroundImage': 'assets/images/bg/room15.jpg',
       'characters': [{'sprite': 'assets/images/characters/skibidi/kingdead.png','position': 'center'}],
       'characterName': 'Skibidi King',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/sfx/sound/flush.mp3',    
 },
 {
       'dialogue':"We finally defeated the skibidi king!", // index 353
@@ -4734,74 +4734,253 @@ class ScenarioData {
       'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
       ],
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',    
 },
+
 {
       'dialogue':"Now everything will finally go back to normal.", // index 354
       'backgroundImage': 'assets/images/bg/room15.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
       ],
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/sfx/emotion/heart.mp3',    
 },
 {
-      'dialogue':"Thanks to you, this city was saved from brainrot infection.", // index 355
+      'dialogue':"Now then...", // index 355
       'backgroundImage': 'assets/images/bg/room15.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+      'characters': [{'sprite': 'assets/images/characters/pose1/132.png','position': 'right' }, 
       ],
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/sfx/emotion/heart.mp3',    
 },
 {
-      'dialogue':"Thank you so much....", // index 356
+      'dialogue':"Let's go outside, it's gonna be morning already.", // index 356
       'backgroundImage': 'assets/images/bg/room15.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+      'characters': [{'sprite': 'assets/images/characters/pose2/221.png','position': 'right' }, 
       ],
-      'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'characterName': 'Mem', 
+      'sfx': 'assets/audio/sfx/emotion/heart.mp3',    
 },
 {
-      'dialogue':"Thank you for helping me throughout this journey...", // index 357
-      'backgroundImage': 'assets/images/bg/room15.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
-      ],
-      'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'dialogue':"(You and Mem walked outside the school building)", // index 357
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',    
 },
 {
-      'dialogue':"I will never forget you...", // index 358
-      'backgroundImage': 'assets/images/bg/room15.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+      'dialogue':"...", // index 358
+      'backgroundImage': 'assets/images/bg/outside10.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/114.png','position': 'right' }, 
       ],
-      'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'characterName': 'Mem', 
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',    
 },
 {
-      'dialogue':"So please don't forget me...", // index 359
-      'backgroundImage': 'assets/images/bg/room15.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+      'dialogue':"hey...", // index 359
+      'backgroundImage': 'assets/images/bg/outside10.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/113.png','position': 'right' }, 
       ],
-      'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'characterName': 'Mem', 
+      'sfx': 'assets/audio/sfx/emotion/question.mp3',    
 },
 {
-      'dialogue':"Goobye.... player", // index 360
-      'backgroundImage': 'assets/images/bg/room15.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
-      ],
+      'dialogue':"Thanks to you...", // index 360
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"This city was saved from being consumed by brainrot infection.", // index 361
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"Every infected are slowly disappearing one by one...", // index 362
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"But...", // index 363
+      'backgroundImage': 'assets/images/bg/cutscene12.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"There is something i did not tell you...", // index 364
+      'backgroundImage': 'assets/images/bg/cutscene12.png',
+      'characterName': 'Mem',
+    
 },
 
 {
-      'dialogue':"", // index 361
-      'backgroundImage': 'assets/images/bg/room15.jpg',
-      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
-      ],
-      'isChapterStart': true,
-      'chapterTitle': 'The End',
+      'dialogue':"", // index 365
+      'backgroundImage': 'assets/images/bg/cutscene12.png',
       'characterName': '',
-      'sfx': 'assets/audio/bgm/what Ive done.mp3',    
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      'showLives': false,
+      'choices': [
+      {
+        'text': "What is it?",
+        'nextDialogueIndex': 366,
+        'isCorrect': null,
+        'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+      }
+    ]
+},
+
+
+{
+      'dialogue':"I'm actually infected since the first time we met.", // index 366
+      'backgroundImage': 'assets/images/bg/cutscene12.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"I,ve been resisting it all this time...", // index 367
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"But it's finally reaching my brain...", // index 368
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"I dont have much time left...", // index 369
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"Soon I will also disappear just like the other infected...", // index 370
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      'showLives': false,
+      'choices': [
+      {
+        'text': "No...",
+        'nextDialogueIndex': 371,
+        'isCorrect': null,
+        'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+      },
+      {
+        'text': "There has to be a way to cure it...",
+        'nextDialogueIndex': 371,
+        'isCorrect': null,
+        'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+      }
+    ]
+},
+{
+      'dialogue':"it's too late for that now...", // index 371
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"Thank you so much....", // index 372
+      'backgroundImage': 'assets/images/bg/cutscene11.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"Thank you for helping me throughout this journey...", // index 373
+      'backgroundImage': 'assets/images/bg/cutscene11.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+  'dialogue': "Even though I know that...", // index 373
+  'backgroundImage': 'assets/images/bg/cutscene11.png',
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+  'dialogue': "to you, this is just a boring journey...", // index 373
+  'backgroundImage': 'assets/images/bg/cutscene11.png',
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+  'dialogue': "For me, every single moment was precious.", // index 373
+  'backgroundImage': 'assets/images/bg/cutscene11.png',
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"Thank you to all the memories I,ve had with you until now...", // index 374
+      'backgroundImage': 'assets/images/bg/cutscene11.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"I will never forget you...", // index 375
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"So please don't forget me either...", // index 376
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"please....", // index 376
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"...", // index 377
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"Goobye....", // index 378
+      'backgroundImage': 'assets/images/bg/cutscene14.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"player...", // index 379
+      'backgroundImage': 'assets/images/bg/cutscene14.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"", // index 380
+      'backgroundImage': 'assets/images/bg/cutscene15.png',
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+
+
+{
+      'dialogue':"", // index 382
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
+},
+
+{
+      'dialogue':"", // index 383
+      'chapterTitle': 'The End',
+      'isChapterStart': true,
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
+},
+{
+      'dialogue':"", // index 384
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
 },
 
 
