@@ -4383,7 +4383,7 @@ class ScenarioData {
                                             'characterName': 'Mem',
                                             'incorrectChoiceGoTo': 328
                                           }, 
-                                          {//index 321
+                                          {//index 331
                                             'dialogue': "Correct! Humans need oxygen to breathe and survive.", 
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
@@ -4394,8 +4394,594 @@ class ScenarioData {
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================// 
+{
+      'dialogue':"Look! He is taking damage.", // index 332
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/skibidi/king25.png','position': 'center'}],
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/sound/omikuji.mp3',    
+},
+{
+      'dialogue':"Just a little more and we can defeat him!", // index 333
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+      {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/emotion/twinkle.mp3',    
+},
+{
+      'dialogue':"Let's do this!", // index 334
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+      {'sprite': 'assets/images/characters/skibidi/king22.png','position': 'left'}],
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/bgm/greg.mp3',    
+},
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//*QUESTION 1
+                                            {
+                                            'dialogue': "What 45 - 19 = ?", // index 335
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "28",
+                                                'nextDialogueIndex': 336,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "24",
+                                                'nextDialogueIndex': 336,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "26",
+                                                'nextDialogueIndex': 337,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Subtracting 19 from 45 gives you the answer.", // index 336
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 335,
+                                          }, 
+                                          {
+                                            'dialogue': "Correct! Keep it up!", // index 337
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },
+//*QUESTION 2
+                                            {
+                                            'dialogue': "What 8 x 8 = ?", // index 338
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "81",
+                                                'nextDialogueIndex': 339,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "78",
+                                                'nextDialogueIndex': 339,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "64",
+                                                'nextDialogueIndex': 340,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {
+                                            'dialogue': "Try multiplying the number 8, 8 times.", // index 339
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 338,
+                                          }, 
+                                          {
+                                            'dialogue': "Correct! We are so close!", // index 340
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },      
+//*QUESTION 3
+                                            {
+                                            'dialogue': "What is 81 ÷ 9 = ?", // index 341
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "12",
+                                                'nextDialogueIndex': 342,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "7",
+                                                'nextDialogueIndex': 342,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "9",
+                                                'nextDialogueIndex': 343,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {// index 342
+                                            'dialogue': "Count up to 81 and keep track of how many times you reach a number that is a multiple of 9.", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 341,
+                                          }, 
+                                          {
+                                            'dialogue': "Amazing! You are so good at this!", // index 343
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },                                          
+//*QUESTION 4
+                                            {
+                                            'dialogue': "What is 100 ÷ 5 = ?", // index 344
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "40",
+                                                'nextDialogueIndex': 345,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "30",
+                                                'nextDialogueIndex': 345,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "20",
+                                                'nextDialogueIndex': 346,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {// index 345
+                                            'dialogue': "Count how many 5 there are in a 100.", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 344,
+                                          }, 
+                                          {
+                                            'dialogue': "You are so right!", // index 346
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },                                          
+//*QUESTION 5
+                                            {
+                                            'dialogue': "What is water made of?", // index 347
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'isQuestion': true,
+                                            'choices': [                                            
+                                              {
+                                                'text': "Oxygen and Carbon",
+                                                'nextDialogueIndex': 348,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "Hydrogen and Nitrogen",
+                                                'nextDialogueIndex': 349,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': false,
+                                                'loseLifeOnIncorrect': true,
+                                              },
+                                              {
+                                                'text': "Hydrogen and Oxygen",
+                                                'nextDialogueIndex': 350,
+                                                'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
+                                                'characterName': 'Mem',
+                                                'isCorrect': true,
+                                              },
+                                            ],
+                                          },
+
+                                          {// index 348
+                                            'dialogue': "Hmm, that's not quite right. Here's a hint: One of the elements is the most abundant gas in the universe.", 
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'incorrectChoiceGoTo': 347,
+                                          }, 
+                                          {
+                                            'dialogue': "Close, but not quite. Think about the gas we breathe and what we drink every day.", // index 349
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },  
+                                          {
+                                            'dialogue': "That's right! Water is made of two hydrogen atoms and one oxygen atom – H2O!", // index 350
+                                            'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'characters': 
+                                            [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+                                            {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
+                                            'characterName': 'Mem',
+                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                          },               
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+//!=================================================QUESTIONS!===================================================//
+{
+      'dialogue':"RAAAAAAAHHHHHHH!!!!!!!", // index 351
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/skibidi/king25.png','position': 'center'}],
+      'characterName': 'Skibidi King',
+      'sfx': 'assets/audio/sfx/sound/rah.mp3',    
+},
+{
+      'dialogue':"...", // index 352
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/skibidi/kingdead.png','position': 'center'}],
+      'characterName': 'Skibidi King',
+      'sfx': 'assets/audio/sfx/sound/flush.mp3',    
+},
+{
+      'dialogue':"We finally defeated the skibidi king!", // index 353
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+      ],
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',    
+},
+
+{
+      'dialogue':"Now everything will finally go back to normal.", // index 354
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
+      ],
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/heart.mp3',    
+},
+{
+      'dialogue':"Now then...", // index 355
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/132.png','position': 'right' }, 
+      ],
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/sfx/emotion/heart.mp3',    
+},
+{
+      'dialogue':"Let's go outside, it's gonna be morning already.", // index 356
+      'backgroundImage': 'assets/images/bg/room15.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose2/221.png','position': 'right' }, 
+      ],
+      'characterName': 'Mem', 
+      'sfx': 'assets/audio/sfx/emotion/heart.mp3',    
+},
+{
+      'dialogue':"(You and Mem walked outside the school building)", // index 357
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      'sfx': 'assets/audio/sfx/action/footstep1.mp3',    
+},
+{
+      'dialogue':"...", // index 358
+      'backgroundImage': 'assets/images/bg/outside10.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/114.png','position': 'right' }, 
+      ],
+      'characterName': 'Mem', 
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',    
+},
+{
+      'dialogue':"hey...", // index 359
+      'backgroundImage': 'assets/images/bg/outside10.jpg',
+      'characters': [{'sprite': 'assets/images/characters/pose1/113.png','position': 'right' }, 
+      ],
+      'characterName': 'Mem', 
+      'sfx': 'assets/audio/sfx/emotion/question.mp3',    
+},
+{
+      'dialogue':"Thanks to you...", // index 360
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"This city was saved from being consumed by brainrot infection.", // index 361
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"Every infected are slowly disappearing one by one...", // index 362
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"But...", // index 363
+      'backgroundImage': 'assets/images/bg/cutscene12.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"There is something i did not tell you...", // index 364
+      'backgroundImage': 'assets/images/bg/cutscene12.png',
+      'characterName': 'Mem',
+    
+},
+
+{
+      'dialogue':"", // index 365
+      'backgroundImage': 'assets/images/bg/cutscene12.png',
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      'showLives': false,
+      'choices': [
+      {
+        'text': "What is it?",
+        'nextDialogueIndex': 366,
+        'isCorrect': null,
+        'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+      }
+    ]
+},
 
 
+{
+      'dialogue':"I'm actually infected since the first time we met.", // index 366
+      'backgroundImage': 'assets/images/bg/cutscene12.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"I,ve been resisting it all this time...", // index 367
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"But it's finally reaching my brain...", // index 368
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"I dont have much time left...", // index 369
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+},
+{
+      'dialogue':"Soon I will also disappear just like the other infected...", // index 370
+      'backgroundImage': 'assets/images/bg/cutscene10.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      'showLives': false,
+      'choices': [
+      {
+        'text': "No...",
+        'nextDialogueIndex': 371,
+        'isCorrect': null,
+        'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+      },
+      {
+        'text': "There has to be a way to cure it...",
+        'nextDialogueIndex': 371,
+        'isCorrect': null,
+        'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
+      }
+    ]
+},
+{
+      'dialogue':"it's too late for that now...", // index 371
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"Thank you so much....", // index 372
+      'backgroundImage': 'assets/images/bg/cutscene11.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"Thank you for helping me throughout this journey...", // index 373
+      'backgroundImage': 'assets/images/bg/cutscene11.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+  'dialogue': "Even though I know that...", // index 373
+  'backgroundImage': 'assets/images/bg/cutscene11.png',
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+  'dialogue': "to you, this is just a boring journey...", // index 373
+  'backgroundImage': 'assets/images/bg/cutscene11.png',
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+  'dialogue': "For me, every single moment was precious.", // index 373
+  'backgroundImage': 'assets/images/bg/cutscene11.png',
+  'characterName': 'Mem',
+  //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"Thank you to all the memories I,ve had with you until now...", // index 374
+      'backgroundImage': 'assets/images/bg/cutscene11.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"I will never forget you...", // index 375
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"So please don't forget me either...", // index 376
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"please....", // index 376
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"...", // index 377
+      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"Goobye....", // index 378
+      'backgroundImage': 'assets/images/bg/cutscene14.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"player...", // index 379
+      'backgroundImage': 'assets/images/bg/cutscene14.png',
+      'characterName': 'Mem',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+{
+      'dialogue':"", // index 380
+      'backgroundImage': 'assets/images/bg/cutscene15.png',
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/a.mp3',    
+},
+
+
+{
+      'dialogue':"", // index 382
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
+},
+
+{
+      'dialogue':"", // index 383
+      'chapterTitle': 'The End',
+      'isChapterStart': true,
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
+},
+{
+      'dialogue':"", // index 384
+      'backgroundImage': 'assets/images/bg/black screen.png',
+      'characterName': '',
+      //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
+},
 
 
 
