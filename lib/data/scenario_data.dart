@@ -16,6 +16,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developers',
       'sfx': 'assets/audio/sfx/emotion/think.mp3',
+      'bgm': 'assets/audio/bgm/a.mp3',
     },
     {
       'dialogue':

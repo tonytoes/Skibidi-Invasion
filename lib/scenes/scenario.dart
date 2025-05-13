@@ -60,6 +60,9 @@ class _ScenarioScreenState extends State<ScenarioScreen>
   double _arrowRotation = 0.0;
   String _arrowAsset = 'assets/icons/tutorial_arrow.png';
 
+
+  final Map<String, Duration> _bgmPausedPositions = {};
+
   List<Map<String, dynamic>> _characters = [];
 
   List<String> _heartImages = [
@@ -221,25 +224,38 @@ class _ScenarioScreenState extends State<ScenarioScreen>
 
   void _updateBgm(String? newBgmPath) async {
     if (newBgmPath != null && newBgmPath.isNotEmpty) {
-      if (newBgmPath != _currentBgm || !_bgm.playing) {
-        await _bgm.stop();
-        try {
-          await _bgm.setAudioSource(AudioSource.asset(newBgmPath));
-          _bgm.setLoopMode(LoopMode.one);
+      if (newBgmPath == _currentBgm) {
+        if (!_bgm.playing) {
+          final resumePosition = _bgmPausedPositions[_currentBgm!] ?? Duration.zero;
+          await _bgm.seek(resumePosition);
           await _bgm.play();
-          _currentBgm = newBgmPath;
-        } catch (e) {
-          await _bgm.stop();
-          _currentBgm = null;
         }
+        return;
+      }
+
+      if (_currentBgm != null && _bgm.playing) {
+        _bgmPausedPositions[_currentBgm!] = await _bgm.position;
+      }
+
+      try {
+        await _bgm.setAudioSource(AudioSource.asset(newBgmPath));
+        _bgm.setLoopMode(LoopMode.one);
+        final resumeFrom = _bgmPausedPositions[newBgmPath] ?? Duration.zero;
+        await _bgm.seek(resumeFrom);
+        await _bgm.play();
+        _currentBgm = newBgmPath;
+      } catch (e) {
+        await _bgm.stop();
+        _currentBgm = null;
       }
     } else {
-      if (_bgm.playing || _currentBgm != null) {
-        await _bgm.stop();
+      if (_bgm.playing && _currentBgm != null) {
+        _bgmPausedPositions[_currentBgm!] = await _bgm.position;
+        await _bgm.pause();
       }
-      _currentBgm = null;
     }
   }
+
 
   void _nextDialogue(String? selectedChoice) {
     setState(() {
