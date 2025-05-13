@@ -7,6 +7,7 @@ class ScenarioData {
       "Before we start, Let's be familiar with the game!", // index 0
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developers',
+      'bgm': 'assets/audio/bgm/tutorial.mp3',
       'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
       'index': 0,
     },
@@ -16,7 +17,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developers',
       'sfx': 'assets/audio/sfx/emotion/think.mp3',
-      'bgm': 'assets/audio/bgm/a.mp3',
+      
     },
     {
       'dialogue':
@@ -106,7 +107,7 @@ class ScenarioData {
       'isCheckpoint': true,
       'backgroundImage': 'assets/images/bg/inside9.jpg',
       'characterName': 'Developers',
-      'sfx': 'assets/audio/sfx/emotion/cartoon.mp3',
+      'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
       
     },
 
@@ -124,6 +125,7 @@ class ScenarioData {
       // index 13
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
+      'bgm': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
       'index': 13,
       'isChapterStart': true,
@@ -895,6 +897,7 @@ class ScenarioData {
       'position': 'right'
     }
   ],
+  'bgm': '',
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
@@ -2243,7 +2246,7 @@ class ScenarioData {
   // index 144
   'backgroundImage': 'assets/images/bg/cutscene4.png',
   'characterName': 'Mem',
-  'sfx': 'assets/audio/sfx/sound/many_skibidi.mp3',
+  'bgm': 'assets/audio/sfx/sound/many_skibidi.mp3',
 },
 {
   'dialogue': "WAIT!! You're too fast! don't leave me!!!", // index 145
@@ -2301,7 +2304,9 @@ class ScenarioData {
     }
   ],
   'characterName': 'Mem',
+  'bgm': 'ss',
   'sfx': 'assets/audio/sfx/emotion/sweat.mp3',
+
 },
 
 {
@@ -3988,7 +3993,8 @@ class ScenarioData {
       [ 
       {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'center'}],
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/a.mp3',
+      'bgm': 'assets/audio/bgm/a.mp3',
+      'sfx': 'assets/audio/sfx/sound/alert.mp3',
       
 },
 {
@@ -3998,7 +4004,7 @@ class ScenarioData {
       [{'sprite': 'assets/images/characters/pose2/223.png','position': 'right' }, 
       {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/sfx/emotion/angry.mp3',
+      'sfx': 'assets/audio/sfx/emotion/angry.mp3',
 },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -4012,7 +4018,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
                                             'choices': [                                            
                                               {
@@ -4048,7 +4054,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 306,
                                           }, 
                                           {
@@ -4058,7 +4064,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 305,
                                           }, 
                                           {
@@ -4068,7 +4074,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -4081,7 +4087,7 @@ class ScenarioData {
     [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }, 
     {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
   'characterName': 'Mem',
-  //'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
   },
   { 
   'dialogue': "Now the skibidi king is stuck in place!",  // index 311
@@ -4090,7 +4096,7 @@ class ScenarioData {
     [{'sprite': 'assets/images/characters/pose1/121.png','position': 'right' }, 
     {'sprite': 'assets/images/characters/skibidi/king12.png','position': 'left'}],
   'characterName': 'Mem',
-  //'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
   },
   { 
   'dialogue': "Let's keep attacking while we still have a chance!",  // index 312
@@ -4099,7 +4105,7 @@ class ScenarioData {
     [{'sprite': 'assets/images/characters/pose1/144.png','position': 'right' }, 
     {'sprite': 'assets/images/characters/skibidi/king12.png','position': 'left'}],
   'characterName': 'Mem',
-  //'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
   },
    { 
   'dialogue': "Now, let’s use Math to confuse him!",  // index 313
@@ -4108,7 +4114,7 @@ class ScenarioData {
     [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right' }, 
     {'sprite': 'assets/images/characters/skibidi/king12.png','position': 'left'}],
   'characterName': 'Mem',
-  //'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
   },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -4122,7 +4128,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
                                             'choices': [                                            
                                               {
@@ -4158,7 +4164,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 314,
                                           }, 
                                           {
@@ -4168,7 +4174,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
                                           {
                                             'dialogue': "Let's keep going!", // index 317
@@ -4177,7 +4183,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/121.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king12.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
 //*QUESTION 2
                                           {
@@ -4187,6 +4193,7 @@ class ScenarioData {
                                               {'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'},
                                             ],
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'characterName': 'Mem',
                                             'isQuestion': true,
                                             'choices': [
@@ -4222,6 +4229,7 @@ class ScenarioData {
                                               {'sprite': 'assets/images/characters/pose1/133.png', 'position': 'right'}, 
                                               {'sprite': 'assets/images/characters/skibidi/king14.png', 'position': 'left'}
                                             ],
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'characterName': 'Mem',
                                             'incorrectChoiceGoTo': 318
                                           }, 
@@ -4230,6 +4238,7 @@ class ScenarioData {
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                             'characterName': 'Mem'
                                           },
 //*QUESTION 3
@@ -4240,6 +4249,7 @@ class ScenarioData {
                                               [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
                                             'characterName': 'Mem',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
                                             'choices': [
                                               {
@@ -4273,6 +4283,7 @@ class ScenarioData {
                                             'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
                                             'characterName': 'Mem',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 321
                                           }, 
                                           {
@@ -4280,12 +4291,14 @@ class ScenarioData {
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
                                             'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
-                                            'characterName': 'Mem'
+                                            'characterName': 'Mem',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
 //*QUESTION 4
                                           {
                                             'dialogue': "What is the main source of energy for plants?", //324
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'characters': 
                                               [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                               {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
@@ -4320,6 +4333,7 @@ class ScenarioData {
                                           { //index 335
                                             'dialogue': "Water is important for plants, but it doesn't provide the energy they need to grow. Think about the energy source plants use directly.", 
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
                                             'characterName': 'Mem',
@@ -4331,11 +4345,13 @@ class ScenarioData {
                                             'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
                                             'characterName': 'Mem',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 324
                                           }, 
                                           {//index 327
                                             'dialogue': "Correct! Sunlight is the energy source plants use to create their food through photosynthesis.", 
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                             'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
                                             'characterName': 'Mem'
@@ -4344,6 +4360,7 @@ class ScenarioData {
                                           {
                                             'dialogue': "Which gas do humans need to breathe in to survive?", //328
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'characters': 
                                               [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                               {'sprite': 'assets/images/characters/skibidi/king11.png','position': 'left'}],
@@ -4381,11 +4398,13 @@ class ScenarioData {
                                             'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
                                             'characterName': 'Mem',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 328
                                           }, 
                                           { //index 330
                                             'dialogue': "Carbon dioxide is what we breathe out, not in. Try again and think about what we inhale.", 
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'characters': [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king14.png','position': 'left'}],
                                             'characterName': 'Mem',
@@ -4394,6 +4413,7 @@ class ScenarioData {
                                           {//index 331
                                             'dialogue': "Correct! Humans need oxygen to breathe and survive.", 
                                             'backgroundImage': 'assets/images/bg/room15.jpg',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                             'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king13.png','position': 'left'}],
                                             'characterName': 'Mem'
@@ -4437,7 +4457,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
                                             'choices': [                                            
                                               {
@@ -4473,7 +4493,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 335,
                                           }, 
                                           {
@@ -4483,7 +4503,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
 //*QUESTION 2
                                             {
@@ -4493,7 +4513,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
                                             'choices': [                                            
                                               {
@@ -4529,7 +4549,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 338,
                                           }, 
                                           {
@@ -4539,7 +4559,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },      
 //*QUESTION 3
                                             {
@@ -4549,7 +4569,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
                                             'choices': [                                            
                                               {
@@ -4585,7 +4605,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 341,
                                           }, 
                                           {
@@ -4595,7 +4615,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },                                          
 //*QUESTION 4
                                             {
@@ -4605,7 +4625,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
                                             'choices': [                                            
                                               {
@@ -4641,7 +4661,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 344,
                                           }, 
                                           {
@@ -4651,7 +4671,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },                                          
 //*QUESTION 5
                                             {
@@ -4661,7 +4681,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/111.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king21.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                            'sfx': 'assets/audio/sfx/emotion/question.mp3',
                                             'isQuestion': true,
                                             'choices': [                                            
                                               {
@@ -4697,7 +4717,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose1/133.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king24.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                             'incorrectChoiceGoTo': 347,
                                           }, 
                                           {
@@ -4707,7 +4727,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },  
                                           {
                                             'dialogue': "That's right! Water is made of two hydrogen atoms and one oxygen atom – H2O!", // index 350
@@ -4716,7 +4736,7 @@ class ScenarioData {
                                             [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
                                             {'sprite': 'assets/images/characters/skibidi/king23.png','position': 'left'}],
                                             'characterName': 'Mem',
-                                            //'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                            'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },               
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -4742,6 +4762,7 @@ class ScenarioData {
       'characters': [{'sprite': 'assets/images/characters/pose2/242.png','position': 'right' }, 
       ],
       'characterName': 'Mem',
+      'bgm': 'assets/audio/bgm/lobby.mp3',
       'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',    
 },
 
@@ -4759,7 +4780,7 @@ class ScenarioData {
       'characters': [{'sprite': 'assets/images/characters/pose1/132.png','position': 'right' }, 
       ],
       'characterName': 'Mem',
-      'sfx': 'assets/audio/sfx/emotion/heart.mp3',    
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',    
 },
 {
       'dialogue':"Let's go outside, it's gonna be morning already.", // index 356
@@ -4795,13 +4816,15 @@ class ScenarioData {
       'dialogue':"Thanks to you...", // index 360
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
-      'sfx': 'assets/audio/bgm/sad.mp3',    
+      'bgm': 'ss', 
+      'sfx': 'assets/audio/bgm/sad.mp3',   
+  
 },
 {
       'dialogue':"This city was saved from being consumed by brainrot infection.", // index 361
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      //'sfx': 'assets/audio/sfx/emotion/question.mp3',    
 },
 {
       'dialogue':"Every infected are slowly disappearing one by one...", // index 362
@@ -4814,6 +4837,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/cutscene12.png',
       'characterName': 'Mem',
       //'sfx': 'assets/audio/bgm/sad.mp3',    
+      //'sfx': 'assets/audio/sfx/emotion/dot.mp3', 
 },
 {
       'dialogue':"There is something i did not tell you...", // index 364
@@ -4872,12 +4896,12 @@ class ScenarioData {
       'choices': [
       {
         'text': "No...",
-        'nextDialogueIndex': 371,
+        'nextDialogueIndex': 372,
         'isCorrect': null,
         'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
       },
       {
-        'text': "There has to be a way to cure it...",
+        'text': "There has to be a way...",
         'nextDialogueIndex': 371,
         'isCorrect': null,
         'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
@@ -4909,7 +4933,7 @@ class ScenarioData {
   //'sfx': 'assets/audio/bgm/a.mp3',    
 },
 {
-  'dialogue': "to you, this is just a boring journey...", // index 373
+  'dialogue': "to you, this is just a short and boring journey...", // index 373
   'backgroundImage': 'assets/images/bg/cutscene11.png',
   'characterName': 'Mem',
   //'sfx': 'assets/audio/bgm/a.mp3',    
@@ -4939,15 +4963,16 @@ class ScenarioData {
       //'sfx': 'assets/audio/bgm/a.mp3',    
 },
 {
-      'dialogue':"please....", // index 376
-      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'dialogue':"....", // index 376
+      'backgroundImage': 'assets/images/bg/cutscene11.png',
       'characterName': 'Mem',
       //'sfx': 'assets/audio/bgm/a.mp3',    
 },
 {
-      'dialogue':"...", // index 377
-      'backgroundImage': 'assets/images/bg/cutscene13.png',
+      'dialogue':".....", // index 377
+      'backgroundImage': 'assets/images/bg/cutscene11.png',
       'characterName': 'Mem',
+      //'sfx': 'assets/audio/sfx/emotion/dot.mp3', 
       //'sfx': 'assets/audio/bgm/a.mp3',    
 },
 {
