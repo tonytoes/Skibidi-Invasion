@@ -128,6 +128,7 @@ class ScenarioData {
       'index': 13,
       'isChapterStart': true,
       'chapterTitle': 'Chapter 1: Intro',
+      'voiceover': 'assets/audio/voice/CH1/CH1-line1.mp3',
     },
     {
       'dialogue':
@@ -135,6 +136,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'voiceover': 'assets/audio/voice/CH1/CH1-line2.mp3',
     },
     {
       'dialogue':
@@ -142,6 +144,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/sound/rappel.mp3',
+      'voiceover': 'assets/audio/voice/CH1/CH1-line3.mp3',
     },
     {
       'dialogue':
@@ -149,12 +152,14 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/gear2.mp3',
+      'voiceover': 'assets/audio/voice/CH1/CH1-line4.mp3',
     },
     {
       'dialogue': "Wha—?!", // index 17
       'backgroundImage': 'assets/images/bg/cutscene1.png',
       'characterName': 'You',
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
+      'voiceover': 'assets/audio/voice/CH1/CH1-line5.mp3',
     },
     {
       'dialogue':
@@ -163,6 +168,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/black screen.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/hit2.mp3',
+      'voiceover': 'assets/audio/voice/CH1/CH1-line6.mp3',
     },
     {
       'dialogue':
@@ -170,6 +176,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/inside5.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
+      'voiceover': 'assets/audio/voice/CH1/CH1-line7.mp3',
     },
     {
       'dialogue': "Hey! Kid..? You alright? I'm sorry for knocking you down, I thought you were infected with brainrot.",

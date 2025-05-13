@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import '../scenes/scenario.dart';
 import '../main.dart';
-import 'package:just_audio/just_audio.dart';
 
 void _openHome(BuildContext context) {
   Navigator.pushReplacement(
@@ -20,7 +18,6 @@ class GameOverOverlay extends StatefulWidget {
 }
 
 class _GameOverOverlayState extends State<GameOverOverlay> {
-
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -52,7 +49,12 @@ class _GameOverOverlayState extends State<GameOverOverlay> {
                   ElevatedButton(
                     onPressed: widget.onRestart,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 30, 121, 206).withOpacity(0.6),
+                      backgroundColor: const Color.fromARGB(
+                        255,
+                        30,
+                        121,
+                        206,
+                      ).withValues(alpha: 0.6),
                       foregroundColor: Colors.white,
                     ),
                     child: const Text(
@@ -70,7 +72,12 @@ class _GameOverOverlayState extends State<GameOverOverlay> {
                       _openHome(context);
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 81, 81, 82).withOpacity(0.6),
+                      backgroundColor: const Color.fromARGB(
+                        255,
+                        81,
+                        81,
+                        82,
+                      ).withValues(alpha: 0.6),
                       foregroundColor: Colors.white,
                     ),
                     child: const Text(

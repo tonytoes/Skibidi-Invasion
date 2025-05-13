@@ -5,7 +5,6 @@ import 'package:page_transition/page_transition.dart';
 import 'settings/select_chapters.dart';
 import 'package:just_audio/just_audio.dart';
 import '../widgets/bgm_player.dart';
-import '../widgets/player_progress.dart';
 import '../widgets/chapter_title.dart';
 import '../settings/options_overlay.dart';
 import '../widgets/challenge_title.dart';
@@ -47,8 +46,8 @@ final bgmPlayer = BGMPlayer();
 final AudioPlayer _sfxPlayer = AudioPlayer();
 
 class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
-  double _opacity = 1.0;
-  bool _isFading = false;
+  final double _opacity = 1.0;
+  final bool _isFading = false;
 
   @override
   void initState() {

@@ -451,6 +451,18 @@ class _ScenarioScreenState extends State<ScenarioScreen>
     );
   }
 
+  Future<void> _playVoiceover(String path) async {
+    final player = widget.sfxPlayer; // reuse the same AudioPlayer
+    try {
+      if (player.playing) await player.stop();
+      await player.setAudioSource(AudioSource.asset(path));
+      await player.play();
+    } catch (e) {
+      print('Failed to play voiceover: $e');
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     final chapterIndex = widget.index;
@@ -482,9 +494,11 @@ class _ScenarioScreenState extends State<ScenarioScreen>
                 ElevatedButton(
                   style: _buttonStyle(),
                   onPressed: () {
-                    setState(() {
-                      pressed = !pressed;
-                    });
+                    final currentScenario = ScenarioData.scenarioData[_currentLine];
+                    final voiceoverPath = currentScenario['voiceover'];
+                    if (voiceoverPath != null && voiceoverPath.isNotEmpty) {
+                      _playVoiceover(voiceoverPath);
+                    }
                   },
                   child: Image.asset(
                     'assets/icons/speaker.png',

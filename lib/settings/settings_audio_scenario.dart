@@ -1,13 +1,12 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:just_audio/just_audio.dart';
 import '../settings/settings_scenario.dart';
 import '../widgets/bgm_player.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void _openMenu(BuildContext context,  AudioPlayer sfxPlayer) {
+void _openMenu(BuildContext context, AudioPlayer sfxPlayer) {
   Navigator.pushReplacement(
     context,
     PageTransition(
@@ -21,10 +20,8 @@ void _openMenu(BuildContext context,  AudioPlayer sfxPlayer) {
 class SettingsMoreScreen extends StatefulWidget {
   final AudioPlayer sfxPlayer;
 
-  const SettingsMoreScreen({
-    Key? key,
-    required this.sfxPlayer,
-  }) : super(key: key);
+  const SettingsMoreScreen({Key? key, required this.sfxPlayer})
+    : super(key: key);
 
   @override
   State<SettingsMoreScreen> createState() => _SettingsMoreScreenState();
@@ -75,8 +72,10 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
         child: Center(
           child: FutureBuilder<SharedPreferences>(
             future: _prefs,
-            builder:
-                (BuildContext context, AsyncSnapshot<SharedPreferences> snapshot) {
+            builder: (
+              BuildContext context,
+              AsyncSnapshot<SharedPreferences> snapshot,
+            ) {
               if (snapshot.hasData) {
                 final prefs = snapshot.data!;
                 musicVolume = prefs.getDouble('musicVolume') ?? 0.5;
@@ -97,7 +96,10 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                             children: [
                               Text(
                                 'Sounds',
-                                style: TextStyle(color: Colors.white, fontSize: 24),
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 24,
+                                ),
                               ),
                             ],
                           ),
@@ -118,18 +120,20 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                               const Text(
                                 'Background Music',
                                 style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontFamily: 'JosefinSans',
-                                    fontWeight: FontWeight.w400),
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontFamily: 'JosefinSans',
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
-                              Container(
+                              SizedBox(
                                 width: 300,
                                 child: SliderTheme(
                                   data: SliderTheme.of(context).copyWith(
                                     trackHeight: 3,
-                                    thumbShape:
-                                    RoundSliderThumbShape(enabledThumbRadius: 5),
+                                    thumbShape: RoundSliderThumbShape(
+                                      enabledThumbRadius: 5,
+                                    ),
                                   ),
                                   child: Slider(
                                     activeColor: Colors.red,
@@ -150,8 +154,11 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                               SizedBox(width: 10),
                               Text(
                                 '${(musicVolume * 100).round()}%',
-                                style: TextStyle(color: Colors.white, fontSize: 16),
-                              )
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -164,18 +171,20 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                               const Text(
                                 'Sound Effects',
                                 style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontFamily: 'JosefinSans',
-                                    fontWeight: FontWeight.w400),
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontFamily: 'JosefinSans',
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
-                              Container(
+                              SizedBox(
                                 width: 300,
                                 child: SliderTheme(
                                   data: SliderTheme.of(context).copyWith(
                                     trackHeight: 3,
-                                    thumbShape:
-                                    RoundSliderThumbShape(enabledThumbRadius: 5),
+                                    thumbShape: RoundSliderThumbShape(
+                                      enabledThumbRadius: 5,
+                                    ),
                                   ),
                                   child: Slider(
                                     activeColor: Colors.red,
@@ -196,8 +205,11 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                               SizedBox(width: 10),
                               Text(
                                 '${(sfxVolume * 100).round()}%',
-                                style: TextStyle(color: Colors.white, fontSize: 16),
-                              )
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -210,7 +222,10 @@ class _SettingsMoreScreenState extends State<SettingsMoreScreen> {
                             },
                             child: Text(
                               'Back',
-                              style: const TextStyle(color: Colors.white, fontSize: 24),
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                              ),
                             ),
                           ),
                         ),

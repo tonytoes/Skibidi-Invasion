@@ -34,10 +34,15 @@ class _ChoiceButtonState extends State<ChoiceButton> {
     Color backgroundColor;
 
     if (!wasTapped) {
-      backgroundColor = Colors.black.withOpacity(0.3);
+      backgroundColor = Colors.black.withValues(alpha: 0.3);
     } else {
       if (widget.isCorrect == null) {
-        backgroundColor = const Color.fromARGB(255, 61, 213, 240).withOpacity(0.5);
+        backgroundColor = const Color.fromARGB(
+          255,
+          61,
+          213,
+          240,
+        ).withValues(alpha: 0.5);
       } else if (widget.isCorrect == true) {
         backgroundColor = Colors.green;
       } else {

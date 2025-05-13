@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import '../settings/settings_audio.dart';
-import '../settings/select_chapters.dart';
 import '../widgets/continue_overlay.dart';
 import 'package:page_transition/page_transition.dart';
 import '../widgets/chapter_overlay.dart';
 import '../settings/settings_audio_scenario.dart';
 import 'package:just_audio/just_audio.dart';
 
-
-
-void _openContinue(BuildContext context, AudioPlayer sfxPlayer)  {
+void _openContinue(BuildContext context, AudioPlayer sfxPlayer) {
   Navigator.pushReplacement(
     context,
     PageTransition(
@@ -19,17 +15,16 @@ void _openContinue(BuildContext context, AudioPlayer sfxPlayer)  {
       child: ContinueOverlay(sfxPlayer: sfxPlayer),
     ),
   );
-
 }
 
 void _openSettings(BuildContext context, AudioPlayer sfxPlayer) {
   Navigator.pushReplacement(
-  context,
-  PageTransition(
+    context,
+    PageTransition(
       type: PageTransitionType.fade,
       duration: const Duration(milliseconds: 500),
       child: SettingsMoreScreen(sfxPlayer: sfxPlayer),
-    )
+    ),
   );
 }
 
@@ -47,7 +42,7 @@ void _openChapters(BuildContext context, AudioPlayer sfxPlayer) {
 class MenuScreen extends StatelessWidget {
   final AudioPlayer sfxPlayer;
 
-  MenuScreen({super.key, required this.sfxPlayer});
+  const MenuScreen({super.key, required this.sfxPlayer});
 
   @override
   Widget build(BuildContext context) {
@@ -70,18 +65,20 @@ class MenuScreen extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
-                      minimumSize: Size(300,50),
-                      side: BorderSide(
-                          color: Colors.white,
-                          width: 2.0
-                      ),
+                      minimumSize: Size(300, 50),
+                      side: BorderSide(color: Colors.white, width: 2.0),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
                     child: Text(
                       'Return Home',
-                      style: const TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'Mplus', fontWeight: FontWeight.w400),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontFamily: 'Mplus',
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -91,18 +88,20 @@ class MenuScreen extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
-                      minimumSize: Size(300,50),
-                      side: BorderSide(
-                          color: Colors.white,
-                          width: 2.0
-                      ),
+                      minimumSize: Size(300, 50),
+                      side: BorderSide(color: Colors.white, width: 2.0),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
                     child: Text(
                       'Chapters',
-                      style: const TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'Mplus', fontWeight: FontWeight.w400),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontFamily: 'Mplus',
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -112,18 +111,20 @@ class MenuScreen extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
-                      minimumSize: Size(300,50),
-                      side: BorderSide(
-                          color: Colors.white,
-                          width: 2.0
-                      ),
+                      minimumSize: Size(300, 50),
+                      side: BorderSide(color: Colors.white, width: 2.0),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
                     child: Text(
                       'Sounds',
-                      style: const TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'Mplus', fontWeight: FontWeight.w400),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontFamily: 'Mplus',
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ),
                   SizedBox(height: 200),
@@ -134,18 +135,20 @@ class MenuScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
 
-                      minimumSize: Size(300,50),
-                      side: BorderSide(
-                          color: Colors.white,
-                          width: 2.0
-                      ),
+                      minimumSize: Size(300, 50),
+                      side: BorderSide(color: Colors.white, width: 2.0),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
                     child: Text(
                       'Close',
-                      style: const TextStyle(color: Colors.white, fontSize: 24, fontFamily: 'MPlus', fontWeight: FontWeight.w400),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontFamily: 'MPlus',
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ),
                 ],

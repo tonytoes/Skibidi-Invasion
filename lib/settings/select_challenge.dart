@@ -30,11 +30,12 @@ class _ChalSelectScreenState extends State<ChalSelectScreen> {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> challenge = [
-      {'title': 'Level 1', 'index': 0},
-      {'title': 'Level 2', 'index': 2},
-      {'title': 'Level 3', 'index': 3},
-      {'title': 'Level 4', 'index': 4},
+      {'title': 'Level 1', 'index': 0, 'requiredIndex': 13},
+      {'title': 'Level 2', 'index': 2, 'requiredIndex': 13},
+      {'title': 'Level 3', 'index': 3, 'requiredIndex': 13},
+      {'title': 'Level 4', 'index': 4, 'requiredIndex': 13},
     ];
+
 
     return Scaffold(
       backgroundColor: Colors.transparent,
@@ -69,7 +70,7 @@ class _ChalSelectScreenState extends State<ChalSelectScreen> {
                   ),
 
                   ...challenge.map((challenge) {
-                    bool isUnlocked = challenge['index'] <= _maxUnlockedIndex;
+                    bool isUnlocked = _maxUnlockedIndex >= (challenge['requiredIndex'] ?? 0);
                     return Padding(
                       padding: const EdgeInsets.only(left: 20.0, top: 10.0),
                       child: GestureDetector(
