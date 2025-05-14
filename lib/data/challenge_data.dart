@@ -1832,7 +1832,7 @@ class ChallengeData {
                                   },
                                   { // 139
                                     'dialogue': "Correct! 'The students forgot their books' is the right usage.",
-                                    'backgroundImage': 'assets/images/bg/library.jpg',
+                                    'backgroundImage': 'assets/images/bg/library1.jpg',
                                     'characterName': 'Mem',
                                     'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                   },
