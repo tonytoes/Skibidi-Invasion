@@ -693,7 +693,7 @@ class ChallengeData {
                                                                             },
                                                                             { // 52
                                                                               'dialogue': "Correct! Plants use sunlight, water, and carbon dioxide to make their food.",
-                                                                              'backgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/messyroom.jpg',
                                                                               'characterName': 'Mem',
                                                                               'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                                                             },
