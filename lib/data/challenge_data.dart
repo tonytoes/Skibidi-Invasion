@@ -616,26 +616,26 @@ class ChallengeData {
 //*SCIENCE INTRO
 { // 45
   'dialogue': "Welcome to Level 2 — Science Time!",
-  'backgroundImage': 'assets/images/bg/lab1.jpg',
+  'backgroundImage': 'assets/images/bg/inside9.jpg',
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
   'index': 45,
 },
 { // 46
   'dialogue': "Science helps us understand how the world works through observation and experiments.",
-  'backgroundImage': 'assets/images/bg/lab1.jpg',
+  'backgroundImage': 'assets/images/bg/inside9.jpg',
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
 { // 47
   'dialogue': "From gravity to plants to electricity — science is all around you.",
-  'backgroundImage': 'assets/images/bg/lab1.jpg',
+  'backgroundImage': 'assets/images/bg/inside9.jpg',
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
 { // 48
   'dialogue': "Are you ready to test your brain with science questions?",
-  'backgroundImage': 'assets/images/bg/lab1.jpg',
+  'backgroundImage': 'assets/images/bg/inside9.jpg',
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
@@ -655,7 +655,7 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Oxygen and sugar",
                                                                                   'nextDialogueIndex': 50,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'backgroundImage': 'assets/images/bg/messyroom.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -663,14 +663,14 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Sunlight, water, and carbon dioxide",
                                                                                   'nextDialogueIndex': 52,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'backgroundImage': 'assets/images/bg/messyroom.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': true,
                                                                                 },
                                                                                 {
                                                                                   'text': "Soil and heat",
                                                                                   'nextDialogueIndex': 51,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'backgroundImage': 'assets/images/bg/messyroom.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -679,7 +679,7 @@ class ChallengeData {
                                                                             },
                                                                             { // 50
                                                                               'dialogue': "Oxygen is a product, not an ingredient in photosynthesis.",
-                                                                              'backgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/messyroom.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 49,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
