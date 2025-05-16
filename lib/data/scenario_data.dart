@@ -93,7 +93,7 @@ class ScenarioData {
     {
       'dialogue': "Now that's all for us.", // index 10
       'backgroundImage': 'assets/images/bg/inside9.jpg',
-      'characterName': 'Developer',
+      'characterName': 'Developers',
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
     },
     {
@@ -130,7 +130,7 @@ class ScenarioData {
       'index': 13,
       'isChapterStart': true,
       'chapterTitle': 'Chapter 1: Intro',
-      'voiceover': 'assets/audio/voice/CH1/CH1-line1.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line1.mp3',
     },
     {
       'dialogue':
@@ -138,7 +138,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
-      'voiceover': 'assets/audio/voice/CH1/CH1-line2.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line2.mp3',
     },
     {
       'dialogue':
@@ -146,7 +146,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/sound/rappel.mp3',
-      'voiceover': 'assets/audio/voice/CH1/CH1-line3.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line3.mp3',
     },
     {
       'dialogue':
@@ -154,14 +154,13 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/gear2.mp3',
-      'voiceover': 'assets/audio/voice/CH1/CH1-line4.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line4.mp3',
     },
     {
       'dialogue': "Wha—?!", // index 17
       'backgroundImage': 'assets/images/bg/cutscene1.png',
       'characterName': 'You',
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
-      'voiceover': 'assets/audio/voice/CH1/CH1-line5.mp3',
     },
     {
       'dialogue':
@@ -170,7 +169,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/black screen.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/hit2.mp3',
-      'voiceover': 'assets/audio/voice/CH1/CH1-line6.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line5.mp3',
     },
     {
       'dialogue':
@@ -178,7 +177,7 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/inside5.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
-      'voiceover': 'assets/audio/voice/CH1/CH1-line7.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line6.mp3',
     },
     {
       'dialogue': "Hey! Kid..? You alright? I'm sorry for knocking you down, I thought you were infected with brainrot.",
@@ -192,9 +191,10 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/question.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line7.mp3',
     },
     {
-      'dialogue': "There is a crazy infection called Brainrot that's spreading throughout the city right now.",
+      'dialogue': "There is a crazy infection called brainrot that's spreading throughout the city right now.",
       // index 21
       'backgroundImage': 'assets/images/bg/inside5.jpg',
       'characterName': 'Girl',
@@ -205,6 +205,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line8.mp3',
     },    
     {
       'dialogue': "It's turning people into skibidi toilets! They infect people and rot their brains using loud music.",
@@ -218,6 +219,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/chat.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line9.mp3',
     },
     {
       'dialogue': "(The girl pauses for a moment, looking at you with a mixture of sympathy and curiousity)",
@@ -231,6 +233,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line10.mp3',
     },
     {
       'dialogue': "I thought you are about to turn into an infected because you were just standing still in the middle of a dangerous city.",
@@ -244,6 +247,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/sweat.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line11.mp3',
     },
     {
       'dialogue': "But you... you didn’t change. You’re still you. Somehow, you survived without getting infected.",
@@ -257,6 +261,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/bulb.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line12.mp3',
     },
     {
       'dialogue': "Hey... I need your help...", // index 26
@@ -269,6 +274,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/respond.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line13.mp3',
     },
     {
       'dialogue': "I am planning to save this city from brainrot.", // index 27
@@ -281,6 +287,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/shy.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line14.mp3',
     },
     {
       'dialogue': "But i can't do it alone.", // index 28
@@ -293,12 +300,14 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/sad.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line15.mp3',
     },
     {
       'dialogue': "Will you join me and help stop this skibidi infection?",
       // index 29
       'backgroundImage': 'assets/images/bg/inside5.jpg',
       'characterName': 'Girl',
+      'voiceover': 'assets/audio/voice/CH1-line16.mp3',
       'characters': [
         {
           'sprite': 'assets/images/characters/pose1/164.png',
@@ -335,6 +344,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line17.mp3',
     },
     {
       'dialogue': "My name is Meguri, but you can call me Mem. My name sounds similar to the word 'memory'.",
@@ -348,6 +358,7 @@ class ScenarioData {
       ],
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/shy.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line18.mp3',
     },
     {
       'dialogue': "The infected are called as Skibdi Toilets, because they're humans transformed into human-headed toilets..",
@@ -361,6 +372,7 @@ class ScenarioData {
       ],
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/think.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line19.mp3',
     },
     {
       'dialogue': "They infect people with brainrot disease using their loud skibidi music...",
@@ -374,6 +386,7 @@ class ScenarioData {
       ],
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/upset.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line20.mp3',
     },
     {
       'dialogue': "Avoid prolonged exposure to skibidi music to prevent being infected.",
@@ -386,6 +399,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/respond.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line21.mp3',
       'characterName': 'Mem',
     },
     {
@@ -399,6 +413,7 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line22.mp3',
       'characterName': 'Mem',
     },
     {
@@ -412,12 +427,14 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/ding.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line23.mp3',
       'characterName': 'Mem',
     },
     {
       'dialogue': "(You followed Mem and walked to another room)", // index 37
       'backgroundImage': 'assets/images/bg/black screen.png',
       'sfx': 'assets/audio/sfx/action/footstep6.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line24.mp3',
       'characterName': '',
     },
     {
@@ -425,8 +442,9 @@ class ScenarioData {
   // index 38
   'backgroundImage': 'assets/images/bg/messyroom.jpg',
   'sfx': 'assets/audio/sfx/action/dooropen1.mp3',
+      'voiceover': 'assets/audio/voice/CH1-line25.mp3',
   'characterName': '',
-},
+  },
 {
   'dialogue': "Alright! To see if you can survive against the infection, we must see how sharp your brain is!",
   // index 39
@@ -439,6 +457,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/ding.mp3',
+  'voiceover': 'assets/audio/voice/CH1-line26.mp3',
 },
 {
   'dialogue': "We need to go outside and find the source of the infection.",
@@ -452,6 +471,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/upset.mp3',
+  'voiceover': 'assets/audio/voice/CH1-line27.mp3',
 },
 {
   'dialogue': "Skibidi Toilet’s weakness are correct facts and grammars.",
@@ -465,6 +485,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/chat.mp3',
+  'voiceover': 'assets/audio/voice/CH1-line28.mp3',
 },
 {
   'dialogue': "It hurts their rotten brains. They flush themselves when you attack them with it.",
@@ -478,6 +499,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/ding.mp3',
+  'voice': 'assets/audio/voice/CH1-line29.mp3'
 },
 {
   'dialogue': "Get the answers right, and you’ll defeat them!", // index 43
@@ -490,6 +512,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/bulb.mp3',
+  'voice': 'assets/audio/voice/CH1-line30.mp3'
 },
 {
   'dialogue': "You have 3 hearts!", // index 44
@@ -502,6 +525,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/think.mp3',
+  'voice': 'assets/audio/voice/CH1-line31.mp3'
 },
 {
   'dialogue': "Mess up three times, and it's game over. So, get ready to think.",
@@ -515,6 +539,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/sigh.mp3',
+  'voice': 'assets/audio/voice/CH1-line32.mp3'
 },
 {
   'dialogue': "Here comes your first question! Pick the sentence that’s written right.",
@@ -528,6 +553,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/question.mp3',
+  'voice': 'assets/audio/voice/CH1-line33.mp3',
 },
 {
   'dialogue': "Alright let's go!", // index 47
@@ -540,6 +566,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/cartoon.mp3',
+  'voice': 'assets/audio/voice/CH1-line34.mp3',
 },
 
 
@@ -561,6 +588,7 @@ class ScenarioData {
                                                   ],
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+                                                  'voice': 'assets/audio/voice/qs1.mp3',
                                                   'isQuestion': true,
                                                   'choices': [
                                                     {
@@ -589,7 +617,7 @@ class ScenarioData {
                                                   ],
                                                 },
                                                 { // 49
-                                                  'dialogue': "You’ve lost one of your lives! Stay sharp",
+                                                  'dialogue': "You’ve got three lives! Lose all three, and we start over!",
                                                   'backgroundImage': 'assets/images/bg/messyroom.jpg',
                                                   'characters': [
                                                     {
@@ -600,6 +628,7 @@ class ScenarioData {
                                                   'characterName': 'Mem',
                                                   'incorrectChoiceGoTo': 48,
                                                   'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                  'voice': 'assets/audio/voice/fdb1.mp3',
                                                 },
                                                 { // 50
                                                   'dialogue': "You’ve got three lives! Lose all three, and we start over!",
@@ -613,6 +642,7 @@ class ScenarioData {
                                                   'characterName': 'Mem',
                                                   'incorrectChoiceGoTo': 48,
                                                   'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                  'voice': 'assets/audio/voice/fdb1.mp3',
                                                 },
                                                 { // 51
                                                   'dialogue': "Correct! That's how we do it!!",
@@ -626,6 +656,7 @@ class ScenarioData {
                                                   ],
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                  'voice': 'assets/audio/voice/crc1.mp3',
                                                 },
 //*QUESTION 2
                                                 { // 52
@@ -634,6 +665,7 @@ class ScenarioData {
                                                   'characters': [{'sprite': 'assets/images/characters/pose1/141.png','position': 'right', }],
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/emotion/thinking.mp3',
+                                                  'voice': 'assets/audio/voice/qs2.mp3',
                                                   'isQuestion': true,
                                                   'choices': [
                                                     {
@@ -669,6 +701,7 @@ class ScenarioData {
                                                       'sprite': 'assets/images/characters/pose1/143.png',
                                                       'position': 'right',
                                                       'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                                      'voice': 'assets/audio/voice/fdb4.mp3',
                                                     }
                                                   ],
                                                   'characterName': 'Mem',
@@ -687,6 +720,7 @@ class ScenarioData {
                                                   'characterName': 'Mem',
                                                   'incorrectChoiceGoTo': 52,
                                                   'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                  'voice': 'assets/audio/voice/fdb2.mp3',
                                                 },
                                                 { // 55
                                                   'dialogue': "Correct! 'They are cleaning' matches the subject and tense!",
@@ -700,6 +734,7 @@ class ScenarioData {
                                                   ],
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                  'voice': 'assets/audio/voice/crc2.mp3',
                                                 },
 //*QUESTION 3
                                                 { // 56
@@ -713,6 +748,7 @@ class ScenarioData {
                                                   ],
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                                  'voice': 'assets/audio/voice/question3.mp3',
                                                   'isQuestion': true,
                                                   'choices': [
                                                     {
@@ -752,6 +788,7 @@ class ScenarioData {
                                                   'characterName': 'Mem',
                                                   'incorrectChoiceGoTo': 56,
                                                   'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                  'voice': 'assets/audio/voice/fdb3.mp3',
                                                 },
                                                 { // 58
                                                   'dialogue': "Yes! 'She had already eaten' — that’s the past perfect form!",
@@ -765,6 +802,7 @@ class ScenarioData {
                                                   ],
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                  'voice': 'assets/audio/voice/crc3.mp3',
                                                 },
 //*QUESTION 4
                                                 { // 59
@@ -778,6 +816,7 @@ class ScenarioData {
                                                   ],
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/emotion/thinking.mp3',
+                                                  'voice': 'assets/audio/voice/question4.mp3',
                                                   'isQuestion': true,
                                                   'choices': [
                                                     {
@@ -817,6 +856,7 @@ class ScenarioData {
                                                   'characterName': 'Mem',
                                                   'incorrectChoiceGoTo': 59,
                                                   'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                  'voice': 'assets/audio/voice/fdb5.mp3',
                                                 },
                                                 { // 61
                                                   'dialogue': "Nice! 'An apple' is correct. You nailed it!",
@@ -830,6 +870,7 @@ class ScenarioData {
                                                   ],
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                  'voice': 'assets/audio/voice/crc5.mp3',
                                                 },
 
 //!=================================================QUESTIONS!===================================================//
@@ -850,7 +891,7 @@ class ScenarioData {
   'sfx': 'assets/audio/sfx/emotion/heart.mp3',
 },
 { // 63
-  'dialogue': "Congrats on completing the tutorial!!",
+  'dialogue': "Congrats on completing the tutorial!",
   'nextDialogueIndex': 64,
   'backgroundImage': 'assets/images/bg/messyroom.jpg',
   'characters': [
@@ -963,6 +1004,7 @@ class ScenarioData {
   'sfx': 'assets/audio/sfx/action/footstep2.mp3',
   'isChapterStart': true,
   'chapterTitle': 'Chapter 2: Library',
+  'voice': 'assets/audio/voice/CH2-line1.mp3',
 
 },
 { // 68
@@ -976,6 +1018,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/sound/skibidi1.mp3',
+  'voice': 'assets/audio/voice/CH2-line2.mp3',
 },
 { // 69
   'dialogue': "Stay alert.",
@@ -988,6 +1031,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/respond.mp3',
+  'voice': 'assets/audio/voice/CH2-line3.mp3',
 },
 { // 70
   'dialogue': "Let’s head towards the library. We can reach the laboratory faster if we go through there.",
@@ -1000,24 +1044,28 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/chat.mp3',
+  'voice': 'assets/audio/voice/CH2-line4.mp3',
 },
 { // 71
   'dialogue': "The two of you walked towards the direction of the library.",
   'backgroundImage': 'assets/images/bg/black screen.png',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/footstep2.mp3',
+  'voice': 'assets/audio/voice/CH2-line5.mp3',
 },
 { // 72
   'dialogue': "We are finally here at the library entrance.",
   'backgroundImage': 'assets/images/bg/black screen.png',
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'voice': 'assets/audio/voice/CH2-line6.mp3',
 },
 { // 73
   'dialogue': "Oh no, a skibidi toilet is blocking the door.",
   'backgroundImage': 'assets/images/bg/cutscene2.png',
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/sound/skibidi2.mp3',
+  'voice': 'assets/audio/voice/CH2-line7.mp3',
 },
 { // 74
   'dialogue': "We have no choice but to fight it!",
@@ -1030,6 +1078,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/upset.mp3',
+  'voice': 'assets/audio/voice/CH2-line8.mp3',
 },
 { // 75
   'dialogue': "Skibidi dop dop dop yiz yiz skibidi skibidi skibidi—",
@@ -1042,6 +1091,7 @@ class ScenarioData {
   ],
   'characterName': 'Skibidi Toilet',
   'sfx': 'assets/audio/sfx/sound/skibidi3.mp3',
+  'voice': 'assets/audio/voice/CH2-line9.mp3',
 },
 { // 76
   'dialogue': "As you can see, they are suffering from brainrotting infection and can only say nonsense words.",
@@ -1058,6 +1108,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/upset.mp3',
+  'voice': 'assets/audio/voice/CH2-line10.mp3',
 },
 { // 77
   'dialogue': "Oh no! It saw us!",
@@ -1070,6 +1121,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/sound/alert.mp3',
+  'voice': 'assets/audio/voice/CH2-line11.mp3',
 },
 { // 78
   'dialogue': "They're afraid of correct grammar and facts, attack him with this sentence! Quick!!",
@@ -1086,6 +1138,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/sound/skibidi3.mp3',
+  'voice': 'assets/audio/voice/CH2-line12.mp3',
 },
 
 //!=================================================QUESTIONS!===================================================//
@@ -1108,6 +1161,7 @@ class ScenarioData {
                                                 ],
                                                 'characterName': 'Mem',
                                                 'sfx': 'assets/audio/sfx/sound/skibidi3.mp3',
+                                                'voice': 'assets/audio/voice/qs-line1.mp3',
                                                 'isQuestion': true,
                                                 'choices': [
                                                   {
@@ -1136,7 +1190,7 @@ class ScenarioData {
                                                 ],
                                               },
                                               { // 80
-                                                'dialogue': "WRONG",
+                                                'dialogue': "Wrong!",
                                                 'backgroundImage': 'assets/images/bg/door2.jpg',
                                                 'characters': [
                                                   {
@@ -1150,10 +1204,11 @@ class ScenarioData {
                                                 ],
                                                 'characterName': 'Mem',
                                                 'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                'voice': 'assets/audio/voice/qs-line2.mp3',
                                                 'incorrectChoiceGoTo': 79,
                                               },
                                               { // 81
-                                                'dialogue': "WRONG",
+                                                'dialogue': "Wrong!",
                                                 'backgroundImage': 'assets/images/bg/door2.jpg',
                                                 'characters': [
                                                   {
@@ -1167,6 +1222,7 @@ class ScenarioData {
                                                 ],
                                                 'characterName': 'Mem',
                                                 'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                'voice': 'assets/audio/voice/qs-line2.mp3',
                                                 'incorrectChoiceGoTo': 79,
                                               },
                                               { // 82
@@ -1184,6 +1240,7 @@ class ScenarioData {
                                                 ],
                                                 'characterName': 'Mem',
                                                 'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                'voice': 'assets/audio/voice/qs-line3.mp3',
                                               },
 //*QUESTION 2
                                               { // 83
@@ -1201,6 +1258,7 @@ class ScenarioData {
                                                 ],
                                                 'characterName': 'Mem',
                                                 'sfx': 'assets/audio/sfx/sound/skibidi3.mp3',
+                                                'voice': 'assets/audio/voice/qs-line4.mp3',
                                                 'isQuestion': true,
                                                 'choices': [
                                                   {
@@ -1229,7 +1287,7 @@ class ScenarioData {
                                                 ],
                                               },
                                               { // 84
-                                                'dialogue': "WRONG",
+                                                'dialogue': "Wrong",
                                                 'backgroundImage': 'assets/images/bg/door2.jpg',
                                                 'characters': [
                                                   {
@@ -1243,10 +1301,11 @@ class ScenarioData {
                                                 ],
                                                 'characterName': 'Mem',
                                                 'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                'voice': 'assets/audio/voice/qs-line5.mp3',
                                                 'incorrectChoiceGoTo': 83,
                                               },
                                               { // 85
-                                                'dialogue': "WRONG",
+                                                'dialogue': "Wrong",
                                                 'backgroundImage': 'assets/images/bg/door2.jpg',
                                                 'characters': [
                                                   {
@@ -1260,6 +1319,7 @@ class ScenarioData {
                                                 ],
                                                 'characterName': 'Mem',
                                                 'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                'voice': 'assets/audio/voice/qs-line5.mp3',
                                                 'incorrectChoiceGoTo': 83,
                                               },
                                               { // 86
@@ -1277,6 +1337,7 @@ class ScenarioData {
                                                 ],
                                                 'characterName': 'Mem',
                                                 'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                'voice': 'assets/audio/voice/qs-line6.mp3',
                                               },
 
 //!=================================================QUESTIONS!===================================================//
@@ -1294,6 +1355,7 @@ class ScenarioData {
   ],
   'characterName': 'Skibidi Toilet',
   'sfx': 'assets/audio/sfx/sound/rah.mp3',
+  'voice': 'assets/audio/voice/qs-line7.mp3',
 },
 
 {
@@ -1307,6 +1369,7 @@ class ScenarioData {
   ],
   'characterName': 'Skibidi Toilet',
   'sfx': 'assets/audio/sfx/sound/flush.mp3',
+  'voice': 'assets/audio/voice/qs-line8.mp3',
 },
 
 {
@@ -1325,6 +1388,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'voice': 'assets/audio/voice/qs-line9.mp3',
 },
 
 {
@@ -1339,6 +1403,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/chat.mp3',
+  'voice': 'assets/audio/voice/qs-line10.mp3',
 },
 
 {
@@ -1352,6 +1417,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/respond.mp3',
+  'voice': 'assets/audio/voice/qs-line11.mp3',
 },
 
 {
@@ -1360,6 +1426,7 @@ class ScenarioData {
   'backgroundImage': 'assets/images/bg/black screen.png',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/dooropen1.mp3',
+  'voice': 'assets/audio/voice/qs-line12.mp3',
 },
 
 {
@@ -1374,6 +1441,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'voice': 'assets/audio/voice/CH2-line13.mp3',
 },
 
 {
@@ -1387,6 +1455,7 @@ class ScenarioData {
   ],
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/switch.mp3',
+  'voice': 'assets/audio/voice/CH2-line14.mp3',
 },
 
 {
@@ -1400,6 +1469,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'voice': 'assets/audio/voice/CH2-line15.mp3',
 },
 
 {
@@ -1414,6 +1484,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/chat.mp3',
+  'voice': 'assets/audio/voice/CH2-line16.mp3',
 },
 
 {
@@ -1428,6 +1499,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
+  'voice': 'assets/audio/voice/CH2-line17.mp3',
 },
 
 {
@@ -1435,6 +1507,7 @@ class ScenarioData {
   'backgroundImage': 'assets/images/bg/cutscene3.png',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/gear2.mp3',
+  'voice': 'assets/audio/voice/CH2-line18.mp3',
 },
 
 {
@@ -1442,6 +1515,7 @@ class ScenarioData {
   'backgroundImage': 'assets/images/bg/cutscene3.png',
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/respond.mp3',
+  'voice': 'assets/audio/voice/CH2-line19.mp3',
 },
 
 {
@@ -1450,10 +1524,11 @@ class ScenarioData {
   'backgroundImage': 'assets/images/bg/cutscene3.png',
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/chat.mp3',
+  'voice': 'assets/audio/voice/CH2-line20.mp3',
 },
 
 {
-  'dialogue': "pay attention to your hearts and only choose the correct answer.",
+  'dialogue': "Pay attention to your hearts and only choose the correct answer.",
   // index 101
   'backgroundImage': 'assets/images/bg/cutscene3.png',
   'characters': [
@@ -1464,6 +1539,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
+  'voice': 'assets/audio/voice/CH2-line21.mp3',
 },
 
 {
@@ -1477,6 +1553,7 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
+  'voice': 'assets/audio/voice/CH2-line22.mp3',
 },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -1494,6 +1571,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line23.mp3',
                                                     'isQuestion': true,
                                                     'choices': [
                                                       {
@@ -1523,7 +1601,7 @@ class ScenarioData {
                                                   },
 
                                                   {
-                                                    'dialogue': "oops, that is wrong.", // index 104
+                                                    'dialogue': "Oops, that is wrong.", // index 104
                                                     'backgroundImage': 'assets/images/bg/library2.jpg',
                                                     'characters': [
                                                       {
@@ -1533,11 +1611,12 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line24.mp3',
                                                     'incorrectChoiceGoTo': 103,
                                                   },
 
                                                   {
-                                                    'dialogue': "oops, that is wrong.", // index 105
+                                                    'dialogue': "Oops, that is wrong.", // index 105
                                                     'backgroundImage': 'assets/images/bg/library2.jpg',
                                                     'characters': [
                                                       {
@@ -1547,6 +1626,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line24.mp3',
                                                     'incorrectChoiceGoTo': 103,
                                                   },
 
@@ -1562,10 +1642,11 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line25.mp3',
                                                   },
 
                                                   {
-                                                    'dialogue': "Next Question!", // index 107
+                                                    'dialogue': "Next question!", // index 107
                                                     'backgroundImage': 'assets/images/bg/library2.jpg',
                                                     'characters': [
                                                       {
@@ -1575,6 +1656,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/emotion/respond.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line26.mp3',
                                                   },
 
 
@@ -1590,6 +1672,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line27.mp3',
                                                     'isQuestion': true,
                                                     'choices': [
                                                       {
@@ -1630,6 +1713,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line28.mp3',
                                                     'incorrectChoiceGoTo': 108,
                                                   },
 
@@ -1644,6 +1728,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line29mp3',
                                                     'incorrectChoiceGoTo': 108,
                                                   },
 
@@ -1659,10 +1744,11 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line30.mp3',
                                                   },
 
                                                   {
-                                                    'dialogue': "Next Question!", // index 112
+                                                    'dialogue': "Next question!", // index 112
                                                     'backgroundImage': 'assets/images/bg/library2.jpg',
                                                     'characters': [
                                                       {
@@ -1672,6 +1758,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/emotion/respond.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line31.mp3',
                                                   },
 
 
@@ -1687,6 +1774,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line32.mp3',
                                                     'isQuestion': true,
                                                     'choices': [
                                                       {
@@ -1727,6 +1815,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line33.mp3',
                                                     'incorrectChoiceGoTo': 113,
                                                   },
 
@@ -1741,6 +1830,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/wrong.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line34.mp3',
                                                     'incorrectChoiceGoTo': 113,
                                                   },
 
@@ -1756,6 +1846,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line35.mp3',
                                                   },
 //*QUESTION 4
                                                   {
@@ -1769,6 +1860,7 @@ class ScenarioData {
                                                     ],
                                                     'characterName': 'Mem',
                                                     'sfx': 'assets/audio/sfx/emotion/question.mp3',
+                                                    'voice': 'assets/audio/voice/CH2-line36.mp3',
                                                     'isQuestion': true,
                                                     'choices': [
                                                       {
@@ -2015,14 +2107,14 @@ class ScenarioData {
 },
 
 {
-  'dialogue': "(walking)", // index 128
+  'dialogue': "(Walking)", // index 128
   'backgroundImage': 'assets/images/bg/outside6.jpg',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/footstep6.mp3',
 },
 
 {
-  'dialogue': "This place is a mess", // index 129
+  'dialogue': "This place is a mess..", // index 129
   'backgroundImage': 'assets/images/bg/outside6.jpg',
   'characters': [
     {
@@ -2119,13 +2211,13 @@ class ScenarioData {
   'sfx': 'assets/audio/sfx/emotion/question.mp3',
   'choices': [
     {
-      'text': "I don’t think we can win",
+      'text': "I don’t think we can win..",
       'nextDialogueIndex': 135,
       'isCorrect': null,
       'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
     },
     {
-      'text': "no",
+      'text': "No",
       'nextDialogueIndex': 135,
       'isCorrect': null,
       'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
@@ -2326,7 +2418,7 @@ class ScenarioData {
 },
 
 {
-  'dialogue': "let's go and explore this place, we might be able to find clues about the skibidi king.", // index 153
+  'dialogue': "Let's go and explore this place, we might be able to find clues about the skibidi king.", // index 153
   'backgroundImage': 'assets/images/bg/hallway4.jpg',
   'characters': [{'sprite': 'assets/images/characters/pose1/112.png','position': 'right'}],
   'characterName': 'Mem',
@@ -2334,7 +2426,7 @@ class ScenarioData {
 },
 
 {
-  'dialogue': "(walking)", // index 154
+  'dialogue': "(Walking)", // index 154
   'backgroundImage': 'assets/images/bg/b12.jpg',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/footstep1.mp3',
@@ -2349,7 +2441,7 @@ class ScenarioData {
 },
 
 {
-  'dialogue': "(walking)", // index 156
+  'dialogue': "(Walking)", // index 156
   'backgroundImage': 'assets/images/bg/b11.jpg',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/footstep2.mp3',
@@ -2364,7 +2456,7 @@ class ScenarioData {
 },
 
 {
-  'dialogue': "(enters a room)", // index 158
+  'dialogue': "(Enters a room)", // index 158
   'backgroundImage': 'assets/images/bg/b10.jpg',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/dooropen3.mp3',
@@ -2387,7 +2479,7 @@ class ScenarioData {
 },
 
 {
-  'dialogue': "(enters a science laboratory room)", // index 161
+  'dialogue': "(Enters a science laboratory room)", // index 161
   'backgroundImage': 'assets/images/bg/b3.jpg',
   'characterName': '',
   'sfx': 'assets/audio/sfx/action/dooropen3.mp3',
@@ -2678,7 +2770,7 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
   	},
     {
-      'dialogue':"(you and Mem left the science lab)", // index 184
+      'dialogue':"(You and Mem left the science lab)", // index 184
       'backgroundImage': 'assets/images/bg/black screen.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/dooropen3.mp3',
@@ -2691,7 +2783,7 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/emotion/cartoon.mp3',
   	},
     {
-      'dialogue':"(you followed Mem)", // index 186
+      'dialogue':"(You followed Mem)", // index 186
       'backgroundImage': 'assets/images/bg/b11.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep2.mp3',
@@ -2767,7 +2859,7 @@ class ScenarioData {
   'sfx': 'assets/audio/sfx/action/gear2.mp3',
 },
 {
-  'dialogue':"alright, lets see what's inside.", // index 193
+  'dialogue':"Alright, lets see what's inside.", // index 193
   'backgroundImage': 'assets/images/bg/cutscene7.png',
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/action/typing1.mp3',
@@ -2779,7 +2871,7 @@ class ScenarioData {
   'sfx': 'assets/audio/sfx/sound/wrong.mp3',
 },
 {
-  'dialogue':"the folders are locked.", // index 195
+  'dialogue':"The folders are locked.", // index 195
   'backgroundImage': 'assets/images/bg/cutscene8.png',
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/sigh.mp3',
@@ -2813,7 +2905,7 @@ class ScenarioData {
       'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
     },
     {
-      'text': "don't worry bebe girl, I'll help you",
+      'text': "Uhhh.. Sure I'll help!",
       'nextDialogueIndex': 199,
       'isCorrect': null,
       'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
@@ -2871,7 +2963,7 @@ class ScenarioData {
   'sfx': 'assets/audio/sfx/emotion/question.mp3',
   'choices': [
     {
-      'text': "Heck Yeah!",
+      'text': "Yeah!",
       'nextDialogueIndex': 206,
       'isCorrect': null,
       'nextBackgroundImage': 'assets/images/bg/computer10.jpg',
@@ -2973,8 +3065,8 @@ class ScenarioData {
                                         'characterName': 'Mem',
                                         'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                       },
-                                      { 
-                                        'dialogue': "Next Question!",  // index 213
+                                      {
+                                        'dialogue': "Next question!",  // index 213
                                         'backgroundImage': 'assets/images/bg/computer10.jpg',
                                         'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                         'characterName': 'Mem',
@@ -3031,7 +3123,7 @@ class ScenarioData {
                                         'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                       },
                                       { 
-                                        'dialogue': "Next Question!",  // index 217
+                                        'dialogue': "Next question!",  // index 217
                                         'backgroundImage': 'assets/images/bg/computer10.jpg',
                                         'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                         'characterName': 'Mem',
@@ -3182,7 +3274,7 @@ class ScenarioData {
                                             'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
                                           { 
-                                          'dialogue': "Next Question!",  // index 229
+                                          'dialogue': "Next question!",  // index 229
                                           'backgroundImage': 'assets/images/bg/computer10.jpg',
                                           'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                           'characterName': 'Mem',
@@ -3240,7 +3332,7 @@ class ScenarioData {
                                             'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
                                           { 
-                                          'dialogue': "Next Question!",  // index 233
+                                          'dialogue': "Next question!",  // index 233
                                           'backgroundImage': 'assets/images/bg/computer10.jpg',
                                           'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                           'characterName': 'Mem',
@@ -3391,7 +3483,7 @@ class ScenarioData {
                                             'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
                                           { 
-                                          'dialogue': "Next Question!",  // index 245
+                                          'dialogue': "Next question!",  // index 245
                                           'backgroundImage': 'assets/images/bg/computer10.jpg',
                                           'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                           'characterName': 'Mem',
@@ -3449,7 +3541,7 @@ class ScenarioData {
                                             'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
                                           { 
-                                          'dialogue': "Next Question!",  // index 249
+                                          'dialogue': "Next question!",  // index 249
                                           'backgroundImage': 'assets/images/bg/computer10.jpg',
                                           'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                           'characterName': 'Mem',
@@ -3600,7 +3692,7 @@ class ScenarioData {
                                             'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
                                           { 
-                                          'dialogue': "Next Question!",  // index 261
+                                          'dialogue': "Next question!",  // index 261
                                           'backgroundImage': 'assets/images/bg/computer10.jpg',
                                           'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                           'characterName': 'Mem',
@@ -3657,7 +3749,7 @@ class ScenarioData {
                                             'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                           },
                                           { 
-                                          'dialogue': "Next Question!",  // index 265
+                                          'dialogue': "Next question!",  // index 265
                                           'backgroundImage': 'assets/images/bg/computer10.jpg',
                                           'characters': [{'sprite': 'assets/images/characters/pose1/151.png','position': 'right'}],
                                           'characterName': 'Mem',
@@ -3826,7 +3918,7 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
 }, 
 {
-      'dialogue':"walking here in the open area is dangerous.", // index 281
+      'dialogue':"Walking here in the open area is dangerous.", // index 281
       'characters': [{'sprite': 'assets/images/characters/pose1/143.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/b9.jpg',
       'characterName': 'Mem',
@@ -3841,7 +3933,7 @@ class ScenarioData {
 }, 
 
 {
-      'dialogue':"(walking)", // index 283
+      'dialogue':"(Walking)", // index 283
       'backgroundImage': 'assets/images/bg/b8.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
@@ -3864,7 +3956,7 @@ class ScenarioData {
 
 
 {
-      'dialogue':"(walking)", // index 286
+      'dialogue':"(Walking)", // index 286
       'backgroundImage': 'assets/images/bg/outside3.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
@@ -3879,7 +3971,7 @@ class ScenarioData {
 }, 
 
 {
-      'dialogue':"(walking)", // index 288
+      'dialogue':"(Walking)", // index 288
       'backgroundImage': 'assets/images/bg/school.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
@@ -3907,20 +3999,20 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/emotion/heart.mp3',
 }, 
 {
-      'dialogue':"(you and mem entered the school)", // index 292
+      'dialogue':"(You and mem entered the school)", // index 292
       'backgroundImage': 'assets/images/bg/black screen.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/footstep1.mp3',
 }, 
 {
-      'dialogue':"we are finally inside the school.", // index 293
+      'dialogue':"We are finally inside the school.", // index 293
       'characters': [{'sprite': 'assets/images/characters/pose2/222.png','position': 'right' }],
       'backgroundImage': 'assets/images/bg/hallway1.jpg',
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
 {
-      'dialogue':"(you and mem heard a strange noise upstairs)", // index 294
+      'dialogue':"(You and mem heard a strange noise upstairs)", // index 294
       'backgroundImage': 'assets/images/bg/hallway1.jpg',
       'characters': [{'sprite': 'assets/images/characters/pose1/114.png','position': 'right' }],
       'characterName': '',
@@ -3973,7 +4065,7 @@ class ScenarioData {
       'sfx': 'assets/audio/sfx/sound/skibidi3.mp3',
 },
 {
-      'dialogue':"ummm...", // index 302
+      'dialogue':"Ummm...", // index 302
       'backgroundImage': 'assets/images/bg/cutscene9.png',
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
@@ -4802,7 +4894,8 @@ class ScenarioData {
       'characters': [{'sprite': 'assets/images/characters/pose1/114.png','position': 'right' }, 
       ],
       'characterName': 'Mem', 
-      'sfx': 'assets/audio/sfx/emotion/dot.mp3',    
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      'bgm': 'ss',
 },
 {
       'dialogue':"hey...", // index 359
@@ -4816,26 +4909,28 @@ class ScenarioData {
       'dialogue':"Thanks to you...", // index 360
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
-      'bgm': 'ss', 
-      'sfx': 'assets/audio/bgm/sad.mp3',   
+      'bgm': 'assets/audio/bgm/sad.mp3',
   
 },
 {
       'dialogue':"This city was saved from being consumed by brainrot infection.", // index 361
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
+      'bgm': 'assets/audio/bgm/sad.mp3',
       //'sfx': 'assets/audio/sfx/emotion/question.mp3',    
 },
 {
       'dialogue':"Every infected are slowly disappearing one by one...", // index 362
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
+      'bgm': 'assets/audio/bgm/sad.mp3',
       //'sfx': 'assets/audio/bgm/sad.mp3',    
 },
 {
       'dialogue':"But...", // index 363
       'backgroundImage': 'assets/images/bg/cutscene12.png',
       'characterName': 'Mem',
+     'bgm': 'assets/audio/bgm/sad.mp3',
       //'sfx': 'assets/audio/bgm/sad.mp3',    
       //'sfx': 'assets/audio/sfx/emotion/dot.mp3', 
 },
@@ -4843,7 +4938,7 @@ class ScenarioData {
       'dialogue':"There is something i did not tell you...", // index 364
       'backgroundImage': 'assets/images/bg/cutscene12.png',
       'characterName': 'Mem',
-    
+      'bgm': 'assets/audio/bgm/sad.mp3',
 },
 
 {
@@ -4858,8 +4953,9 @@ class ScenarioData {
         'nextDialogueIndex': 366,
         'isCorrect': null,
         'nextBackgroundImage': 'assets/images/bg/outside6.jpg',
-      }
-    ]
+      },
+    ],
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 
 
@@ -4867,31 +4963,36 @@ class ScenarioData {
       'dialogue':"I'm actually infected since the first time we met.", // index 366
       'backgroundImage': 'assets/images/bg/cutscene12.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      //'sfx': 'assets/audio/bgm/sad.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"I,ve been resisting it all this time...", // index 367
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      //'sfx': 'assets/audio/bgm/sad.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"But it's finally reaching my brain...", // index 368
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      //'sfx': 'assets/audio/bgm/sad.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"I dont have much time left...", // index 369
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      //'sfx': 'assets/audio/bgm/sad.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"Soon I will also disappear just like the other infected...", // index 370
       'backgroundImage': 'assets/images/bg/cutscene10.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/sad.mp3',    
+      //'sfx': 'assets/audio/bgm/sad.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
       'showLives': false,
       'choices': [
       {
@@ -4912,111 +5013,134 @@ class ScenarioData {
       'dialogue':"it's too late for that now...", // index 371
       'backgroundImage': 'assets/images/bg/cutscene13.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"Thank you so much....", // index 372
       'backgroundImage': 'assets/images/bg/cutscene11.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"Thank you for helping me throughout this journey...", // index 373
       'backgroundImage': 'assets/images/bg/cutscene11.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
   'dialogue': "Even though I know that...", // index 373
   'backgroundImage': 'assets/images/bg/cutscene11.png',
   'characterName': 'Mem',
-  //'sfx': 'assets/audio/bgm/a.mp3',    
+  //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
   'dialogue': "to you, this is just a short and boring journey...", // index 373
   'backgroundImage': 'assets/images/bg/cutscene11.png',
   'characterName': 'Mem',
-  //'sfx': 'assets/audio/bgm/a.mp3',    
+  //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
   'dialogue': "For me, every single moment was precious.", // index 373
   'backgroundImage': 'assets/images/bg/cutscene11.png',
   'characterName': 'Mem',
-  //'sfx': 'assets/audio/bgm/a.mp3',    
+  //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"Thank you to all the memories I,ve had with you until now...", // index 374
       'backgroundImage': 'assets/images/bg/cutscene11.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"I will never forget you...", // index 375
       'backgroundImage': 'assets/images/bg/cutscene13.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"So please don't forget me either...", // index 376
       'backgroundImage': 'assets/images/bg/cutscene13.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"....", // index 376
       'backgroundImage': 'assets/images/bg/cutscene11.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':".....", // index 377
       'backgroundImage': 'assets/images/bg/cutscene11.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/sfx/emotion/dot.mp3', 
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      'sfx': 'assets/audio/sfx/emotion/dot.mp3',
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
       'dialogue':"Goobye....", // index 378
       'backgroundImage': 'assets/images/bg/cutscene14.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
-      'dialogue':"player...", // index 379
+      'dialogue':"Player...", // index 379
       'backgroundImage': 'assets/images/bg/cutscene14.png',
       'characterName': 'Mem',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+      //'sfx': 'assets/audio/bgm/a.mp3',
+  'bgm': 'assets/audio/bgm/sad.mp3',
 },
 {
-      'dialogue':"", // index 380
-      'backgroundImage': 'assets/images/bg/cutscene15.png',
-      'characterName': '',
-      //'sfx': 'assets/audio/bgm/a.mp3',    
+  'dialogue':"Days, Months, and Years have passed by since the skibidi invasion", // index 380
+  'backgroundImage': 'assets/images/bg/black screen.png',
+  'characterName': '',
+  'bgm': 'ss',
+  //'sfx': 'assets/audio/bgm/a.mp3',
+},
+{
+  'dialogue':"I still remember the days we had..", // index 381
+  'backgroundImage': 'assets/images/bg/black screen.png',
+  'characterName': '',
+  //'sfx': 'assets/audio/bgm/a.mp3',
+},
+{
+  'dialogue':"I wish I had known sooner..", // index 382
+  'backgroundImage': 'assets/images/bg/black screen.png',
+  'characterName': '',
+  //'sfx': 'assets/audio/bgm/a.mp3',
+},
+{
+  'dialogue':"Still I'm grateful meeting you..", // index 383
+  'backgroundImage': 'assets/images/bg/black screen.png',
+  'characterName': '',
+  //'sfx': 'assets/audio/bgm/a.mp3',
+},
+{
+  'dialogue':"Thank you Mem...", // index 384
+  'backgroundImage': 'assets/images/bg/black screen.png',
+  'characterName': '',
+  //'sfx': 'assets/audio/bgm/a.mp3',
 },
 
-
 {
-      'dialogue':"", // index 382
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
-      //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
-},
-
-{
-      'dialogue':"", // index 383
+      'dialogue':"....", // index 385
       'chapterTitle': 'The End',
       'isChapterStart': true,
       'characterName': '',
+      'isCredits': true,
       //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
 },
-{
-      'dialogue':"", // index 384
-      'backgroundImage': 'assets/images/bg/black screen.png',
-      'characterName': '',
-      //'sfx': 'assets/audio/bgm/what Ive done.mp3',    
-},
-
-
 
 
   ];

@@ -578,6 +578,7 @@ class ChallengeData {
                                                   'backgroundImage': 'assets/images/bg/messyroom.jpg',
                                                   'characterName': 'Mem',
                                                   'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                  'isCredits': true,
                                                 },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -614,28 +615,28 @@ class ChallengeData {
 //?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?//?
 
 //*SCIENCE INTRO
-{ // 45
+{ // 47
   'dialogue': "Welcome to Level 2 — Science Time!",
-  'backgroundImage': 'assets/images/bg/lab1.jpg',
+  'backgroundImage': 'assets/images/bg/laboratory1.jpg',
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
   'index': 45,
 },
 { // 46
   'dialogue': "Science helps us understand how the world works through observation and experiments.",
-  'backgroundImage': 'assets/images/bg/lab1.jpg',
+  'backgroundImage': 'assets/images/bg/laboratory1.jpg',
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
 { // 47
   'dialogue': "From gravity to plants to electricity — science is all around you.",
-  'backgroundImage': 'assets/images/bg/lab1.jpg',
+  'backgroundImage': 'assets/images/bg/laboratory1.jpg',
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
 { // 48
   'dialogue': "Are you ready to test your brain with science questions?",
-  'backgroundImage': 'assets/images/bg/lab1.jpg',
+  'backgroundImage': 'assets/images/bg/laboratory1.jpg',
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
 },
@@ -655,7 +656,7 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Oxygen and sugar",
                                                                                   'nextDialogueIndex': 50,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -663,14 +664,14 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Sunlight, water, and carbon dioxide",
                                                                                   'nextDialogueIndex': 52,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': true,
                                                                                 },
                                                                                 {
                                                                                   'text': "Soil and heat",
                                                                                   'nextDialogueIndex': 51,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -679,21 +680,21 @@ class ChallengeData {
                                                                             },
                                                                             { // 50
                                                                               'dialogue': "Oxygen is a product, not an ingredient in photosynthesis.",
-                                                                              'backgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 49,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                                                             },
                                                                             { // 51
                                                                               'dialogue': "Soil helps plants grow, but it's not used in photosynthesis.",
-                                                                              'backgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 49,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                                                             },
                                                                             { // 52
                                                                               'dialogue': "Correct! Plants use sunlight, water, and carbon dioxide to make their food.",
-                                                                              'backgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                                                             },
@@ -811,7 +812,7 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Water",
                                                                                   'nextDialogueIndex': 62,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab3.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory13.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -819,14 +820,14 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Oxygen",
                                                                                   'nextDialogueIndex': 64,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab3.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory13.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': true,
                                                                                 },
                                                                                 {
                                                                                   'text': "Iron",
                                                                                   'nextDialogueIndex': 63,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab3.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory13.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -835,21 +836,21 @@ class ChallengeData {
                                                                             },
                                                                             { // 62
                                                                               'dialogue': "Water is a liquid at room temperature.",
-                                                                              'backgroundImage': 'assets/images/bg/lab3.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory13.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 61,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                                                             },
                                                                             { // 63
                                                                               'dialogue': "Iron is a solid metal, not a gas.",
-                                                                              'backgroundImage': 'assets/images/bg/lab3.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory13.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 61,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                                                             },
                                                                             { // 64
                                                                               'dialogue': "Right! Oxygen is a gas at room temperature.",
-                                                                              'backgroundImage': 'assets/images/bg/lab3.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory13.jpg',
                                                                               'characterName': 'Mem',
                                                                               'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                                                             },
@@ -1019,7 +1020,7 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Telescope",
                                                                                   'nextDialogueIndex': 78,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -1027,14 +1028,14 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Microscope",
                                                                                   'nextDialogueIndex': 80,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': true,
                                                                                 },
                                                                                 {
                                                                                   'text': "Periscope",
                                                                                   'nextDialogueIndex': 79,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -1043,21 +1044,21 @@ class ChallengeData {
                                                                             },
                                                                             { // 78
                                                                               'dialogue': "Telescope is for looking at stars, not tiny cells.",
-                                                                              'backgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 77,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                                                             },
                                                                             { // 79
                                                                               'dialogue': "Periscopes are used in submarines. Not for science!",
-                                                                              'backgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 77,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                                                             },
                                                                             { // 80
                                                                               'dialogue': "Correct! A microscope helps us see very small things.",
-                                                                              'backgroundImage': 'assets/images/bg/lab2.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                                                             },
@@ -1071,7 +1072,7 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Carbon Dioxide",
                                                                                   'nextDialogueIndex': 82,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/park.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -1079,14 +1080,14 @@ class ChallengeData {
                                                                                 {
                                                                                   'text': "Oxygen",
                                                                                   'nextDialogueIndex': 84,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/park.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': true,
                                                                                 },
                                                                                 {
                                                                                   'text': "Hydrogen",
                                                                                   'nextDialogueIndex': 83,
-                                                                                  'nextBackgroundImage': 'assets/images/bg/park.jpg',
+                                                                                  'nextBackgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                                   'characterName': 'Mem',
                                                                                   'isCorrect': false,
                                                                                   'loseLifeOnIncorrect': true,
@@ -1095,21 +1096,21 @@ class ChallengeData {
                                                                             },
                                                                             { // 82
                                                                               'dialogue': "Carbon dioxide is what we breathe out.",
-                                                                              'backgroundImage': 'assets/images/bg/park.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 81,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                                                             },
                                                                             { // 83
                                                                               'dialogue': "Hydrogen is explosive! Not for breathing.",
-                                                                              'backgroundImage': 'assets/images/bg/park.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'incorrectChoiceGoTo': 81,
                                                                               'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                                                             },
                                                                             { // 84
                                                                               'dialogue': "Yes! Oxygen keeps us alive.",
-                                                                              'backgroundImage': 'assets/images/bg/park.jpg',
+                                                                              'backgroundImage': 'assets/images/bg/laboratory1oratory1.jpg',
                                                                               'characterName': 'Mem',
                                                                               'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                                                             },
@@ -1164,6 +1165,7 @@ class ChallengeData {
                                                                               'backgroundImage': 'assets/images/bg/powerplant.jpg',
                                                                               'characterName': 'Mem',
                                                                               'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                                              'isCredits': true,
                                                                             },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -1733,6 +1735,7 @@ class ChallengeData {
                                                         'backgroundImage': 'assets/images/bg/classroom.jpg',
                                                         'characterName': 'Mem',
                                                         'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                                        'isCredits': true,
                                                       },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//
@@ -1757,25 +1760,25 @@ class ChallengeData {
   'dialogue': "Welcome to Level 4. This level is the ultimate challenge!",
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
-  'backgroundImage': 'assets/images/bg/laboratory.jpg',
+  'backgroundImage': 'assets/images/bg/laboratory1oratory.jpg',
 },
 { // 133
   'dialogue': "Here, you'll face a mix of English, Math, and Science questions.",
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
-  'backgroundImage': 'assets/images/bg/laboratory.jpg',
+  'backgroundImage': 'assets/images/bg/laboratory1oratory.jpg',
 },
 { // 134
   'dialogue': "These questions are tricky, but not impossible—just like real learning!",
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
-  'backgroundImage': 'assets/images/bg/laboratory.jpg',
+  'backgroundImage': 'assets/images/bg/laboratory1oratory.jpg',
 },
 { // 135
   'dialogue': "Use everything you've learned so far. Let’s begin!",
   'characterName': 'Developers',
   'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
-  'backgroundImage': 'assets/images/bg/laboratory.jpg',
+  'backgroundImage': 'assets/images/bg/laboratory1oratory.jpg',
 },
 
 //!=================================================QUESTIONS!===================================================//
@@ -2110,14 +2113,14 @@ class ChallengeData {
                                     {
                                       'text': "Solid",
                                       'nextDialogueIndex': 163,
-                                      'nextBackgroundImage': 'assets/images/bg/lab.jpg',
+                                      'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                       'characterName': 'Mem',
                                       'isCorrect': true,
                                     },
                                     {
                                       'text': "Gas",
                                       'nextDialogueIndex': 161,
-                                      'nextBackgroundImage': 'assets/images/bg/lab.jpg',
+                                      'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                       'characterName': 'Mem',
                                       'isCorrect': false,
                                       'loseLifeOnIncorrect': true,
@@ -2125,7 +2128,7 @@ class ChallengeData {
                                     {
                                       'text': "Liquid",
                                       'nextDialogueIndex': 162,
-                                      'nextBackgroundImage': 'assets/images/bg/lab.jpg',
+                                      'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                       'characterName': 'Mem',
                                       'isCorrect': false,
                                       'loseLifeOnIncorrect': true,
@@ -2134,21 +2137,21 @@ class ChallengeData {
                                 },
                                 { // 161
                                   'dialogue': "Gases take the shape and volume of their container.",
-                                  'backgroundImage': 'assets/images/bg/lab.jpg',
+                                  'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                   'characterName': 'Mem',
                                   'incorrectChoiceGoTo': 160,
                                   'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                 },
                                 { // 162
                                   'dialogue': "Liquids have a volume but not a definite shape.",
-                                  'backgroundImage': 'assets/images/bg/lab.jpg',
+                                  'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                   'characterName': 'Mem',
                                   'incorrectChoiceGoTo': 160,
                                   'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                                 },
                                 { // 163
                                   'dialogue': "Right! Solids have a definite shape and volume.",
-                                  'backgroundImage': 'assets/images/bg/lab.jpg',
+                                  'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                   'characterName': 'Mem',
                                   'sfx': 'assets/audio/sfx/sound/check2.mp3',
                                 },
@@ -2269,7 +2272,7 @@ class ChallengeData {
                                   {
                                     'text': "Photosynthesis",
                                     'nextDialogueIndex': 173,
-                                    'nextBackgroundImage': 'assets/images/bg/lab.jpg',
+                                    'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                     'characterName': 'Mem',
                                     'isCorrect': false,
                                     'loseLifeOnIncorrect': true,
@@ -2277,14 +2280,14 @@ class ChallengeData {
                                   {
                                     'text': "Water Cycle",
                                     'nextDialogueIndex': 175,
-                                    'nextBackgroundImage': 'assets/images/bg/lab.jpg',
+                                    'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                     'characterName': 'Mem',
                                     'isCorrect': true,
                                   },
                                   {
                                     'text': "Evaporation",
                                     'nextDialogueIndex': 174,
-                                    'nextBackgroundImage': 'assets/images/bg/lab.jpg',
+                                    'nextBackgroundImage': 'assets/images/bg/laboratory1.jpg',
                                     'characterName': 'Mem',
                                     'isCorrect': false,
                                     'loseLifeOnIncorrect': true,
@@ -2293,23 +2296,24 @@ class ChallengeData {
                               },
                               { // 173
                                 'dialogue': "Photosynthesis is the process by which plants make food.",
-                                'backgroundImage': 'assets/images/bg/lab.jpg',
+                                'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                 'characterName': 'Mem',
                                 'incorrectChoiceGoTo': 172,
                                 'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                               },
                               { // 174
                                 'dialogue': "Evaporation is part of the water cycle but isn't the whole process.",
-                                'backgroundImage': 'assets/images/bg/lab.jpg',
+                                'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                 'characterName': 'Mem',
                                 'incorrectChoiceGoTo': 172,
                                 'sfx': 'assets/audio/sfx/sound/wrong.mp3',
                               },
                               { // 175
                                 'dialogue': "That's right! The water cycle describes the movement of water on Earth.",
-                                'backgroundImage': 'assets/images/bg/lab.jpg',
+                                'backgroundImage': 'assets/images/bg/laboratory1.jpg',
                                 'characterName': 'Mem',
                                 'sfx': 'assets/audio/sfx/sound/check2.mp3',
+                                'isCredits': true,
                               },
 //!=================================================QUESTIONS!===================================================//
 //!=================================================QUESTIONS!===================================================//

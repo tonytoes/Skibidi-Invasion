@@ -11,6 +11,7 @@ import 'package:just_audio/just_audio.dart';
 import 'dart:async';
 import '../widgets/audio_debug.dart';
 import '../data/challenge_data.dart';
+import '../widgets/credits_challenge.dart';
 
 void _openHelp(BuildContext context) {
   showCupertinoModalPopup(
@@ -48,6 +49,8 @@ class _ChallengeScreenState extends State<ChallengeScreen>
   late String _characterName;
   AudioPlayer get _bgm => widget.bgmPlayer;
   String? _currentBgm;
+
+  final Map<String, Duration> _bgmPausedPositions = {};
 
   List<Map<String, dynamic>> _characters = [];
 
@@ -204,23 +207,35 @@ class _ChallengeScreenState extends State<ChallengeScreen>
 
   void _updateBgm(String? newBgmPath) async {
     if (newBgmPath != null && newBgmPath.isNotEmpty) {
-      if (newBgmPath != _currentBgm || !_bgm.playing) {
-        await _bgm.stop();
-        try {
-          await _bgm.setAudioSource(AudioSource.asset(newBgmPath));
-          _bgm.setLoopMode(LoopMode.one);
+      if (newBgmPath == _currentBgm) {
+        if (!_bgm.playing) {
+          final resumePosition = _bgmPausedPositions[_currentBgm!] ?? Duration.zero;
+          await _bgm.seek(resumePosition);
           await _bgm.play();
-          _currentBgm = newBgmPath;
-        } catch (e) {
-          await _bgm.stop();
-          _currentBgm = null;
         }
+        return;
+      }
+
+      if (_currentBgm != null && _bgm.playing) {
+        _bgmPausedPositions[_currentBgm!] = await _bgm.position;
+      }
+
+      try {
+        await _bgm.setAudioSource(AudioSource.asset(newBgmPath));
+        _bgm.setLoopMode(LoopMode.one);
+        final resumeFrom = _bgmPausedPositions[newBgmPath] ?? Duration.zero;
+        await _bgm.seek(resumeFrom);
+        await _bgm.play();
+        _currentBgm = newBgmPath;
+      } catch (e) {
+        await _bgm.stop();
+        _currentBgm = null;
       }
     } else {
-      if (_bgm.playing || _currentBgm != null) {
-        await _bgm.stop();
+      if (_bgm.playing && _currentBgm != null) {
+        _bgmPausedPositions[_currentBgm!] = await _bgm.position;
+        await _bgm.pause();
       }
-      _currentBgm = null;
     }
   }
 
@@ -283,6 +298,16 @@ class _ChallengeScreenState extends State<ChallengeScreen>
           ChallengeData.challengeData[nextLine]['isQuestion'] == true) {
         _lastQuestionIndex = nextLine;
       }
+
+      if (ChallengeData.challengeData[nextLine]['isCredits'] == true) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => CreditChallengeScreen(),
+          ),
+        );
+        return;
+      }
+
 
       _currentLine = nextLine;
 

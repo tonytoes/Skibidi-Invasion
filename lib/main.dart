@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:page_transition/page_transition.dart';
 import 'settings/select_chapters.dart';
 import 'package:just_audio/just_audio.dart';
 import '../widgets/bgm_player.dart';
@@ -12,15 +11,13 @@ import '../settings/select_challenge.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.light,
-    ),
-  );
+
   runApp(const MyApp());
+
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  });
 }
 
 class MyApp extends StatelessWidget {

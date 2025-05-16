@@ -31,9 +31,9 @@ class _ChalSelectScreenState extends State<ChalSelectScreen> {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> challenge = [
       {'title': 'Level 1', 'index': 0, 'requiredIndex': 13},
-      {'title': 'Level 2', 'index': 2, 'requiredIndex': 13},
-      {'title': 'Level 3', 'index': 3, 'requiredIndex': 13},
-      {'title': 'Level 4', 'index': 4, 'requiredIndex': 13},
+      {'title': 'Level 2', 'index': 47, 'requiredIndex': 13},
+      {'title': 'Level 3', 'index': 89, 'requiredIndex': 13},
+      {'title': 'Level 4', 'index': 132, 'requiredIndex': 13},
     ];
 
 

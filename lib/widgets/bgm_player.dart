@@ -78,19 +78,21 @@ class BGMPlayer {
   }
 
   Future<void> stopBackgroundMusic() async {
-    if (!_bgmPlayer.playing && _bgmPlayer.processingState == ProcessingState.idle) {
-      return;
-    }
-
-    for (double vol = _bgmPlayer.volume; vol >= 0.0; vol -= 0.1) {
-      if (!_bgmPlayer.playing && _bgmPlayer.processingState == ProcessingState.idle) {
-        break;
+    try {
+      if (_bgmPlayer.playing || _bgmPlayer.processingState != ProcessingState.idle) {
+        for (double vol = _bgmPlayer.volume; vol >= 0.0; vol -= 0.1) {
+          await Future.delayed(const Duration(milliseconds: 200));
+          await _bgmPlayer.setVolume(vol);
+        }
+        await _bgmPlayer.stop();
       }
-      await Future.delayed(const Duration(milliseconds: 200));
-      await _bgmPlayer.setVolume(vol);
+    } catch (e) {
+      print('Error stopping BGM: $e');
     }
-    await _bgmPlayer.stop();
   }
+
+
+
 
   Future<void> setVolume(double volume) async {
     try {

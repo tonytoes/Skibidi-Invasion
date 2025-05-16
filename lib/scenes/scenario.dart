@@ -51,7 +51,7 @@ class _ScenarioScreenState extends State<ScenarioScreen>
   bool _resetColors = false;
   late String _backgroundImage;
   late String _characterName;
-  AudioPlayer get _audio => widget.sfxPlayer;
+
   AudioPlayer get _bgm => widget.bgmPlayer;
   String? _currentBgm;
   bool _showArrow = false;
@@ -59,7 +59,6 @@ class _ScenarioScreenState extends State<ScenarioScreen>
   double _arrowTop = 0.0;
   double _arrowRotation = 0.0;
   String _arrowAsset = 'assets/icons/tutorial_arrow.png';
-
 
   final Map<String, Duration> _bgmPausedPositions = {};
 
@@ -226,7 +225,8 @@ class _ScenarioScreenState extends State<ScenarioScreen>
     if (newBgmPath != null && newBgmPath.isNotEmpty) {
       if (newBgmPath == _currentBgm) {
         if (!_bgm.playing) {
-          final resumePosition = _bgmPausedPositions[_currentBgm!] ?? Duration.zero;
+          final resumePosition =
+              _bgmPausedPositions[_currentBgm!] ?? Duration.zero;
           await _bgm.seek(resumePosition);
           await _bgm.play();
         }
@@ -256,7 +256,6 @@ class _ScenarioScreenState extends State<ScenarioScreen>
     }
   }
 
-
   void _nextDialogue(String? selectedChoice) {
     setState(() {
       if (_isGameOver) {
@@ -265,7 +264,7 @@ class _ScenarioScreenState extends State<ScenarioScreen>
 
       bool isChoiceCorrect = false;
       int nextLine = _currentLine;
-      bool incorrectChoiceMade = false;
+
       final screenWidth = MediaQuery.of(context).size.width;
       final screenHeight = MediaQuery.of(context).size.height;
 
@@ -298,7 +297,6 @@ class _ScenarioScreenState extends State<ScenarioScreen>
 
                 return;
               }
-              incorrectChoiceMade = true;
             }
             if (choice.containsKey('nextDialogueIndex')) {
               nextLine = choice['nextDialogueIndex'] as int;
@@ -340,22 +338,23 @@ class _ScenarioScreenState extends State<ScenarioScreen>
           await Navigator.of(context).push(
             PageRouteBuilder(
               opaque: false,
-              pageBuilder: (_, __, ___) => ChapterIntroOverlay(
-                chapterIndex: _currentLine,
-                chapterTitle: scenario['chapterTitle'] ?? 'Chapter',
-                sfxPlayer: widget.sfxPlayer,
-                bgmPlayer: widget.bgmPlayer,
-                autoSfx: nextSfx,
-                autoBgm: nextBgm,
-              ),
-              transitionsBuilder: (_, animation, __, child) =>
-                  FadeTransition(opacity: animation, child: child),
+              pageBuilder:
+                  (_, __, ___) => ChapterIntroOverlay(
+                    chapterIndex: _currentLine,
+                    chapterTitle: scenario['chapterTitle'] ?? 'Chapter',
+                    sfxPlayer: widget.sfxPlayer,
+                    bgmPlayer: widget.bgmPlayer,
+                    autoSfx: nextSfx,
+                    autoBgm: nextBgm,
+                  ),
+              transitionsBuilder:
+                  (_, animation, __, child) =>
+                      FadeTransition(opacity: animation, child: child),
             ),
           );
         });
         return;
       }
-
 
       _backgroundImage =
           ScenarioData.scenarioData[_currentLine]['backgroundImage'] ??
@@ -451,21 +450,8 @@ class _ScenarioScreenState extends State<ScenarioScreen>
     );
   }
 
-  Future<void> _playVoiceover(String path) async {
-    final player = widget.sfxPlayer; // reuse the same AudioPlayer
-    try {
-      if (player.playing) await player.stop();
-      await player.setAudioSource(AudioSource.asset(path));
-      await player.play();
-    } catch (e) {
-      print('Failed to play voiceover: $e');
-    }
-  }
-
-
   @override
   Widget build(BuildContext context) {
-    final chapterIndex = widget.index;
     return Scaffold(
       appBar: null,
       body: Stack(
@@ -494,11 +480,9 @@ class _ScenarioScreenState extends State<ScenarioScreen>
                 ElevatedButton(
                   style: _buttonStyle(),
                   onPressed: () {
-                    final currentScenario = ScenarioData.scenarioData[_currentLine];
-                    final voiceoverPath = currentScenario['voiceover'];
-                    if (voiceoverPath != null && voiceoverPath.isNotEmpty) {
-                      _playVoiceover(voiceoverPath);
-                    }
+                    setState(() {
+                      pressed = !pressed;
+                    });
                   },
                   child: Image.asset(
                     'assets/icons/speaker.png',
