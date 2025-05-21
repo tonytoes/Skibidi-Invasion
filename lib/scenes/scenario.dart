@@ -471,26 +471,7 @@ class _ScenarioScreenState extends State<ScenarioScreen>
             right: MediaQuery.of(context).size.width * 0.02,
             child: Column(
               children: [
-                ElevatedButton(
-                  onPressed: () => _openMenu(context),
-                  style: _buttonStyle(),
-                  child: Icon(Icons.menu, color: Colors.white, size: 30),
-                ),
-                const SizedBox(height: 3), // spacing between buttons
-                ElevatedButton(
-                  style: _buttonStyle(),
-                  onPressed: () {
-                    setState(() {
-                      pressed = !pressed;
-                    });
-                  },
-                  child: Image.asset(
-                    'assets/icons/speaker.png',
-                    color: Colors.white,
-                    width: 30,
-                    height: 30,
-                  ),
-                ),
+
                 const SizedBox(height: 3),
                 ElevatedButton(
                   style: _buttonStyle(),

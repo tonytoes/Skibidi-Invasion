@@ -130,7 +130,6 @@ class ScenarioData {
       'index': 13,
       'isChapterStart': true,
       'chapterTitle': 'Chapter 1: Intro',
-      'voiceover': 'assets/audio/voice/CH1-line1.mp3',
     },
     {
       'dialogue':
@@ -138,7 +137,6 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/emotion/dot.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line2.mp3',
     },
     {
       'dialogue':
@@ -146,7 +144,6 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/sound/rappel.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line3.mp3',
     },
     {
       'dialogue':
@@ -154,7 +151,6 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/Downtown-Night.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/gear2.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line4.mp3',
     },
     {
       'dialogue': "Wha—?!", // index 17
@@ -169,7 +165,6 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/black screen.png',
       'characterName': '',
       'sfx': 'assets/audio/sfx/action/hit2.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line5.mp3',
     },
     {
       'dialogue':
@@ -177,7 +172,6 @@ class ScenarioData {
       'backgroundImage': 'assets/images/bg/inside5.jpg',
       'characterName': '',
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line6.mp3',
     },
     {
       'dialogue': "Hey! Kid..? You alright? I'm sorry for knocking you down, I thought you were infected with brainrot.",
@@ -191,7 +185,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/question.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line7.mp3',
     },
     {
       'dialogue': "There is a crazy infection called brainrot that's spreading throughout the city right now.",
@@ -205,7 +198,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line8.mp3',
     },    
     {
       'dialogue': "It's turning people into skibidi toilets! They infect people and rot their brains using loud music.",
@@ -219,7 +211,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/chat.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line9.mp3',
     },
     {
       'dialogue': "(The girl pauses for a moment, looking at you with a mixture of sympathy and curiousity)",
@@ -233,7 +224,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/surprise.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line10.mp3',
     },
     {
       'dialogue': "I thought you are about to turn into an infected because you were just standing still in the middle of a dangerous city.",
@@ -247,7 +237,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/sweat.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line11.mp3',
     },
     {
       'dialogue': "But you... you didn’t change. You’re still you. Somehow, you survived without getting infected.",
@@ -261,7 +250,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/bulb.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line12.mp3',
     },
     {
       'dialogue': "Hey... I need your help...", // index 26
@@ -274,7 +262,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/respond.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line13.mp3',
     },
     {
       'dialogue': "I am planning to save this city from brainrot.", // index 27
@@ -287,7 +274,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/shy.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line14.mp3',
     },
     {
       'dialogue': "But i can't do it alone.", // index 28
@@ -300,14 +286,12 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/sad.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line15.mp3',
     },
     {
       'dialogue': "Will you join me and help stop this skibidi infection?",
       // index 29
       'backgroundImage': 'assets/images/bg/inside5.jpg',
       'characterName': 'Girl',
-      'voiceover': 'assets/audio/voice/CH1-line16.mp3',
       'characters': [
         {
           'sprite': 'assets/images/characters/pose1/164.png',
@@ -344,7 +328,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/twinkle.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line17.mp3',
     },
     {
       'dialogue': "My name is Meguri, but you can call me Mem. My name sounds similar to the word 'memory'.",
@@ -358,7 +341,6 @@ class ScenarioData {
       ],
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/shy.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line18.mp3',
     },
     {
       'dialogue': "The infected are called as Skibdi Toilets, because they're humans transformed into human-headed toilets..",
@@ -372,7 +354,6 @@ class ScenarioData {
       ],
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/think.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line19.mp3',
     },
     {
       'dialogue': "They infect people with brainrot disease using their loud skibidi music...",
@@ -386,7 +367,6 @@ class ScenarioData {
       ],
       'characterName': 'Mem',
       'sfx': 'assets/audio/sfx/emotion/upset.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line20.mp3',
     },
     {
       'dialogue': "Avoid prolonged exposure to skibidi music to prevent being infected.",
@@ -399,7 +379,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/respond.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line21.mp3',
       'characterName': 'Mem',
     },
     {
@@ -413,7 +392,6 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/exclaim.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line22.mp3',
       'characterName': 'Mem',
     },
     {
@@ -427,14 +405,12 @@ class ScenarioData {
         }
       ],
       'sfx': 'assets/audio/sfx/emotion/ding.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line23.mp3',
       'characterName': 'Mem',
     },
     {
       'dialogue': "(You followed Mem and walked to another room)", // index 37
       'backgroundImage': 'assets/images/bg/black screen.png',
       'sfx': 'assets/audio/sfx/action/footstep6.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line24.mp3',
       'characterName': '',
     },
     {
@@ -442,7 +418,6 @@ class ScenarioData {
   // index 38
   'backgroundImage': 'assets/images/bg/messyroom.jpg',
   'sfx': 'assets/audio/sfx/action/dooropen1.mp3',
-      'voiceover': 'assets/audio/voice/CH1-line25.mp3',
   'characterName': '',
   },
 {
@@ -457,7 +432,6 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/ding.mp3',
-  'voiceover': 'assets/audio/voice/CH1-line26.mp3',
 },
 {
   'dialogue': "We need to go outside and find the source of the infection.",
@@ -471,7 +445,6 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/upset.mp3',
-  'voiceover': 'assets/audio/voice/CH1-line27.mp3',
 },
 {
   'dialogue': "Skibidi Toilet’s weakness are correct facts and grammars.",
@@ -485,7 +458,6 @@ class ScenarioData {
   ],
   'characterName': 'Mem',
   'sfx': 'assets/audio/sfx/emotion/chat.mp3',
-  'voiceover': 'assets/audio/voice/CH1-line28.mp3',
 },
 {
   'dialogue': "It hurts their rotten brains. They flush themselves when you attack them with it.",

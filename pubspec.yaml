@@ -44,7 +44,6 @@ flutter:
     - assets/audio/sfx/emotion/
     - assets/audio/sfx/action/
     - assets/audio/sfx/sound/
-    - assets/audio/voice/
     - assets/audio/bgm/
     - assets/images/dialogue/
     - assets/icons/tutorial_arrow.png
