@@ -12,7 +12,7 @@ The plan is to use dart as the main languange for the project.
 - Install Android Studio/Visual Studio Code
 - Ensure that you had installed flutter sdk
 - Ensure that you had installed dart
-- Install an emulator to your liking
+- Install an any android emulator to your liking
 - Run Skibidi Invasion
 
 ## Contributing 
