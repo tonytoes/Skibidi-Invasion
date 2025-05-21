@@ -1,16 +1,21 @@
-# skibidi_invasion
+# Skibidi Invasion: A Visual Learning Novel Game
 
-A new Flutter project.
+The purpose of this project is to make a visual novel game that would help users learn basic
+english, math, and science.
 
-## Getting Started
+## About
 
-This project is a starting point for a Flutter application.
+The plan is to use dart as the main languange for the project.
 
-A few resources to get you started if this is your first Flutter project:
+## How to run
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Install Android Studio/Visual Studio Code
+- Ensure that you had installed flutter sdk
+- Ensure that you had installed dart
+- Install an emulator to your liking
+- Run Skibidi Invasion
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Contributing 
+
+Pull requests are welcome. For major changes, please open an issue first 
+to discuss what you would like to change.
