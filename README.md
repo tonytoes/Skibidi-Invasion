@@ -1,3 +1,11 @@
+# Skibidi Invasion: A Visual Learning Novel Game
+
+This visual novel learning game was created using flutter that would help users learn basic english grammar, science facts, and math eqations.
+
+## About
+
+The plan is to use dart as the main languange for the project.
+
 <div align="center">
   <img src="screenshots/Skibidi Infection Banner.png" alt="Skibidi Infection"/>
 </div>
@@ -13,15 +21,6 @@
 ## Controls
 
  <img src="screenshots/Picture3.png" alt="controls" style="width:500px; " />
-
-
-# Skibidi Invasion: A Visual Learning Novel Game
-
-This visual novel learning game was created using flutter that would help users learn basic english grammar, science facts, and math eqations.
-
-## About
-
-The plan is to use dart as the main languange for the project.
 
 ## How to run
 
