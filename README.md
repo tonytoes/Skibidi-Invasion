@@ -4,10 +4,10 @@
   <img src="screenshots/Skibidi Infection Banner.png" alt="Skibidi Infection"/>
 </div>
 
-This visual novel learning game was created using flutter that would help users learn basic english grammar, science facts, and math eqations.
 
 ## About
 
+This visual novel learning game was created using flutter that would help users learn basic english grammar, science facts, and math eqations. 
 The plan is to use dart as the main languange for the project.
 
 ## Screenshots
